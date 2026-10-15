@@ -1,0 +1,73 @@
+{
+  "verifiedDate": "2026-10-15",
+  "target": "production",
+  "status": "READY",
+  "framework": "Vite",
+  "source": "git",
+  "commit": "d2bc491f23a9e069401a08615d466877dd28e62f",
+  "deploymentId": "dpl_3vy6u8TSpRSFTVCbTTcCfyZPX9iW",
+  "url": "sonant-no4k5eh86-my-team-4f230354.vercel.app",
+  "aliases": [
+    "sonant-beta.vercel.app",
+    "sonant-my-team-4f230354.vercel.app",
+    "sonant-git-main-my-team-4f230354.vercel.app"
+  ],
+  "buildDurationSeconds": 8.6,
+  "githubPagesEnabled": false,
+  "githubPagesUrlStatus": 404,
+  "productionHttpChecks": 8,
+  "expected404Checks": 0,
+  "byteComparedFiles": 2,
+  "runtimeErrorScan": "No runtime errors found in last 1h",
+  "drains": "Inventory unavailable: Vercel endpoint returned 404",
+  "checks": [
+    {
+      "url": "https://sonant-beta.vercel.app/",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": false
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/llms.txt",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": true
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/favicon.svg",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": true
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/assets/index-CMRMAyQK.js",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": false
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/assets/index-QBo_8_vM.css",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": false
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": false
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": false
+    },
+    {
+      "url": "https://sonant-beta.vercel.app/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "status": 200,
+      "expected": 200,
+      "byteCompared": false
+    }
+  ]
+}
