@@ -51,6 +51,43 @@ test("delegated bindings respect cancellation, disabled controls, iframe realms,
 test("catalog renders, filters, and plays through native Web Audio", async ({ page }, testInfo) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
+  await page.addInitScript(() => {
+    const records: unknown[] = [];
+    Object.defineProperty(window, "__sonantAudioDiagnostics", { value: records });
+    const NativeContext = window.AudioContext;
+    let sequence = 0;
+    window.AudioContext = class extends NativeContext {
+      private probeId: number;
+      constructor(options?: AudioContextOptions) {
+        super(options);
+        this.probeId = ++sequence;
+        records.push({
+          id: this.probeId,
+          event: "created",
+          state: this.state,
+          active: navigator.userActivation?.isActive,
+        });
+        this.addEventListener("statechange", () =>
+          records.push({ id: this.probeId, event: "statechange", state: this.state }),
+        );
+      }
+      async resume() {
+        records.push({
+          id: this.probeId,
+          event: "resume",
+          state: this.state,
+          active: navigator.userActivation?.isActive,
+        });
+        try {
+          await super.resume();
+          records.push({ id: this.probeId, event: "resumed", state: this.state });
+        } catch (error) {
+          records.push({ id: this.probeId, event: "resume-error", error: String(error) });
+          throw error;
+        }
+      }
+    };
+  });
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("A little sound.");
   await page.screenshot({ path: testInfo.outputPath("home.png"), fullPage: true });
@@ -75,10 +112,28 @@ test("catalog renders, filters, and plays through native Web Audio", async ({ pa
       }
     });
     console.log("Native Web Audio diagnostic:", JSON.stringify(probe));
+    console.log(
+      "Audio lifecycle:",
+      await page.evaluate(() =>
+        JSON.stringify(
+          (window as unknown as { __sonantAudioDiagnostics: unknown[] }).__sonantAudioDiagnostics,
+        ),
+      ),
+    );
     await page.goto("/#/devtools");
     console.log("Sonant diagnostic:", await page.locator(".devtools-metrics").innerText());
     throw error;
   }
+  if (testInfo.project.name === "firefox")
+    console.log(
+      "Firefox audio lifecycle:",
+      await page.evaluate(() =>
+        JSON.stringify(
+          (window as unknown as { __sonantAudioDiagnostics: unknown[] }).__sonantAudioDiagnostics,
+        ),
+      ),
+    );
+  await page.screenshot({ path: testInfo.outputPath("preview.png") });
   await page.getByRole("textbox", { name: "Search sounds" }).fill("does-not-exist");
   await expect(page.getByText("No sounds found.")).toBeVisible();
   await page.getByRole("button", { name: "Clear filters" }).click();
