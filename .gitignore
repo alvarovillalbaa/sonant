@@ -6,5 +6,6 @@ dist/
 *.tsbuildinfo
 playwright-report/
 test-results/
+cold-start-results/
 tests/tmp/
 .DS_Store
