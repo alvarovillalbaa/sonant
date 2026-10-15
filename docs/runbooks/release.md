@@ -8,7 +8,7 @@ Last updated: 2026-10-15
 4. Run `npm run pack:library`; inspect `npm pack --dry-run --workspace @alvarovillalbaa/sonant`. Confirm declarations, executable CLI, client directive, README, and MIT license are included. Never include credentials, local-only paths, website source, or node_modules.
 5. Install the actual tarball into a fresh consumer. Exercise core imports, CLI init/add/export, and generated React source compilation.
 6. Reconfirm the npm identity and permission for the scope. Publish the reviewed package with `npm publish --workspace @alvarovillalbaa/sonant --access public`. Complete npm's interactive authentication or 2FA if required; never pass credentials into Git history.
-7. Verify registry metadata and fresh npm/npx/pnpm installation. Create a matching GitHub release with the package tarball and notes.
+7. Verify registry metadata and dispatch the `Registry installation` workflow for that exact version. It checks fresh npm imports, npx init/add, and pnpm add/dlx using disposable consumers. Create a matching GitHub release with the package tarball and notes.
 8. Push the reviewed source. The workflow gates GitHub Pages deployment on quality checks. Verify the remote commit, checks, deployment, HTTP response, and live site.
 9. Record actual results and limits in `docs/results/YYYY/MM-DD/`. A successful build is not proof of npm publication, hosted deployment, real-device audio, or improved user outcomes.
 

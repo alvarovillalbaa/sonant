@@ -1,0 +1,25 @@
+name: Registry installation
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Published version to verify
+        required: true
+        default: 0.1.0
+
+permissions:
+  contents: read
+
+jobs:
+  consumers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm install --global pnpm@10
+      - run: node tests/scripts/registry-install.mjs
+        env:
+          SONANT_VERSION: ${{ inputs.version }}

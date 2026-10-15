@@ -14,7 +14,8 @@
     "check": "npm run build && tsc --noEmit -p website/tsconfig.json",
     "test": "npm run build && node --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
     "pack:library": "npm pack --workspace @alvarovillalbaa/sonant",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:registry": "node tests/scripts/registry-install.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
