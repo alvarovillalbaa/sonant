@@ -23,7 +23,7 @@ The final research shifts differentiation toward policy, QA, and observability. 
 | Accessibility and user control | Preferences, native controls, visible states | Axe checks, keyboard interactions, explicit limits |
 | Provenance | Original recipes and manifests | MIT license and SHA-256 export checks |
 | Public GitHub upload | `alvarovillalbaa/sonant` | Remote commit, workflow run and release state |
-| Hosted website | GitHub Pages deployment | Successful deployment and live HTTP/browser inspection |
+| Hosted website | Vercel deployment on Clous Team (Pro) | Successful deployment and live HTTP/browser inspection |
 
 ## Research directions beyond this release
 

@@ -6,7 +6,7 @@ Last updated: 2026-10-15
 
 An open-source sound layer for React, Next.js, and the web: semantic feedback, original sound characters, considerate playback policy, copy-in components, and local diagnostics.
 
-[Website & playground](https://alvarovillalbaa.github.io/sonant/) · [Create a kit](https://alvarovillalbaa.github.io/sonant/#/create) · [Documentation](https://alvarovillalbaa.github.io/sonant/#/docs)
+[Website & playground](https://sonant-beta.vercel.app/) · [Create a kit](https://sonant-beta.vercel.app/#/create) · [Documentation](https://sonant-beta.vercel.app/#/docs)
 
 ## Install
 
@@ -81,7 +81,7 @@ npm run test:e2e
 npm run pack:library
 ```
 
-The repository is an npm workspace. `packages/sonant/` owns the public ESM package; `website/` consumes that exact package. `tests/` holds unit, CLI integration, and browser checks. The static site uses hash routes so it can run from GitHub Pages without a server.
+The repository is an npm workspace. `packages/sonant/` owns the public ESM package; `website/` consumes that exact package. `tests/` holds unit, CLI integration, and browser checks. The static site uses hash routes and is hosted on Vercel, Clous Team (Pro). `vercel.json` builds the workspace with `npm run build:site` and serves `website/dist` at `/`. The connected `main` branch deploys automatically. See [deployment evidence](docs/deployment.md).
 
 ## Proof and limits
 

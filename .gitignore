@@ -9,3 +9,5 @@ test-results/
 cold-start-results/
 tests/tmp/
 .DS_Store
+
+.vercel/

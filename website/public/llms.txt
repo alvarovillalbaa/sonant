@@ -3,7 +3,7 @@
 Sonant is a local-first interface sound library for React, Next.js, and vanilla TypeScript.
 Package: @alvarovillalbaa/sonant
 Source: https://github.com/alvarovillalbaa/sonant
-Docs: https://alvarovillalbaa.github.io/sonant/#/docs
+Docs: https://sonant-beta.vercel.app/#/docs
 
 Install the runtime, then run `npx @alvarovillalbaa/sonant@latest init`.
 Copy components with `npx @alvarovillalbaa/sonant@latest add sound-settings sound-button`.

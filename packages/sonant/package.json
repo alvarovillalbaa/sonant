@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Alvaro Villalba",
   "repository": { "type": "git", "url": "git+https://github.com/alvarovillalbaa/sonant.git", "directory": "packages/sonant" },
-  "homepage": "https://alvarovillalbaa.github.io/sonant/",
+  "homepage": "https://sonant-beta.vercel.app/",
   "bugs": "https://github.com/alvarovillalbaa/sonant/issues",
   "keywords": ["sound", "react", "nextjs", "web-audio", "design-system", "sensory", "shadcn"],
   "sideEffects": false,

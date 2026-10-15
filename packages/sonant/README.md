@@ -6,7 +6,7 @@ Last updated: 2026-10-15
 
 An open-source sound layer for React, Next.js, and the web: semantic feedback, original sound characters, considerate playback policy, copy-in components, and local diagnostics.
 
-[Website & playground](https://alvarovillalbaa.github.io/sonant/) · [Create a kit](https://alvarovillalbaa.github.io/sonant/#/create) · [Documentation](https://alvarovillalbaa.github.io/sonant/#/docs)
+[Website & playground](https://sonant-beta.vercel.app/) · [Create a kit](https://sonant-beta.vercel.app/#/create) · [Documentation](https://sonant-beta.vercel.app/#/docs)
 
 ## Install
 
@@ -81,12 +81,12 @@ npm run test:e2e
 npm run pack:library
 ```
 
-The repository is an npm workspace. `packages/sonant/` owns the public ESM package; `website/` consumes that exact package. `tests/` holds unit, CLI integration, and browser checks. The static site uses hash routes so it can run from GitHub Pages without a server.
+The repository is an npm workspace. `packages/sonant/` owns the public ESM package; `website/` consumes that exact package. `tests/` holds unit, CLI integration, and browser checks. The static site uses hash routes and is hosted on Vercel.
 
 ## Proof and limits
 
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 
-This release does not include hosted analytics, experiments, native haptics, Ogg export, team governance, or direct version-specific third-party adapters. See the [documentation](https://alvarovillalbaa.github.io/sonant/#/docs) and [source repository](https://github.com/alvarovillalbaa/sonant).
+This release does not include hosted analytics, experiments, native haptics, Ogg export, team governance, or direct version-specific third-party adapters. See the [documentation](https://sonant-beta.vercel.app/#/docs) and [source repository](https://github.com/alvarovillalbaa/sonant).
 
 Original recipes and code are MIT licensed. Website fonts use their upstream SIL Open Font Licenses. No competitor sounds or testimonials are copied.
