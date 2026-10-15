@@ -32,14 +32,20 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pulseaudio
           pulseaudio --start --exit-idle-time=-1
-          pactl load-module module-null-sink sink_name=sonant
+          # norewinds caps the null sink at 50 ms instead of its 2-second default.
+          pactl load-module module-null-sink sink_name=sonant norewinds=1
           pactl set-default-sink sonant
+          pactl list short sinks
       - run: npm run test:e2e
+      - name: Verify repeated Firefox cold starts
+        run: npm run test:e2e -- --project firefox --grep "catalog renders" --repeat-each 5 --workers 1 --output cold-start-results
       - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: browser-evidence
-          path: test-results/
+          path: |
+            test-results/
+            cold-start-results/
           retention-days: 7
       - run: npm pack --dry-run --workspace @alvarovillalbaa/sonant
 

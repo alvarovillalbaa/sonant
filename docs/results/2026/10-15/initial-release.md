@@ -28,7 +28,9 @@ Screenshots below come from the expanded successful browser run. Browser instrum
 
 Fresh consumer testing caught an npm executable symlink guard that skipped the CLI. Generated-source compilation caught JSON import attributes needed by NodeNext. Browser checks caught contrast, hidden mobile labels, and non-focusable horizontal scrolling. Those were repaired and checked again.
 
-Some headless Firefox cold starts initially remained suspended. The runtime now bounds unlock waits and reports blocked playback; CI has an explicit virtual audio device. Native lifecycle evidence from the successful run shows trusted activation, a suspended context, two resume requests, then running state. No assertion was removed and no test retry was enabled. Physical audio quality and repeated real-device cold starts remain manual validation.
+Some headless Firefox cold starts initially remained suspended. The runtime bounds unlock waits and reports blocked playback. Runs [38736212189](https://github.com/alvarovillalbaa/sonant/actions/runs/38736212189) and [38736846411](https://github.com/alvarovillalbaa/sonant/actions/runs/38736846411) each failed the native Firefox preview while the other 39 checks passed. Serial execution did not resolve it. Timestamped native lifecycle evidence measured 1,981 ms between resume and running, beyond the 1,500 ms runtime deadline.
+
+The CI virtual device used PulseAudio's default two-second block. Its supported `norewinds=1` option reduces that block to 50 ms ([upstream implementation](https://github.com/pulseaudio/pulseaudio/blob/master/src/modules/module-null-sink.c)). CI now applies this option and adds five independent Firefox cold-start checks. This changes the test device configuration; the published library and its deadline are unchanged. Final results of that repair are pending. No assertion was removed and no test retry was enabled. Physical audio quality and repeated real-device cold starts remain manual validation.
 
 ## Registry publication gate
 
