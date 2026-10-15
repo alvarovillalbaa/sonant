@@ -124,6 +124,15 @@ test("cancellation during unlock never reaches the renderer", async () => {
   assert.equal(sound.getSnapshot().trace.at(-1).reason, "cancelled");
   await sound.destroy();
 });
+test("a browser unlock that never settles becomes an observable blocked decision", async () => {
+  const e = engine({ unlock: () => new Promise(() => {}) });
+  const sound = createSoundSystem({ provider: e.provider });
+  const handle = await sound.emit("action.select");
+  assert.equal(handle.reason, "activation");
+  assert.equal(handle.decision, "blocked");
+  assert.equal(sound.getSnapshot().activeVoices, 0);
+  await sound.destroy();
+});
 test("high-priority failure interrupts a lower-priority voice", async () => {
   const e = engine();
   const sound = createSoundSystem({ provider: e.provider, maxVoices: 1 });

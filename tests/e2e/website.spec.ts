@@ -70,20 +70,27 @@ test("mute persists, policy suppression is visible, and traces export", async ({
   await page.getByRole("button", { name: "Export JSON" }).click();
   expect((await downloaded).suggestedFilename()).toBe("sonant-trace.json");
 });
-test("pages have no serious accessibility violations or horizontal overflow", async ({ page }) => {
-  for (const route of ["/", "/#/create", "/#/examples", "/#/devtools", "/#/docs"]) {
+for (const route of ["/", "/#/create", "/#/examples", "/#/devtools", "/#/docs"]) {
+  test(`${route} has no serious accessibility violations or horizontal overflow`, async ({
+    page,
+  }) => {
     await page.goto(route);
     await expect(page.locator("main h1")).toBeVisible();
     const result = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
       .analyze();
     expect(
-      result.violations.filter((v) => ["serious", "critical"].includes(v.impact ?? "")),
+      result.violations
+        .filter((v) => ["serious", "critical"].includes(v.impact ?? ""))
+        .map((v) => ({
+          rule: v.id,
+          nodes: v.nodes.map((n) => ({ target: n.target, summary: n.failureSummary })),
+        })),
       `${route} accessibility`,
     ).toEqual([]);
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
       `${route} overflow`,
     ).toBe(true);
-  }
-});
+  });
+}

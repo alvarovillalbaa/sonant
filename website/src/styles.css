@@ -3184,6 +3184,10 @@ main:focus {
 .trace-filters select {
   color: #4d5842;
 }
+.beta-badge,
+.category-list button.active > span:last-child {
+  color: #66715b;
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *:before,

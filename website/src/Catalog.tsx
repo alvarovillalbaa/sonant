@@ -88,6 +88,7 @@ export function Catalog({
             <div className="select-wrap">
               <select
                 id="catalog-theme"
+                aria-label="Sound character"
                 value={theme}
                 onChange={(e) => setTheme(e.target.value as ThemeName)}
               >

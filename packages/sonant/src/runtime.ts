@@ -196,6 +196,8 @@ export function createSoundSystem(options: SoundOptions = {}) {
     let stopped = false;
     let finish!: () => void;
     let timer: ReturnType<typeof setTimeout> | undefined;
+    let unlockTimer: ReturnType<typeof setTimeout> | undefined;
+    let finishUnlock: ((value: boolean) => void) | undefined;
     const ended = new Promise<void>((resolve) => {
       finish = resolve;
     });
@@ -203,6 +205,8 @@ export function createSoundSystem(options: SoundOptions = {}) {
       if (stopped) return;
       stopped = true;
       clearTimeout(timer);
+      clearTimeout(unlockTimer);
+      finishUnlock?.(false);
       meta.signal?.removeEventListener("abort", stop);
       try {
         voice?.stop();
@@ -222,7 +226,13 @@ export function createSoundSystem(options: SoundOptions = {}) {
     density.set(windowKey, [...recent, time]);
     notify();
     try {
-      const unlocked = await provider.unlock();
+      const interrupted = new Promise<boolean>((resolve) => {
+        finishUnlock = resolve;
+      });
+      unlockTimer = setTimeout(() => finishUnlock?.(false), 1500);
+      const unlocked = await Promise.race([provider.unlock(), interrupted]);
+      clearTimeout(unlockTimer);
+      finishUnlock = undefined;
       if (stopped || destroyed) {
         stop();
         return silent(destroyed ? "destroyed" : meta.signal?.aborted ? "cancelled" : "muted");
@@ -298,10 +308,22 @@ export function createSoundSystem(options: SoundOptions = {}) {
   return {
     emit,
     begin,
-    unlock: () => {
+    unlock: async () => {
       if (destroyed) return Promise.resolve(false);
       observeVisibility();
-      return provider.unlock();
+      let timeout: ReturnType<typeof setTimeout> | undefined;
+      try {
+        return await Promise.race([
+          provider.unlock(),
+          new Promise<boolean>((resolve) => {
+            timeout = setTimeout(() => resolve(false), 1500);
+          }),
+        ]);
+      } catch {
+        return false;
+      } finally {
+        clearTimeout(timeout);
+      }
     },
     getStatus: () => ({ ...snapshot, audio: provider.getStatus?.() ?? "external" }),
     getSnapshot: () => snapshot,

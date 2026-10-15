@@ -257,6 +257,7 @@ export function Examples() {
       <dialog
         ref={dialog}
         className="demo-dialog"
+        aria-labelledby="demo-dialog-title"
         onCancel={() => {
           if (enhanced) void sound.emit("overlay.close");
         }}
@@ -272,7 +273,7 @@ export function Examples() {
           <X size={18} />
         </button>
         <span className="eyebrow">A LITTLE SPACE TO THINK</span>
-        <h2>Every layer has a feeling.</h2>
+        <h2 id="demo-dialog-title">Every layer has a feeling.</h2>
         <p>
           The browser manages focus and keyboard dismissal. Sonant adds a small audible opening and
           closing.
