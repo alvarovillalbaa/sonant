@@ -1,14 +1,17 @@
 # Initial release evidence
 
-## Implemented and published to GitHub
+## Implemented and published
 
 Sonant includes the public ESM runtime, React adapter, 32 semantic events, three original themes, copy-in CLI, shared installation configurator, WAV export, source audit hints, recipe checks, provider bridges, local Devtools, interaction examples, and documentation.
 
 - Repository: https://github.com/alvarovillalbaa/sonant
 - Website: https://alvarovillalbaa.github.io/sonant/
+- npm: https://www.npmjs.com/package/@alvarovillalbaa/sonant/v/0.1.0
+- Release: https://github.com/alvarovillalbaa/sonant/releases/tag/v0.1.0
 - Initial fully green source: `20b38b95629c5be606e723c060deab42b8203fa0`.
 - Expanded 40-check browser run: [38735142788](https://github.com/alvarovillalbaa/sonant/actions/runs/38735142788), source `2edb63615bf369808532d07c0d9c324f908876ea`. Quality and Pages deployment both succeeded.
 - Final audio-device repair: [38737386125](https://github.com/alvarovillalbaa/sonant/actions/runs/38737386125), source `0b6e43458e626b61f5da6ff9d351b579bacabebb`. All 25 package checks, 40 browser checks, five additional Firefox cold starts, and Pages deployment succeeded.
+- Main-branch confirmation: [38738005948](https://github.com/alvarovillalbaa/sonant/actions/runs/38738005948), source `953040f181328ae9395615726fee4e6b958a4472`. Quality and Pages deployment succeeded again.
 
 ## Checks and proof
 
@@ -34,14 +37,21 @@ Some headless Firefox cold starts initially remained suspended. The runtime boun
 
 The CI virtual device used PulseAudio's default two-second block. Its supported `norewinds=1` option reduces that block to 50 ms ([upstream implementation](https://github.com/pulseaudio/pulseaudio/blob/master/src/modules/module-null-sink.c)). CI now applies this option and adds five independent Firefox cold-start checks. Run 38737386125 passed all of them. This changes the test device configuration; the published library and its deadline are unchanged. No assertion was removed and no test retry was enabled. Physical audio quality and repeated real-device cold starts remain manual validation.
 
-## Registry publication gate
+## Verified registry publication
 
-The agent attempted npm publication after the checks passed. Its execution environment failed to resolve `registry.npmjs.org` (`ENOTFOUND`). Browser account login is confirmed, but this is not registry-publication proof. The user was given the exact reviewed tarball publication command; registry publication and fresh registry-based npm/npx/pnpm checks remain pending until verified.
+The initial agent-side publication attempt could not resolve npm's publish endpoint (`ENOTFOUND`), so the reviewed artifact was handed off to the operator. The registry subsequently recorded version **0.1.0** at **2026-10-15 13:02:12 UTC**. Public metadata confirms the MIT license, repository, 39 packaged files, and `latest: 0.1.0`. The temporary `0.0.0-stage` placeholder alone was not counted as publication.
+
+Fresh consumer verification passed in [Registry installation run 38739497019](https://github.com/alvarovillalbaa/sonant/actions/runs/38739497019), source `953040f181328ae9395615726fee4e6b958a4472`, using Node 22.23.3, npm 10.9.9, and pnpm 10.34.7:
+
+- `npm install @alvarovillalbaa/sonant@0.1.0`, installed metadata, core import, and SSR-safe teardown.
+- `npx --yes @alvarovillalbaa/sonant@0.1.0 init` and `add sound-settings`, with generated source inspected.
+- `pnpm add @alvarovillalbaa/sonant@0.1.0` and `pnpm dlx` init/add, with the selected soft theme and generated async component inspected.
 
 Artifact: `alvarovillalbaa-sonant-0.1.0.tgz`.
 SHA-256: `d4c375fb44dd36f0f561216193dd515ea82fbbfa4ef3808c9be93ef9c713a78d`.
+Registry integrity: `sha512-ZZsJphSp/Z20lVj6fYka9UrN5hDQroZi4wMP1v7+NepkNe5QVyKRhBu97a888L59rwWpqVHOcVl5Dov93NrqWQ==`.
 
-The public [GitHub release](https://github.com/alvarovillalbaa/sonant/releases/tag/v0.1.0) contains the same artifact and matching asset digest. Every packaged file was compared byte-for-byte with the local package files after the final CI repair; no differences were found. The user handoff now uses the release asset URL directly, avoiding local path errors.
+The actual registry tarball was downloaded with `npm pack @alvarovillalbaa/sonant@0.1.0`; its SHA-256 matches the reviewed local artifact and public GitHub release asset exactly. Every packaged file was also compared byte-for-byte with the local package files after the final CI repair; no differences were found.
 
 ## Limits
 
