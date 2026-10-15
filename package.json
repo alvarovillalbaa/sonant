@@ -1,0 +1,30 @@
+{
+  "name": "sonant-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/sonant",
+    "website"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @alvarovillalbaa/sonant",
+    "build:site": "npm run build && npm run build --workspace sonant-website",
+    "dev": "npm run build && npm run dev --workspace sonant-website",
+    "check": "npm run build && tsc --noEmit -p website/tsconfig.json",
+    "test": "npm run build && node --test tests/unit/*.test.mjs tests/integration/*.test.mjs",
+    "pack:library": "npm pack --workspace @alvarovillalbaa/sonant",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

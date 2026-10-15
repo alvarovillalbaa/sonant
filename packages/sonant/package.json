@@ -1,0 +1,27 @@
+{
+  "name": "@alvarovillalbaa/sonant",
+  "version": "0.1.0",
+  "description": "Composable interface sounds, semantic feedback policy, and local diagnostics for React and the web.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Alvaro Villalba",
+  "repository": { "type": "git", "url": "git+https://github.com/alvarovillalbaa/sonant.git", "directory": "packages/sonant" },
+  "homepage": "https://alvarovillalbaa.github.io/sonant/",
+  "bugs": "https://github.com/alvarovillalbaa/sonant/issues",
+  "keywords": ["sound", "react", "nextjs", "web-audio", "design-system", "sensory", "shadcn"],
+  "sideEffects": false,
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./react": { "types": "./dist/react.d.ts", "import": "./dist/react.js" },
+    "./providers": { "types": "./dist/providers.d.ts", "import": "./dist/providers.js" },
+    "./registry": { "types": "./dist/registry.d.ts", "import": "./dist/registry.js" },
+    "./config": { "types": "./dist/config.d.ts", "import": "./dist/config.js" }
+  },
+  "bin": { "sonant": "./dist/cli.js" },
+  "scripts": { "build": "tsc -p tsconfig.json", "prepack": "npm run build" },
+  "peerDependencies": { "react": "^18.0.0 || ^19.0.0" },
+  "peerDependenciesMeta": { "react": { "optional": true } },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20.19.0" }
+}

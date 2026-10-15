@@ -1,0 +1,15 @@
+# Sonant
+
+Sonant is a local-first interface sound library for React, Next.js, and vanilla TypeScript.
+Package: @alvarovillalbaa/sonant
+Source: https://github.com/alvarovillalbaa/sonant
+Docs: https://alvarovillalbaa.github.io/sonant/#/docs
+
+Install the runtime, then run `npx @alvarovillalbaa/sonant@latest init`.
+Copy components with `npx @alvarovillalbaa/sonant@latest add sound-settings sound-button`.
+Mount the generated client SonantProvider and render SoundSettings for explicit opt-in.
+Use semantic events through useSound, and useSoundOperation for work with cleanup.
+Preserve visible state and error messages. Emit success only after confirmed completion.
+Keep hover opt-in, avoid per-token sound, respect mute and volume, and stop loops on cancellation.
+The audit command gives advisory source-review hints, never accessibility proof.
+No telemetry is enabled by default. A played trace means provider acceptance, not audible-output proof.
