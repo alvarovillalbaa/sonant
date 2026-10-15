@@ -221,7 +221,12 @@ function DocContent({ route }: { route: string }) {
           </p>
         </Section>
         <Section title="Event contract · v1">
-          <div className="doc-table-wrap">
+          <div
+            className="doc-table-wrap"
+            tabIndex={0}
+            role="region"
+            aria-label="Semantic event reference"
+          >
             <table className="doc-table">
               <thead>
                 <tr>

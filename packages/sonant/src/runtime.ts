@@ -198,6 +198,9 @@ export function createSoundSystem(options: SoundOptions = {}) {
     let timer: ReturnType<typeof setTimeout> | undefined;
     let unlockTimer: ReturnType<typeof setTimeout> | undefined;
     let finishUnlock: ((value: boolean) => void) | undefined;
+    let finishPlayback: ((value: Voice | null) => void) | undefined;
+    let playbackTimer: ReturnType<typeof setTimeout> | undefined;
+    const providerAbort = new AbortController();
     const ended = new Promise<void>((resolve) => {
       finish = resolve;
     });
@@ -206,7 +209,10 @@ export function createSoundSystem(options: SoundOptions = {}) {
       stopped = true;
       clearTimeout(timer);
       clearTimeout(unlockTimer);
+      clearTimeout(playbackTimer);
       finishUnlock?.(false);
+      finishPlayback?.(null);
+      providerAbort.abort();
       meta.signal?.removeEventListener("abort", stop);
       try {
         voice?.stop();
@@ -241,10 +247,26 @@ export function createSoundSystem(options: SoundOptions = {}) {
         stop();
         return silent("activation", "blocked");
       }
-      voice = await provider.play(event, {
-        volume: clamp(rule?.volume ?? 1, 1) * (prefs.profile === "quiet" ? 0.65 : 1),
-        loop: meta.loop === true,
+      const incomplete = new Promise<Voice | null>((resolve) => {
+        finishPlayback = resolve;
       });
+      playbackTimer = setTimeout(() => finishPlayback?.(null), 1500);
+      const pendingPlayback = Promise.resolve(
+        provider.play(event, {
+          volume: clamp(rule?.volume ?? 1, 1) * (prefs.profile === "quiet" ? 0.65 : 1),
+          loop: meta.loop === true,
+          signal: providerAbort.signal,
+        }),
+      );
+      void pendingPlayback.then(
+        (lateVoice) => {
+          if (stopped) lateVoice?.stop();
+        },
+        () => {},
+      );
+      voice = await Promise.race([pendingPlayback, incomplete]);
+      clearTimeout(playbackTimer);
+      finishPlayback = undefined;
       if (stopped || destroyed) {
         voice?.stop();
         stop();

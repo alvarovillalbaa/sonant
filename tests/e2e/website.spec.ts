@@ -10,7 +10,29 @@ test("catalog renders, filters, and plays through native Web Audio", async ({ pa
   await page.screenshot({ path: testInfo.outputPath("home.png"), fullPage: true });
   await page.getByRole("button", { name: "Sound off", exact: true }).click();
   await page.getByRole("button", { name: "Preview Success", exact: true }).click();
-  await expect(page.getByRole("status").filter({ hasText: "Playing success" })).toBeVisible();
+  try {
+    await expect(page.getByRole("status").filter({ hasText: "Playing success" })).toBeVisible();
+  } catch (error) {
+    const probe = await page.evaluate(async () => {
+      let context: AudioContext | undefined;
+      try {
+        context = new AudioContext();
+        const resumed = await Promise.race([
+          context.resume().then(() => "resolved"),
+          new Promise((resolve) => setTimeout(() => resolve("timeout"), 1500)),
+        ]);
+        return { resumed, state: context.state, sampleRate: context.sampleRate };
+      } catch (cause) {
+        return { error: String(cause) };
+      } finally {
+        if (context) void context.close();
+      }
+    });
+    console.log("Native Web Audio diagnostic:", JSON.stringify(probe));
+    await page.goto("/#/devtools");
+    console.log("Sonant diagnostic:", await page.locator(".devtools-metrics").innerText());
+    throw error;
+  }
   await page.getByRole("textbox", { name: "Search sounds" }).fill("does-not-exist");
   await expect(page.getByText("No sounds found.")).toBeVisible();
   await page.getByRole("button", { name: "Clear filters" }).click();

@@ -20,6 +20,29 @@ test("React provider renders on the server without a browser or AudioContext", (
     /balanced/,
   );
 });
+test("device preferences are deferred until client hydration", () => {
+  let reads = 0;
+  function Consumer() {
+    const sound = useSound();
+    return createElement("span", null, String(sound.preferences.enabled));
+  }
+  const storage = {
+    load() {
+      reads++;
+      return { enabled: true };
+    },
+    save() {},
+  };
+  const html = renderToString(
+    createElement(
+      SoundProvider,
+      { storage, preferences: { enabled: false } },
+      createElement(Consumer),
+    ),
+  );
+  assert.match(html, /false/);
+  assert.equal(reads, 0);
+});
 test("generated provider, every copied component, and editable themes compile as consumer source", async () => {
   await mkdir("tests/tmp", { recursive: true });
   const root = await mkdtemp(resolve("tests/tmp/generated-"));

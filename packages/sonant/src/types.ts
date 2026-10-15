@@ -19,7 +19,7 @@ export interface Provider {
   unlock(): Promise<boolean>;
   play(
     event: SoundEvent,
-    options: { volume: number; loop: boolean },
+    options: { volume: number; loop: boolean; signal?: AbortSignal },
   ): Voice | null | Promise<Voice | null>;
   setVolume?(value: number): void;
   suspend?(): void | Promise<void>;

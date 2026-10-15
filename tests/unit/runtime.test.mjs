@@ -133,6 +133,33 @@ test("a browser unlock that never settles becomes an observable blocked decision
   assert.equal(sound.getSnapshot().activeVoices, 0);
   await sound.destroy();
 });
+test("an unresponsive media provider times out, receives cancellation, and releases a late voice", async () => {
+  let signal;
+  let resolvePlay;
+  let stopped = false;
+  const e = engine({
+    play(event, options) {
+      signal = options.signal;
+      return new Promise((resolve) => {
+        resolvePlay = resolve;
+      });
+    },
+  });
+  const sound = createSoundSystem({ provider: e.provider });
+  const handle = await sound.emit("action.select");
+  assert.equal(handle.reason, "provider");
+  assert.equal(signal.aborted, true);
+  assert.equal(sound.getSnapshot().activeVoices, 0);
+  resolvePlay({
+    stop() {
+      stopped = true;
+    },
+    ended: Promise.resolve(),
+  });
+  await new Promise((resolve) => setImmediate(resolve));
+  assert.equal(stopped, true);
+  await sound.destroy();
+});
 test("high-priority failure interrupts a lower-priority voice", async () => {
   const e = engine();
   const sound = createSoundSystem({ provider: e.provider, maxVoices: 1 });

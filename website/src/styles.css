@@ -17,7 +17,7 @@
   --ink: #242622;
   --muted: #7c7e75;
   --line: #e4e4db;
-  --accent: #d34e2d;
+  --accent: #c44729;
   --tint: #f8ede6;
   --mono: "IBM Plex Mono", monospace;
 }
@@ -843,6 +843,8 @@ main:focus {
   margin-bottom: 8px;
 }
 .mini-code {
+  max-height: 165px;
+  overflow: auto;
   font-size: 9px;
   line-height: 1.9;
   color: #8a755d;
@@ -3186,7 +3188,7 @@ main:focus {
 }
 .beta-badge,
 .category-list button.active > span:last-child {
-  color: #66715b;
+  color: #5c674f;
 }
 @media (prefers-reduced-motion: reduce) {
   *,

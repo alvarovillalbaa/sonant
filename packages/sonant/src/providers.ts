@@ -10,7 +10,7 @@ export function mappedProvider<T extends string>(options: {
   unlock: () => boolean | Promise<boolean>;
   play: (
     cue: T,
-    options: { volume: number; loop: boolean },
+    options: { volume: number; loop: boolean; signal?: AbortSignal },
   ) => Voice | null | Promise<Voice | null>;
   setVolume?: (volume: number) => void;
   suspend?: () => void | Promise<void>;
@@ -40,7 +40,8 @@ export function htmlAudioProvider(assets: Partial<Record<SoundEvent, string>>): 
       return !destroyed && typeof Audio !== "undefined";
     },
     async play(event, settings) {
-      if (destroyed || !assets[event] || typeof Audio === "undefined") return null;
+      if (destroyed || settings.signal?.aborted || !assets[event] || typeof Audio === "undefined")
+        return null;
       const audio = new Audio(assets[event]);
       audio.volume = volume * settings.volume;
       audio.loop = settings.loop;
@@ -57,6 +58,7 @@ export function htmlAudioProvider(assets: Partial<Record<SoundEvent, string>>): 
           stop() {
             if (stopped) return;
             stopped = true;
+            settings.signal?.removeEventListener("abort", abort);
             audio.pause();
             audio.removeAttribute("src");
             audio.load();
@@ -65,6 +67,8 @@ export function htmlAudioProvider(assets: Partial<Record<SoundEvent, string>>): 
           },
         },
       };
+      const abort = () => item.voice.stop();
+      settings.signal?.addEventListener("abort", abort, { once: true });
       audio.onended = () => item.voice.stop();
       audio.onerror = () => item.voice.stop();
       voices.add(item);

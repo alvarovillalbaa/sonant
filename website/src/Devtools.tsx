@@ -147,7 +147,7 @@ export function Devtools() {
             <option value="error">Error</option>
           </select>
         </div>
-        <div className="trace-scroll">
+        <div className="trace-scroll" tabIndex={0} role="region" aria-label="Event trace table">
           <table>
             <thead>
               <tr>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowDownToLine,
   ArrowRight,
@@ -45,7 +45,9 @@ export function Catalog({
       `${event} ${label}`.toLowerCase().includes(query.toLowerCase()),
   );
   const cue = catalog.find(([event]) => event === selected)!;
-  const recipe = createTheme(theme)[selected];
+  const currentTheme = useMemo(() => createTheme(theme), [theme]);
+  const recipe = currentTheme[selected];
+  const usage = `void sound.emit("${selected}", {\n  visibleEquivalent: true,\n});`;
   const preview = async (event: SoundEvent) => {
     setSelected(event);
     const handle = await sound.emit(event, {
@@ -145,7 +147,7 @@ export function Catalog({
               <span>{filtered.length} SOUNDS</span>
             </div>
             <div className="sound-grid">
-              {filtered.map(([event, label, group, , , duration], index) => (
+              {filtered.map(([event, label, group], index) => (
                 <button
                   key={event}
                   className={`sound-card ${selected === event ? "selected" : ""} ${playing === event ? "is-playing" : ""}`}
@@ -163,7 +165,9 @@ export function Catalog({
                       <strong>{label}</strong>
                       <small>{group}</small>
                     </span>
-                    <span className="sound-duration">{Math.round(duration * 1000)}ms</span>
+                    <span className="sound-duration">
+                      {Math.round(currentTheme[event].duration * 1000)}ms
+                    </span>
                   </span>
                 </button>
               ))}
@@ -229,17 +233,13 @@ export function Catalog({
               </button>
               <Code2 size={13} />
             </div>
-            <pre className="mini-code">
-              <code>
-                {codeMode
-                  ? JSON.stringify(recipe.tones[0], null, 2)
-                  : `const sound = useSound();\n\nsound.emit(\n  "${selected}"\n);`}
-              </code>
+            <pre className="mini-code" tabIndex={0} aria-label="Selected sound code">
+              <code>{codeMode ? JSON.stringify(recipe, null, 2) : usage}</code>
             </pre>
             <div className="inspector-actions">
               <CopyButton
-                value={`void sound.emit("${selected}", { visibleEquivalent: true });`}
-                label="Copy code"
+                value={codeMode ? JSON.stringify(recipe, null, 2) : usage}
+                label={codeMode ? "Copy recipe" : "Copy code"}
               />
               <button
                 className="icon-button"
