@@ -64,23 +64,25 @@ test("catalog renders, filters, and plays through native Web Audio", async ({ pa
         records.push({
           id: this.probeId,
           event: "created",
+          time: performance.now(),
           state: this.state,
           active: navigator.userActivation?.isActive,
         });
         this.addEventListener("statechange", () =>
-          records.push({ id: this.probeId, event: "statechange", state: this.state }),
+          records.push({ id: this.probeId, event: "statechange", time: performance.now(), state: this.state }),
         );
       }
       resume() {
         records.push({
           id: this.probeId,
           event: "resume",
+          time: performance.now(),
           state: this.state,
           active: navigator.userActivation?.isActive,
         });
         const pending = super.resume();
         void pending.then(
-          () => records.push({ id: this.probeId, event: "resumed", state: this.state }),
+          () => records.push({ id: this.probeId, event: "resumed", time: performance.now(), state: this.state }),
           (error) =>
             records.push({ id: this.probeId, event: "resume-error", error: String(error) }),
         );
