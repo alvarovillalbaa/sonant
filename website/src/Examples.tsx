@@ -1,36 +1,293 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Check, CheckCheck, LoaderCircle, MessageSquare, Play, RotateCcw, Square, X } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  CheckCheck,
+  LoaderCircle,
+  MessageSquare,
+  Play,
+  RotateCcw,
+  Square,
+  X,
+} from "lucide-react";
 import { useSound, useSoundOperation } from "@alvarovillalbaa/sonant/react";
 import { Code } from "./ui";
 
 export function Examples() {
-  const sound = useSound(); const begin = useSoundOperation(); const beginAgent = useSoundOperation();
-  const [enhanced, setEnhanced] = useState(true); const [status, setStatus] = useState("Ready when you are."); const [saving, setSaving] = useState(false);
-  const [checked, setChecked] = useState(false); const [agent, setAgent] = useState("idle"); const [agentSteps, setAgentSteps] = useState<string[]>([]);
-  const timers = useRef<ReturnType<typeof setTimeout>[]>([]); const operation = useRef<ReturnType<typeof begin> | null>(null);
+  const sound = useSound();
+  const begin = useSoundOperation();
+  const beginAgent = useSoundOperation();
+  const [enhanced, setEnhanced] = useState(true);
+  const [status, setStatus] = useState("Ready when you are.");
+  const [saving, setSaving] = useState(false);
+  const [checked, setChecked] = useState(false);
+  const [agent, setAgent] = useState("idle");
+  const [agentSteps, setAgentSteps] = useState<string[]>([]);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const operation = useRef<ReturnType<typeof begin> | null>(null);
   const saveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const dialog = useRef<HTMLDialogElement>(null);
-  useEffect(() => () => { clearTimeout(saveTimer.current); timers.current.forEach(clearTimeout); operation.current?.stop(); }, []);
+  useEffect(
+    () => () => {
+      clearTimeout(saveTimer.current);
+      timers.current.forEach(clearTimeout);
+      operation.current?.stop();
+    },
+    [],
+  );
   const save = (fail = false) => {
-    if (saving) return; setSaving(true); setStatus("Saving your changes…");
-    const op = enhanced ? begin("progress.start", { source: "SaveExample", surface: "examples", visibleEquivalent: true }) : null;
+    if (saving) return;
+    setSaving(true);
+    setStatus("Saving your changes…");
+    const op = enhanced
+      ? begin("progress.start", {
+          source: "SaveExample",
+          surface: "examples",
+          visibleEquivalent: true,
+        })
+      : null;
     saveTimer.current = setTimeout(() => {
-      setSaving(false); setStatus(fail ? "Could not save. Please try again." : "Your changes have been saved.");
-      if (fail) void op?.reject("state.error"); else void op?.resolve("state.success");
+      setSaving(false);
+      setStatus(fail ? "Could not save. Please try again." : "Your changes have been saved.");
+      if (fail) void op?.reject("state.error");
+      else void op?.resolve("state.success");
     }, 800);
   };
-  const stopAgent = () => { timers.current.forEach(clearTimeout); timers.current = []; operation.current?.stop(); setAgent("idle"); setAgentSteps(previous => [...previous, "Stopped by you."]); if (enhanced) void sound.emit("agent.interrupted", { visibleEquivalent: true }); };
-  const startAgent = () => {
-    if (agent !== "idle") return; setAgent("thinking"); setAgentSteps(["Thinking through your request…"]);
-    operation.current = enhanced ? beginAgent("agent.thinking", { source: "AgentExample", surface: "examples", visibleEquivalent: true }) : null;
-    timers.current.push(setTimeout(() => { setAgentSteps(previous => [...previous, "Searching the reference library"]); if (enhanced) void operation.current?.update("agent.tool.started"); }, 700));
-    timers.current.push(setTimeout(() => { setAgentSteps(previous => [...previous, "Three useful references found"]); if (enhanced) void operation.current?.update("agent.tool.completed"); }, 1500));
-    timers.current.push(setTimeout(() => { setAgentSteps(previous => [...previous, "Your summary is ready."]); setAgent("idle"); void operation.current?.resolve("agent.ready"); }, 2400));
+  const stopAgent = () => {
+    timers.current.forEach(clearTimeout);
+    timers.current = [];
+    operation.current?.stop();
+    setAgent("idle");
+    setAgentSteps((previous) => [...previous, "Stopped by you."]);
+    if (enhanced) void sound.emit("agent.interrupted", { visibleEquivalent: true });
   };
-  return <div className="examples-page"><section className="page-intro"><span className="eyebrow">SOUND IN CONTEXT</span><h1>Hear what<br /><span>an interaction feels like.</span></h1><p>Real components. The same runtime. Try each moment with and without sound.</p>
-    <div className="segmented"><button aria-pressed={!enhanced} onClick={() => { setEnhanced(false); sound.stopAll(); }}>Silent</button><button aria-pressed={enhanced} onClick={() => setEnhanced(true)}>With sound</button></div><p className="small-note">{sound.preferences.enabled ? "Sound is enabled. Use the header to mute anytime." : "Enable sound in the header to hear these examples."}</p></section>
-    <div className="example-grid"><article className="example-card"><div className="example-label"><span>01 / CONFIRMED OUTCOMES</span><span className="tag">800ms simulated save</span></div><h2>Good news should feel good.</h2><p>Processing starts with the request. Success follows the result.</p><div className="example-stage"><div className="save-document"><div className="document-icon"><CheckCheck size={24} /></div><div><strong>Project settings</strong><span>Your latest changes, ready to save.</span></div></div><div className="example-buttons"><button className="button primary" disabled={saving} onClick={() => save()}>{saving ? <LoaderCircle className="spin" size={16} /> : <Check size={16} />}{saving ? "Saving…" : "Save changes"}</button><button className="button secondary" disabled={saving} onClick={() => save(true)}>Try failure</button></div><p className={`demo-status ${status.startsWith("Could") ? "error" : ""}`} role="status">{status}</p></div><Code title="Lifecycle">{`const op = sound.begin("progress.start");\ntry {\n  await save();\n  await op.resolve("state.success");\n} catch {\n  await op.reject("state.error");\n} finally {\n  op.stop();\n}`}</Code></article>
-      <article className="example-card"><div className="example-label"><span>02 / SMALL DECISIONS</span><span className="tag">Native controls</span></div><h2>A little more tactile.</h2><p>Complement a state change. Keep the visual state clear.</p><div className="example-stage controls-stage"><label className="demo-toggle"><span><strong>Weekly digest</strong><small>A considered summary, once a week.</small></span><input type="checkbox" role="switch" checked={checked} onChange={e => { setChecked(e.target.checked); if (enhanced) void sound.emit("action.select", { source: "DigestSwitch" }); }} /></label><button className="button secondary" onClick={() => { dialog.current?.showModal(); if (enhanced) void sound.emit("overlay.open"); }}>Open a dialog<ArrowRight size={15} /></button><p className="demo-status" role="status">Weekly digest {checked ? "enabled" : "disabled"}.</p></div><Code title="Semantic intent">{`onChange={(event) => {\n  setEnabled(event.target.checked);\n  void sound.emit("action.select");\n}}\n\n// Native dialog, same sound system.\ndialog.showModal();\nvoid sound.emit("overlay.open");`}</Code></article>
-      <article className="example-card agent-example"><div><div className="example-label"><span>03 / AGENT OPERATIONS</span><span className="tag">A simulated workflow</span></div><h2>Less noise. More understanding.</h2><p>Hear meaningful state transitions, with a bounded thinking pulse. No sound for every token.</p><Code title="Agent lifecycle">{`const op = sound.begin("agent.thinking");\nawait op.update("agent.tool.started");\nawait op.update("agent.tool.completed");\nawait op.resolve("agent.ready");\n// Stop on cancellation or unmount.`}</Code></div><div className="agent-window"><div className="agent-window-top"><span className="status-dot" /><span>REFERENCE ASSISTANT</span><span>DEMO</span></div><div className="agent-request"><MessageSquare size={16} /><p>Find a few references for a more considered interface.</p></div><div className="agent-steps" role="log" aria-label="Agent workflow">{agentSteps.length ? agentSteps.map((step, i) => <p key={`${step}-${i}`}>{i === agentSteps.length - 1 && agent !== "idle" ? <LoaderCircle className="spin" size={14} /> : <Check size={14} />}{step}</p>) : <p className="agent-placeholder">Your next idea starts here.</p>}</div><div className="agent-controls"><button className="button primary" disabled={agent !== "idle"} onClick={startAgent}><Play size={13} />Run workflow</button><button className="button secondary" disabled={agent === "idle"} onClick={stopAgent}><Square size={12} />Stop</button><button className="icon-button" aria-label="Reset agent demo" disabled={agent !== "idle"} onClick={() => setAgentSteps([])}><RotateCcw size={15} /></button></div></div></article>
-    </div><dialog ref={dialog} className="demo-dialog" onCancel={() => { if (enhanced) void sound.emit("overlay.close"); }}><button className="dialog-close icon-button" aria-label="Close dialog" onClick={() => { dialog.current?.close(); if (enhanced) void sound.emit("overlay.close"); }}><X size={18} /></button><span className="eyebrow">A LITTLE SPACE TO THINK</span><h2>Every layer has a feeling.</h2><p>The browser manages focus and keyboard dismissal. Sonant adds a small audible opening and closing.</p><button className="button primary" onClick={() => { dialog.current?.close(); if (enhanced) void sound.emit("overlay.close"); }}>Got it<Check size={15} /></button></dialog></div>;
+  const startAgent = () => {
+    if (agent !== "idle") return;
+    setAgent("thinking");
+    setAgentSteps(["Thinking through your request…"]);
+    operation.current = enhanced
+      ? beginAgent("agent.thinking", {
+          source: "AgentExample",
+          surface: "examples",
+          visibleEquivalent: true,
+        })
+      : null;
+    timers.current.push(
+      setTimeout(() => {
+        setAgentSteps((previous) => [...previous, "Searching the reference library"]);
+        if (enhanced) void operation.current?.update("agent.tool.started");
+      }, 700),
+    );
+    timers.current.push(
+      setTimeout(() => {
+        setAgentSteps((previous) => [...previous, "Three useful references found"]);
+        if (enhanced) void operation.current?.update("agent.tool.completed");
+      }, 1500),
+    );
+    timers.current.push(
+      setTimeout(() => {
+        setAgentSteps((previous) => [...previous, "Your summary is ready."]);
+        setAgent("idle");
+        void operation.current?.resolve("agent.ready");
+      }, 2400),
+    );
+  };
+  return (
+    <div className="examples-page">
+      <section className="page-intro">
+        <span className="eyebrow">SOUND IN CONTEXT</span>
+        <h1>
+          Hear what
+          <br />
+          <span>an interaction feels like.</span>
+        </h1>
+        <p>Real components. The same runtime. Try each moment with and without sound.</p>
+        <div className="segmented">
+          <button
+            aria-pressed={!enhanced}
+            onClick={() => {
+              setEnhanced(false);
+              sound.stopAll();
+            }}
+          >
+            Silent
+          </button>
+          <button aria-pressed={enhanced} onClick={() => setEnhanced(true)}>
+            With sound
+          </button>
+        </div>
+        <p className="small-note">
+          {sound.preferences.enabled
+            ? "Sound is enabled. Use the header to mute anytime."
+            : "Enable sound in the header to hear these examples."}
+        </p>
+      </section>
+      <div className="example-grid">
+        <article className="example-card">
+          <div className="example-label">
+            <span>01 / CONFIRMED OUTCOMES</span>
+            <span className="tag">800ms simulated save</span>
+          </div>
+          <h2>Good news should feel good.</h2>
+          <p>Processing starts with the request. Success follows the result.</p>
+          <div className="example-stage">
+            <div className="save-document">
+              <div className="document-icon">
+                <CheckCheck size={24} />
+              </div>
+              <div>
+                <strong>Project settings</strong>
+                <span>Your latest changes, ready to save.</span>
+              </div>
+            </div>
+            <div className="example-buttons">
+              <button className="button primary" disabled={saving} onClick={() => save()}>
+                {saving ? <LoaderCircle className="spin" size={16} /> : <Check size={16} />}
+                {saving ? "Saving…" : "Save changes"}
+              </button>
+              <button className="button secondary" disabled={saving} onClick={() => save(true)}>
+                Try failure
+              </button>
+            </div>
+            <p className={`demo-status ${status.startsWith("Could") ? "error" : ""}`} role="status">
+              {status}
+            </p>
+          </div>
+          <Code title="Lifecycle">{`const op = sound.begin("progress.start");\ntry {\n  await save();\n  await op.resolve("state.success");\n} catch {\n  await op.reject("state.error");\n} finally {\n  op.stop();\n}`}</Code>
+        </article>
+        <article className="example-card">
+          <div className="example-label">
+            <span>02 / SMALL DECISIONS</span>
+            <span className="tag">Native controls</span>
+          </div>
+          <h2>A little more tactile.</h2>
+          <p>Complement a state change. Keep the visual state clear.</p>
+          <div className="example-stage controls-stage">
+            <label className="demo-toggle">
+              <span>
+                <strong>Weekly digest</strong>
+                <small>A considered summary, once a week.</small>
+              </span>
+              <input
+                type="checkbox"
+                role="switch"
+                checked={checked}
+                onChange={(e) => {
+                  setChecked(e.target.checked);
+                  if (enhanced) void sound.emit("action.select", { source: "DigestSwitch" });
+                }}
+              />
+            </label>
+            <button
+              className="button secondary"
+              onClick={() => {
+                dialog.current?.showModal();
+                if (enhanced) void sound.emit("overlay.open");
+              }}
+            >
+              Open a dialog
+              <ArrowRight size={15} />
+            </button>
+            <p className="demo-status" role="status">
+              Weekly digest {checked ? "enabled" : "disabled"}.
+            </p>
+          </div>
+          <Code title="Semantic intent">{`onChange={(event) => {\n  setEnabled(event.target.checked);\n  void sound.emit("action.select");\n}}\n\n// Native dialog, same sound system.\ndialog.showModal();\nvoid sound.emit("overlay.open");`}</Code>
+        </article>
+        <article className="example-card agent-example">
+          <div>
+            <div className="example-label">
+              <span>03 / AGENT OPERATIONS</span>
+              <span className="tag">A simulated workflow</span>
+            </div>
+            <h2>Less noise. More understanding.</h2>
+            <p>
+              Hear meaningful state transitions, with a bounded thinking pulse. No sound for every
+              token.
+            </p>
+            <Code title="Agent lifecycle">{`const op = sound.begin("agent.thinking");\nawait op.update("agent.tool.started");\nawait op.update("agent.tool.completed");\nawait op.resolve("agent.ready");\n// Stop on cancellation or unmount.`}</Code>
+          </div>
+          <div className="agent-window">
+            <div className="agent-window-top">
+              <span className="status-dot" />
+              <span>REFERENCE ASSISTANT</span>
+              <span>DEMO</span>
+            </div>
+            <div className="agent-request">
+              <MessageSquare size={16} />
+              <p>Find a few references for a more considered interface.</p>
+            </div>
+            <div className="agent-steps" role="log" aria-label="Agent workflow">
+              {agentSteps.length ? (
+                agentSteps.map((step, i) => (
+                  <p key={`${step}-${i}`}>
+                    {i === agentSteps.length - 1 && agent !== "idle" ? (
+                      <LoaderCircle className="spin" size={14} />
+                    ) : (
+                      <Check size={14} />
+                    )}
+                    {step}
+                  </p>
+                ))
+              ) : (
+                <p className="agent-placeholder">Your next idea starts here.</p>
+              )}
+            </div>
+            <div className="agent-controls">
+              <button className="button primary" disabled={agent !== "idle"} onClick={startAgent}>
+                <Play size={13} />
+                Run workflow
+              </button>
+              <button className="button secondary" disabled={agent === "idle"} onClick={stopAgent}>
+                <Square size={12} />
+                Stop
+              </button>
+              <button
+                className="icon-button"
+                aria-label="Reset agent demo"
+                disabled={agent !== "idle"}
+                onClick={() => setAgentSteps([])}
+              >
+                <RotateCcw size={15} />
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <dialog
+        ref={dialog}
+        className="demo-dialog"
+        onCancel={() => {
+          if (enhanced) void sound.emit("overlay.close");
+        }}
+      >
+        <button
+          className="dialog-close icon-button"
+          aria-label="Close dialog"
+          onClick={() => {
+            dialog.current?.close();
+            if (enhanced) void sound.emit("overlay.close");
+          }}
+        >
+          <X size={18} />
+        </button>
+        <span className="eyebrow">A LITTLE SPACE TO THINK</span>
+        <h2>Every layer has a feeling.</h2>
+        <p>
+          The browser manages focus and keyboard dismissal. Sonant adds a small audible opening and
+          closing.
+        </p>
+        <button
+          className="button primary"
+          onClick={() => {
+            dialog.current?.close();
+            if (enhanced) void sound.emit("overlay.close");
+          }}
+        >
+          Got it
+          <Check size={15} />
+        </button>
+      </dialog>
+    </div>
+  );
 }

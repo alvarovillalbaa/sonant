@@ -4,4 +4,8 @@ import { App } from "./App";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "./styles.css";
 
-createRoot(document.getElementById("root")!).render(<StrictMode><App /></StrictMode>);
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);

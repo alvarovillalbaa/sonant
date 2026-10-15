@@ -2,13 +2,29 @@ import { createTheme, type ThemeName } from "./catalog.js";
 import type { Profile } from "./types.js";
 
 export const packageName = "@alvarovillalbaa/sonant";
-export function createConfig({ theme = "studio", profile = "balanced", volume = 0.35, enabled = false }: {
-  theme?: ThemeName; profile?: Profile; volume?: number; enabled?: boolean;
+export function createConfig({
+  theme = "studio",
+  profile = "balanced",
+  volume = 0.35,
+  enabled = false,
+}: {
+  theme?: ThemeName;
+  profile?: Profile;
+  volume?: number;
+  enabled?: boolean;
 } = {}) {
-  if (!["studio", "soft", "arcade"].includes(theme)) throw new TypeError("Theme must be studio, soft, or arcade.");
-  if (!["quiet", "balanced", "expressive"].includes(profile)) throw new TypeError("Profile must be quiet, balanced, or expressive.");
-  if (!Number.isFinite(volume) || volume < 0 || volume > 1) throw new RangeError("Volume must be between 0 and 1.");
-  return { schemaVersion: 1, theme, preferences: { enabled, volume, profile }, directory: "components/sonant" };
+  if (!["studio", "soft", "arcade"].includes(theme))
+    throw new TypeError("Theme must be studio, soft, or arcade.");
+  if (!["quiet", "balanced", "expressive"].includes(profile))
+    throw new TypeError("Profile must be quiet, balanced, or expressive.");
+  if (!Number.isFinite(volume) || volume < 0 || volume > 1)
+    throw new RangeError("Volume must be between 0 and 1.");
+  return {
+    schemaVersion: 1,
+    theme,
+    preferences: { enabled, volume, profile },
+    directory: "components/sonant",
+  };
 }
 export function providerSource(config: ReturnType<typeof createConfig>) {
   return `"use client";
