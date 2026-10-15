@@ -233,7 +233,7 @@ export function Catalog({
               </button>
               <Code2 size={13} />
             </div>
-            <pre className="mini-code" tabIndex={0} aria-label="Selected sound code">
+            <pre className="mini-code" tabIndex={0} role="region" aria-label="Selected sound code">
               <code>{codeMode ? JSON.stringify(recipe, null, 2) : usage}</code>
             </pre>
             <div className="inspector-actions">

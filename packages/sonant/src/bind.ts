@@ -30,6 +30,7 @@ export function bindSounds(
   root.addEventListener(
     "click",
     (event) => {
+      if (event.defaultPrevented) return;
       const target = find(event.target, "data-sonant");
       if (target) play(target, "data-sonant");
     },

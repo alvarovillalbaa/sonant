@@ -1,6 +1,52 @@
 // Data tier T2: local static website with simulated interaction outcomes.
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+
+test("delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding", async ({
+  page,
+}) => {
+  await page.route(/\/sonant-test\/[a-z]+\.js$/, async (route) => {
+    const file = new URL(route.request().url()).pathname.split("/").at(-1)!;
+    await route.fulfill({
+      body: await readFile(join(process.cwd(), "packages/sonant/dist", file)),
+      contentType: "application/javascript",
+    });
+  });
+  await page.goto("/");
+  const played = await page.evaluate(async (prefix) => {
+    const { createSoundSystem, bindSounds } = await import(prefix + "index.js");
+    const events: string[] = [];
+    const system = createSoundSystem({
+      provider: {
+        name: "DOM fixture",
+        unlock: async () => true,
+        play(event: string) {
+          events.push(event);
+          return { stop() {}, ended: Promise.resolve() };
+        },
+      },
+    });
+    const iframe = document.createElement("iframe");
+    document.body.append(iframe);
+    const root = iframe.contentDocument!.body;
+    root.innerHTML =
+      '<button data-sonant="action.press" disabled>Disabled</button><button id="cancel" data-sonant="action.release">Cancelled</button><button id="go" data-sonant="action.select">Enabled</button>';
+    const unbind = bindSounds(root, system);
+    root.querySelector("#cancel")!.addEventListener("click", (event) => event.preventDefault());
+    for (const button of root.querySelectorAll("button")) button.click();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    unbind();
+    root.querySelector("#go")!.setAttribute("data-sonant", "action.confirm");
+    (root.querySelector("#go") as HTMLButtonElement).click();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    await system.destroy();
+    iframe.remove();
+    return events;
+  }, "/sonant-test/");
+  expect(played).toEqual(["action.select"]);
+});
 
 test("catalog renders, filters, and plays through native Web Audio", async ({ page }, testInfo) => {
   const errors: string[] = [];
