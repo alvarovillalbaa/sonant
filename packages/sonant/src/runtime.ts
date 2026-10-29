@@ -295,34 +295,62 @@ export function createSoundSystem(options: SoundOptions = {}) {
   function begin(event: SoundEvent = "progress.start", meta: Omit<EmitOptions, "loop"> = {}) {
     let settled = false;
     const controller = new AbortController();
-    const started = emit(event, { ...meta, loop: true, signal: controller.signal });
+    const callerSignal = meta.signal;
+    let pending = 0;
+    let listening = false;
     let finish!: () => void;
     const ended = new Promise<void>((resolve) => {
       finish = resolve;
     });
+    const detach = () => {
+      if (listening) callerSignal?.removeEventListener("abort", stop);
+      listening = false;
+    };
     const stop = () => {
       if (settled) return;
       settled = true;
+      detach();
       controller.abort();
-      void started.then((handle) => handle.stop());
       finish();
     };
+    const cancelled = () => {
+      if (callerSignal?.aborted) stop();
+      return settled;
+    };
+    // Keep the caller link while any progress or update playback is pending or active.
+    const progress = (next: SoundEvent, loop: boolean) => {
+      pending += 1;
+      if (!settled && callerSignal && !listening) {
+        listening = true;
+        callerSignal.addEventListener("abort", stop, { once: true });
+      }
+      cancelled();
+      const request = emit(next, { ...meta, loop, signal: controller.signal });
+      void request.then((handle) =>
+        handle.ended.then(() => {
+          pending -= 1;
+          if (!pending) detach();
+        }),
+      );
+      return request;
+    };
+    const started = progress(event, true);
     void started.then((handle) => handle.ended.then(finish));
     return {
       stop,
       ended,
       update(next: SoundEvent) {
-        return settled ? Promise.resolve(undefined) : emit(next, meta);
+        return cancelled() ? Promise.resolve(undefined) : progress(next, false);
       },
       resolve(next: SoundEvent = "progress.complete") {
-        if (settled) return Promise.resolve(undefined);
+        if (cancelled()) return Promise.resolve(undefined);
         stop();
-        return emit(next, meta);
+        return emit(next, { ...meta, signal: callerSignal });
       },
       reject(next: SoundEvent = "progress.fail") {
-        if (settled) return Promise.resolve(undefined);
+        if (cancelled()) return Promise.resolve(undefined);
         stop();
-        return emit(next, meta);
+        return emit(next, { ...meta, signal: callerSignal });
       },
     };
   }

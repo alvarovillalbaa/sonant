@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "kind": "sonant.prepared-operation-cancellation",
+  "prepared_at_utc": "2026-10-29T21:13:29.001Z",
+  "base_commit": "c5657ad20911f136bc86769f2d79114889693b0e",
+  "source_branch": "fix/operation-cancellation",
+  "state": "authored_unrun",
+  "approval": "pending",
+  "source_files": [
+    {
+      "path": ".github/workflows/quality-and-pages.yml",
+      "bytes": 1553,
+      "sha256": "2352ae3a6697862c9a26ed2b32a5454f13be932ee4c7b2f3c13a58ac342a4cda"
+    },
+    {
+      "path": ".github/workflows/registry-installation.yml",
+      "bytes": 555,
+      "sha256": "dd3ab516476c4466bc0b3aa3a36f1ba53a9a1c36f08f5d1ee4f7e2dc3aff310f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 144,
+      "sha256": "fb55cfb9cc2fa78e350b1e80b3d1a4809918a325ed64cb1609d62ef0d8a0ef56"
+    },
+    {
+      "path": ".prettierignore",
+      "bytes": 79,
+      "sha256": "e2ce36246f94d88e59a6606259ab4190cfc3b8cead0f8d63f51cbab1d2dc1c1a"
+    },
+    {
+      "path": ".prettierrc.json",
+      "bytes": 41,
+      "sha256": "7a96e9a1d7d49eba1a6ad1070a397c2d9e06232fc9781383a2dc57d33b4e3eaa"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1344,
+      "sha256": "d19d5d0ca9d1f814355dce7facc019405d4a70fc46c049d1bac02551d02b071c"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 430,
+      "sha256": "11237ce0f5f75b060bf037c4444e2b5ce6254dfa8d3b3dc7b6cabf1c8fc4efd7"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 744,
+      "sha256": "b359224cbc7c7e19b6cfda59dffec5b9ec37b994850276df300ae507b5bfb879"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1072,
+      "sha256": "7edafcd8ebca4ecabedfad6e3c3d4872ce0ef6b49c3658a8b6e644cfb884d32d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5017,
+      "sha256": "412d23e37e691fc155ba87cbc1edae8febb4d08cf5f7c63270468aadc5c57a3e"
+    },
+    {
+      "path": "docs/deployment-verification.json",
+      "bytes": 2032,
+      "sha256": "b03912f0869740786fee75ac4f8fb1f5abdf7a84fcbd1985e6790a389a8d6794"
+    },
+    {
+      "path": "docs/deployment.md",
+      "bytes": 2714,
+      "sha256": "7060415dfad7346316b9046f661da526a263d9b0a01981303741ff7ab1577909"
+    },
+    {
+      "path": "docs/examples/operation-cancellation-checks.workflow.yml",
+      "bytes": 8812,
+      "sha256": "daae1de5ee914e6e9449f3d200ca5d365605837c5bc978c3ba105c70f13f0578"
+    },
+    {
+      "path": "docs/proposals/operation-cancellation-checks.md",
+      "bytes": 4191,
+      "sha256": "02e37b31a741a57251a09f1bf58ab89301fe5db569fe86136bb1d27677a3b735"
+    },
+    {
+      "path": "docs/references/architecture.md",
+      "bytes": 2406,
+      "sha256": "e1365439aeb7c62dc28c6b336cc5cfccf0d393bccee76e9173a368a50007285f"
+    },
+    {
+      "path": "docs/runbooks/listening.md",
+      "bytes": 1090,
+      "sha256": "bb156b25c09496aa452c519a35e3cf2bf35872f33d45a33e38a90a1a1acb14e3"
+    },
+    {
+      "path": "docs/runbooks/release.md",
+      "bytes": 2342,
+      "sha256": "8792cdcf105fd7912a8f868c027b3c7f736ce4e811cd168130ed6e64b980a8a7"
+    },
+    {
+      "path": "docs/sources/INDEX.md",
+      "bytes": 1592,
+      "sha256": "1eff2297ae85ce0c89379cf0f803ca0733570b7954fd567f66b5a0c86cc55680"
+    },
+    {
+      "path": "docs/specs/product.md",
+      "bytes": 2907,
+      "sha256": "61be054d496f2fc71b53f000c3cfcde13f28b508e568460014fb557327e715d9"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 34985,
+      "sha256": "3a514958108361c4aed6cc272539920051eca6bc868605ebaf8ca4c6e48315d3"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1017,
+      "sha256": "853f8939c28de359a02fb43b18216687211731e3e8736a9dd06de4f655161e25"
+    },
+    {
+      "path": "packages/sonant/LICENSE",
+      "bytes": 1072,
+      "sha256": "7edafcd8ebca4ecabedfad6e3c3d4872ce0ef6b49c3658a8b6e644cfb884d32d"
+    },
+    {
+      "path": "packages/sonant/README.md",
+      "bytes": 4841,
+      "sha256": "78da138bfcb4a799cf5c2edf5b93647c33660396b8cfcea7bb335b4641be7a9b"
+    },
+    {
+      "path": "packages/sonant/package.json",
+      "bytes": 1397,
+      "sha256": "418a52a0a44c71cc8f08f845f543b2360aab496e18116115e6ffe42e2d9b5e2e"
+    },
+    {
+      "path": "packages/sonant/src/audio.ts",
+      "bytes": 3659,
+      "sha256": "84f31f2d371c46f0093e407d41dec11b612cbff92de54d9a70d90f47003ef003"
+    },
+    {
+      "path": "packages/sonant/src/bind.ts",
+      "bytes": 2369,
+      "sha256": "6f707ccc842dcf7e9ea8eff7ca3f848ed7cd2bc2c83758fd5401c14ae8e255cb"
+    },
+    {
+      "path": "packages/sonant/src/catalog.ts",
+      "bytes": 9219,
+      "sha256": "4cadf5783588a156d998b14f8911b6f6af69a4c3da6f9332bda6648f7e48a545"
+    },
+    {
+      "path": "packages/sonant/src/cli.ts",
+      "bytes": 10779,
+      "sha256": "7223dd9dddafe771836e5c9d028dfbeac7385c245993cab109611d7f60a41371"
+    },
+    {
+      "path": "packages/sonant/src/config.ts",
+      "bytes": 1779,
+      "sha256": "72f5c93417faea05e1fa28d53af667ec713793097e5d361e9797e8eb2338b41c"
+    },
+    {
+      "path": "packages/sonant/src/index.ts",
+      "bytes": 457,
+      "sha256": "2c203b718cb59a8a585d5d6a557ab427fd5d96405d93b0f6f6d1a4aac2abddf5"
+    },
+    {
+      "path": "packages/sonant/src/providers.ts",
+      "bytes": 2956,
+      "sha256": "13dff329193b5e5e05354d797dfed7e97a47e73d92664e7a6bd2c7ffeb8f278c"
+    },
+    {
+      "path": "packages/sonant/src/react.tsx",
+      "bytes": 2788,
+      "sha256": "48679fbd2e6908b29acf1f25abeb5ac00e5ed238ad4c3b50532562d53e6bfb92"
+    },
+    {
+      "path": "packages/sonant/src/registry.ts",
+      "bytes": 3228,
+      "sha256": "b4a58006172496ffc075f8a1a580dc9f771cbb09fb2a3bc08f8991861a483b85"
+    },
+    {
+      "path": "packages/sonant/src/runtime.ts",
+      "bytes": 14322,
+      "sha256": "e3450d4efa8313423343681051c2a14c062f4a96038ee1f7f5cb76291da8e318"
+    },
+    {
+      "path": "packages/sonant/src/storage.ts",
+      "bytes": 564,
+      "sha256": "e6a9e1ac9f8a3f8f319d3d1a9ffade39484c856ba9e19a6621da6ecbb81216ba"
+    },
+    {
+      "path": "packages/sonant/src/types.ts",
+      "bytes": 2333,
+      "sha256": "45051314311b92dc08f22f58d6f40c0951d0cd17952190bb5e317259d42cb6f2"
+    },
+    {
+      "path": "packages/sonant/tsconfig.json",
+      "bytes": 397,
+      "sha256": "cb763c4ffb7f6c6afe14db396ddc29bd78689413927286c65f2b7f1086c25db3"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 748,
+      "sha256": "174abeb00ec08f5644111a0ad919a82363052941089d709c133cc2f758db2c0d"
+    },
+    {
+      "path": "tests/e2e/website.spec.ts",
+      "bytes": 9686,
+      "sha256": "75143c0878ee0a004a32dfeb595095e98de6accb0728852ac25474c546ec024b"
+    },
+    {
+      "path": "tests/integration/cli.test.mjs",
+      "bytes": 4654,
+      "sha256": "a8b5de6cbb8617ce32c6a06cc5f239973a01f960525733ed3d5afe3c53956714"
+    },
+    {
+      "path": "tests/integration/packed.test.mjs",
+      "bytes": 2618,
+      "sha256": "b043c76e6607db8bb3bdf2c648420aa80fd5c2dde19e5fe22817f2560cddbac3"
+    },
+    {
+      "path": "tests/integration/react-source.test.mjs",
+      "bytes": 2953,
+      "sha256": "def54a0c4aaf13a2e5a4224c83b738f414c75188497928a7e544b1efad72d470"
+    },
+    {
+      "path": "tests/scripts/registry-install.mjs",
+      "bytes": 2466,
+      "sha256": "ccd34e3be8a56b144740750145bdd795755dae38b23d9d599be7ef330336a6ea"
+    },
+    {
+      "path": "tests/unit/operation-cancellation.test.mjs",
+      "bytes": 15252,
+      "sha256": "893bd17eb69ef771055045c165d1a27535675b28b899440d1ef2cc337b6656b6"
+    },
+    {
+      "path": "tests/unit/runtime.test.mjs",
+      "bytes": 9396,
+      "sha256": "c66862230cdfb8eb9a4bb9832b1de544600f658df786902c5365f520d380cc6e"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 187,
+      "sha256": "bb39eb00d3c9ef886e0d70d1a7ade258063528e2bc4274f48f0ee9adb2a4c74f"
+    },
+    {
+      "path": "website/index.html",
+      "bytes": 816,
+      "sha256": "a716a43a35df3d9f897606a07f83cee92146578b5abcad703f76d2977c2038d0"
+    },
+    {
+      "path": "website/package.json",
+      "bytes": 564,
+      "sha256": "15ac38777b7afe6cf2be9462b501cfa94ca9facad9d6ff09d0c6dbd9fd2d177c"
+    },
+    {
+      "path": "website/public/favicon.svg",
+      "bytes": 218,
+      "sha256": "f83df4eff47e8d9433788c5d13db99022fa0426acdaa3adf7b421e381f93489f"
+    },
+    {
+      "path": "website/public/licenses/dm-sans.txt",
+      "bytes": 4502,
+      "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+    },
+    {
+      "path": "website/public/licenses/ibm-plex-mono.txt",
+      "bytes": 5299,
+      "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f"
+    },
+    {
+      "path": "website/public/licenses/lucide.txt",
+      "bytes": 2004,
+      "sha256": "668dcc52803480e0a026b31140a4cae668772663cd764e5991d252eef03f98db"
+    },
+    {
+      "path": "website/public/licenses/react-dom.txt",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "website/public/licenses/react.txt",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "website/public/llms.txt",
+      "bytes": 938,
+      "sha256": "0951fe3b9df8560d168c4d84bdf2ac93030804b2996c170d477c720ba7bb6fb5"
+    },
+    {
+      "path": "website/src/App.tsx",
+      "bytes": 9513,
+      "sha256": "399714758c7014f7a23b7637e55f9fbfd682f3c22e50055205d06aee8b83556c"
+    },
+    {
+      "path": "website/src/Catalog.tsx",
+      "bytes": 11728,
+      "sha256": "8489aa7b44207f782c524cbd126ebe7175e71184f1dde01ee688249edaa03a3a"
+    },
+    {
+      "path": "website/src/Create.tsx",
+      "bytes": 8820,
+      "sha256": "c82b57116db03cb7a5a09492b798d3364fab0e591da9bda525d9da7a6958f1bd"
+    },
+    {
+      "path": "website/src/Devtools.tsx",
+      "bytes": 7749,
+      "sha256": "5354948680e821e4b9b3baa35b510522b8f823c9a1e80b4d07656864186c11eb"
+    },
+    {
+      "path": "website/src/Docs.tsx",
+      "bytes": 32874,
+      "sha256": "f2d239b126a819cde8edcabc495d8282ab58425377a0e9049f8b1155b42d6f7b"
+    },
+    {
+      "path": "website/src/Examples.tsx",
+      "bytes": 10997,
+      "sha256": "e176939c64d81ceaf36d7069ed0a1770979b8d4c4b1b835daf6d1aa77ebcfc2f"
+    },
+    {
+      "path": "website/src/main.tsx",
+      "bytes": 286,
+      "sha256": "f7c383b7790435159889b397f573863248a7b2e33833479406d3eefbfb7618c3"
+    },
+    {
+      "path": "website/src/styles.css",
+      "bytes": 55613,
+      "sha256": "6294c6f0dc55b4034e856c7b2e800dc39c8de094ae99acf54893aae36f0edb88"
+    },
+    {
+      "path": "website/src/ui.tsx",
+      "bytes": 4681,
+      "sha256": "e1a8107c3c33cba5e1ac13f8946a2e9be832ff8e914e728a44d4a739219a3d7f"
+    },
+    {
+      "path": "website/tsconfig.json",
+      "bytes": 418,
+      "sha256": "b0f4cdebfd5012229f51e50f0aa204c6b66198d84946e892845a3f74bbc43695"
+    },
+    {
+      "path": "website/vite.config.ts",
+      "bytes": 171,
+      "sha256": "454eea6a01f450a322e291c7e4d9b489327b323570b0bf2782f1f913fd5dae90"
+    }
+  ],
+  "source_bytes": 344554,
+  "protected_files": [
+    {
+      "path": "package.json",
+      "sha256": "853f8939c28de359a02fb43b18216687211731e3e8736a9dd06de4f655161e25"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3a514958108361c4aed6cc272539920051eca6bc868605ebaf8ca4c6e48315d3"
+    },
+    {
+      "path": "packages/sonant/package.json",
+      "sha256": "418a52a0a44c71cc8f08f845f543b2360aab496e18116115e6ffe42e2d9b5e2e"
+    },
+    {
+      "path": "packages/sonant/tsconfig.json",
+      "sha256": "cb763c4ffb7f6c6afe14db396ddc29bd78689413927286c65f2b7f1086c25db3"
+    },
+    {
+      "path": "packages/sonant/src/types.ts",
+      "sha256": "45051314311b92dc08f22f58d6f40c0951d0cd17952190bb5e317259d42cb6f2"
+    },
+    {
+      "path": "packages/sonant/src/index.ts",
+      "sha256": "2c203b718cb59a8a585d5d6a557ab427fd5d96405d93b0f6f6d1a4aac2abddf5"
+    },
+    {
+      "path": "packages/sonant/src/audio.ts",
+      "sha256": "84f31f2d371c46f0093e407d41dec11b612cbff92de54d9a70d90f47003ef003"
+    },
+    {
+      "path": "packages/sonant/src/providers.ts",
+      "sha256": "13dff329193b5e5e05354d797dfed7e97a47e73d92664e7a6bd2c7ffeb8f278c"
+    },
+    {
+      "path": "packages/sonant/src/react.tsx",
+      "sha256": "48679fbd2e6908b29acf1f25abeb5ac00e5ed238ad4c3b50532562d53e6bfb92"
+    },
+    {
+      "path": "tests/unit/runtime.test.mjs",
+      "sha256": "c66862230cdfb8eb9a4bb9832b1de544600f658df786902c5365f520d380cc6e"
+    },
+    {
+      "path": ".github/workflows/quality-and-pages.yml",
+      "sha256": "2352ae3a6697862c9a26ed2b32a5454f13be932ee4c7b2f3c13a58ac342a4cda"
+    },
+    {
+      "path": ".github/workflows/registry-installation.yml",
+      "sha256": "dd3ab516476c4466bc0b3aa3a36f1ba53a9a1c36f08f5d1ee4f7e2dc3aff310f"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "bb39eb00d3c9ef886e0d70d1a7ade258063528e2bc4274f48f0ee9adb2a4c74f"
+    }
+  ],
+  "test_files": [
+    {
+      "path": "tests/unit/runtime.test.mjs",
+      "sha256": "c66862230cdfb8eb9a4bb9832b1de544600f658df786902c5365f520d380cc6e",
+      "literal_cases": 14,
+      "case_names": [
+        "all characters implement the complete deterministic contract with silent tails",
+        "validation rejects incomplete, non-finite and out-of-budget recipes",
+        "server imports and unavailable audio are safe and observable",
+        "muting stops a live voice and persists bounded preferences",
+        "cooldown and voice reservations cover concurrent unlocks",
+        "cancellation during unlock never reaches the renderer",
+        "a browser unlock that never settles becomes an observable blocked decision",
+        "an unresponsive media provider times out, receives cancellation, and releases a late voice",
+        "high-priority failure interrupts a lower-priority voice",
+        "quiet, speech, category, surface, density and visible-equivalent policies are explicit",
+        "watchdog stops loops but a later real result still emits exactly once",
+        "destroy during async provider playback releases the eventual voice",
+        "provider failures are isolated and traces remain bounded and exportable",
+        "malformed stored preferences cannot erase safe defaults"
+      ]
+    },
+    {
+      "path": "tests/unit/operation-cancellation.test.mjs",
+      "sha256": "893bd17eb69ef771055045c165d1a27535675b28b899440d1ef2cc337b6656b6",
+      "literal_cases": 10,
+      "case_names": [
+        "a pre-aborted caller never unlocks or plays and its operation settles",
+        "caller cancellation during pending unlock prevents late progress playback",
+        "caller cancellation during pending progress playback releases its eventual voice",
+        "caller abort stops active progress and a pending update despite synchronous terminal reentry",
+        "explicit operation stop cancels a pending update as well as progress",
+        "watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes",
+        "resolve and reject settle once under provider reentry without cancelling their confirmed outcome",
+        "caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable",
+        "natural progress completion retains caller cancellation for an already pending or active update",
+        "caller cancellation synchronously inside provider unlock or play cannot retain a voice"
+      ]
+    }
+  ],
+  "patched_literal_cases": 24,
+  "baseline_cases": 1,
+  "baseline_case_name": "a pre-aborted caller never unlocks or plays and its operation settles",
+  "baseline_runtime_sha256": "f6c41b2b490aeac401d189bfa5f8397ac5bc44faa7e3784dc0dbc273594704f0",
+  "static": {
+    "node": "v26.8.2",
+    "typescript": "5.9.3",
+    "compiler_sha256": "3ae902c92cc44dace175c0e69e13a4b0899f6983c6121d76b9ab8dd5795e7675",
+    "changed_ts_tsx_syntax_files": 2,
+    "test_js_syntax_files": 2,
+    "workflow_yaml": "parsed",
+    "shell_bodies": 7,
+    "embedded_js_bodies": 4,
+    "product_or_test_imports": "none",
+    "runtime_execution": "not_run"
+  },
+  "exclusions": [
+    "Dated docs/results records, including this inventory, are not self-hashed."
+  ],
+  "limits": [
+    "Syntax, source inspection and hash checks do not establish types, cancellation behavior, audio, browser acceptance or distribution.",
+    "No baseline or repaired-runtime test was executed. Existing ignored dist artifacts are outside this prepared-source claim."
+  ]
+}

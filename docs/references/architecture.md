@@ -6,6 +6,13 @@ Last updated: 2026-10-15
 
 `runtime.ts` owns instance preferences, budgets, pending reservations, voice priority, operation cancellation, loop watchdogs, lifecycle, subscriptions, and a bounded local trace. Reservation happens before async unlock so simultaneous calls cannot bypass limits. Abort signals stop requests that have not reached a renderer yet. A watchdog ends audio without preventing a later operation outcome.
 
+An operation links its caller signal to an internal cancellation controller for
+the initial loop and every update. A pending-handle count keeps that link only
+while playback is pending or active, including an update that outlives its
+initial loop. New updates recheck cancellation and restore the link as needed.
+Terminal settlement precedes provider cleanup to fence synchronous reentry.
+Confirmed outcomes use the caller signal separately from cancelled progress.
+
 `audio.ts` creates a Web Audio context lazily, caches per-instance buffers, and renders through a master gain. Injected contexts remain application-owned. `providers.ts` supports sample-backed media and normalized external bridges. Provider acceptance is observable; device audibility is outside this contract.
 
 `react.tsx` is a client entry point with a scoped context, useSyncExternalStore subscriptions, StrictMode-safe delayed disposal for owned systems, and unmount-safe operations. Externally supplied systems remain caller-owned.

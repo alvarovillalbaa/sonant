@@ -322,6 +322,12 @@ function DocContent({ route }: { route: string }) {
             seconds, only when independent controls exist. <code>useSoundOperation</code> also stops
             on unmount.
           </p>
+          <p>
+            Pass <code>{"{ signal: controller.signal }"}</code> to <code>begin</code> to cancel
+            pending or active progress and updates together. After cancellation, later updates
+            and outcomes stay silent. A confirmed outcome uses the caller signal independently
+            from the progress it stops, so the caller can still cancel that outcome.
+          </p>
         </Section>
         <Section title="Speech and lifecycle">
           <Code>{`sound.setSpeechActive(true); // Stops voices, suppresses low-priority cues.\nsound.setSpeechActive(false);\nawait sound.suspend();      // Stops voices and suspends an owned context.\nawait sound.destroy();      // Terminal. Releases owned resources.`}</Code>
@@ -429,14 +435,16 @@ function DocContent({ route }: { route: string }) {
             </dd>
             <dt>emit(event, options?) → Promise&lt;FeedbackHandle&gt;</dt>
             <dd>
-              Options: source, surface, visibleEquivalent, loop. The handle has id, decision,
+              Options: source, surface, visibleEquivalent, loop, signal. The handle has id, decision,
               reason, stop(), and ended. Blocked and suppressed handles complete immediately.
             </dd>
             <dt>begin(event?, options?) → operation</dt>
             <dd>
               Default progress.start. Returns stop(), update(event), resolve(event?),
               reject(event?), and ended. Resolution defaults to progress.complete; rejection
-              defaults to progress.fail. Terminal calls are idempotent.
+              defaults to progress.fail. Accepts source, surface, visibleEquivalent and signal.
+              stop() and caller cancellation stop the loop and its updates. Terminal calls are
+              idempotent; ended reports completion of the initial loop, including its watchdog.
             </dd>
             <dt>setPreferences(partial)</dt>
             <dd>
@@ -525,7 +533,7 @@ function DocContent({ route }: { route: string }) {
         <Section title="Decision reasons">
           <p>
             muted, category, profile, speech, background, surface, cooldown, density, voice-limit,
-            activation, provider, destroyed, unknown-event, visual-equivalent.
+            activation, provider, destroyed, unknown-event, visual-equivalent, cancelled.
           </p>
           <p>
             “Played” means accepted by a provider. The trace retains the latest 100 decisions by

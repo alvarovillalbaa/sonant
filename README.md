@@ -67,6 +67,12 @@ try {
 
 Loops stop after three seconds by default. A later confirmed outcome can still play. The consuming app owns status messages, accessibility, cancellation, and the decision to use sound.
 
+Pass an `AbortSignal` as `begin(event, { signal })` to cancel pending or active
+progress and updates together. `operation.stop()` also cancels those updates.
+A cancelled operation cannot emit a later update or outcome. A confirmed
+`resolve`/`reject` stops progress first and emits its outcome separately; the
+caller signal can still cancel that outcome while it is pending or active.
+
 ## Development
 
 Node 22.12+ and npm:
@@ -84,6 +90,9 @@ npm run pack:library
 The repository is an npm workspace. `packages/sonant/` owns the public ESM package; `website/` consumes that exact package. `tests/` holds unit, CLI integration, and browser checks. The static site uses hash routes and is hosted on Vercel, Clous Team (Pro). `vercel.json` builds the workspace with `npm run build:site` and serves `website/dist` at `/`. The connected `main` branch deploys automatically. See [deployment evidence](docs/deployment.md).
 
 ## Proof and limits
+
+The operation-cancellation repair is source-only and awaits focused checks and
+a package release. See its [verification record](docs/results/2026/10-29/operation-cancellation.md).
 
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 

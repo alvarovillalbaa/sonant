@@ -1,0 +1,146 @@
+name: Focused operation cancellation
+on:
+  push:
+    branches: [checks/sonant-operation-cancellation]
+
+permissions:
+  contents: read
+
+env:
+  SOURCE_COMMIT: REPLACE_WITH_APPROVED_40_HEX_COMMIT
+
+jobs:
+  cancellation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Require an explicit approved source
+        shell: bash
+        run: '[[ "$SOURCE_COMMIT" =~ ^[0-9a-f]{40}$ ]]'
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.21.0
+      - name: Match the approved source inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SOURCE_COMMIT"
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const crypto = require('node:crypto');
+          const seal = JSON.parse(fs.readFileSync('docs/results/2026/10-29/operation-cancellation-inventory.json', 'utf8'));
+          if (process.version !== 'v24.21.0') throw Error('Unexpected Node version');
+          for (const file of seal.source_files) {
+            const bytes = fs.readFileSync(file.path);
+            if (bytes.length !== file.bytes || crypto.createHash('sha256').update(bytes).digest('hex') !== file.sha256) throw Error('Source changed: ' + file.path);
+          }
+          NODE
+      - name: Install the existing frozen lock
+        run: npm ci
+      - name: Reproduce the original pre-abort defect
+        shell: bash
+        run: |
+          set -euo pipefail
+          fixture_dir=$(mktemp -d "$RUNNER_TEMP/sonant-cancellation.XXXXXX")
+          printf 'SONANT_CHECK_DIR=%s\n' "$fixture_dir" >> "$GITHUB_ENV"
+          cp packages/sonant/src/runtime.ts "$fixture_dir/runtime.approved.ts"
+          trap 'cp "$fixture_dir/runtime.approved.ts" packages/sonant/src/runtime.ts' EXIT
+          git fetch --no-tags --depth=1 origin c5657ad20911f136bc86769f2d79114889693b0e
+          git show c5657ad20911f136bc86769f2d79114889693b0e:packages/sonant/src/runtime.ts > packages/sonant/src/runtime.ts
+          npm run build
+          set +e
+          node --test --test-reporter=tap --test-name-pattern='^a pre-aborted caller never unlocks or plays and its operation settles$' tests/unit/operation-cancellation.test.mjs > "$fixture_dir/baseline.tap" 2>&1
+          baseline_exit=$?
+          set -e
+          cp "$fixture_dir/runtime.approved.ts" packages/sonant/src/runtime.ts
+          test "$baseline_exit" -eq 1
+          cat "$fixture_dir/baseline.tap"
+      - name: Build the repair and run only its focused runtime cases
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run build
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const crypto = require('node:crypto');
+          const seal = JSON.parse(fs.readFileSync('docs/results/2026/10-29/operation-cancellation-inventory.json', 'utf8'));
+          for (const file of seal.source_files) {
+            const bytes = fs.readFileSync(file.path);
+            if (bytes.length !== file.bytes || crypto.createHash('sha256').update(bytes).digest('hex') !== file.sha256) throw Error('Source changed: ' + file.path);
+          }
+          NODE
+          node --test --test-concurrency=1 --test-reporter=tap tests/unit/runtime.test.mjs tests/unit/operation-cancellation.test.mjs > "$SONANT_CHECK_DIR/patched.tap" 2>&1
+          cat "$SONANT_CHECK_DIR/patched.tap"
+      - name: Match actual cases and retain exact evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const crypto = require('node:crypto');
+          const hash = data => crypto.createHash('sha256').update(data).digest('hex');
+          const root = process.env.SONANT_CHECK_DIR;
+          if (!root || path.dirname(root) !== process.env.RUNNER_TEMP || !path.basename(root).startsWith('sonant-cancellation.')) throw Error('Invalid evidence directory');
+          const sealPath = 'docs/results/2026/10-29/operation-cancellation-inventory.json';
+          const seal = JSON.parse(fs.readFileSync(sealPath, 'utf8'));
+          const expected = seal.test_files.flatMap(file => file.case_names).sort();
+          const readTap = name => {
+            const bytes = fs.readFileSync(path.join(root, name));
+            if (bytes.length > 256 * 1024) throw Error('Unbounded TAP');
+            const text = bytes.toString('utf8');
+            const cases = [...text.matchAll(/^(ok|not ok) \d+ - (.+?)(?: # (SKIP|TODO).*)?$/gm)].map(match => ({status: match[1], name: match[2], omitted: match[3] || null}));
+            return {text, cases, sha256: hash(bytes)};
+          };
+          const baseline = readTap('baseline.tap');
+          const baselineCases = baseline.cases.filter(item => !item.omitted);
+          if (baselineCases.length !== 1 || baselineCases[0].status !== 'not ok' || baselineCases[0].name !== expected.find(name => name.startsWith('a pre-aborted caller ')) || !/code: 'ERR_ASSERTION'/.test(baseline.text) || !/expected: 0/.test(baseline.text) || !/actual: 1/.test(baseline.text) || !/^# fail 1$/m.test(baseline.text)) throw Error('Baseline did not reproduce the exact defect');
+          const patched = readTap('patched.tap');
+          if (expected.length !== 24 || patched.cases.length !== 24 || patched.cases.some(item => item.status !== 'ok' || item.omitted) || JSON.stringify(patched.cases.map(item => item.name).sort()) !== JSON.stringify(expected)) throw Error('Patched case set/status mismatch');
+          for (const name of ['fail', 'cancelled', 'skipped', 'todo']) if (!new RegExp('^# ' + name + ' 0$', 'm').test(patched.text)) throw Error('Unexpected ' + name);
+          if (!/^# pass 24$/m.test(patched.text)) throw Error('Missing pass count');
+          const report = {source_commit: process.env.SOURCE_COMMIT, node: process.version, typescript: require('typescript/package.json').version, inventory_sha256: hash(fs.readFileSync(sealPath)), baseline: {status: 'expected_failure', cases: baselineCases, tap_sha256: baseline.sha256}, patched: {status: 'passed', cases: patched.cases, tap_sha256: patched.sha256}, limits: ['Synthetic providers only; no browser, audio device, package publication or production release.']};
+          fs.writeFileSync(path.join(root, 'report.json'), JSON.stringify(report, null, 2) + '\n', {flag: 'wx'});
+          console.log(JSON.stringify(report));
+          NODE
+      - name: Bound retained evidence even after a failed check
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${SONANT_CHECK_DIR:-}" ]; then exit 0; fi
+          node --input-type=commonjs <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const crypto = require('node:crypto');
+          const root = process.env.SONANT_CHECK_DIR;
+          if (path.dirname(root) !== process.env.RUNNER_TEMP || !path.basename(root).startsWith('sonant-cancellation.') || fs.lstatSync(root).isSymbolicLink()) throw Error('Invalid evidence directory');
+          const files = [];
+          for (const name of ['baseline.tap', 'patched.tap', 'report.json']) {
+            const file = path.join(root, name);
+            if (!fs.existsSync(file)) continue;
+            const stat = fs.lstatSync(file);
+            if (!stat.isFile() || stat.isSymbolicLink()) throw Error('Unexpected artifact type');
+            const truncated = stat.size > 256 * 1024;
+            if (truncated) fs.truncateSync(file, 256 * 1024);
+            const bytes = fs.readFileSync(file);
+            files.push({name, original_bytes: stat.size, retained_bytes: bytes.length, truncated, retained_sha256: crypto.createHash('sha256').update(bytes).digest('hex')});
+          }
+          fs.writeFileSync(path.join(root, 'bounded-artifacts.json'), JSON.stringify({files}, null, 2) + '\n', {flag: 'wx'});
+          if (files.some(file => file.truncated)) throw Error('Artifact overflow; retained prefixes cannot count as acceptance');
+          NODE
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: ${{ always() && env.SONANT_CHECK_DIR != '' }}
+        with:
+          name: operation-cancellation-evidence
+          path: |
+            ${{ env.SONANT_CHECK_DIR }}/baseline.tap
+            ${{ env.SONANT_CHECK_DIR }}/patched.tap
+            ${{ env.SONANT_CHECK_DIR }}/report.json
+            ${{ env.SONANT_CHECK_DIR }}/bounded-artifacts.json
+          if-no-files-found: ignore
+          retention-days: 7
