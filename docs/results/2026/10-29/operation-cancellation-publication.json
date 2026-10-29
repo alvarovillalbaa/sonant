@@ -1,0 +1,567 @@
+{
+  "schema_version": 1,
+  "kind": "sonant.operation-cancellation-publication",
+  "observed_at_utc": "2026-10-29T21:15:50Z",
+  "source": {
+    "commit": "17b2edb1b48a418f8bd9c2ceeaa995e2e650b863",
+    "ref": "refs/heads/fix/operation-cancellation",
+    "main": "c5657ad20911f136bc86769f2d79114889693b0e",
+    "leaf_count": 74,
+    "entries": [
+      {
+        "mode": "100644",
+        "path": ".github/workflows/quality-and-pages.yml",
+        "sha": "ed4a888405ecaa964ed9a42d117aefe56fa20f60",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": ".github/workflows/registry-installation.yml",
+        "sha": "0f1f0fae0eb04274a599562bd145460df3913384",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": ".gitignore",
+        "sha": "45f8ed8ab05f9395d80ed70283d55aa2f7359608",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": ".prettierignore",
+        "sha": "95215881e4772e0ba315e8088b40f37e3a6550c7",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": ".prettierrc.json",
+        "sha": "1d43a318a49ea76abd3f9aa088b2d5cb13097c33",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "AGENTS.md",
+        "sha": "91139811f0f8344702f48ba7a004b291361cb1bc",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "CHANGELOG.md",
+        "sha": "2ce0506a92e81b89a5e3886aafb75c1fa2774644",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "CONTRIBUTING.md",
+        "sha": "97abd3388bde92fa0d567eb30f98144adb8fa58f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "LICENSE",
+        "sha": "5fb52b674e5a4d756d26a8fc3619651bb3b28798",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "README.md",
+        "sha": "576f03db5050d344347e898b126ffca91ae60413",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/deployment-verification.json",
+        "sha": "3382b7111339a3e472c526856b55202fdff9fe4f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/deployment.md",
+        "sha": "ea6fa530662e0bb4a987a48ba6843fc77a3363f5",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/examples/operation-cancellation-checks.workflow.yml",
+        "sha": "b08f5aaa0a6f9d66b7828717bc759d7b94518ca0",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/proposals/operation-cancellation-checks.md",
+        "sha": "d23a4296f4b7ab1041923715e2a7db7b932ee55f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/references/architecture.md",
+        "sha": "2f1e24b09c14642ffd643ada74cda47b131d9114",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-15/desktop-home.png",
+        "sha": "b9f58ddb6cdcbfd0f7b767c6d1442ec99cbba8fa",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-15/desktop-preview.png",
+        "sha": "709306bf17e0478cf35fe0132e2c72a5ce245922",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-15/initial-release.md",
+        "sha": "8d72296f3033cc0fdf0813688e25703e2ea11225",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-15/mobile-home.png",
+        "sha": "2fcfed56c56938d47c72c08df10c28fe52476a0e",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-15/release-notes.md",
+        "sha": "9c75b8af1146744f7ba5bab52ec1ee837e491b40",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-26/release-links.md",
+        "sha": "4eaf1f4df16b1b7645bf339cdf271a2c1499bc93",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-29/operation-cancellation-inventory.json",
+        "sha": "cebfcd8f9296139e8c695402c69fb506d2ff60b5",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/results/2026/10-29/operation-cancellation.md",
+        "sha": "0cf8c5332dc349aefcaf326b9bfb9e4c64a1f25a",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/runbooks/listening.md",
+        "sha": "cb25f91f394f456a1624b659727fe407b367c830",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/runbooks/release.md",
+        "sha": "c7d58ff8e0f56aa6fd025e4b554391bc8a3ba241",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/sources/INDEX.md",
+        "sha": "27f5b36a66b5db778d6bfcb7262b9fb9c6222667",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/specs/product.md",
+        "sha": "7c56cf32a2e8fc13b454f93bc0c48e06f53c0a00",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "package-lock.json",
+        "sha": "42f7f8183e64e23e2bf70c2aab17ca50080a86ea",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "package.json",
+        "sha": "e9eff1b7a311c142af23aad4a4f50702787d8c3d",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/LICENSE",
+        "sha": "5fb52b674e5a4d756d26a8fc3619651bb3b28798",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/README.md",
+        "sha": "a508fc432611b43865986786c9baa792e891267e",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/package.json",
+        "sha": "31ad86e93b7fe76891aab42c51264b7624a2a43a",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/audio.ts",
+        "sha": "a7f1bcc1fd6080c819b0ea4d5b0435705a36489b",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/bind.ts",
+        "sha": "959d209c0e6c2ceeaa04174ec3018caaab8c1f93",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/catalog.ts",
+        "sha": "6c75af1b253f20e04761b95d91d57f41cedcc297",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/cli.ts",
+        "sha": "243ffa5e5906f0dbf5e1b80e860e7c5ca234a3a9",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/config.ts",
+        "sha": "4a50aeb3217f4c871203efb9701d6d512b53dd55",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/index.ts",
+        "sha": "17c8f94e12b83737795ae95895c17e3245a2bcb8",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/providers.ts",
+        "sha": "ccd39652fe239fd3919babd4ab24ba365136e43f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/react.tsx",
+        "sha": "fd40545c18f63e611e27fd67ed57891a75267c95",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/registry.ts",
+        "sha": "f9011eb3fa705815d6d5c778beb6f082efec611d",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/runtime.ts",
+        "sha": "f3bcd3d7b3476d3c249cb0357ee78a159f3090ca",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/storage.ts",
+        "sha": "b5b38dfb288317beee4668abcb0a6f133a210579",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/src/types.ts",
+        "sha": "4e18bf5cdc978d17335fefd06293d8e87a8ffc78",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "packages/sonant/tsconfig.json",
+        "sha": "ff716325629d48bce4b8fa657699c890e69ae71f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "playwright.config.ts",
+        "sha": "5dd9e1022318d820ef044b9ce44386ad6f086782",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/e2e/website.spec.ts",
+        "sha": "d48fb36ec307723682444cf5071afae8c5e8347f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/integration/cli.test.mjs",
+        "sha": "aa89a16870dd40bd88769640bae296e5cf675aef",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/integration/packed.test.mjs",
+        "sha": "e7d8d4ce7e64526297ea92570a4af891c96e0bbb",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/integration/react-source.test.mjs",
+        "sha": "c4524566a66e3a7997cac8a8287ae2dcc4e5c404",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/scripts/registry-install.mjs",
+        "sha": "d2e0ab6033d1bf306de6750688a9502aeb476870",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/unit/operation-cancellation.test.mjs",
+        "sha": "61c2b5be39b4e44e43b1f5dbbdb8f0fb0c289323",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "tests/unit/runtime.test.mjs",
+        "sha": "18471bfb43414316187e876f7ceb54dea1f427bc",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "vercel.json",
+        "sha": "e2196d4bbd3f250da97e60dc9c324624e76f9164",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/index.html",
+        "sha": "c37732799b0badc0a4a3c84284ecc4ef0f9107a7",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/package.json",
+        "sha": "9f345942d80fce9e753ebb7a64c402c62f807e11",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/favicon.svg",
+        "sha": "b06ccf9946abbb30902e8992e0b12d61beac1546",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/licenses/dm-sans.txt",
+        "sha": "917aaa663125b07671987742a0e805661e08e624",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/licenses/ibm-plex-mono.txt",
+        "sha": "83eac8278b2e427a72ce3622a53cdb7a56e55b05",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/licenses/lucide.txt",
+        "sha": "322e0d86e5b36cb0adb6f41132c7764b875a6d0a",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/licenses/react-dom.txt",
+        "sha": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/licenses/react.txt",
+        "sha": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/public/llms.txt",
+        "sha": "b2bf0c7609598a2d79d2026d7ecea458f9502f13",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/App.tsx",
+        "sha": "37541a70d988c9de3e274fd23f2ad8c5f55a342b",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/Catalog.tsx",
+        "sha": "49396b7dc955df5c55fc35dd27b07cb76ec4dc9b",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/Create.tsx",
+        "sha": "1694b1e295528603c74bf74e266352b436429b3d",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/Devtools.tsx",
+        "sha": "bd3bfaf0a3f7a840f735ae73bc4c66a24446f542",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/Docs.tsx",
+        "sha": "122f47fd198a8d9f51451444a229237d991ff170",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/Examples.tsx",
+        "sha": "60bd9ebd86fddd57fc9e453e4e78af530959d554",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/main.tsx",
+        "sha": "4dfaade731905d740a23e18441f4a4dea4210f2d",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/styles.css",
+        "sha": "cdddf2e3f607513c830a9ae9d41709765c072480",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/src/ui.tsx",
+        "sha": "670a509f0a2cc416dc2109d666095539271e4efd",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/tsconfig.json",
+        "sha": "179928705770b7412e80b80a853059e1d5f054f5",
+        "type": "blob"
+      },
+      {
+        "mode": "100644",
+        "path": "website/vite.config.ts",
+        "sha": "940f437c037b59aa03510e165de5e44430829fe8",
+        "type": "blob"
+      }
+    ],
+    "tree_truncated": false,
+    "all_local_remote_leaf_identities_match": true,
+    "compared_fields": [
+      "path",
+      "mode",
+      "type",
+      "sha"
+    ],
+    "workflow_runs_at_observation": 0
+  },
+  "preview": {
+    "deployment_id": "dpl_7hxAE3i3PNgYZpzsB7xQZ4JVEhMc",
+    "commit": "17b2edb1b48a418f8bd9c2ceeaa995e2e650b863",
+    "ref": "fix/operation-cancellation",
+    "url": "https://sonant-r3oz19sjb-my-team-4f230354.vercel.app",
+    "state": "READY",
+    "target": null,
+    "source": "git",
+    "build_command": "npm run build:site",
+    "selected_build_events": [
+      {
+        "created": 1793308502701,
+        "type": "stdout",
+        "text": "Deployment completed"
+      },
+      {
+        "created": 1793308501730,
+        "type": "stderr",
+        "text": "Build Completed in /vercel/output [7s]"
+      },
+      {
+        "created": 1793308501639,
+        "type": "stdout",
+        "text": "\u001b[32m✓ built in 281ms\u001b[39m"
+      },
+      {
+        "created": 1793308501353,
+        "type": "stdout",
+        "text": "\u001b[36mvite v8.3.4 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m"
+      },
+      {
+        "created": 1793308501124,
+        "type": "stdout",
+        "text": "> vite build"
+      },
+      {
+        "created": 1793308501090,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options."
+      },
+      {
+        "created": 1793308499044,
+        "type": "stdout",
+        "text": "> tsc -p tsconfig.json"
+      },
+      {
+        "created": 1793308498993,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options."
+      },
+      {
+        "created": 1793308498863,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options."
+      },
+      {
+        "created": 1793308498728,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options."
+      },
+      {
+        "created": 1793308495468,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options."
+      }
+    ],
+    "unauthenticated_access": {
+      "method": "unauthenticated HEAD",
+      "exit": 0,
+      "status": [
+        "HTTP/2 302 "
+      ],
+      "redirect_without_query": "https://vercel.com/sso-api",
+      "query_omitted": true
+    }
+  },
+  "production": {
+    "deployment_id": "dpl_G9gBpqxifRZZ5QW5qqcyLeG3tXEt",
+    "commit": "c5657ad20911f136bc86769f2d79114889693b0e",
+    "state": "READY",
+    "target": "production",
+    "alias": "https://sonant-beta.vercel.app",
+    "unchanged_by_branch": true
+  },
+  "npm": {
+    "observed_version": "0.1.0",
+    "published_by_this_work": false
+  },
+  "checks": {
+    "state": "pending_approval",
+    "baseline_cases": 1,
+    "patched_cases": 24,
+    "temporary_ci": "inactive_example_only",
+    "browser": "not_run",
+    "physical_audio": "not_checked"
+  },
+  "limits": [
+    "The hosted library TypeScript and Vite build passed; no runtime fixture was executed.",
+    "Vercel SSO remains enabled; no authenticated rendering or interaction was inspected.",
+    "Package publication, production merge and broader release acceptance are not completed."
+  ]
+}

@@ -2,8 +2,12 @@
 
 29 October 2026. Prepared from clean personal `main`
 `c5657ad20911f136bc86769f2d79114889693b0e`; the remote head matched before
-editing. Source publication will use the dedicated `fix/operation-cancellation`
-branch. This is not a package or production release.
+editing. Source was published at `17b2edb1b48a418f8bd9c2ceeaa995e2e650b863`
+on `fix/operation-cancellation`. All 74 local/remote file identities matched
+(path, mode, type and blob SHA), the tree was untruncated and zero Actions runs
+were returned. Main remains at the baseline. This is not a package or production
+release. The [publication receipt](operation-cancellation-publication.json)
+retains the complete leaf ledger and hosted observations.
 
 The public `EmitOptions.signal` reaches `begin`, but baseline `begin` replaced
 it with a fresh internal signal. A pre-aborted caller could therefore unlock
@@ -37,7 +41,22 @@ Read-only TypeScript 5.9.3 syntax parsing passed for the runtime and website
 docs, using an existing compiler and Node 26.8.2; no product/test module was imported. Native
 `node --check`, YAML parsing, seven shell-body syntax checks, four embedded-JS
 syntax checks and `git diff --check` passed. These are syntax/static evidence,
-not type correctness, runtime cancellation or browser/audio acceptance.
+not type correctness, runtime cancellation or browser/audio acceptance. The
+separate hosted compilation below establishes a narrower build result.
+
+The existing Git integration created branch deployment
+`dpl_7hxAE3i3PNgYZpzsB7xQZ4JVEhMc`, now READY at
+<https://sonant-r3oz19sjb-my-team-4f230354.vercel.app>, for exactly `17b2edb`.
+Its npm-ci/library-TypeScript/Vite build completed. The logs retain npm's
+provider-side unknown `cache-dir` environment warning. No test script ran.
+Unauthenticated HEAD returns 302 to Vercel SSO; its query was omitted from
+evidence. Authenticated rendering, interactions and physical audio were not
+checked. Existing protection settings were preserved.
+
+Canonical production still resolves to READY
+`dpl_G9gBpqxifRZZ5QW5qqcyLeG3tXEt`, source `c5657ad`, target `production`.
+No main merge, production promotion or npm release was performed. The focused
+CI question was sent after the exact source publication; it remains pending.
 
 Storage Guard returned 29.5 GiB free versus 34.0 GiB required, exit two. No
 local install, build or new dependency environment was created. No fixture,
