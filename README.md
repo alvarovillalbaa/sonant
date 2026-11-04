@@ -91,12 +91,13 @@ The repository is an npm workspace. `packages/sonant/` owns the public ESM packa
 
 ## Proof and limits
 
-The operation-cancellation repair is source-only and awaits focused checks and
-a package release. See its [verification record](docs/results/2026/10-29/operation-cancellation.md).
-The [current focused scope](docs/proposals/operation-cancellation-verification.md)
-is authorized by the owner's standing continuation instructions: one baseline
-defect reproduction and 24 repaired-runtime cases. It is still unrun until its
-actual result is recorded. Public npm and production source remain separate.
+The operation-cancellation repair passed its
+[focused verification](docs/results/2026/11-04/operation-cancellation-checks.md):
+one baseline defect reproduction and all 24 repaired-runtime cases, with both
+isolated builds, source guards and owned cleanup passing. The original
+[source-only record](docs/results/2026/10-29/operation-cancellation.md) remains
+historical evidence. This result belongs to the repair branch; main/production,
+the existing npm release and full release acceptance remain separate.
 
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 

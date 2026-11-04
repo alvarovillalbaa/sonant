@@ -77,3 +77,15 @@ The remote packet uses no browser, audio device, real provider, account, databas
 model call, secrets, cache/artifact upload, npm publication or paid enrollment.
 No listening, physical audibility, broad suite, site build, real-host or
 consumer/distribution acceptance is inferred from these synthetic tests.
+
+## Observed focused outcome
+
+The [actual receipt](../results/2026/11-04/operation-cancellation-checks.md)
+records job `126883643063` in run `41918268685`, preparation source
+`39d484c192b936f5aaf6e3cc25ce041a241719b8`: the one expected baseline assertion
+failure and all 24 repaired cases, both library builds, all five source guards
+and owned cleanup passed. The job is terminal success; the separate workflow
+aggregate still projected in progress at receipt time. Preserve that distinction.
+This final evidence edition removes the active workflow and retires only its
+owned QA bookmark. Main, production, npm and broader release acceptance remain
+separate from the focused packet.

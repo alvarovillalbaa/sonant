@@ -25,3 +25,11 @@ full Git guards, isolated baseline fixture and owned process/storage cleanup.
 Preserve the old inventory, examples and results. Existing broad quality and
 registry workflows remain unchanged. This packet does not release npm or merge
 the repair to main/production; preserve those separate acceptance boundaries.
+
+The [focused result](docs/results/2026/11-04/operation-cancellation-checks.md)
+passed at `39d484c192b936f5aaf6e3cc25ce041a241719b8`: one expected baseline
+assertion failure, all 24 repaired cases, two isolated library builds, five full
+source guards and owned cleanup. Its active workflow is retired; preserve the
+inactive example and original results. The job completed successfully while
+the workflow aggregate API remained in progress at receipt time; retain both
+observations. Main/production/npm and full release checks are separate.

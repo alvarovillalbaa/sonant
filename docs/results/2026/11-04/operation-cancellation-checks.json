@@ -1,0 +1,2526 @@
+{
+  "schemaVersion": 1,
+  "kind": "sonant-operation-cancellation-checks",
+  "sourceCommit": "39d484c192b936f5aaf6e3cc25ce041a241719b8",
+  "sourceTree": "da657bc2a0791a636a022f388badc296cd37cce1",
+  "activationCommit": "c457090845038b2c900f963e390c25575beca899",
+  "activationTree": "869f4c3dab0c84653aaaed782bd0a09f287bbe9d",
+  "observedAtUtc": "2026-11-04 21:44:36 UTC",
+  "sourceInventory": {
+    "path": "docs/results/2026/11-04/operation-cancellation-source.json",
+    "bytes": 23085,
+    "sha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92"
+  },
+  "workflow": {
+    "path": ".github/workflows/operation-cancellation-v2.yml",
+    "bytes": 1720,
+    "sha256": "3f1203727721a32313f62d7545415aaa1df21c4f03285fc1b6ab07ac19bf9b85"
+  },
+  "run": {
+    "id": 41918268685,
+    "url": "https://github.com/alvarovillalbaa/sonant/actions/runs/41918268685",
+    "event": "create",
+    "headSha": "c457090845038b2c900f963e390c25575beca899",
+    "headBranch": "qa/sonant-cancellation-20261104",
+    "status": "in_progress",
+    "conclusion": null,
+    "createdAt": "2026-11-04T21:40:26Z",
+    "updatedAt": "2026-11-04T21:40:30Z",
+    "attempt": 1
+  },
+  "job": {
+    "id": 126883643063,
+    "name": "cancellation",
+    "status": "completed",
+    "conclusion": "success",
+    "startedAt": "2026-11-04T21:40:30Z",
+    "completedAt": "2026-11-04T21:40:51Z"
+  },
+  "controller": {
+    "schemaVersion": "sonant.operation-cancellation.v2",
+    "sourceCommit": "39d484c192b936f5aaf6e3cc25ce041a241719b8",
+    "baselineCommit": "c5657ad20911f136bc86769f2d79114889693b0e",
+    "status": "passed",
+    "startedAtUtc": "2026-11-04T21:40:37.735Z",
+    "scope": {
+      "baselineExecutions": 1,
+      "patchedExecutions": 24,
+      "testFiles": [
+        "tests/unit/runtime.test.mjs",
+        "tests/unit/operation-cancellation.test.mjs"
+      ]
+    },
+    "runtime": {
+      "node": "v24.21.0",
+      "platform": "linux",
+      "architecture": "x64",
+      "executableSha256": "7fde7b8afa198da66257f42ee2001d874c7355631e6d1579a5fb5ef1f246df4c",
+      "npmCliSha256": "8e5f6f3429f8cdbe693cdc29904e9d5a7b127a494bd15c804bd54c7403bfcbe7",
+      "npm": "11.19.0",
+      "typescript": "5.9.3",
+      "compilerSha256": "8d5fa5bd883fec0979fc2004f1fe1d99aef40570155d550eadc0b03b55513bf0"
+    },
+    "limits": {
+      "workSeconds": 480,
+      "cleanupSeconds": 30,
+      "finalStdoutSeconds": 2,
+      "jobMinutes": 10,
+      "streamBytes": 131072,
+      "reportBytes": 131072,
+      "termToKillSeconds": 3,
+      "drainAfterKillSeconds": 3
+    },
+    "commands": [
+      {
+        "label": "before_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "capturedBytes": 41,
+            "observedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "capturedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "before_seal",
+        "args": [
+          "git",
+          "show",
+          "HEAD:docs/results/2026/11-04/operation-cancellation-source.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 23085,
+            "capturedBytes": 23085,
+            "observedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "capturedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "before_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6349,
+            "capturedBytes": 6349,
+            "observedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "capturedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "before_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6586,
+            "capturedBytes": 6586,
+            "observedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "capturedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "before_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "before_working",
+        "args": [
+          "git",
+          "-c",
+          "core.filemode=true",
+          "diff",
+          "--no-ext-diff",
+          "--no-textconv",
+          "--quiet",
+          "--exit-code",
+          "HEAD",
+          "--"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "npm_version",
+        "args": [
+          "[node]",
+          "/opt/hostedtoolcache/node/24.21.0/x64/lib/node_modules/npm/bin/npm-cli.js",
+          "--version"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 8,
+            "capturedBytes": 8,
+            "observedSha256": "005206ab803f8881d8227540b7980b37e723b69a8849edb31734a90b7e7964e2",
+            "capturedSha256": "005206ab803f8881d8227540b7980b37e723b69a8849edb31734a90b7e7964e2",
+            "complete": true,
+            "head": "11.19.0\n",
+            "tail": "11.19.0\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "install",
+        "args": [
+          "[node]",
+          "/opt/hostedtoolcache/node/24.21.0/x64/lib/node_modules/npm/bin/npm-cli.js",
+          "ci",
+          "--ignore-scripts",
+          "--no-audit",
+          "--no-fund"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 25,
+            "capturedBytes": 25,
+            "observedSha256": "ed3488c0dad53ade8657c9fabb0a14b8fd232ce67362e4c5489d14bc4ef97686",
+            "capturedSha256": "ed3488c0dad53ade8657c9fabb0a14b8fd232ce67362e4c5489d14bc4ef97686",
+            "complete": true,
+            "head": "\nadded 36 packages in 3s\n",
+            "tail": "\nadded 36 packages in 3s\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "after_install_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "capturedBytes": 41,
+            "observedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "capturedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_install_seal",
+        "args": [
+          "git",
+          "show",
+          "HEAD:docs/results/2026/11-04/operation-cancellation-source.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 23085,
+            "capturedBytes": 23085,
+            "observedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "capturedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_install_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6349,
+            "capturedBytes": 6349,
+            "observedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "capturedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_install_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6586,
+            "capturedBytes": 6586,
+            "observedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "capturedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_install_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_install_working",
+        "args": [
+          "git",
+          "-c",
+          "core.filemode=true",
+          "diff",
+          "--no-ext-diff",
+          "--no-textconv",
+          "--quiet",
+          "--exit-code",
+          "HEAD",
+          "--"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "baseline_object",
+        "args": [
+          "git",
+          "cat-file",
+          "-t",
+          "c5657ad20911f136bc86769f2d79114889693b0e"
+        ],
+        "allowedExits": [
+          0,
+          128
+        ],
+        "exitCode": 128,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 47,
+            "capturedBytes": 47,
+            "observedSha256": "93051ef5e7bf1424b70ed514d3f012953c936894eec9c3018251c6cfb674dd83",
+            "capturedSha256": "93051ef5e7bf1424b70ed514d3f012953c936894eec9c3018251c6cfb674dd83",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "fetch_baseline",
+        "args": [
+          "git",
+          "fetch",
+          "--no-tags",
+          "--no-recurse-submodules",
+          "--no-write-fetch-head",
+          "--depth=1",
+          "origin",
+          "c5657ad20911f136bc86769f2d79114889693b0e"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "baseline_runtime",
+        "args": [
+          "git",
+          "show",
+          "c5657ad20911f136bc86769f2d79114889693b0e:packages/sonant/src/runtime.ts"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 13408,
+            "capturedBytes": 13408,
+            "observedSha256": "f6c41b2b490aeac401d189bfa5f8397ac5bc44faa7e3784dc0dbc273594704f0",
+            "capturedSha256": "f6c41b2b490aeac401d189bfa5f8397ac5bc44faa7e3784dc0dbc273594704f0",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "compile_baseline",
+        "args": [
+          "[node]",
+          "[scratch]/install/node_modules/typescript/bin/tsc",
+          "-p",
+          "[scratch]/baseline/packages/sonant/tsconfig.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "baseline_tests",
+        "args": [
+          "[node]",
+          "--test",
+          "--test-concurrency=1",
+          "--test-reporter=tap",
+          "--test-name-pattern=^a pre-aborted caller never unlocks or plays and its operation settles$",
+          "tests/unit/operation-cancellation.test.mjs"
+        ],
+        "allowedExits": [
+          1
+        ],
+        "exitCode": 1,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 1057,
+            "capturedBytes": 1057,
+            "observedSha256": "fae2e9c31acb920bd26344bb5d042b9a86d88834366332325ab011a615113d30",
+            "capturedSha256": "fae2e9c31acb920bd26344bb5d042b9a86d88834366332325ab011a615113d30",
+            "complete": true,
+            "head": "TAP version 13\n# Subtest: a pre-aborted caller never unlocks or plays and its operation settles\nnot ok 1 - a pre-aborted caller never unlocks or plays and its operation settles\n  ---\n  duration_ms: 3.10324\n  type: 'test'\n  location: '[scratch]/baseline/tests/unit/operation-cancellation.test.mjs:100:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    1 !== 0\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 0\n  actual: 1\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file://[scratch]/baseline/tests/unit/operation-cancellation.test.mjs:106:12)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 70.249168\n",
+            "tail": "TAP version 13\n# Subtest: a pre-aborted caller never unlocks or plays and its operation settles\nnot ok 1 - a pre-aborted caller never unlocks or plays and its operation settles\n  ---\n  duration_ms: 3.10324\n  type: 'test'\n  location: '[scratch]/baseline/tests/unit/operation-cancellation.test.mjs:100:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    1 !== 0\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 0\n  actual: 1\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file://[scratch]/baseline/tests/unit/operation-cancellation.test.mjs:106:12)\n    Test.runInAsyncScope (node:async_hooks:227:14)\n    Test.run (node:internal/test_runner/test:1402:25)\n    Test.start (node:internal/test_runner/test:1262:17)\n    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 70.249168\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "after_baseline_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "capturedBytes": 41,
+            "observedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "capturedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_baseline_seal",
+        "args": [
+          "git",
+          "show",
+          "HEAD:docs/results/2026/11-04/operation-cancellation-source.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 23085,
+            "capturedBytes": 23085,
+            "observedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "capturedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_baseline_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6349,
+            "capturedBytes": 6349,
+            "observedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "capturedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_baseline_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6586,
+            "capturedBytes": 6586,
+            "observedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "capturedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_baseline_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_baseline_working",
+        "args": [
+          "git",
+          "-c",
+          "core.filemode=true",
+          "diff",
+          "--no-ext-diff",
+          "--no-textconv",
+          "--quiet",
+          "--exit-code",
+          "HEAD",
+          "--"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "compile_repaired",
+        "args": [
+          "[node]",
+          "[scratch]/install/node_modules/typescript/bin/tsc",
+          "-p",
+          "[scratch]/repaired/packages/sonant/tsconfig.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "after_compile_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "capturedBytes": 41,
+            "observedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "capturedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_compile_seal",
+        "args": [
+          "git",
+          "show",
+          "HEAD:docs/results/2026/11-04/operation-cancellation-source.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 23085,
+            "capturedBytes": 23085,
+            "observedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "capturedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_compile_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6349,
+            "capturedBytes": 6349,
+            "observedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "capturedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_compile_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6586,
+            "capturedBytes": 6586,
+            "observedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "capturedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_compile_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_compile_working",
+        "args": [
+          "git",
+          "-c",
+          "core.filemode=true",
+          "diff",
+          "--no-ext-diff",
+          "--no-textconv",
+          "--quiet",
+          "--exit-code",
+          "HEAD",
+          "--"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "patched_tests",
+        "args": [
+          "[node]",
+          "--test",
+          "--test-concurrency=1",
+          "--test-reporter=tap",
+          "tests/unit/runtime.test.mjs",
+          "tests/unit/operation-cancellation.test.mjs"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 5454,
+            "capturedBytes": 5454,
+            "observedSha256": "8a87b6d4e799d75ad1aa9b513e74994174d945b11466ba0f100c7aaad74dfb46",
+            "capturedSha256": "8a87b6d4e799d75ad1aa9b513e74994174d945b11466ba0f100c7aaad74dfb46",
+            "complete": true,
+            "head": "TAP version 13\n# Subtest: a pre-aborted caller never unlocks or plays and its operation settles\nok 1 - a pre-aborted caller never unlocks or plays and its operation settles\n  ---\n  duration_ms: 3.021454\n  type: 'test'\n  ...\n# Subtest: caller cancellation during pending unlock prevents late progress playback\nok 2 - caller cancellation during pending unlock prevents late progress playback\n  ---\n  duration_ms: 8.396683\n  type: 'test'\n  ...\n# Subtest: caller cancellation during pending progress playback releases its eventual voice\nok 3 - caller cancellation during pending progress playback releases its eventual voice\n  ---\n  duration_ms: 1.97395\n  type: 'test'\n  ...\n# Subtest: caller abort stops active progress and a pending update despite synchronous terminal reentry\nok 4 - caller abort stops active progress and a pending update despite synchronous terminal reentry\n  ---\n  duration_ms: 2.222833\n  type: 'test'\n  ...\n# Subtest: explicit operation stop cancels a pending update as well as progress\nok 5 - explicit operation stop cancels a pending update as well as progress\n  ---\n  duration_ms: 1.347219\n  type: 'test'\n  ...\n# Subtest: watchdog completion permits a real result while later ca",
+            "tail": "\n# Subtest: an unresponsive media provider times out, receives cancellation, and releases a late voice\nok 18 - an unresponsive media provider times out, receives cancellation, and releases a late voice\n  ---\n  duration_ms: 1501.690681\n  type: 'test'\n  ...\n# Subtest: high-priority failure interrupts a lower-priority voice\nok 19 - high-priority failure interrupts a lower-priority voice\n  ---\n  duration_ms: 0.680003\n  type: 'test'\n  ...\n# Subtest: quiet, speech, category, surface, density and visible-equivalent policies are explicit\nok 20 - quiet, speech, category, surface, density and visible-equivalent policies are explicit\n  ---\n  duration_ms: 0.491039\n  type: 'test'\n  ...\n# Subtest: watchdog stops loops but a later real result still emits exactly once\nok 21 - watchdog stops loops but a later real result still emits exactly once\n  ---\n  duration_ms: 15.869318\n  type: 'test'\n  ...\n# Subtest: destroy during async provider playback releases the eventual voice\nok 22 - destroy during async provider playback releases the eventual voice\n  ---\n  duration_ms: 0.724336\n  type: 'test'\n  ...\n# Subtest: provider failures are isolated and traces remain bounded and exportable\nok 23 - provider failures are isolated and traces remain bounded and exportable\n  ---\n  duration_ms: 0.761917\n  type: 'test'\n  ...\n# Subtest: malformed stored preferences cannot erase safe defaults\nok 24 - malformed stored preferences cannot erase safe defaults\n  ---\n  duration_ms: 0.19243\n  type: 'test'\n  ...\n1..24\n# tests 24\n# suites 0\n# pass 24\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3407.667163\n"
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true,
+            "head": "",
+            "tail": ""
+          }
+        ]
+      },
+      {
+        "label": "after_head",
+        "args": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 41,
+            "capturedBytes": 41,
+            "observedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "capturedSha256": "ccf53cd200bd0af4db04952a172100ddd11622a4ec50d5e77fd209a882a508e3",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_seal",
+        "args": [
+          "git",
+          "show",
+          "HEAD:docs/results/2026/11-04/operation-cancellation-source.json"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 23085,
+            "capturedBytes": 23085,
+            "observedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "capturedSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_index",
+        "args": [
+          "git",
+          "ls-files",
+          "--stage",
+          "-z"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6349,
+            "capturedBytes": 6349,
+            "observedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "capturedSha256": "5da6bf1fa095dd18e1b8088cdc5cd9a03effe96fb0ae54dd8f4e2302d634ce4b",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_tree",
+        "args": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "HEAD"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 6586,
+            "capturedBytes": 6586,
+            "observedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "capturedSha256": "5a3642f0a353601733f19aa5aab3658d640a67668a25b38bef2066661ca4cf57",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_status",
+        "args": [
+          "git",
+          "status",
+          "--porcelain=v1",
+          "-z",
+          "--untracked-files=all"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      },
+      {
+        "label": "after_working",
+        "args": [
+          "git",
+          "-c",
+          "core.filemode=true",
+          "diff",
+          "--no-ext-diff",
+          "--no-textconv",
+          "--quiet",
+          "--exit-code",
+          "HEAD",
+          "--"
+        ],
+        "allowedExits": [
+          0
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "stop": null,
+        "spawned": true,
+        "exitObserved": true,
+        "closeObserved": true,
+        "originalProcessGroupAbsent": true,
+        "termSent": false,
+        "killSent": false,
+        "streams": [
+          {
+            "name": "stdout",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          },
+          {
+            "name": "stderr",
+            "observedBytes": 0,
+            "capturedBytes": 0,
+            "observedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "capturedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete": true
+          }
+        ]
+      }
+    ],
+    "guards": [
+      {
+        "label": "before",
+        "passed": true,
+        "inputFiles": 78,
+        "inputBytes": 1382681,
+        "trackedFiles": 79,
+        "fullIndexMatchesHead": true,
+        "fullWorkingBytesMatchHead": true,
+        "historicalChanged": [
+          "AGENTS.md",
+          "README.md"
+        ],
+        "historicalInventorySha256": "fcf4f75cb09706b820a9879c14411a9727b67a20d8dc122bcf0c0fcdde95848d",
+        "historicalInventoryGitBlob": "cebfcd8f9296139e8c695402c69fb506d2ff60b5",
+        "historicalInventoryCommit": "e562e6b159b581a3d9e02ae2e4bd7e8faa268095"
+      },
+      {
+        "label": "after_install",
+        "passed": true,
+        "inputFiles": 78,
+        "inputBytes": 1382681,
+        "trackedFiles": 79,
+        "fullIndexMatchesHead": true,
+        "fullWorkingBytesMatchHead": true,
+        "historicalChanged": [
+          "AGENTS.md",
+          "README.md"
+        ],
+        "historicalInventorySha256": "fcf4f75cb09706b820a9879c14411a9727b67a20d8dc122bcf0c0fcdde95848d",
+        "historicalInventoryGitBlob": "cebfcd8f9296139e8c695402c69fb506d2ff60b5",
+        "historicalInventoryCommit": "e562e6b159b581a3d9e02ae2e4bd7e8faa268095"
+      },
+      {
+        "label": "after_baseline",
+        "passed": true,
+        "inputFiles": 78,
+        "inputBytes": 1382681,
+        "trackedFiles": 79,
+        "fullIndexMatchesHead": true,
+        "fullWorkingBytesMatchHead": true,
+        "historicalChanged": [
+          "AGENTS.md",
+          "README.md"
+        ],
+        "historicalInventorySha256": "fcf4f75cb09706b820a9879c14411a9727b67a20d8dc122bcf0c0fcdde95848d",
+        "historicalInventoryGitBlob": "cebfcd8f9296139e8c695402c69fb506d2ff60b5",
+        "historicalInventoryCommit": "e562e6b159b581a3d9e02ae2e4bd7e8faa268095"
+      },
+      {
+        "label": "after_compile",
+        "passed": true,
+        "inputFiles": 78,
+        "inputBytes": 1382681,
+        "trackedFiles": 79,
+        "fullIndexMatchesHead": true,
+        "fullWorkingBytesMatchHead": true,
+        "historicalChanged": [
+          "AGENTS.md",
+          "README.md"
+        ],
+        "historicalInventorySha256": "fcf4f75cb09706b820a9879c14411a9727b67a20d8dc122bcf0c0fcdde95848d",
+        "historicalInventoryGitBlob": "cebfcd8f9296139e8c695402c69fb506d2ff60b5",
+        "historicalInventoryCommit": "e562e6b159b581a3d9e02ae2e4bd7e8faa268095"
+      },
+      {
+        "label": "after",
+        "passed": true,
+        "inputFiles": 78,
+        "inputBytes": 1382681,
+        "trackedFiles": 79,
+        "fullIndexMatchesHead": true,
+        "fullWorkingBytesMatchHead": true,
+        "historicalChanged": [
+          "AGENTS.md",
+          "README.md"
+        ],
+        "historicalInventorySha256": "fcf4f75cb09706b820a9879c14411a9727b67a20d8dc122bcf0c0fcdde95848d",
+        "historicalInventoryGitBlob": "cebfcd8f9296139e8c695402c69fb506d2ff60b5",
+        "historicalInventoryCommit": "e562e6b159b581a3d9e02ae2e4bd7e8faa268095"
+      }
+    ],
+    "fixtures": [
+      {
+        "label": "install",
+        "inputs": [
+          {
+            "path": "package.json",
+            "bytes": 1017,
+            "sha256": "853f8939c28de359a02fb43b18216687211731e3e8736a9dd06de4f655161e25"
+          },
+          {
+            "path": "package-lock.json",
+            "bytes": 34985,
+            "sha256": "3a514958108361c4aed6cc272539920051eca6bc868605ebaf8ca4c6e48315d3"
+          },
+          {
+            "path": "packages/sonant/package.json",
+            "bytes": 1397,
+            "sha256": "418a52a0a44c71cc8f08f845f543b2360aab496e18116115e6ffe42e2d9b5e2e"
+          },
+          {
+            "path": "website/package.json",
+            "bytes": 564,
+            "sha256": "15ac38777b7afe6cf2be9462b501cfa94ca9facad9d6ff09d0c6dbd9fd2d177c"
+          }
+        ],
+        "outputs": []
+      },
+      {
+        "label": "baseline",
+        "inputs": [
+          {
+            "path": "packages/sonant/package.json",
+            "bytes": 1397,
+            "sha256": "418a52a0a44c71cc8f08f845f543b2360aab496e18116115e6ffe42e2d9b5e2e"
+          },
+          {
+            "path": "packages/sonant/src/audio.ts",
+            "bytes": 3659,
+            "sha256": "84f31f2d371c46f0093e407d41dec11b612cbff92de54d9a70d90f47003ef003"
+          },
+          {
+            "path": "packages/sonant/src/bind.ts",
+            "bytes": 2369,
+            "sha256": "6f707ccc842dcf7e9ea8eff7ca3f848ed7cd2bc2c83758fd5401c14ae8e255cb"
+          },
+          {
+            "path": "packages/sonant/src/catalog.ts",
+            "bytes": 9219,
+            "sha256": "4cadf5783588a156d998b14f8911b6f6af69a4c3da6f9332bda6648f7e48a545"
+          },
+          {
+            "path": "packages/sonant/src/cli.ts",
+            "bytes": 10779,
+            "sha256": "7223dd9dddafe771836e5c9d028dfbeac7385c245993cab109611d7f60a41371"
+          },
+          {
+            "path": "packages/sonant/src/config.ts",
+            "bytes": 1779,
+            "sha256": "72f5c93417faea05e1fa28d53af667ec713793097e5d361e9797e8eb2338b41c"
+          },
+          {
+            "path": "packages/sonant/src/index.ts",
+            "bytes": 457,
+            "sha256": "2c203b718cb59a8a585d5d6a557ab427fd5d96405d93b0f6f6d1a4aac2abddf5"
+          },
+          {
+            "path": "packages/sonant/src/providers.ts",
+            "bytes": 2956,
+            "sha256": "13dff329193b5e5e05354d797dfed7e97a47e73d92664e7a6bd2c7ffeb8f278c"
+          },
+          {
+            "path": "packages/sonant/src/react.tsx",
+            "bytes": 2788,
+            "sha256": "48679fbd2e6908b29acf1f25abeb5ac00e5ed238ad4c3b50532562d53e6bfb92"
+          },
+          {
+            "path": "packages/sonant/src/registry.ts",
+            "bytes": 3228,
+            "sha256": "b4a58006172496ffc075f8a1a580dc9f771cbb09fb2a3bc08f8991861a483b85"
+          },
+          {
+            "path": "packages/sonant/src/runtime.ts",
+            "bytes": 13408,
+            "sha256": "f6c41b2b490aeac401d189bfa5f8397ac5bc44faa7e3784dc0dbc273594704f0"
+          },
+          {
+            "path": "packages/sonant/src/storage.ts",
+            "bytes": 564,
+            "sha256": "e6a9e1ac9f8a3f8f319d3d1a9ffade39484c856ba9e19a6621da6ecbb81216ba"
+          },
+          {
+            "path": "packages/sonant/src/types.ts",
+            "bytes": 2333,
+            "sha256": "45051314311b92dc08f22f58d6f40c0951d0cd17952190bb5e317259d42cb6f2"
+          },
+          {
+            "path": "packages/sonant/tsconfig.json",
+            "bytes": 397,
+            "sha256": "cb763c4ffb7f6c6afe14db396ddc29bd78689413927286c65f2b7f1086c25db3"
+          },
+          {
+            "path": "tests/unit/operation-cancellation.test.mjs",
+            "bytes": 15252,
+            "sha256": "893bd17eb69ef771055045c165d1a27535675b28b899440d1ef2cc337b6656b6"
+          },
+          {
+            "path": "package.json",
+            "bytes": 33,
+            "sha256": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428"
+          }
+        ],
+        "outputs": [
+          {
+            "path": "audio.d.ts",
+            "bytes": 268,
+            "sha256": "790e710e5d47054f3a7de5e9f7f173a65dd99ded844ac7e13705c2acc1d322c8"
+          },
+          {
+            "path": "audio.js",
+            "bytes": 4132,
+            "sha256": "a2e46bc88a231d192c0865e8afe73dc8f9bba2b67c5ee02006f71457f7b46899"
+          },
+          {
+            "path": "audio.js.map",
+            "bytes": 7745,
+            "sha256": "da8fd571a797ae43d637a324c936bff8a8bb33b88f99a67553962607fd14c179"
+          },
+          {
+            "path": "bind.d.ts",
+            "bytes": 271,
+            "sha256": "7492024e652b0ccb16639f4d9c3f8974496c07a351714914b350156f61b066f3"
+          },
+          {
+            "path": "bind.js",
+            "bytes": 2211,
+            "sha256": "2a7e4b2d5bd558496e32c0be606b849105edd27a2eb61f4ec96e03357647e2f0"
+          },
+          {
+            "path": "bind.js.map",
+            "bytes": 4850,
+            "sha256": "6eeca9f48939181acc37241929c82603305d0512039c5dd120db68a62b56a73b"
+          },
+          {
+            "path": "catalog.d.ts",
+            "bytes": 5571,
+            "sha256": "3175a676a04061d59ffe47db1e43f643c5e28ebcf4daafc9f3a5a55e35637630"
+          },
+          {
+            "path": "catalog.js",
+            "bytes": 9565,
+            "sha256": "1f20530ba98ce8a979026492b4be1c4b0844613fd2a41a883b05628a6ab017c1"
+          },
+          {
+            "path": "catalog.js.map",
+            "bytes": 19006,
+            "sha256": "375195ffe4b368bcd00717404c8f63816937ff96078e9d75bb8455788892cc79"
+          },
+          {
+            "path": "cli.d.ts",
+            "bytes": 218,
+            "sha256": "f7c7a8d11b3d1f50fb166469699306cde1b38b068d3d1d24676f3b7fb9f47c6b"
+          },
+          {
+            "path": "cli.js",
+            "bytes": 10877,
+            "sha256": "bdb093d29671bfd931b876e0bd0641fc92773808e7339e83b021b7435d3fdf5c"
+          },
+          {
+            "path": "cli.js.map",
+            "bytes": 22399,
+            "sha256": "1dc028bb0e99a1a545c830fcb52a6bc1c9d16e9c64bbd0417200a08b422610f2"
+          },
+          {
+            "path": "config.d.ts",
+            "bytes": 731,
+            "sha256": "277026fb0d8e911e4b9128d7924629b383cb67fb97b94d55c424d5fddd4f9268"
+          },
+          {
+            "path": "config.js",
+            "bytes": 1648,
+            "sha256": "7fd303b7ac0bdf5bddf7461b27b3673a216a078a09cf77e55e7e9fc1e0842984"
+          },
+          {
+            "path": "config.js.map",
+            "bytes": 3164,
+            "sha256": "ea6e192e878617cafb55637275b62aa3ce8436776af06809fbbbd5d387658ac5"
+          },
+          {
+            "path": "index.d.ts",
+            "bytes": 443,
+            "sha256": "6e25343a86d328699203613871428dcdd2bf2c2dca2725b3195cabe0bcd81da3"
+          },
+          {
+            "path": "index.js",
+            "bytes": 330,
+            "sha256": "94681bd986ccf27a591abbe2d074eb871549eeff9da371a57ddd10f371b34909"
+          },
+          {
+            "path": "index.js.map",
+            "bytes": 880,
+            "sha256": "e9f3c38cbafc35a06806fcaa90f640608c74bde5f8847c5e62e907bb0934c3cd"
+          },
+          {
+            "path": "providers.d.ts",
+            "bytes": 874,
+            "sha256": "4aef859c6d64de851a66dd0481fd0feed11c133b61c8d58932c76f0ca48eb50d"
+          },
+          {
+            "path": "providers.js",
+            "bytes": 2909,
+            "sha256": "fd415f657aead97b17d684496e12829e4b438a944f5ef3cd7991ae1605086e35"
+          },
+          {
+            "path": "providers.js.map",
+            "bytes": 5824,
+            "sha256": "f629e028fd04867e6eca859bd17e5babdcbd5f2066ba2f3da619086b2d39a7a1"
+          },
+          {
+            "path": "react.d.ts",
+            "bytes": 3905,
+            "sha256": "81820bd20acda444ca6d4d492810c3a80ddc940542fa7e678c46a11364ace3ca"
+          },
+          {
+            "path": "react.js",
+            "bytes": 2656,
+            "sha256": "f5c0b084f0800ac37eb4ec2a4a0d14636b302a3024d8d9b4b5a2016120bc64b5"
+          },
+          {
+            "path": "react.js.map",
+            "bytes": 5361,
+            "sha256": "a307a4c040db2f0fe017953aeb6505dad48ddc12765f25d6f94115a636c0150b"
+          },
+          {
+            "path": "registry.d.ts",
+            "bytes": 3555,
+            "sha256": "f00c38cbf7401678f0df951ae7a90ee697abaa72221688f26868b70b97d931bf"
+          },
+          {
+            "path": "registry.js",
+            "bytes": 3269,
+            "sha256": "88d283267970aff79cbb53a205c22c24a158dacd086e7b911a2520a17d047283"
+          },
+          {
+            "path": "registry.js.map",
+            "bytes": 3954,
+            "sha256": "b01c93053ac7ab380666455179341ad15102b737bad82eddb911df185798d615"
+          },
+          {
+            "path": "runtime.d.ts",
+            "bytes": 1343,
+            "sha256": "2177b374893d694e90b62d731c5734354c979f8e3d491869ca4a0dca952afaae"
+          },
+          {
+            "path": "runtime.js",
+            "bytes": 14345,
+            "sha256": "25dbbaa862560dc0498c048a62e5658c2386b382bce1f1eb28bf4edd292741f9"
+          },
+          {
+            "path": "runtime.js.map",
+            "bytes": 28449,
+            "sha256": "ffebf0ae39e633a0d48cd671db52dba143172fee429cc1d520c04eb855418b23"
+          },
+          {
+            "path": "storage.d.ts",
+            "bytes": 205,
+            "sha256": "3a4b63ebd033ba7a9471214c75a6a81413d9924ba3f9fb841b84a468730b2531"
+          },
+          {
+            "path": "storage.js",
+            "bytes": 638,
+            "sha256": "8bd1358d97a7b283ac4b99f0b99df2a26e0478e4d2ca7e17cce7f34754dee07d"
+          },
+          {
+            "path": "storage.js.map",
+            "bytes": 1170,
+            "sha256": "45d25d49fb0e3703e4296c80015ce41592718f9186f5772383ba2681a5a74cf6"
+          },
+          {
+            "path": "types.d.ts",
+            "bytes": 2429,
+            "sha256": "9545b466d6ed27f6c0d67da6004404ed16f30ec7bab6ccfa689ffa3503527f12"
+          },
+          {
+            "path": "types.js",
+            "bytes": 44,
+            "sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2"
+          },
+          {
+            "path": "types.js.map",
+            "bytes": 2601,
+            "sha256": "0186eafd1fbb7498b40989e9e86edefd2d9971d93ee8f3918e232cdfc27c4107"
+          }
+        ]
+      },
+      {
+        "label": "repaired",
+        "inputs": [
+          {
+            "path": "packages/sonant/package.json",
+            "bytes": 1397,
+            "sha256": "418a52a0a44c71cc8f08f845f543b2360aab496e18116115e6ffe42e2d9b5e2e"
+          },
+          {
+            "path": "packages/sonant/src/audio.ts",
+            "bytes": 3659,
+            "sha256": "84f31f2d371c46f0093e407d41dec11b612cbff92de54d9a70d90f47003ef003"
+          },
+          {
+            "path": "packages/sonant/src/bind.ts",
+            "bytes": 2369,
+            "sha256": "6f707ccc842dcf7e9ea8eff7ca3f848ed7cd2bc2c83758fd5401c14ae8e255cb"
+          },
+          {
+            "path": "packages/sonant/src/catalog.ts",
+            "bytes": 9219,
+            "sha256": "4cadf5783588a156d998b14f8911b6f6af69a4c3da6f9332bda6648f7e48a545"
+          },
+          {
+            "path": "packages/sonant/src/cli.ts",
+            "bytes": 10779,
+            "sha256": "7223dd9dddafe771836e5c9d028dfbeac7385c245993cab109611d7f60a41371"
+          },
+          {
+            "path": "packages/sonant/src/config.ts",
+            "bytes": 1779,
+            "sha256": "72f5c93417faea05e1fa28d53af667ec713793097e5d361e9797e8eb2338b41c"
+          },
+          {
+            "path": "packages/sonant/src/index.ts",
+            "bytes": 457,
+            "sha256": "2c203b718cb59a8a585d5d6a557ab427fd5d96405d93b0f6f6d1a4aac2abddf5"
+          },
+          {
+            "path": "packages/sonant/src/providers.ts",
+            "bytes": 2956,
+            "sha256": "13dff329193b5e5e05354d797dfed7e97a47e73d92664e7a6bd2c7ffeb8f278c"
+          },
+          {
+            "path": "packages/sonant/src/react.tsx",
+            "bytes": 2788,
+            "sha256": "48679fbd2e6908b29acf1f25abeb5ac00e5ed238ad4c3b50532562d53e6bfb92"
+          },
+          {
+            "path": "packages/sonant/src/registry.ts",
+            "bytes": 3228,
+            "sha256": "b4a58006172496ffc075f8a1a580dc9f771cbb09fb2a3bc08f8991861a483b85"
+          },
+          {
+            "path": "packages/sonant/src/runtime.ts",
+            "bytes": 14322,
+            "sha256": "e3450d4efa8313423343681051c2a14c062f4a96038ee1f7f5cb76291da8e318"
+          },
+          {
+            "path": "packages/sonant/src/storage.ts",
+            "bytes": 564,
+            "sha256": "e6a9e1ac9f8a3f8f319d3d1a9ffade39484c856ba9e19a6621da6ecbb81216ba"
+          },
+          {
+            "path": "packages/sonant/src/types.ts",
+            "bytes": 2333,
+            "sha256": "45051314311b92dc08f22f58d6f40c0951d0cd17952190bb5e317259d42cb6f2"
+          },
+          {
+            "path": "packages/sonant/tsconfig.json",
+            "bytes": 397,
+            "sha256": "cb763c4ffb7f6c6afe14db396ddc29bd78689413927286c65f2b7f1086c25db3"
+          },
+          {
+            "path": "tests/unit/operation-cancellation.test.mjs",
+            "bytes": 15252,
+            "sha256": "893bd17eb69ef771055045c165d1a27535675b28b899440d1ef2cc337b6656b6"
+          },
+          {
+            "path": "tests/unit/runtime.test.mjs",
+            "bytes": 9396,
+            "sha256": "c66862230cdfb8eb9a4bb9832b1de544600f658df786902c5365f520d380cc6e"
+          },
+          {
+            "path": "package.json",
+            "bytes": 33,
+            "sha256": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428"
+          }
+        ],
+        "outputs": [
+          {
+            "path": "audio.d.ts",
+            "bytes": 268,
+            "sha256": "790e710e5d47054f3a7de5e9f7f173a65dd99ded844ac7e13705c2acc1d322c8"
+          },
+          {
+            "path": "audio.js",
+            "bytes": 4132,
+            "sha256": "a2e46bc88a231d192c0865e8afe73dc8f9bba2b67c5ee02006f71457f7b46899"
+          },
+          {
+            "path": "audio.js.map",
+            "bytes": 7745,
+            "sha256": "da8fd571a797ae43d637a324c936bff8a8bb33b88f99a67553962607fd14c179"
+          },
+          {
+            "path": "bind.d.ts",
+            "bytes": 271,
+            "sha256": "7492024e652b0ccb16639f4d9c3f8974496c07a351714914b350156f61b066f3"
+          },
+          {
+            "path": "bind.js",
+            "bytes": 2211,
+            "sha256": "2a7e4b2d5bd558496e32c0be606b849105edd27a2eb61f4ec96e03357647e2f0"
+          },
+          {
+            "path": "bind.js.map",
+            "bytes": 4850,
+            "sha256": "6eeca9f48939181acc37241929c82603305d0512039c5dd120db68a62b56a73b"
+          },
+          {
+            "path": "catalog.d.ts",
+            "bytes": 5571,
+            "sha256": "3175a676a04061d59ffe47db1e43f643c5e28ebcf4daafc9f3a5a55e35637630"
+          },
+          {
+            "path": "catalog.js",
+            "bytes": 9565,
+            "sha256": "1f20530ba98ce8a979026492b4be1c4b0844613fd2a41a883b05628a6ab017c1"
+          },
+          {
+            "path": "catalog.js.map",
+            "bytes": 19006,
+            "sha256": "375195ffe4b368bcd00717404c8f63816937ff96078e9d75bb8455788892cc79"
+          },
+          {
+            "path": "cli.d.ts",
+            "bytes": 218,
+            "sha256": "f7c7a8d11b3d1f50fb166469699306cde1b38b068d3d1d24676f3b7fb9f47c6b"
+          },
+          {
+            "path": "cli.js",
+            "bytes": 10877,
+            "sha256": "bdb093d29671bfd931b876e0bd0641fc92773808e7339e83b021b7435d3fdf5c"
+          },
+          {
+            "path": "cli.js.map",
+            "bytes": 22399,
+            "sha256": "1dc028bb0e99a1a545c830fcb52a6bc1c9d16e9c64bbd0417200a08b422610f2"
+          },
+          {
+            "path": "config.d.ts",
+            "bytes": 731,
+            "sha256": "277026fb0d8e911e4b9128d7924629b383cb67fb97b94d55c424d5fddd4f9268"
+          },
+          {
+            "path": "config.js",
+            "bytes": 1648,
+            "sha256": "7fd303b7ac0bdf5bddf7461b27b3673a216a078a09cf77e55e7e9fc1e0842984"
+          },
+          {
+            "path": "config.js.map",
+            "bytes": 3164,
+            "sha256": "ea6e192e878617cafb55637275b62aa3ce8436776af06809fbbbd5d387658ac5"
+          },
+          {
+            "path": "index.d.ts",
+            "bytes": 443,
+            "sha256": "6e25343a86d328699203613871428dcdd2bf2c2dca2725b3195cabe0bcd81da3"
+          },
+          {
+            "path": "index.js",
+            "bytes": 330,
+            "sha256": "94681bd986ccf27a591abbe2d074eb871549eeff9da371a57ddd10f371b34909"
+          },
+          {
+            "path": "index.js.map",
+            "bytes": 880,
+            "sha256": "e9f3c38cbafc35a06806fcaa90f640608c74bde5f8847c5e62e907bb0934c3cd"
+          },
+          {
+            "path": "providers.d.ts",
+            "bytes": 874,
+            "sha256": "4aef859c6d64de851a66dd0481fd0feed11c133b61c8d58932c76f0ca48eb50d"
+          },
+          {
+            "path": "providers.js",
+            "bytes": 2909,
+            "sha256": "fd415f657aead97b17d684496e12829e4b438a944f5ef3cd7991ae1605086e35"
+          },
+          {
+            "path": "providers.js.map",
+            "bytes": 5824,
+            "sha256": "f629e028fd04867e6eca859bd17e5babdcbd5f2066ba2f3da619086b2d39a7a1"
+          },
+          {
+            "path": "react.d.ts",
+            "bytes": 3905,
+            "sha256": "81820bd20acda444ca6d4d492810c3a80ddc940542fa7e678c46a11364ace3ca"
+          },
+          {
+            "path": "react.js",
+            "bytes": 2656,
+            "sha256": "f5c0b084f0800ac37eb4ec2a4a0d14636b302a3024d8d9b4b5a2016120bc64b5"
+          },
+          {
+            "path": "react.js.map",
+            "bytes": 5361,
+            "sha256": "a307a4c040db2f0fe017953aeb6505dad48ddc12765f25d6f94115a636c0150b"
+          },
+          {
+            "path": "registry.d.ts",
+            "bytes": 3555,
+            "sha256": "f00c38cbf7401678f0df951ae7a90ee697abaa72221688f26868b70b97d931bf"
+          },
+          {
+            "path": "registry.js",
+            "bytes": 3269,
+            "sha256": "88d283267970aff79cbb53a205c22c24a158dacd086e7b911a2520a17d047283"
+          },
+          {
+            "path": "registry.js.map",
+            "bytes": 3954,
+            "sha256": "b01c93053ac7ab380666455179341ad15102b737bad82eddb911df185798d615"
+          },
+          {
+            "path": "runtime.d.ts",
+            "bytes": 1343,
+            "sha256": "2177b374893d694e90b62d731c5734354c979f8e3d491869ca4a0dca952afaae"
+          },
+          {
+            "path": "runtime.js",
+            "bytes": 15412,
+            "sha256": "244e55256e30cb31a46a11184a5295fb518fdf7e9ddcbe388a7f93547766db5f"
+          },
+          {
+            "path": "runtime.js.map",
+            "bytes": 30332,
+            "sha256": "a314be790dcb9cb9a7eafa7b3b6c91b663077229d6bf59ac33bfbc7b0dd2d89d"
+          },
+          {
+            "path": "storage.d.ts",
+            "bytes": 205,
+            "sha256": "3a4b63ebd033ba7a9471214c75a6a81413d9924ba3f9fb841b84a468730b2531"
+          },
+          {
+            "path": "storage.js",
+            "bytes": 638,
+            "sha256": "8bd1358d97a7b283ac4b99f0b99df2a26e0478e4d2ca7e17cce7f34754dee07d"
+          },
+          {
+            "path": "storage.js.map",
+            "bytes": 1170,
+            "sha256": "45d25d49fb0e3703e4296c80015ce41592718f9186f5772383ba2681a5a74cf6"
+          },
+          {
+            "path": "types.d.ts",
+            "bytes": 2429,
+            "sha256": "9545b466d6ed27f6c0d67da6004404ed16f30ec7bab6ccfa689ffa3503527f12"
+          },
+          {
+            "path": "types.js",
+            "bytes": 44,
+            "sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2"
+          },
+          {
+            "path": "types.js.map",
+            "bytes": 2601,
+            "sha256": "0186eafd1fbb7498b40989e9e86edefd2d9971d93ee8f3918e232cdfc27c4107"
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "proofLimits": [
+      "One baseline assertion and 24 repaired cases use synthetic providers/timers; no browser, physical audio, live service or npm release.",
+      "Direct child exit/close and original groups are checked; separate descendant sessions are not independently inventoried.",
+      "Executable hashes do not inventory dynamic libraries. Userspace deadlines cannot interrupt blocked kernel filesystem operations."
+    ],
+    "sealSha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92",
+    "baseline": {
+      "raw": {
+        "encoding": "gzip-base64",
+        "bytes": 1057,
+        "sha256": "fae2e9c31acb920bd26344bb5d042b9a86d88834366332325ab011a615113d30",
+        "compressedBytes": 517,
+        "data": "H4sIAAAAAAAAA71TS2/bMAy++1dwyCHdwQ85adIJ64BsyLBe9khyDxSbQVwroifSXQP0xw9SvKy9bJdhF4OgvhcJc7P4Cg/ouSEHapKMYN3vBFk0GOg8pmZHXrCGyliLHhw+oIfeWapaBvLQWXNiMK6GRhioQ28kaDGKWOTEkQC1oCD9R4IAaZomAHV/ftgeWcMkU8WknCYAcupQwziMME4ALFURpWGcH+iIue+dQ5//IN/mW8FjlzM54yStjKvQ2ohOP/lv5v463xlG2zjMgxznvWskvyR6wcgCIjves1ZFoVWw3pvG9h43vwN9oBo/nrsBgN6T1/AUpgFYPnZYhcU8GNsjgxDsEFh8U4k9AX7vjdURGT8KXt3eQvGrUVEdXJar1XaxXi9Xm7svn4OHM8fQXzCjDzmXwTOaD3Y6aphKgjyoBIaVh2Tjs/syWAcOi6naS+BNnMgJPkr21jhypyP1/A6u9o1Fnef/bd8zrcrXl0iZ792dW/DJVeuKOoQrF3ZjQmN7IGpZl+Vcq+lLygBrnKB3xsYE2yF8vAc1LUpdXj9jsRgvf+eVs1Kr+ZkXKcOFLfaC/j2RsHjT/UnnYLxDZj25mQ9KWZYlKstUMoK4KggV940gQ5GMoDN8LsJPGB+H5WEd29w2XTfUQjXF4tlFwbzIyukbNbtJfgKf2l1hIQQAAA=="
+      },
+      "cases": [
+        {
+          "number": 1,
+          "name": "a pre-aborted caller never unlocks or plays and its operation settles",
+          "status": "not ok"
+        }
+      ],
+      "totals": {
+        "tests": 1,
+        "suites": 0,
+        "pass": 0,
+        "fail": 1,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "orderingRequired": false,
+      "accepted": true
+    },
+    "patched": {
+      "raw": {
+        "encoding": "gzip-base64",
+        "bytes": 5454,
+        "sha256": "8a87b6d4e799d75ad1aa9b513e74994174d945b11466ba0f100c7aaad74dfb46",
+        "compressedBytes": 1335,
+        "data": "H4sIAAAAAAAAA71YzY7iOBC+8xQlzWEuJMofSZjbvsFKu/eVcYrG28bOlB0Y3n5VjunQaqL0dNN7ISHE9V9ffcXff/wJJySnrIG8XH2Dv4adR+d/gICeMBE7Sx47kEJrJDB4QoLBaCufHViCXouLA2E6UN6B7ZGEZ1kOvdfoVvYZckgeJAwgSZIVQDeMP/xzdD+gTLMirzbVCsBfevwB39n+7yuANE1vHYpapTAStR4ldwMp8wQ9mo6voy1s6wmNd6CFR+jJPhE6F8zbCfnMThWQPFDgXcfatNzWdVs+wrE3KoFQo3DoQqiDdYPQcLJKIvtXvs+/35N718083TbldvNeL0MNgfO2dyCkV6ebeHLliCn2fcfR7tD1yiO4i5EHssYODjzSURmhgRCNpwt7XE0ef42Ou94XaVEUbbmcZPzVayWVv20Lb/uYHffWJuHgjFrz9Wo8u7mB5DGyZpJZVk2RbxfdOQsvD519AmmPvcZgQ88R86yeMMTNDdrD+aA0hsah1/m5Wkto8IxdtHXMkB28tMcRf2pI/jd193Ocpe2maZYRitBZfcIgkvBflD5CH1gjEQbTIXECTopvYl3BWfmDHa4Gak6bP6AikNbsFR3xxT6ORgPJ1+uZqY222G6y/L2drpXzaJAcdOiFPMD5gGZqRDRdGBpxOMTECQPitgujRUB4FMq4FzDb6RCNdmr6L1c3h35tW1TFYlCM8AMJPRl0U8mEPmp7C9h7S8FKTSi6y0tj89MR2cY65mBsIflyNXOVkTfZO0Dwnuab8OsLKONUh1PxxgEcyQWfNNZHT0BM8y7PZgbeA8TP+JxviqysF30WWoM8CBLSc3EqTscRjefmu2aHJ9A4b5TzSnJHej4Qehac0uF9ofRIyAIje6zY+8CX12mTb4pm0cmT0KoTscoYkBwoc7ViDcaaZK8Mj9gIt4ndJ7uhe0KOtlR9pJpMyx4h6647WVptmjpbpioOiZmtOvaW/DghBiNOQgUgADF0yoIgBCf20Yodn7miUs7s61NCZkpuU1Tbul20/zh4bt5IgEBz/4ZSDmp6Xhecd7CzPCk6Zrd7JDQyJoGZ1CdEzMS+zcuiXcZJaa3u7NkEPaNGwhAXlsV4xlGV1siBiOs37h/BciZHHxYwY/emyqpmuc3vseyILuOeRCjkAV3oT0Ie0UjB6Dog10dO37W4Sbebsq2We1bAjuzZTSjoD8JHddcpucPAi3g0TNUJO34dO+hQKt48gxtNWBMfJvJ+B2yyPK3aNm+Xm0AYGAyh661xXL1H7JSYkN8rNsIOfs2ggeqE7lUW1pFdxW1IjKvfNG+YeXyhinn3621Wt8sk7KCeDklPypLyF9gLpQdCUMYj0dAH2qztGWl6Z/KNicRHz890Ud1mWbZMEH4OCv0aXI8oD2uQwuOTpcsa3EB7IXENHRrH2kJ3K6d2GhP8OaiTCNOst7wZcTQJX/aksPAzQfgi8XPTZptn5W+sUiPYasufu8HHgqBX643zSmvAsPjgLyG9vgTSH1zMbzelT0mbKb+0rbdlvtx7HTpP9nJFskCxp754+18Do9rb/zAKZgMPEDWTnqaoynfwtxddsQfG3CtnOZxdKBQmVeji0vAyE/kX/MXT/8oLCuYFj5I351Wdb/Nl8D8Kvbdh53Pe0usJfqXBSMJFetLhXgzahylbBH7wwfMzVufboppBhzxNi2r1DfiZg3DrBsWbe7b6Br1w8SGHMzyKEItd+OaeVd/He287G25utENZZU1a101el6v/AAMe6ohOFQAA"
+      },
+      "cases": [
+        {
+          "number": 1,
+          "name": "a pre-aborted caller never unlocks or plays and its operation settles",
+          "status": "ok"
+        },
+        {
+          "number": 2,
+          "name": "caller cancellation during pending unlock prevents late progress playback",
+          "status": "ok"
+        },
+        {
+          "number": 3,
+          "name": "caller cancellation during pending progress playback releases its eventual voice",
+          "status": "ok"
+        },
+        {
+          "number": 4,
+          "name": "caller abort stops active progress and a pending update despite synchronous terminal reentry",
+          "status": "ok"
+        },
+        {
+          "number": 5,
+          "name": "explicit operation stop cancels a pending update as well as progress",
+          "status": "ok"
+        },
+        {
+          "number": 6,
+          "name": "watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes",
+          "status": "ok"
+        },
+        {
+          "number": 7,
+          "name": "resolve and reject settle once under provider reentry without cancelling their confirmed outcome",
+          "status": "ok"
+        },
+        {
+          "number": 8,
+          "name": "caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable",
+          "status": "ok"
+        },
+        {
+          "number": 9,
+          "name": "natural progress completion retains caller cancellation for an already pending or active update",
+          "status": "ok"
+        },
+        {
+          "number": 10,
+          "name": "caller cancellation synchronously inside provider unlock or play cannot retain a voice",
+          "status": "ok"
+        },
+        {
+          "number": 11,
+          "name": "all characters implement the complete deterministic contract with silent tails",
+          "status": "ok"
+        },
+        {
+          "number": 12,
+          "name": "validation rejects incomplete, non-finite and out-of-budget recipes",
+          "status": "ok"
+        },
+        {
+          "number": 13,
+          "name": "server imports and unavailable audio are safe and observable",
+          "status": "ok"
+        },
+        {
+          "number": 14,
+          "name": "muting stops a live voice and persists bounded preferences",
+          "status": "ok"
+        },
+        {
+          "number": 15,
+          "name": "cooldown and voice reservations cover concurrent unlocks",
+          "status": "ok"
+        },
+        {
+          "number": 16,
+          "name": "cancellation during unlock never reaches the renderer",
+          "status": "ok"
+        },
+        {
+          "number": 17,
+          "name": "a browser unlock that never settles becomes an observable blocked decision",
+          "status": "ok"
+        },
+        {
+          "number": 18,
+          "name": "an unresponsive media provider times out, receives cancellation, and releases a late voice",
+          "status": "ok"
+        },
+        {
+          "number": 19,
+          "name": "high-priority failure interrupts a lower-priority voice",
+          "status": "ok"
+        },
+        {
+          "number": 20,
+          "name": "quiet, speech, category, surface, density and visible-equivalent policies are explicit",
+          "status": "ok"
+        },
+        {
+          "number": 21,
+          "name": "watchdog stops loops but a later real result still emits exactly once",
+          "status": "ok"
+        },
+        {
+          "number": 22,
+          "name": "destroy during async provider playback releases the eventual voice",
+          "status": "ok"
+        },
+        {
+          "number": 23,
+          "name": "provider failures are isolated and traces remain bounded and exportable",
+          "status": "ok"
+        },
+        {
+          "number": 24,
+          "name": "malformed stored preferences cannot erase safe defaults",
+          "status": "ok"
+        }
+      ],
+      "totals": {
+        "tests": 24,
+        "suites": 0,
+        "pass": 24,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "orderingRequired": false,
+      "accepted": true
+    },
+    "dependencyLinksRemoved": true,
+    "cleanup": "passed",
+    "interrupted": false,
+    "completedAtUtc": "2026-11-04T21:40:48.434Z"
+  },
+  "validation": {
+    "verified": true,
+    "controllerBytes": 58344,
+    "log": {
+      "bytes": 73982,
+      "sha256": "78032761bb89474b278fa3572238edc2bf06023a36c7ee14814cd36d3560861f"
+    },
+    "workflow": {
+      "bytes": 1720,
+      "sha256": "3f1203727721a32313f62d7545415aaa1df21c4f03285fc1b6ab07ac19bf9b85"
+    },
+    "seal": {
+      "path": "docs/results/2026/11-04/operation-cancellation-source.json",
+      "bytes": 23085,
+      "sha256": "2e8866d56b75b6d08b5945c184cb2763b3e2228ad8e62117b29a1ab0a66e0a92"
+    },
+    "tap": 6511,
+    "controllerMatchesSingleActualJobLogResult": true,
+    "completeTapPayloadsVerified": true,
+    "fixtureInputsMatchedSource": true
+  },
+  "platformWarnings": [
+    "(node:2387) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.",
+    "(node:2577) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.",
+    "##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/"
+  ],
+  "proofLimits": [
+    "The focused job and its single controller completed successfully. The separate workflow aggregate API state is retained exactly as observed; an in-progress aggregate is not called a completed workflow.",
+    "The baseline's expected assertion failure and absent shallow baseline-object probe are preserved, not described as passing product cases or zero exits.",
+    "Synthetic provider lifecycle only. This packet does not establish physical audio, browser/React-hook behavior, public npm availability, a fresh consumer release or deployment.",
+    "Main/production remain at c5657ad20911f136bc86769f2d79114889693b0e; only the repair branch is published by this packet.",
+    "The final evidence edition changes status docs and retires the active temporary workflow. Reproduce the immutable preparation source for this result."
+  ]
+}
