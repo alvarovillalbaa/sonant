@@ -1,0 +1,127 @@
+name: Sonant public delivery HTTP checks
+"on":
+  create:
+permissions:
+  contents: read
+jobs:
+  public-http:
+    if: >-
+      github.event_name == 'create' && github.event.ref_type == 'branch' &&
+      github.repository == 'alvarovillalbaa/sonant' &&
+      github.event.repository.private == false &&
+      github.event.ref == 'qa/sonant-public-http-20261104' &&
+      github.ref == 'refs/heads/qa/sonant-public-http-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    env:
+      SOURCE_COMMIT: 22ab91b9d1333b749d31d8946512c49c279972e8
+    steps:
+      - name: Require the immutable production pin
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_COMMIT" =~ ^[a-f0-9]{40}$ ]]
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: 24.21.0
+      - name: Verify five fixed anonymous public responses
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module - <<'NODE'
+          import fs from "node:fs";
+          import { createHash } from "node:crypto";
+          import { execFileSync } from "node:child_process";
+          const ORIGIN = "https://sonant-beta.vercel.app", LIMIT = 1048576;
+          const JS = "/assets/index-D_Lgjs50.js", CSS = "/assets/index-QBo_8_vM.css";
+          const CASES = [
+            { name: "/", type: /^text\/html(?:;|$)/i },
+            { name: "/llms.txt", type: /^text\/plain(?:;|$)/i, source: "website/public/llms.txt" },
+            { name: "/favicon.svg", type: /^image\/svg\+xml(?:;|$)/i, source: "website/public/favicon.svg" },
+            { name: JS, type: /^(?:text|application)\/javascript(?:;|$)/i },
+            { name: CSS, type: /^text\/css(?:;|$)/i },
+          ];
+          const sha = bytes => createHash("sha256").update(bytes).digest("hex");
+          const need = (ok, code) => { if (!ok) throw new Error(code); };
+          const read = name => { const stat = fs.lstatSync(name); need(stat.isFile() && !stat.isSymbolicLink() && stat.size <= LIMIT, "source_file_invalid"); return fs.readFileSync(name); };
+          const rows = CASES.map(test => ({ name: test.name, status: "not_run" }));
+          const end = Date.now() + 60000, abort = new AbortController(); let finished = false;
+          const report = { schemaVersion: "sonant.public-http.v1", sourceSha: process.env.SOURCE_COMMIT,
+            sourceVerified: false, origin: ORIGIN, status: "failed", readiness: "public-http-unverified",
+            authSent: false, cookiesSent: false, shareLink: false, requestsSettled: false, checks: rows,
+            startedAtUtc: new Date().toISOString(), runtime: { node: process.version, platform: process.platform },
+            limits: { requestSeconds: 15, globalSeconds: 60, finalStdoutSeconds: 2, responseBytes: LIMIT, reportBytes: 16384 },
+            proofLimits: ["HTTP only: no browser JavaScript, interaction, accessibility, physical audio, npm release or live host acceptance.",
+              "Source SHA identifies the checked-out comparison baseline; provider mapping is verified separately. Bundle hashes are observations, not expected source-byte comparisons."] };
+          const finish = error => {
+            if (finished) return; finished = true; clearTimeout(globalTimer); abort.abort();
+            if (error) report.error = error; report.completedAtUtc = new Date().toISOString();
+            report.status = !error && report.sourceVerified && report.requestsSettled && rows.length === 5 && rows.every(row => row.status === "passed") ? "passed" : "failed";
+            report.readiness = report.status === "passed" ? "public-http-verified" : "public-http-unverified";
+            let output = JSON.stringify(report);
+            if (Buffer.byteLength(output) > 16384) {
+              report.status = "failed"; output = JSON.stringify({ schemaVersion: report.schemaVersion, sourceSha: report.sourceSha,
+                status: "failed", readiness: "public-http-unverified", error: "report_limit", authSent: false, cookiesSent: false, shareLink: false,
+                checks: rows.map(row => ({ name: row.name, status: row.status })) });
+            }
+            const timer = setTimeout(() => { process.stdout.destroy(); process.exit(1); }, Math.max(1, Math.min(2000, end + 2000 - Date.now())));
+            process.stdout.write(output + "\n", error => { clearTimeout(timer); process.exit(!error && report.status === "passed" && Date.now() <= end + 2000 ? 0 : 1); });
+          };
+          // A stalled abort is an unsettled failure, never accepted HTTP evidence.
+          const globalTimer = setTimeout(() => finish("global_timeout"), 60000);
+          const attributes = tag => Object.fromEntries([...tag.matchAll(/([^\s=/>]+)\s*=\s*(["'])(.*?)\2/gs)].map(match => [match[1].toLowerCase(), match[3]]));
+          async function check(test, row) {
+            const own = new AbortController(), expires = Date.now() + 15000;
+            const timer = setTimeout(() => own.abort(), 15000), signal = AbortSignal.any([own.signal, abort.signal]); let reader;
+            try {
+              row.status = "running";
+              const response = await fetch(ORIGIN + test.name, { method: "GET", credentials: "omit", redirect: "error", signal,
+                headers: { accept: test.name === "/" ? "text/html" : "*/*" }, cache: "no-store" });
+              row.httpStatus = response.status; row.contentType = (response.headers.get("content-type") ?? "").slice(0, 128);
+              row.effectiveOrigin = new URL(response.url).origin; reader = response.body?.getReader();
+              need(response.status === 200 && row.effectiveOrigin === ORIGIN, "http_status_or_origin");
+              need(test.type.test(row.contentType), "content_type"); need(reader, "body_missing");
+              const chunks = []; let total = 0;
+              while (true) { const part = await reader.read(); if (part.done) break; total += part.value.byteLength; row.bodyBytes = total; need(total <= LIMIT, "body_limit"); chunks.push(part.value); }
+              const body = Buffer.concat(chunks); row.bodyBytes = body.length; row.bodySha256 = sha(body); row.bodyComplete = true;
+              need(body.length > 0, "body_empty");
+              if (test.source) {
+                const source = read(test.source); row.sourceFile = test.source; row.sourceBytes = source.length; row.sourceSha256 = sha(source);
+                row.byteEqual = body.equals(source); need(row.byteEqual, "public_file_bytes");
+              } else if (test.name === "/") {
+                const source = read("website/index.html"), expected = /<title>([\s\S]*?)<\/title>/i.exec(source.toString("utf8"))?.[1];
+                const html = new TextDecoder("utf-8", { fatal: true }).decode(body), titles = [...html.matchAll(/<title>([\s\S]*?)<\/title>/gi)];
+                row.sourceFile = "website/index.html"; row.sourceSha256 = sha(source); row.titleMatches = !!expected && titles.length === 1 && titles[0][1] === expected;
+                row.scriptMatches = [...html.matchAll(/<script\b[^>]*>/gi)].some(match => { const a = attributes(match[0]); return a.type === "module" && a.src === JS; });
+                row.stylesheetMatches = [...html.matchAll(/<link\b[^>]*>/gi)].some(match => { const a = attributes(match[0]); return a.rel === "stylesheet" && a.href === CSS; });
+                need(row.titleMatches && row.scriptMatches && row.stylesheetMatches, "html_title_or_assets");
+              } else if (test.name === JS) {
+                const text = new TextDecoder("utf-8", { fatal: true }).decode(body);
+                row.releaseNoticeStringsPresent = text.includes("Caller cancellation fixes are available in source") && text.includes("predates these fixes");
+                row.bundleValidation = "fingerprint-and-release-notice-strings";
+                need(row.releaseNoticeStringsPresent, "release_notice_strings");
+              } else row.bundleValidation = "fingerprint-only";
+              need(!signal.aborted && Date.now() <= expires, "request_deadline"); row.status = "passed";
+            } catch (error) {
+              row.status = "failed"; row.error = /^[a-z0-9_]+$/.test(error?.message ?? "") ? error.message : "request_or_validation_failed";
+              if (/^[A-Z0-9_]+$/.test(error?.cause?.code ?? "")) row.transportCode = error.cause.code.slice(0, 64);
+            } finally {
+              if (reader) { try { await reader.cancel(); } catch {} try { reader.releaseLock(); row.streamReleased = true; } catch { row.streamReleased = false; row.status = "failed"; } }
+              clearTimeout(timer); if (signal.aborted || Date.now() > expires) { row.status = "failed"; row.error ??= "request_deadline"; }
+            }
+          }
+          try {
+            need(process.version === "v24.21.0" && /^[a-f0-9]{40}$/.test(report.sourceSha ?? ""), "runtime_or_source_pin");
+            const head = execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8", timeout: 10000, killSignal: "SIGKILL", maxBuffer: 1024, stdio: ["ignore", "pipe", "pipe"] }).trim();
+            need(head === report.sourceSha, "source_head_mismatch"); report.sourceVerified = true;
+            const settled = await Promise.allSettled(CASES.map((test, index) => check(test, rows[index])));
+            report.requestsSettled = settled.length === 5 && settled.every(item => item.status === "fulfilled"); finish(report.requestsSettled ? null : "request_check_unsettled");
+          } catch { finish("source_or_controller_failed"); }
+          NODE
+# Inactive example. Root pins the reviewed production application commit,
+# publishes its active copy, then creates qa/sonant-public-http-20261104.
+# Five anonymous HTTP GETs only; no browser, dependencies, credentials or artifacts.
