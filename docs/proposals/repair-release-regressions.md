@@ -55,3 +55,13 @@ screen-reader and full-product acceptance remain separate boundaries.
 
 Local Storage Guard still blocks a local install/build. This job installs and
 executes only on its public runner; no local dependency environment is created.
+
+## Observed result
+
+[Run 41919747791](../results/2026/11-04/release-regressions.md), job
+`126888797472`, completed successfully at immutable source
+`55c990b3998e1a3b3f03cd80dc32fb971da8eec8`: all 35 unit/integration cases,
+40 browser scenarios, five cold-start repetitions, builds and final source
+guard passed. The final evidence edition removes the active temporary workflow
+and retires only this job's owned branch. Main integration, hosted delivery and
+npm publication remain their own observed boundaries.

@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 1,
+  "kind": "sonant-repair-release-regressions",
+  "sourceCommit": "55c990b3998e1a3b3f03cd80dc32fb971da8eec8",
+  "sourceTree": "3c44f77fd4c9481c4f18fa6950ac411942c4cf48",
+  "activationCommit": "1679f07639d61998eb6eb513f73d15661d391c92",
+  "activationTree": "fcb02e9cb8d5a8015ff0cadee5d08b6923e0a10c",
+  "run": {
+    "id": 41919747791,
+    "url": "https://github.com/alvarovillalbaa/sonant/actions/runs/41919747791",
+    "event": "create",
+    "headSha": "1679f07639d61998eb6eb513f73d15661d391c92",
+    "status": "completed",
+    "conclusion": "success",
+    "createdAt": "2026-11-04T21:50:07Z",
+    "updatedAt": "2026-11-04T21:52:24Z"
+  },
+  "job": {
+    "id": 126888797472,
+    "name": "quality",
+    "status": "completed",
+    "conclusion": "success",
+    "startedAt": "2026-11-04T21:50:10Z",
+    "completedAt": "2026-11-04T21:52:23Z",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Require the immutable repair pin",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Verify the immutable checkout",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm ci",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run check",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm test",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run build:site",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run node node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Provide a virtual audio device for headless Firefox",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run test:e2e",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Verify repeated Firefox cold starts",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm pack --dry-run --workspace @alvarovillalbaa/sonant",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Verify tracked source stayed unchanged",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "runtime": {
+    "node": "v22.23.4",
+    "npm": "10.9.9",
+    "typescript": "5.9.3",
+    "typescriptEvidence": "Unchanged frozen lockfile installed by npm ci; this profile does not separately print the compiler version.",
+    "vite": "8.3.4"
+  },
+  "unitIntegration": {
+    "status": "passed",
+    "cases": [
+      {
+        "number": 1,
+        "name": "CLI creates an editable kit and selected source components",
+        "status": "ok"
+      },
+      {
+        "number": 2,
+        "name": "CLI preflights all collisions and preserves existing bytes",
+        "status": "ok"
+      },
+      {
+        "number": 3,
+        "name": "dry runs and invalid input leave no residue",
+        "status": "ok"
+      },
+      {
+        "number": 4,
+        "name": "CLI rejects traversal, symlinks, and inherited registry keys",
+        "status": "ok"
+      },
+      {
+        "number": 5,
+        "name": "export emits portable WAVs with provenance and deterministic hashes",
+        "status": "ok"
+      },
+      {
+        "number": 6,
+        "name": "compile validates copied recipes and recipe checks run for all themes",
+        "status": "ok"
+      },
+      {
+        "number": 7,
+        "name": "audit findings are explicitly advisory and strict mode is opt-in",
+        "status": "ok"
+      },
+      {
+        "number": 8,
+        "name": "packed package installs offline and its public imports and executable CLI work",
+        "status": "ok"
+      },
+      {
+        "number": 9,
+        "name": "React provider renders on the server without a browser or AudioContext",
+        "status": "ok"
+      },
+      {
+        "number": 10,
+        "name": "device preferences are deferred until client hydration",
+        "status": "ok"
+      },
+      {
+        "number": 11,
+        "name": "generated provider, every copied component, and editable themes compile as consumer source",
+        "status": "ok"
+      },
+      {
+        "number": 12,
+        "name": "a pre-aborted caller never unlocks or plays and its operation settles",
+        "status": "ok"
+      },
+      {
+        "number": 13,
+        "name": "caller cancellation during pending unlock prevents late progress playback",
+        "status": "ok"
+      },
+      {
+        "number": 14,
+        "name": "caller cancellation during pending progress playback releases its eventual voice",
+        "status": "ok"
+      },
+      {
+        "number": 15,
+        "name": "caller abort stops active progress and a pending update despite synchronous terminal reentry",
+        "status": "ok"
+      },
+      {
+        "number": 16,
+        "name": "explicit operation stop cancels a pending update as well as progress",
+        "status": "ok"
+      },
+      {
+        "number": 17,
+        "name": "watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes",
+        "status": "ok"
+      },
+      {
+        "number": 18,
+        "name": "resolve and reject settle once under provider reentry without cancelling their confirmed outcome",
+        "status": "ok"
+      },
+      {
+        "number": 19,
+        "name": "caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable",
+        "status": "ok"
+      },
+      {
+        "number": 20,
+        "name": "natural progress completion retains caller cancellation for an already pending or active update",
+        "status": "ok"
+      },
+      {
+        "number": 21,
+        "name": "caller cancellation synchronously inside provider unlock or play cannot retain a voice",
+        "status": "ok"
+      },
+      {
+        "number": 22,
+        "name": "all characters implement the complete deterministic contract with silent tails",
+        "status": "ok"
+      },
+      {
+        "number": 23,
+        "name": "validation rejects incomplete, non-finite and out-of-budget recipes",
+        "status": "ok"
+      },
+      {
+        "number": 24,
+        "name": "server imports and unavailable audio are safe and observable",
+        "status": "ok"
+      },
+      {
+        "number": 25,
+        "name": "muting stops a live voice and persists bounded preferences",
+        "status": "ok"
+      },
+      {
+        "number": 26,
+        "name": "cooldown and voice reservations cover concurrent unlocks",
+        "status": "ok"
+      },
+      {
+        "number": 27,
+        "name": "cancellation during unlock never reaches the renderer",
+        "status": "ok"
+      },
+      {
+        "number": 28,
+        "name": "a browser unlock that never settles becomes an observable blocked decision",
+        "status": "ok"
+      },
+      {
+        "number": 29,
+        "name": "an unresponsive media provider times out, receives cancellation, and releases a late voice",
+        "status": "ok"
+      },
+      {
+        "number": 30,
+        "name": "high-priority failure interrupts a lower-priority voice",
+        "status": "ok"
+      },
+      {
+        "number": 31,
+        "name": "quiet, speech, category, surface, density and visible-equivalent policies are explicit",
+        "status": "ok"
+      },
+      {
+        "number": 32,
+        "name": "watchdog stops loops but a later real result still emits exactly once",
+        "status": "ok"
+      },
+      {
+        "number": 33,
+        "name": "destroy during async provider playback releases the eventual voice",
+        "status": "ok"
+      },
+      {
+        "number": 34,
+        "name": "provider failures are isolated and traces remain bounded and exportable",
+        "status": "ok"
+      },
+      {
+        "number": 35,
+        "name": "malformed stored preferences cannot erase safe defaults",
+        "status": "ok"
+      }
+    ],
+    "totals": {
+      "tests": 35,
+      "pass": 35,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "focusedCaseOverlap": 24,
+    "normalizedTap": "TAP version 13\n# Subtest: CLI creates an editable kit and selected source components\nok 1 - CLI creates an editable kit and selected source components\n---\nduration_ms: 94.293691\ntype: 'test'\n...\n# Subtest: CLI preflights all collisions and preserves existing bytes\nok 2 - CLI preflights all collisions and preserves existing bytes\n---\nduration_ms: 52.478376\ntype: 'test'\n...\n# Subtest: dry runs and invalid input leave no residue\nok 3 - dry runs and invalid input leave no residue\n---\nduration_ms: 171.319269\ntype: 'test'\n...\n# Subtest: CLI rejects traversal, symlinks, and inherited registry keys\nok 4 - CLI rejects traversal, symlinks, and inherited registry keys\n---\nduration_ms: 180.764311\ntype: 'test'\n...\n# Subtest: export emits portable WAVs with provenance and deterministic hashes\nok 5 - export emits portable WAVs with provenance and deterministic hashes\n---\nduration_ms: 293.571236\ntype: 'test'\n...\n# Subtest: compile validates copied recipes and recipe checks run for all themes\nok 6 - compile validates copied recipes and recipe checks run for all themes\n---\nduration_ms: 481.438937\ntype: 'test'\n...\n# Subtest: audit findings are explicitly advisory and strict mode is opt-in\nok 7 - audit findings are explicitly advisory and strict mode is opt-in\n---\nduration_ms: 87.658651\ntype: 'test'\n...\n# Subtest: packed package installs offline and its public imports and executable CLI work\nok 8 - packed package installs offline and its public imports and executable CLI work\n---\nduration_ms: 1302.873091\ntype: 'test'\n...\n# Subtest: React provider renders on the server without a browser or AudioContext\nok 9 - React provider renders on the server without a browser or AudioContext\n---\nduration_ms: 4.996108\ntype: 'test'\n...\n# Subtest: device preferences are deferred until client hydration\nok 10 - device preferences are deferred until client hydration\n---\nduration_ms: 0.723227\ntype: 'test'\n...\n# Subtest: generated provider, every copied component, and editable themes compile as consumer source\nok 11 - generated provider, every copied component, and editable themes compile as consumer source\n---\nduration_ms: 1135.566662\ntype: 'test'\n...\n# Subtest: a pre-aborted caller never unlocks or plays and its operation settles\nok 12 - a pre-aborted caller never unlocks or plays and its operation settles\n---\nduration_ms: 2.499616\ntype: 'test'\n...\n# Subtest: caller cancellation during pending unlock prevents late progress playback\nok 13 - caller cancellation during pending unlock prevents late progress playback\n---\nduration_ms: 4.531039\ntype: 'test'\n...\n# Subtest: caller cancellation during pending progress playback releases its eventual voice\nok 14 - caller cancellation during pending progress playback releases its eventual voice\n---\nduration_ms: 1.278721\ntype: 'test'\n...\n# Subtest: caller abort stops active progress and a pending update despite synchronous terminal reentry\nok 15 - caller abort stops active progress and a pending update despite synchronous terminal reentry\n---\nduration_ms: 1.48372\ntype: 'test'\n...\n# Subtest: explicit operation stop cancels a pending update as well as progress\nok 16 - explicit operation stop cancels a pending update as well as progress\n---\nduration_ms: 0.860123\ntype: 'test'\n...\n# Subtest: watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes\nok 17 - watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes\n---\nduration_ms: 22.050324\ntype: 'test'\n...\n# Subtest: resolve and reject settle once under provider reentry without cancelling their confirmed outcome\nok 18 - resolve and reject settle once under provider reentry without cancelling their confirmed outcome\n---\nduration_ms: 3.512518\ntype: 'test'\n...\n# Subtest: caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable\nok 19 - caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable\n---\nduration_ms: 1.630821\ntype: 'test'\n...\n# Subtest: natural progress completion retains caller cancellation for an already pending or active update\nok 20 - natural progress completion retains caller cancellation for an already pending or active update\n---\nduration_ms: 4.669447\ntype: 'test'\n...\n# Subtest: caller cancellation synchronously inside provider unlock or play cannot retain a voice\nok 21 - caller cancellation synchronously inside provider unlock or play cannot retain a voice\n---\nduration_ms: 1.368526\ntype: 'test'\n...\n# Subtest: all characters implement the complete deterministic contract with silent tails\nok 22 - all characters implement the complete deterministic contract with silent tails\n---\nduration_ms: 182.307841\ntype: 'test'\n...\n# Subtest: validation rejects incomplete, non-finite and out-of-budget recipes\nok 23 - validation rejects incomplete, non-finite and out-of-budget recipes\n---\nduration_ms: 0.391559\ntype: 'test'\n...\n# Subtest: server imports and unavailable audio are safe and observable\nok 24 - server imports and unavailable audio are safe and observable\n---\nduration_ms: 1.003518\ntype: 'test'\n...\n# Subtest: muting stops a live voice and persists bounded preferences\nok 25 - muting stops a live voice and persists bounded preferences\n---\nduration_ms: 0.481073\ntype: 'test'\n...\n# Subtest: cooldown and voice reservations cover concurrent unlocks\nok 26 - cooldown and voice reservations cover concurrent unlocks\n---\nduration_ms: 0.25314\ntype: 'test'\n...\n# Subtest: cancellation during unlock never reaches the renderer\nok 27 - cancellation during unlock never reaches the renderer\n---\nduration_ms: 3.579609\ntype: 'test'\n...\n# Subtest: a browser unlock that never settles becomes an observable blocked decision\nok 28 - a browser unlock that never settles becomes an observable blocked decision\n---\nduration_ms: 1500.857456\ntype: 'test'\n...\n# Subtest: an unresponsive media provider times out, receives cancellation, and releases a late voice\nok 29 - an unresponsive media provider times out, receives cancellation, and releases a late voice\n---\nduration_ms: 1500.847135\ntype: 'test'\n...\n# Subtest: high-priority failure interrupts a lower-priority voice\nok 30 - high-priority failure interrupts a lower-priority voice\n---\nduration_ms: 0.507653\ntype: 'test'\n...\n# Subtest: quiet, speech, category, surface, density and visible-equivalent policies are explicit\nok 31 - quiet, speech, category, surface, density and visible-equivalent policies are explicit\n---\nduration_ms: 0.519541\ntype: 'test'\n...\n# Subtest: watchdog stops loops but a later real result still emits exactly once\nok 32 - watchdog stops loops but a later real result still emits exactly once\n---\nduration_ms: 16.077658\ntype: 'test'\n...\n# Subtest: destroy during async provider playback releases the eventual voice\nok 33 - destroy during async provider playback releases the eventual voice\n---\nduration_ms: 0.425209\ntype: 'test'\n...\n# Subtest: provider failures are isolated and traces remain bounded and exportable\nok 34 - provider failures are isolated and traces remain bounded and exportable\n---\nduration_ms: 0.638019\ntype: 'test'\n...\n# Subtest: malformed stored preferences cannot erase safe defaults\nok 35 - malformed stored preferences cannot erase safe defaults\n---\nduration_ms: 0.149625\ntype: 'test'\n...\n1..35\n# tests 35\n# suites 0\n# pass 35\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4696.692418\n",
+    "qualification": "Decoded GitHub log normalized by removing date/ANSI/CR prefixes; this is not an independently captured raw process stream.",
+    "normalizedTapSha256": "24f62b811b26778cca56012cb4fb54b259930c08c44341e703f30cc11b9d36d2"
+  },
+  "browser": {
+    "status": "passed",
+    "scheduled": 40,
+    "passed": 40,
+    "seconds": 41.3,
+    "projects": [
+      "chromium",
+      "firefox",
+      "webkit",
+      "mobile"
+    ],
+    "reporter": "dot",
+    "individualRuntimeCaseIdsRetained": false,
+    "qualification": "All 40 scheduled cases passed under the pinned four-project configuration; the terminal dot reporter does not enumerate every actual case identity."
+  },
+  "firefoxColdStarts": {
+    "status": "passed",
+    "scheduled": 5,
+    "passed": 5,
+    "seconds": 13.9,
+    "repeatOf": "catalog renders",
+    "nativeResumeMilliseconds": [
+      41,
+      42,
+      31,
+      39,
+      42
+    ],
+    "mainMatrixResumeMilliseconds": 62,
+    "qualification": "Synthetic CI virtual PulseAudio device and native AudioContext lifecycle; no physical audibility proof."
+  },
+  "build": {
+    "packageAndSiteTypes": "passed",
+    "siteBuild": "passed",
+    "outputAssets": [
+      "dist/index.html                                              0.91 kB │ gzip:  0.50 kB",
+      "dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff    13.14 kB",
+      "dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2   14.70 kB",
+      "dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB",
+      "dist/assets/index-QBo_8_vM.css                              43.43 kB │ gzip:  9.60 kB",
+      "dist/assets/index-CEfWi6V6.js                              310.23 kB │ gzip: 96.36 kB"
+    ],
+    "dryRunPackageFiles": 39,
+    "dryRunPackageVersion": "0.1.0",
+    "actualPackedConsumerCase": "packed package installs offline and its public imports and executable CLI work",
+    "dryRunNotice": [
+      "npm notice",
+      "npm notice 📦  @alvarovillalbaa/sonant@0.1.0",
+      "npm notice Tarball Contents",
+      "npm notice 1.1kB LICENSE",
+      "npm notice 4.8kB README.md",
+      "npm notice 268B dist/audio.d.ts",
+      "npm notice 4.1kB dist/audio.js",
+      "npm notice 7.7kB dist/audio.js.map",
+      "npm notice 271B dist/bind.d.ts",
+      "npm notice 2.2kB dist/bind.js",
+      "npm notice 4.8kB dist/bind.js.map",
+      "npm notice 5.6kB dist/catalog.d.ts",
+      "npm notice 9.6kB dist/catalog.js",
+      "npm notice 19.0kB dist/catalog.js.map",
+      "npm notice 218B dist/cli.d.ts",
+      "npm notice 10.9kB dist/cli.js",
+      "npm notice 22.4kB dist/cli.js.map",
+      "npm notice 731B dist/config.d.ts",
+      "npm notice 1.6kB dist/config.js",
+      "npm notice 3.2kB dist/config.js.map",
+      "npm notice 443B dist/index.d.ts",
+      "npm notice 330B dist/index.js",
+      "npm notice 880B dist/index.js.map",
+      "npm notice 874B dist/providers.d.ts",
+      "npm notice 2.9kB dist/providers.js",
+      "npm notice 5.8kB dist/providers.js.map",
+      "npm notice 3.9kB dist/react.d.ts",
+      "npm notice 2.7kB dist/react.js",
+      "npm notice 5.4kB dist/react.js.map",
+      "npm notice 3.6kB dist/registry.d.ts",
+      "npm notice 3.3kB dist/registry.js",
+      "npm notice 4.0kB dist/registry.js.map",
+      "npm notice 1.3kB dist/runtime.d.ts",
+      "npm notice 15.4kB dist/runtime.js",
+      "npm notice 30.3kB dist/runtime.js.map",
+      "npm notice 205B dist/storage.d.ts",
+      "npm notice 638B dist/storage.js",
+      "npm notice 1.2kB dist/storage.js.map",
+      "npm notice 2.4kB dist/types.d.ts",
+      "npm notice 44B dist/types.js",
+      "npm notice 2.6kB dist/types.js.map",
+      "npm notice 1.4kB package.json",
+      "npm notice Tarball Details",
+      "npm notice name: @alvarovillalbaa/sonant",
+      "npm notice version: 0.1.0",
+      "npm notice filename: alvarovillalbaa-sonant-0.1.0.tgz",
+      "npm notice package size: 49.6 kB",
+      "npm notice unpacked size: 188.1 kB",
+      "npm notice shasum: ed898282cec3932f12e6fb55d2d3b364f3348f3b",
+      "npm notice integrity: sha512-jxPxkIz77KGiF[...]tmSIAvCSP4nWA==",
+      "npm notice total files: 39",
+      "npm notice"
+    ]
+  },
+  "sourceGuard": {
+    "immutableHeadBefore": true,
+    "immutableHeadAfter": true,
+    "trackedIndexWorkingUnchanged": true,
+    "step": "Verify tracked source stayed unchanged",
+    "applicationSourceUnchangedFromFocusedPreparation": true
+  },
+  "artifacts": [
+    {
+      "id": 13367680010,
+      "name": "browser-evidence",
+      "bytes": 4216164,
+      "digest": "sha256:ba0e7bc9d6114c105e680d72c93defe3893527bb6c08ded367f1182d8620124e",
+      "expired": false,
+      "expiresAt": "2026-11-11T21:52:17Z"
+    }
+  ],
+  "proofLimits": [
+    "35 unit/integration cases include the 24 focused repaired cases; counts overlap and must not be added as unique tests.",
+    "40 browser cases plus five repetitions are not 45 unique scenarios; device/listening/screen-reader acceptance remains separate.",
+    "The standard quality job does not independently inventory process groups, all temporary resources or runner disposal. No cleanup proof is borrowed from the focused controller.",
+    "Public npm remains version 0.1.0 by historical observation; this job publishes nothing and does not establish current registry metadata or a new version.",
+    "Production/main integration and public hosted responses require their own provider observations."
+  ],
+  "decodedLog": {
+    "characters": 179992,
+    "bytes": 184457,
+    "sha256": "8f37a4b4656157aa6e4c5fa034df844dfdedb255f7b51c384f4c16d11619091d",
+    "retained": "Selected evidence and normalized unit TAP only; full log remains in the linked GitHub job."
+  }
+}

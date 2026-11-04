@@ -33,3 +33,11 @@ source guards and owned cleanup. Its active workflow is retired; preserve the
 inactive example and original results. The job completed successfully while
 the workflow aggregate API remained in progress at receipt time; retain both
 observations. Main/production/npm and full release checks are separate.
+
+The [release regression result](docs/results/2026/11-04/release-regressions.md)
+passed at `55c990b3998e1a3b3f03cd80dc32fb971da8eec8`: 35 package/integration
+cases (including the 24 focused cases), 40 browser scenarios, five repeated
+Firefox cold starts, type/site checks, production build and package inspection.
+The temporary release workflow is retired, preserving the permanent jobs.
+The actual ref/provider state owns subsequent integration and hosted delivery;
+do not claim a new npm version or physical listening from CI.

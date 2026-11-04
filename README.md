@@ -99,6 +99,13 @@ isolated builds, source guards and owned cleanup passing. The original
 historical evidence. This result belongs to the repair branch; main/production,
 the existing npm release and full release acceptance remain separate.
 
+The [release regressions](docs/results/2026/11-04/release-regressions.md) also
+passed: 35 package/integration cases, 40 browser scenarios, five repeated Firefox
+cold starts, package/site checks, site build and package inspection. The 35-case
+suite includes the 24 focused cases and a fresh packed consumer. These results
+remain tied to their immutable sources; production and a new npm release need
+their own delivery evidence.
+
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 
 This release does not include hosted analytics, experiments, native haptics, Ogg export, team governance, or direct version-specific third-party adapters. See [scope](docs/specs/product.md), [architecture](docs/references/architecture.md), [sources](docs/sources/INDEX.md), and [release procedure](docs/runbooks/release.md).
