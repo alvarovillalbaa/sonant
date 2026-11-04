@@ -96,15 +96,21 @@ The operation-cancellation repair passed its
 one baseline defect reproduction and all 24 repaired-runtime cases, with both
 isolated builds, source guards and owned cleanup passing. The original
 [source-only record](docs/results/2026/10-29/operation-cancellation.md) remains
-historical evidence. This result belongs to the repair branch; main/production,
-the existing npm release and full release acceptance remain separate.
+historical evidence. Main now includes the repair; a new npm release remains
+separate from the published source and CI results.
 
 The [release regressions](docs/results/2026/11-04/release-regressions.md) also
 passed: 35 package/integration cases, 40 browser scenarios, five repeated Firefox
 cold starts, package/site checks, site build and package inspection. The 35-case
 suite includes the 24 focused cases and a fresh packed consumer. These results
-remain tied to their immutable sources; production and a new npm release need
-their own delivery evidence.
+remain tied to their immutable sources.
+
+The [public delivery receipt](docs/results/2026/11-04/public-delivery.md) records
+the production cutover and five anonymous HTTP 200 checks, including the built
+assets and source-identical public files. Installation/policy/API guidance
+distinguishes the source repair from the older verified 0.1.0 package. The
+browser matrix predates that small status callout; its provider build and public
+bundle checks are separate evidence. No new npm version was published.
 
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 

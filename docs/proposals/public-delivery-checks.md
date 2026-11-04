@@ -37,3 +37,9 @@ After the terminal result, retain its receipt, remove the temporary workflow
 and retire only the new owned branch. Final status/evidence changes may advance
 main with the application code unchanged; verify that deployment metadata
 separately without reclassifying these HTTP requests as a later-source run.
+
+The [actual result](../results/2026/11-04/public-delivery.md) passed all five
+checks in run `41922988638`, job `126899979073`, at pinned source `22ab91b`.
+All bodies completed and streams released; the two source files matched bytes
+and the delivered JS contained both repair-note strings. This evidence edition
+removes the active workflow and retires its exact owned QA branch.

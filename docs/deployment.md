@@ -22,3 +22,22 @@ Initial production deployment `dpl_8MeQuwUTiXFdeS38DpcevEDgKv7H` reached READY f
 - **Observability:** the last-hour Vercel runtime-error scan returned no errors. Drains inventory returned HTTP 404, so drains/continuous monitoring are unverified. Static delivery and HTTP checks do not prove browser interactions or physical audio output.
 
 The migration adds no dependencies or required environment variables. Browser interaction QA was not rerun against these Vercel sites; earlier browser evidence remains scoped to its original deployment. The following evidence-only commit may trigger a fresh build; the source commit above identifies the fully checked migration build.
+
+## Cancellation repair delivery — 4 November 2026
+
+The [current delivery receipt](results/2026/11-04/public-delivery.md) supersedes
+the historical source/deployment above for the cancellation repair. Main was
+fast-forwarded nonforce after the focused and full release-quality checks.
+Production `dpl_AxxzCyGn5ovst1Mz7vkvySCVoi9v` is READY at source
+`22ab91b9d1333b749d31d8946512c49c279972e8` and the same canonical domain.
+Five anonymous GETs passed for the page, llms/icon and JS/CSS assets. The two
+public files match source bytes, and JS carries the release-status notice.
+The existing SSO, project settings and billing policy were preserved.
+
+Provider Node 26.x selected by the existing broad engine range differs from
+the Node 22 release CI and Node 24 focused/HTTP profiles; no exact-runtime
+reproduction or provider patch-version claim is made. The broad browser matrix
+predates the copy-only notice. Final docs-only publication may trigger another
+build with unchanged application code; its provider metadata remains separate
+from the recorded HTTP source. This is not a new npm package or physical-audio
+acceptance result.

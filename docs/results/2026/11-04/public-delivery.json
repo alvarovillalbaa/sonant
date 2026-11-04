@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "kind": "sonant-public-delivery",
+  "observedAtUtc": "2026-11-04 22:13:44 UTC",
+  "comparisonSource": "22ab91b9d1333b749d31d8946512c49c279972e8",
+  "applicationSourceTree": "07b758b36329dc51eacfa96c8cb840d0067f9439",
+  "activationCommit": "bf1f30c6def9ae08783108723d6287cd69e5b566",
+  "activationTree": "f00fd239d12269fa8dd7a4255d718d9378594776",
+  "run": {
+    "id": 41922988638,
+    "url": "https://github.com/alvarovillalbaa/sonant/actions/runs/41922988638",
+    "event": "create",
+    "headSha": "bf1f30c6def9ae08783108723d6287cd69e5b566",
+    "status": "completed",
+    "conclusion": "success",
+    "createdAt": "2026-11-04T22:11:05Z",
+    "updatedAt": "2026-11-04T22:11:20Z"
+  },
+  "job": {
+    "id": 126899979073,
+    "name": "public-http",
+    "status": "completed",
+    "conclusion": "success",
+    "startedAt": "2026-11-04T22:11:08Z",
+    "completedAt": "2026-11-04T22:11:19Z"
+  },
+  "workflow": {
+    "path": ".github/workflows/temporary-public-delivery.yml",
+    "bytes": 9944,
+    "sha256": "685b6e80a031382a113a342eeb1c1c5cac6cd138378f68b968d64f6bf9e34f37"
+  },
+  "decodedJobLog": {
+    "bytes": 32424,
+    "sha256": "82858bf14c704255c468d59ef76a834401e07bff10836dc0ddb17b5758a9a7aa"
+  },
+  "controller": {
+    "schemaVersion": "sonant.public-http.v1",
+    "sourceSha": "22ab91b9d1333b749d31d8946512c49c279972e8",
+    "sourceVerified": true,
+    "origin": "https://sonant-beta.vercel.app",
+    "status": "passed",
+    "readiness": "public-http-verified",
+    "authSent": false,
+    "cookiesSent": false,
+    "shareLink": false,
+    "requestsSettled": true,
+    "checks": [
+      {
+        "name": "/",
+        "status": "passed",
+        "httpStatus": 200,
+        "contentType": "text/html; charset=utf-8",
+        "effectiveOrigin": "https://sonant-beta.vercel.app",
+        "bodyBytes": 919,
+        "bodySha256": "6ff8573cf6759e095552fbcf437a64235256e5f7e74f60b7fa8d1b32ffb1ce15",
+        "bodyComplete": true,
+        "sourceFile": "website/index.html",
+        "sourceSha256": "a716a43a35df3d9f897606a07f83cee92146578b5abcad703f76d2977c2038d0",
+        "titleMatches": true,
+        "scriptMatches": true,
+        "stylesheetMatches": true,
+        "streamReleased": true
+      },
+      {
+        "name": "/llms.txt",
+        "status": "passed",
+        "httpStatus": 200,
+        "contentType": "text/plain; charset=utf-8",
+        "effectiveOrigin": "https://sonant-beta.vercel.app",
+        "bodyBytes": 938,
+        "bodySha256": "0951fe3b9df8560d168c4d84bdf2ac93030804b2996c170d477c720ba7bb6fb5",
+        "bodyComplete": true,
+        "sourceFile": "website/public/llms.txt",
+        "sourceBytes": 938,
+        "sourceSha256": "0951fe3b9df8560d168c4d84bdf2ac93030804b2996c170d477c720ba7bb6fb5",
+        "byteEqual": true,
+        "streamReleased": true
+      },
+      {
+        "name": "/favicon.svg",
+        "status": "passed",
+        "httpStatus": 200,
+        "contentType": "image/svg+xml",
+        "effectiveOrigin": "https://sonant-beta.vercel.app",
+        "bodyBytes": 218,
+        "bodySha256": "f83df4eff47e8d9433788c5d13db99022fa0426acdaa3adf7b421e381f93489f",
+        "bodyComplete": true,
+        "sourceFile": "website/public/favicon.svg",
+        "sourceBytes": 218,
+        "sourceSha256": "f83df4eff47e8d9433788c5d13db99022fa0426acdaa3adf7b421e381f93489f",
+        "byteEqual": true,
+        "streamReleased": true
+      },
+      {
+        "name": "/assets/index-D_Lgjs50.js",
+        "status": "passed",
+        "httpStatus": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "effectiveOrigin": "https://sonant-beta.vercel.app",
+        "bodyBytes": 310658,
+        "bodySha256": "dc0afa513815a5d2f5f0267bd34c61e00f4a844effa2b411349a5d02696378b7",
+        "bodyComplete": true,
+        "releaseNoticeStringsPresent": true,
+        "bundleValidation": "fingerprint-and-release-notice-strings",
+        "streamReleased": true
+      },
+      {
+        "name": "/assets/index-QBo_8_vM.css",
+        "status": "passed",
+        "httpStatus": 200,
+        "contentType": "text/css; charset=utf-8",
+        "effectiveOrigin": "https://sonant-beta.vercel.app",
+        "bodyBytes": 43433,
+        "bodySha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+        "bodyComplete": true,
+        "bundleValidation": "fingerprint-only",
+        "streamReleased": true
+      }
+    ],
+    "startedAtUtc": "2026-11-04T22:11:16.209Z",
+    "runtime": {
+      "node": "v24.21.0",
+      "platform": "linux"
+    },
+    "limits": {
+      "requestSeconds": 15,
+      "globalSeconds": 60,
+      "finalStdoutSeconds": 2,
+      "responseBytes": 1048576,
+      "reportBytes": 16384
+    },
+    "proofLimits": [
+      "HTTP only: no browser JavaScript, interaction, accessibility, physical audio, npm release or live host acceptance.",
+      "Source SHA identifies the checked-out comparison baseline; provider mapping is verified separately. Bundle hashes are observations, not expected source-byte comparisons."
+    ],
+    "completedAtUtc": "2026-11-04T22:11:16.456Z"
+  },
+  "provider": {
+    "deploymentId": "dpl_AxxzCyGn5ovst1Mz7vkvySCVoi9v",
+    "projectId": "prj_e0gY5HZyOJwbsFtEvHDDZDFuAbo5",
+    "target": "production",
+    "readyState": "READY",
+    "source": "22ab91b9d1333b749d31d8946512c49c279972e8",
+    "canonicalDomain": "sonant-beta.vercel.app",
+    "record": "production-notice.json"
+  },
+  "proofLimits": [
+    "All five anonymous HTTP responses completed and matched their specified checks. Only llms.txt/favicon are source-byte comparisons; bundle hashes are observations and JS strings do not establish DOM rendering.",
+    "The four-project browser matrix is scoped to immutable55c990b before the nine-line status callout. Provider build and these HTTP checks cover notice edition22ab91b separately.",
+    "Final evidence/status publication changes documentation and workflow retirement only, with the application unchanged from22ab91b. Later deployment metadata is recorded separately; these requests are not relabeled as a later-source run.",
+    "No new npm package, paid enrollment, account, physical listening session or hosted browser interaction was performed."
+  ]
+}

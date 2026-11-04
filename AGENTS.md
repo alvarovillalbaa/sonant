@@ -41,3 +41,13 @@ Firefox cold starts, type/site checks, production build and package inspection.
 The temporary release workflow is retired, preserving the permanent jobs.
 The actual ref/provider state owns subsequent integration and hosted delivery;
 do not claim a new npm version or physical listening from CI.
+
+Main includes the verified repair. The
+[public delivery receipt](docs/results/2026/11-04/public-delivery.md) records
+READY production at notice source `22ab91b9d1333b749d31d8946512c49c279972e8`
+and five complete anonymous HTTP 200s, two source-byte comparisons and delivered
+release-note strings. The nine-line Docs callout follows the broad CI edition;
+runtime/test/dependency/style/configuration inputs remain unchanged. This final
+status edition retires the HTTP workflow; keep the older QA bookmarks fixed.
+Provider metadata for later docs-only deployments does not relabel the tested
+HTTP source. Public npm, physical audio and hosted browser limits remain open.
