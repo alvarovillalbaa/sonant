@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "kind": "sonant-cancellation-production-cutover",
+  "observedAtUtc": "2026-11-04 22:03:20 UTC",
+  "integration": {
+    "method": "nonforce fast-forward with expected old SHA",
+    "mainBefore": "c5657ad20911f136bc86769f2d79114889693b0e",
+    "mainAfter": "9be0bd5b9ed601c2b29905b9d313c3d9a971febf",
+    "sourceTree": "58cc608d717fd6eb0ad655364ad1bd684876c533",
+    "trackedLeaves": 85,
+    "localBranch": "fix/operation-cancellation",
+    "localMainAndOriginMainMatched": true,
+    "permanentCiUnchanged": true,
+    "temporaryVerificationWorkflowsRemoved": true
+  },
+  "verification": {
+    "focusedSource": "39d484c192b936f5aaf6e3cc25ce041a241719b8",
+    "focusedJob": 126883643063,
+    "regressionSource": "55c990b3998e1a3b3f03cd80dc32fb971da8eec8",
+    "regressionJob": 126888797472,
+    "regressionRun": 41919747791,
+    "applicationTestsDependenciesAndConfigUnchangedFromCheckedSource": true
+  },
+  "deployment": {
+    "id": "dpl_EcAWQPwDPkkDjbSG7Wnt9fYqiUVj",
+    "url": "sonant-nvjnfzajl-my-team-4f230354.vercel.app",
+    "project": {
+      "id": "prj_e0gY5HZyOJwbsFtEvHDDZDFuAbo5",
+      "name": "sonant",
+      "framework": "vite"
+    },
+    "readyState": "READY",
+    "target": "production",
+    "source": "9be0bd5b9ed601c2b29905b9d313c3d9a971febf",
+    "alias": [
+      "sonant-beta.vercel.app",
+      "sonant-my-team-4f230354.vercel.app",
+      "sonant-git-main-my-team-4f230354.vercel.app"
+    ],
+    "aliasError": null
+  },
+  "project": {
+    "id": "prj_e0gY5HZyOJwbsFtEvHDDZDFuAbo5",
+    "accountId": "team_JpdIsOJgYNpX0ywVZ54Zdb7m",
+    "name": "sonant",
+    "configuredNodeVersion": "24.x",
+    "live": false,
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all_except_custom_domains"
+    },
+    "passwordProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "trustedIps": {
+      "enabled": false,
+      "deploymentType": null,
+      "addresses": [],
+      "protectionMode": null
+    }
+  },
+  "build": {
+    "selectedNodeMajor": "26.x",
+    "nodePatchMeasured": false,
+    "rootManifestNodeRange": ">=22.12.0",
+    "publicLibraryNodeRange": ">=20.19.0",
+    "vite": "8.3.4",
+    "javascriptAsset": "/assets/index-CEfWi6V6.js",
+    "stylesheetAsset": "/assets/index-QBo_8_vM.css",
+    "assetPathsMatchRegressionBuild": true,
+    "selectedEvents": [
+      {
+        "created": 1793829605419,
+        "type": "stdout",
+        "text": "Running build in Washington, D.C., USA (East) – iad1"
+      },
+      {
+        "created": 1793829606059,
+        "type": "stdout",
+        "text": "Skipping build cache since Node.js version changed from \"24.x\" to \"26.x\""
+      },
+      {
+        "created": 1793829606320,
+        "type": "stdout",
+        "text": "Running \"vercel build\""
+      },
+      {
+        "created": 1793829606809,
+        "type": "stderr",
+        "text": "Warning: Due to \"engines\": { \"node\": \">=22.12.0\" } in your `package.json` file, the Node.js Version defined in your Project Settings (\"24.x\") will not apply, Node.js Version \"26.x\" will be used instead. Learn More: https://vercel.link/node-version",
+        "level": "warning"
+      },
+      {
+        "created": 1793829606809,
+        "type": "stderr",
+        "text": "Warning: Detected \"engines\": { \"node\": \">=22.12.0\" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version",
+        "level": "warning"
+      },
+      {
+        "created": 1793829607399,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning"
+      },
+      {
+        "created": 1793829609417,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning"
+      },
+      {
+        "created": 1793829609512,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning"
+      },
+      {
+        "created": 1793829609634,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning"
+      },
+      {
+        "created": 1793829611327,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning"
+      },
+      {
+        "created": 1793829611559,
+        "type": "stdout",
+        "text": "vite v8.3.4 building client environment for production..."
+      },
+      {
+        "created": 1793829611814,
+        "type": "stdout",
+        "text": "dist/index.html                                              0.91 kB │ gzip:  0.50 kB"
+      },
+      {
+        "created": 1793829611814,
+        "type": "stdout",
+        "text": "dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff    13.14 kB"
+      },
+      {
+        "created": 1793829611815,
+        "type": "stdout",
+        "text": "dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2   14.70 kB"
+      },
+      {
+        "created": 1793829611815,
+        "type": "stdout",
+        "text": "dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB"
+      },
+      {
+        "created": 1793829611815,
+        "type": "stdout",
+        "text": "dist/assets/index-QBo_8_vM.css                              43.43 kB │ gzip:  9.60 kB"
+      },
+      {
+        "created": 1793829611815,
+        "type": "stdout",
+        "text": "dist/assets/index-CEfWi6V6.js                              310.23 kB │ gzip: 96.36 kB"
+      },
+      {
+        "created": 1793829611815,
+        "type": "stdout",
+        "text": "✓ built in 255ms"
+      },
+      {
+        "created": 1793829611870,
+        "type": "stderr",
+        "text": "Build Completed in /vercel/output [5s]"
+      }
+    ],
+    "returnedEventCount": 58,
+    "completeBuildLogClaim": false,
+    "qualification": "Provider reported Node 26.x due to the existing root engine range, overriding configured 24.x. This is not exact Node 22/24 CI reproduction. The static application built successfully with unchanged settings and matching JS/CSS asset names; bundle byte equality is not asserted."
+  },
+  "webTransport": {
+    "urls": [
+      "https://sonant-beta.vercel.app/",
+      "https://sonant-beta.vercel.app/llms.txt",
+      "https://sonant-beta.vercel.app/favicon.svg"
+    ],
+    "result": "The web tool returned URL inaccessible/Internal Error without an HTTP status.",
+    "meaning": "A tool transport limit does not establish application failure or anonymous success."
+  },
+  "proofLimits": [
+    "This is exact ref/deployment/build evidence, not yet direct anonymous HTTP or hosted browser acceptance.",
+    "No package version, dependency, project setting, SSO/domain/account/billing configuration was changed. The existing Pro hosting team remains in use.",
+    "The separate public HTTP receipt will verify fixed static URLs without credentials/share links; native browser matrix evidence remains scoped to its local CI source."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "kind": "sonant-package-release-status-copy",
+  "observedAtUtc": "2026-11-04 22:08:33 UTC",
+  "sourceCommit": "22ab91b9d1333b749d31d8946512c49c279972e8",
+  "sourceTree": "07b758b36329dc51eacfa96c8cb840d0067f9439",
+  "previousProductionSource": "9be0bd5b9ed601c2b29905b9d313c3d9a971febf",
+  "change": {
+    "file": "website/src/Docs.tsx",
+    "addedLines": 9,
+    "scope": "Existing doc-callout on installation/policy/API pages distinguishes the source cancellation repair from the older verified npm 0.1.0 tarball.",
+    "runtimeTestsDependenciesConfigurationUnchanged": true
+  },
+  "deployment": {
+    "id": "dpl_AxxzCyGn5ovst1Mz7vkvySCVoi9v",
+    "url": "sonant-p6ls5o3a6-my-team-4f230354.vercel.app",
+    "project": {
+      "id": "prj_e0gY5HZyOJwbsFtEvHDDZDFuAbo5",
+      "name": "sonant",
+      "framework": "vite"
+    },
+    "readyState": "READY",
+    "target": "production",
+    "source": "22ab91b9d1333b749d31d8946512c49c279972e8",
+    "alias": [
+      "sonant-beta.vercel.app",
+      "sonant-my-team-4f230354.vercel.app",
+      "sonant-git-main-my-team-4f230354.vercel.app"
+    ]
+  },
+  "build": {
+    "nodeMajor": "26.x",
+    "nodePatchMeasured": false,
+    "vite": "8.3.4",
+    "javascriptAsset": "/assets/index-D_Lgjs50.js",
+    "stylesheetAsset": "/assets/index-QBo_8_vM.css",
+    "selectedEvents": [
+      {
+        "created": 1793830028858,
+        "type": "stderr",
+        "text": "Warning: Due to \"engines\": { \"node\": \">=22.12.0\" } in your `package.json` file, the Node.js Version defined in your Project Settings (\"24.x\") will not apply, Node.js Version \"26.x\" will be used instead. Learn More: https://vercel.link/node-version"
+      },
+      {
+        "created": 1793830028859,
+        "type": "stderr",
+        "text": "Warning: Detected \"engines\": { \"node\": \">=22.12.0\" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version"
+      },
+      {
+        "created": 1793830034882,
+        "type": "stdout",
+        "text": "vite v8.3.4 building client environment for production..."
+      },
+      {
+        "created": 1793830035137,
+        "type": "stdout",
+        "text": "dist/assets/index-QBo_8_vM.css                              43.43 kB │ gzip:  9.60 kB"
+      },
+      {
+        "created": 1793830035137,
+        "type": "stdout",
+        "text": "dist/assets/index-D_Lgjs50.js                              310.65 kB │ gzip: 96.50 kB"
+      },
+      {
+        "created": 1793830035204,
+        "type": "stderr",
+        "text": "Build Completed in /vercel/output [6s]"
+      }
+    ]
+  },
+  "proofLimits": [
+    "The full Node22/browser regressions remain at immutable55c990b before this copy-only edition; they were not rerun for this notice.",
+    "The provider built this actual notice edition. Its pending five HTTP checks inspect public static delivery and bundle strings, not browser rendering of the callout.",
+    "No package publication or current registry metadata check was performed. The historical 0.1.0 artifact predates the repair; no claim about another maintainer's current latest release is made."
+  ]
+}
