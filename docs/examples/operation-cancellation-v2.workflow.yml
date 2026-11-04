@@ -1,0 +1,42 @@
+name: Sonant isolated operation cancellation checks
+"on":
+  create:
+permissions:
+  contents: read
+jobs:
+  cancellation:
+    if: >-
+      github.event_name == 'create' && github.event.ref_type == 'branch' &&
+      github.repository == 'alvarovillalbaa/sonant' &&
+      github.event.repository.private == false &&
+      github.event.ref == 'qa/sonant-cancellation-20261104' &&
+      github.ref == 'refs/heads/qa/sonant-cancellation-20261104'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      SOURCE_COMMIT: REPLACE_WITH_IMMUTABLE_PREPARATION_COMMIT
+      SONANT_PUBLIC_REPOSITORY: ${{ !github.event.repository.private }}
+      SONANT_CREATED_REF_TYPE: ${{ github.event.ref_type }}
+    steps:
+      - name: Require the immutable source pin
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_COMMIT" =~ ^[a-f0-9]{40}$ ]]
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.21.0
+      - name: Verify isolated baseline and repaired runtime
+        timeout-minutes: 9
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/run-operation-cancellation-checks.mjs --source-commit "$SOURCE_COMMIT"
+# Inactive example. Root pins the preparation commit in its active copy on the
+# existing fix/operation-cancellation branch [skip ci], then creates only
+# qa/sonant-cancellation-20261104. Existing quality/registry jobs stay unchanged.
+# No site/browser/audio-device check, package publication, cache or artifact upload.

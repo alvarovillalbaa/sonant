@@ -15,3 +15,13 @@ Read `README.md`, `docs/specs/product.md`, and the closest source before editing
 - Verify relevant changes with `npm run check`, `npm test`, `npm run build:site`, and browser checks when authorized. Always use `git diff --check`.
 - Read `docs/runbooks/release.md` before publishing. Never expose registry credentials or add them to source.
 - Durable sources, specs, references, results, and runbooks live under `docs/` following AFS naming. Keep evidence distinct from claims about live releases.
+
+Current focused authority (4 November 2026): the owner's repeated “I approve
+everything / Keep going / Do all the work” clears the prepared cancellation
+packet's check/temporary-CI gate. Follow
+`docs/proposals/operation-cancellation-verification.md`: one expected baseline
+failure plus 24 repaired cases in a bounded public job, with immutable source,
+full Git guards, isolated baseline fixture and owned process/storage cleanup.
+Preserve the old inventory, examples and results. Existing broad quality and
+registry workflows remain unchanged. This packet does not release npm or merge
+the repair to main/production; preserve those separate acceptance boundaries.
