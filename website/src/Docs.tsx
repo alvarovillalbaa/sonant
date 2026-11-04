@@ -78,6 +78,15 @@ export function Docs({ route }: { route: string }) {
           {page?.[1] ?? "Page not found"}
           <span className="accent-dot">.</span>
         </h1>
+        {(route === "/docs/installation" || route === "/docs/policy" || route === "/docs/api") && (
+          <div className="doc-callout">
+            Caller cancellation fixes are available in source. The <code>0.1.0</code> package
+            predates these fixes.{" "}
+            <a href={`${REPO}/blob/main/docs/results/2026/11-04/operation-cancellation-checks.md`}>
+              View the repair status
+            </a>.
+          </div>
+        )}
         <DocContent route={route} />
         <div className="doc-pagination">
           {index > 0 ? (
