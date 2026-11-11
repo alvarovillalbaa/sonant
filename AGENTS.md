@@ -78,3 +78,9 @@ run43018663824, with actual downloads, source/stream/process verification and
 all four PNGs inspected. See `docs/results/2026/11-11/hosted-browser.md`. Retire
 the last QA control with final publication; do not rerun these closed scopes
 unchanged. Public npm and physical-device acceptance are still separate gates.
+
+Patch package preparation follows docs/proposals/patch-package-release.md under
+the standing continued goal. Begin with its anonymous public metadata job; do
+not repeat failed local DNS or extract/copy local tokens. Prepare and verify
+the exact patch tarball before publication. Authenticated npm identity and scope
+permission remain required; candidate archives are not registry releases.
