@@ -1,0 +1,122 @@
+{
+  "source": "fe64588bfb8c95e0b2b5ca6f249594b7afc28087",
+  "run": 43018663824,
+  "job": 130516042950,
+  "status": "passed",
+  "archiveBytes": 382197,
+  "archiveSha256": "3b7392b5ed482d44efc24d788c528d3117b6b32ee3bcf82d158c9d0793c28cc5",
+  "originalArtifactFiles": 22,
+  "originalArtifactBytes": 553649,
+  "artifactFiles": [
+    {
+      "file": "H01-sonant-trace.json",
+      "bytes": 670,
+      "sha256": "9cad1020d809997768c007d983fb7c062735acad6d6b020ea91215b1c3646377"
+    },
+    {
+      "file": "H01.png",
+      "bytes": 85796,
+      "sha256": "9c8ff4c873ee08ad59f5d7cc416a16a69c3b66fa2acfa5b1d7752550582d5366"
+    },
+    {
+      "file": "H02-sonant-trace.json",
+      "bytes": 925,
+      "sha256": "02ebea0861875e5598538a2ec08a27d4c8f2b3af09a8b34b8680484d2f7e1b13"
+    },
+    {
+      "file": "H02.png",
+      "bytes": 95611,
+      "sha256": "3bd83f12116bcca75b43caf88d6e353c628882cd9d387ffbb461054d78a18b6a"
+    },
+    {
+      "file": "H03-sonant-trace.json",
+      "bytes": 731,
+      "sha256": "1266b203abb600a3772b42491293e95ab7d61db61b078f0ef98d3d4887f50df9"
+    },
+    {
+      "file": "H03.png",
+      "bytes": 65025,
+      "sha256": "66e4d1611a2a8ac2be2cd32f155cfc97bf32ffd3170acbffa1cb74178868c500"
+    },
+    {
+      "file": "H04-repeat-sonant-kit.json",
+      "bytes": 19599,
+      "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de"
+    },
+    {
+      "file": "H04-sonant-kit.json",
+      "bytes": 19599,
+      "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de"
+    },
+    {
+      "file": "H04.png",
+      "bytes": 125621,
+      "sha256": "772cac000ec70197338c616096475d9b279878dbc31d567948f5da1947c60335"
+    },
+    {
+      "file": "browser.json",
+      "bytes": 19475,
+      "sha256": "aa3d5ed43a7a7fd2de9fe0373439280eb3b107a6b651958d9ee69f9b031a4075"
+    },
+    {
+      "file": "browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "browser.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "chromium-install.stderr.log",
+      "bytes": 237,
+      "sha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+    },
+    {
+      "file": "chromium-install.stdout.log",
+      "bytes": 16503,
+      "sha256": "f61a345b372862c332c47101cc2ced6d639ec2bed010cf00e0a2748d4954974b"
+    },
+    {
+      "file": "install.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "install.stdout.log",
+      "bytes": 24,
+      "sha256": "65c731cd02e19c79f6f5a3e84a4dd64a49acd6c47d2ee551d7cc9da191e8c96c"
+    },
+    {
+      "file": "node.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "node.stdout.log",
+      "bytes": 9,
+      "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04"
+    },
+    {
+      "file": "run.json",
+      "bytes": 4524,
+      "sha256": "b315db1d711fb8ae9cc39bca4d1b7635bd669da1e3ffcb077b5a08a9b40d5c02"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 49118,
+      "sha256": "4719220ce4ad22b3277493fc7c9c4f2601becaeb7bb227406d8189d770e20f17"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 49118,
+      "sha256": "4719220ce4ad22b3277493fc7c9c4f2601becaeb7bb227406d8189d770e20f17"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 1064,
+      "sha256": "2fa84b8293c8e0da7953f61ce00ae75c27f19081d3f3f5e5017b077f053377ad"
+    }
+  ]
+}

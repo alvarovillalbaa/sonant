@@ -121,7 +121,11 @@ does not contain this source repair; its registry release remains pending.
 The [mobile trace layout repair](docs/fixes/trace-label-containing-block.md)
 also passed [35 package tests,44 browser cases and five cold starts](docs/results/2026/11-11/trace-layout-release.md).
 Its four native navigation cases now verify viewport containment and actual
-post-navigation exports, using touch on mobile. Hosted acceptance is separate.
+post-navigation exports, using touch on mobile. The subsequent
+[four public hosted journeys](docs/results/2026/11-11/hosted-browser.md) also
+passed together at `fe64588b`, including real mobile trace/kit downloads and
+verified owned cleanup. Original failures remain preserved. Public npm 0.1.0
+still lacks the source repairs; no new registry version was published.
 
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 

@@ -1,0 +1,56 @@
+{
+  "source": "fe64588bfb8c95e0b2b5ca6f249594b7afc28087",
+  "run": 43018663824,
+  "job": 130516042950,
+  "status": "four-passed",
+  "sourceFiles": 188,
+  "sourceBytes": 15552588,
+  "allSourceModesBlobsAndBytesVerified": true,
+  "fullStreamsVerified": 8,
+  "ownedGroupsAbsent": 4,
+  "ownedWorkRemoved": true,
+  "remainingOrUncertainProcesses": [],
+  "browserResponses": 25,
+  "finalDirectGets": 5,
+  "stableAssets": {
+    "/": {
+      "bytes": 919,
+      "sha256": "09836b64add2a491639be5414712565a173a5a7f9ba7f985d009da64e9454ce1"
+    },
+    "/assets/index-CPjRlEqu.css": {
+      "bytes": 43451,
+      "sha256": "e15994d1fec3abefc92789d917be6e430a181daff0759254f2688b4b4d80f385"
+    },
+    "/assets/index-B60jQrS5.js": {
+      "bytes": 310655,
+      "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751"
+    },
+    "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": {
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2": {
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+    }
+  },
+  "browserClosed": true,
+  "allContextsAndRequestsClosed": true,
+  "actualDownloads": 5,
+  "narrowDownloadsUseTrustedTouch": true,
+  "screenshotsViewed": [
+    "H01.png",
+    "H02.png",
+    "H03.png",
+    "H04.png"
+  ],
+  "chromium": "158.0.8127.18",
+  "node": "v24.22.2",
+  "playwright": "1.65.0",
+  "productionBeforeAndAfter": {
+    "id": "dpl_C6MbPHV3uY9uK7eYBvcRgKyL5rwm",
+    "source": "fe64588bfb8c95e0b2b5ca6f249594b7afc28087",
+    "state": "READY",
+    "alias": "sonant-beta.vercel.app"
+  }
+}

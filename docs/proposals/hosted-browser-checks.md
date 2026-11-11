@@ -80,3 +80,7 @@ The ineffective route-scroll hypothesis is removed and its failed originals
 remain. Recheck canonical deployment metadata for that repaired source before
 the next hosted activation. All four original expectations remain unchanged;
 use native touch on narrow download controls and retain the click diagnostics.
+
+Fourth run 43018663824 passed H01–H04 together at published/deployed `fe64588b`.
+The [final result](../results/2026/11-11/hosted-browser.md) and its immutable
+original packet close this scope. Do not repeat it unchanged.

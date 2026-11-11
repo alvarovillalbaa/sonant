@@ -39,3 +39,6 @@ The [release gate](../results/2026/11-11/trace-layout-release.md) passed35/44/5
 at3608e4d, including mobile document/client width390/390, zero visual offset and
 a real trace download. Production cutover and the four public hosted cases
 remain separate next gates, requiring an actual repaired canonical deployment.
+Those gates subsequently passed at published source `fe64588b`: the canonical
+deployment was READY and [all four public journeys](../results/2026/11-11/hosted-browser.md)
+passed together, including the actual narrow trace download.

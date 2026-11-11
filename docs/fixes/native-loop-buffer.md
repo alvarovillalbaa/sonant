@@ -36,3 +36,5 @@ package/integration cases, 44 browser scenarios including four native-loop
 regressions, and five Firefox cold starts at `3f3d5349`. Production cutover and
 four hosted journeys remain separate; no new npm release or physical audibility
 is claimed by this source repair.
+The later [public hosted result](../results/2026/11-11/hosted-browser.md) also
+verifies native loop acceptance and teardown on the actual repaired website.

@@ -11,7 +11,7 @@
       "nativeBranch": "fix/operation-cancellation",
       "productionDeployment": "dpl_8vnSWmGKJbNuazDQTA3Vmk3eHMt7",
       "productionSource": "dc3a48d1ac9f2d74a0f88d8d1d5fe5589988f1b5",
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "f6a842e66b43b975ebd62cc318818ed60de2a804",
@@ -20,7 +20,7 @@
       "activationTree": "637652ad36115d424de90726f8f4344c7b9c8843",
       "ref": "refs/heads/qa/sonant-loop-release-20261111-1",
       "workflow": ".github/workflows/temporary-native-loop-release.yml",
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
@@ -29,7 +29,7 @@
       "activationTree": "687bed8a3c2927aa6b2e3e883e8cea55a3fa0b50",
       "ref": "refs/heads/qa/sonant-loop-release-20261111-2",
       "workflow": ".github/workflows/temporary-native-loop-release.yml",
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "54ae94d056dfd9438f0325877d724e4d61a146ac",
@@ -43,7 +43,7 @@
       "canonicalAlias": "sonant-beta.vercel.app",
       "sourceFiles": 152,
       "sourceBytes": 6698652,
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "3e67ef6d8dd626b61997f710d81df7c872e35856",
@@ -55,7 +55,7 @@
       "productionDeployment": "dpl_7fY2rn99HhEtPafM1BD6FtMCUFTC",
       "productionSource": "54ae94d056dfd9438f0325877d724e4d61a146ac",
       "runtimeBytesUnchanged": true,
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "784aee89fe4141fa585aee168739f80f104a090d",
@@ -71,7 +71,7 @@
         "strengthenedNativeCasesIncluded": 4,
         "coldStarts": 5
       },
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "2b6d04accd45af4725171bbbbd2580c9278dc6f2",
@@ -81,7 +81,7 @@
       "ref": "refs/heads/qa/sonant-loop-layout-20261111-1",
       "workflow": ".github/workflows/temporary-loop-layout.yml",
       "scope": "one mobile diagnostic; no new application change",
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
     },
     {
       "source": "3608e4d4694ab7a0ca0a867e45093ba1d7d95af6",
@@ -96,7 +96,42 @@
         "strongNativeCasesIncluded": 4,
         "coldStarts": 5
       },
-      "retirement": "planned after terminal evidence and publication"
+      "retirement": "deleted with exact leases and read back"
+    },
+    {
+      "source": "fe64588bfb8c95e0b2b5ca6f249594b7afc28087",
+      "sourceTree": "a83c26b6b249974fe0c43162cce27787f6aa9b8f",
+      "activation": "8d70d9572f41b10b7a5e34cdeef589d969e4036f",
+      "activationTree": "813fb3e020d7b42993fa694bfa38ae1105c6d49c",
+      "ref": "refs/heads/qa/sonant-hosted-20261111-4",
+      "workflow": ".github/workflows/temporary-hosted-browser.yml",
+      "productionDeployment": "dpl_C6MbPHV3uY9uK7eYBvcRgKyL5rwm",
+      "productionSource": "fe64588bfb8c95e0b2b5ca6f249594b7afc28087",
+      "canonicalAlias": "sonant-beta.vercel.app",
+      "sourceFiles": 188,
+      "sourceBytes": 15552588,
+      "run": 43018663824,
+      "job": 130516042950,
+      "conclusion": "success",
+      "retirement": "delete with final publication using exact expected activation lease"
+    }
+  ],
+  "temporaryWorkflows": [
+    {
+      "id": 414595642,
+      "state": "disabled_manually"
+    },
+    {
+      "id": 414622460,
+      "state": "disabled_manually"
+    },
+    {
+      "id": 414626458,
+      "state": "disabled_manually"
+    },
+    {
+      "id": 414589707,
+      "state": "disabled_manually"
     }
   ]
 }

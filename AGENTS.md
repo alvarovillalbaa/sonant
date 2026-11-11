@@ -73,3 +73,8 @@ pin and owned branch ending-4 in one public twelve-minute job; retain originals
 and retire only task-owned controls after terminal evidence. No model/API call,
 account, paid plan, dependency change or production-setting mutation is needed.
 Public npm and physical-device acceptance remain separate from source/hosting.
+The four public hosted cases subsequently passed together at `fe64588b` in
+run43018663824, with actual downloads, source/stream/process verification and
+all four PNGs inspected. See `docs/results/2026/11-11/hosted-browser.md`. Retire
+the last QA control with final publication; do not rerun these closed scopes
+unchanged. Public npm and physical-device acceptance are still separate gates.
