@@ -1,0 +1,502 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/22.23.4/x64/bin/node",
+      "/home/runner/work/sonant/sonant/node_modules/@playwright/test/cli.js",
+      "test",
+      "--project",
+      "firefox",
+      "--grep",
+      "catalog renders",
+      "--repeat-each",
+      "5",
+      "--workers",
+      "1",
+      "--output",
+      "cold-start-results",
+      "--reporter=json"
+    ],
+    "configFile": "/home/runner/work/sonant/sonant/playwright.config.ts",
+    "rootDir": "/home/runner/work/sonant/sonant/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/alvarovillalbaa/sonant/commit/8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+        "commitHash": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+        "buildHref": "https://github.com/alvarovillalbaa/sonant/actions/runs/43012905409"
+      },
+      "gitCommit": {
+        "shortHash": "3f3d534",
+        "hash": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+        "subject": "Set release proof path in runner step [skip ci]",
+        "body": "Set release proof path in runner step [skip ci]\n",
+        "author": {
+          "name": "Alvaro Villalba",
+          "email": "alvaro.villalbaperez@icloud.com",
+          "time": 1794396778000
+        },
+        "committer": {
+          "name": "Alvaro Villalba",
+          "email": "alvaro.villalbaperez@icloud.com",
+          "time": 1794396778000
+        },
+        "branch": "HEAD"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/sonant/sonant/cold-start-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/alvarovillalbaa/sonant/commit/8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "commitHash": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "buildHref": "https://github.com/alvarovillalbaa/sonant/actions/runs/43012905409"
+          },
+          "gitCommit": {
+            "shortHash": "3f3d534",
+            "hash": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+            "subject": "Set release proof path in runner step [skip ci]",
+            "body": "Set release proof path in runner step [skip ci]\n",
+            "author": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "committer": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "branch": "HEAD"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/sonant/sonant/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/sonant/sonant/cold-start-results",
+        "repeatEach": 5,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/alvarovillalbaa/sonant/commit/8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "commitHash": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "buildHref": "https://github.com/alvarovillalbaa/sonant/actions/runs/43012905409"
+          },
+          "gitCommit": {
+            "shortHash": "3f3d534",
+            "hash": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+            "subject": "Set release proof path in runner step [skip ci]",
+            "body": "Set release proof path in runner step [skip ci]\n",
+            "author": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "committer": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "branch": "HEAD"
+          },
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/runner/work/sonant/sonant/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/sonant/sonant/cold-start-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/alvarovillalbaa/sonant/commit/8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "commitHash": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "buildHref": "https://github.com/alvarovillalbaa/sonant/actions/runs/43012905409"
+          },
+          "gitCommit": {
+            "shortHash": "3f3d534",
+            "hash": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+            "subject": "Set release proof path in runner step [skip ci]",
+            "body": "Set release proof path in runner step [skip ci]\n",
+            "author": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "committer": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "branch": "HEAD"
+          },
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/runner/work/sonant/sonant/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/sonant/sonant/cold-start-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/alvarovillalbaa/sonant/commit/8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "commitHash": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "buildHref": "https://github.com/alvarovillalbaa/sonant/actions/runs/43012905409"
+          },
+          "gitCommit": {
+            "shortHash": "3f3d534",
+            "hash": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+            "subject": "Set release proof path in runner step [skip ci]",
+            "body": "Set release proof path in runner step [skip ci]\n",
+            "author": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "committer": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "branch": "HEAD"
+          },
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/runner/work/sonant/sonant/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/runner/work/sonant/sonant/cold-start-results",
+        "repeatEach": 5,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/alvarovillalbaa/sonant/commit/8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "commitHash": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+            "buildHref": "https://github.com/alvarovillalbaa/sonant/actions/runs/43012905409"
+          },
+          "gitCommit": {
+            "shortHash": "3f3d534",
+            "hash": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+            "subject": "Set release proof path in runner step [skip ci]",
+            "body": "Set release proof path in runner step [skip ci]\n",
+            "author": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "committer": {
+              "name": "Alvaro Villalba",
+              "email": "alvaro.villalbaperez@icloud.com",
+              "time": 1794396778000
+            },
+            "branch": "HEAD"
+          },
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "/home/runner/work/sonant/sonant/tests/e2e",
+        "snapshotDir": "/home/runner/work/sonant/sonant/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview --workspace sonant-website -- --port 4173",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "website.spec.ts",
+      "file": "website.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "catalog renders, filters, and plays through native Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2294,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Firefox audio lifecycle: [{\"id\":1,\"event\":\"created\",\"time\":763,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resume\",\"time\":763,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resumed\",\"time\":833,\"state\":\"running\"},{\"id\":1,\"event\":\"statechange\",\"time\":842,\"state\":\"running\"}]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T11:35:33.844Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ac69d5138567e2fe8f3-fd6102679d3a1875c7e4",
+          "file": "website.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "catalog renders, filters, and plays through native Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2309,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Firefox audio lifecycle: [{\"id\":1,\"event\":\"created\",\"time\":806,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resume\",\"time\":806,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resumed\",\"time\":859,\"state\":\"running\"},{\"id\":1,\"event\":\"statechange\",\"time\":866,\"state\":\"running\"}]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T11:35:37.464Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ac69d5138567e2fe8f3-e2880bff9e7cb54c6eb1",
+          "file": "website.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "catalog renders, filters, and plays through native Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2333,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Firefox audio lifecycle: [{\"id\":1,\"event\":\"created\",\"time\":730,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resume\",\"time\":730,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resumed\",\"time\":798,\"state\":\"running\"},{\"id\":1,\"event\":\"statechange\",\"time\":807,\"state\":\"running\"}]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T11:35:41.136Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ac69d5138567e2fe8f3-d7ea9c5c8fb78d23f58d",
+          "file": "website.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "catalog renders, filters, and plays through native Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2291,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Firefox audio lifecycle: [{\"id\":1,\"event\":\"created\",\"time\":741,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resume\",\"time\":741,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resumed\",\"time\":795,\"state\":\"running\"},{\"id\":1,\"event\":\"statechange\",\"time\":803,\"state\":\"running\"}]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T11:35:44.821Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ac69d5138567e2fe8f3-830e91e9dc26ba3ee0d9",
+          "file": "website.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "catalog renders, filters, and plays through native Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2320,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Firefox audio lifecycle: [{\"id\":1,\"event\":\"created\",\"time\":733,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resume\",\"time\":735,\"state\":\"suspended\",\"active\":true},{\"id\":1,\"event\":\"resumed\",\"time\":801,\"state\":\"running\"},{\"id\":1,\"event\":\"statechange\",\"time\":807,\"state\":\"running\"}]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-11T11:35:48.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ac69d5138567e2fe8f3-7316a954c83fc7d11bd6",
+          "file": "website.spec.ts",
+          "line": 51,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-11T11:35:32.819Z",
+    "duration": 18813.020999999997,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -64,3 +64,7 @@ docs/fixes/native-loop-buffer.md. Standing approval covers the necessary
 buffer-assignment repair, four new native matrix cases and existing release
 regressions in docs/proposals/native-loop-release-checks.md. The next hosted
 invocation must wait for that release gate and an actually repaired deployment.
+The release gate passed at 3f3d5349 in run43012905409:35 package/integration,
+44 browser cases including four native-loop regressions and five cold starts.
+Its original packet and the rejected prior activation are preserved in owning
+results. Workflow414595642 is disabled; production/hosted/npm remain separate.

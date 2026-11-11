@@ -1,0 +1,455 @@
+{
+  "source": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+  "sourceFiles": 115,
+  "sourceBytes": 1854244,
+  "sourceBeforeAfterAndGitBlobsMatch": true,
+  "node": "v22.23.4",
+  "npm": "10.9.9",
+  "unitPassed": 35,
+  "browserCases": [
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    }
+  ],
+  "coldStarts": {
+    "startTime": "2026-11-11T11:35:32.819Z",
+    "duration": 18813.020999999997,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "newLoops": [
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "chromium",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "firefox",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "webkit",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "mobile",
+      "expected": "passed",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    }
+  ],
+  "processGroupOrRunnerDisposalAcceptance": false,
+  "immutableSourceModesMatch": true
+}

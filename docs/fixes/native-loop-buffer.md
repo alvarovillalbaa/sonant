@@ -31,5 +31,8 @@ before tool setup; every newly created identity remains in scope. No deadline
 or behavioral assertion is weakened. Public hosted acceptance must be repeated
 against the repaired deployment after the separate release regression gate.
 
-Verification is pending. No new npm release, physical audibility, production
-cutover or complete hosted acceptance is claimed by this source repair.
+The [release gate](../results/2026/11-11/native-loop-release.md) passed 35
+package/integration cases, 44 browser scenarios including four native-loop
+regressions, and five Firefox cold starts at `3f3d5349`. Production cutover and
+four hosted journeys remain separate; no new npm release or physical audibility
+is claimed by this source repair.

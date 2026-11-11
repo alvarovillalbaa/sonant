@@ -112,6 +112,12 @@ distinguishes the source repair from the older verified 0.1.0 package. The
 browser matrix predates that small status callout; its provider build and public
 bundle checks are separate evidence. No new npm version was published.
 
+The later [native loop buffer repair](docs/fixes/native-loop-buffer.md) also
+passed its [release gate](docs/results/2026/11-11/native-loop-release.md): 35
+package/integration cases, 44 browser scenarios including four actual native
+loop regressions, and five Firefox cold starts. The published 0.1.0 package
+does not contain this source repair; its registry release remains pending.
+
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 
 This release does not include hosted analytics, experiments, native haptics, Ogg export, team governance, or direct version-specific third-party adapters. See [scope](docs/specs/product.md), [architecture](docs/references/architecture.md), [sources](docs/sources/INDEX.md), and [release procedure](docs/runbooks/release.md).
