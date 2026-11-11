@@ -1,0 +1,143 @@
+{
+  "source": "3e67ef6d8dd626b61997f710d81df7c872e35856",
+  "run": 43014896933,
+  "status": "failed",
+  "sourceFiles": 174,
+  "allSourceBlobsAndBytesVerified": true,
+  "artifactFiles": [
+    {
+      "file": "H01-sonant-trace.json",
+      "bytes": 670,
+      "sha256": "b5a2edbe4f9060d2e55e65fbcc2ab904d3ebad3ed4a50a5eb69c8e61b11a7a31"
+    },
+    {
+      "file": "H01.png",
+      "bytes": 85844,
+      "sha256": "5c6086d235e8fb60dab49c93e0141c02399361fe6938e131969b645486e07575"
+    },
+    {
+      "file": "H02-sonant-trace.json",
+      "bytes": 925,
+      "sha256": "56a314115351c1017b4c721b651b5fcb4d2c982c65f05fdb0f2487fa3797f75e"
+    },
+    {
+      "file": "H02.png",
+      "bytes": 95931,
+      "sha256": "081720e8007f0523a8c58131a3644a155a46609b16b3ab07ff2cb428a0f26c05"
+    },
+    {
+      "file": "H03.png",
+      "bytes": 66573,
+      "sha256": "9bcb768ad34a9ecd718605bb016cb735736c5c9c70518317875f18b293478a2c"
+    },
+    {
+      "file": "H04-repeat-sonant-kit.json",
+      "bytes": 19599,
+      "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de"
+    },
+    {
+      "file": "H04-sonant-kit.json",
+      "bytes": 19599,
+      "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de"
+    },
+    {
+      "file": "H04.png",
+      "bytes": 125624,
+      "sha256": "e1ac83998b62f5d94baca142e02144ce53ccf512fdd89b55787632567b159102"
+    },
+    {
+      "file": "browser.json",
+      "bytes": 22902,
+      "sha256": "e0ba38b4d77641344288a8849488c9bfe4e0682cfb7fcb65ebcbe6fb7edfaa05"
+    },
+    {
+      "file": "browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "browser.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "chromium-install.stderr.log",
+      "bytes": 237,
+      "sha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+    },
+    {
+      "file": "chromium-install.stdout.log",
+      "bytes": 16503,
+      "sha256": "7d60a8daa4cb0c7a18e349c987013797f246d4e0dbcae68fa0543ee89525e80b"
+    },
+    {
+      "file": "install.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "install.stdout.log",
+      "bytes": 24,
+      "sha256": "65c731cd02e19c79f6f5a3e84a4dd64a49acd6c47d2ee551d7cc9da191e8c96c"
+    },
+    {
+      "file": "node.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "node.stdout.log",
+      "bytes": 9,
+      "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04"
+    },
+    {
+      "file": "run.json",
+      "bytes": 4556,
+      "sha256": "e461398030ee247528ffb604b06fa0e881c12984847c6cd31275d3267a32b3b3"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 45458,
+      "sha256": "9c45aa7f747b2d1f14c3a911f43008ba268a18f06fad0632784b1c9d56440b6a"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 45458,
+      "sha256": "9c45aa7f747b2d1f14c3a911f43008ba268a18f06fad0632784b1c9d56440b6a"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 1064,
+      "sha256": "2fa84b8293c8e0da7953f61ce00ae75c27f19081d3f3f5e5017b077f053377ad"
+    }
+  ],
+  "archiveBytes": 380777,
+  "archiveSha256": "c21cea516ff854522250db47d89de0c0dabf4d78464a6af14b78b4defd6ed830",
+  "originalArtifactBytes": 550976,
+  "completeStreamsVerified": 8,
+  "groupsAbsent": 4,
+  "ownedCleanupPassed": true,
+  "h03ScreenshotViewed": true,
+  "galleryVisualAcceptance": false,
+  "h03VisualViewport": {
+    "scrollX": 0,
+    "scrollY": 0,
+    "innerWidth": 624,
+    "innerHeight": 1351,
+    "documentWidth": 624,
+    "visual": {
+      "scale": 1,
+      "width": 390,
+      "height": 844,
+      "left": 0,
+      "top": 473
+    }
+  },
+  "caseStatus": {
+    "H01": "passed",
+    "H02": "passed",
+    "H03": "failed",
+    "H04": "passed"
+  },
+  "failure": "H03 native tap hit-testing intercepted by other page content; no export click was delivered"
+}

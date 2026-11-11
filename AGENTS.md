@@ -68,3 +68,7 @@ The release gate passed at 3f3d5349 in run43012905409:35 package/integration,
 44 browser cases including four native-loop regressions and five cold starts.
 Its original packet and the rejected prior activation are preserved in owning
 results. Workflow414595642 is disabled; production/hosted/npm remain separate.
+Third hosted failure diagnostics led to docs/fixes/route-scroll-commit.md.
+Standing approval covers its small route-scroll placement candidate and the
+same release gate, now with four strengthened native navigation/export cases.
+It remains pending; do not deploy it on the strength of the earlier 44 cases.

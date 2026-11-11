@@ -181,19 +181,31 @@ test("examples resolve and fail visibly, native dialog restores focus", async ({
   await page.getByRole("button", { name: "Run workflow" }).click();
   await expect(page.getByText("Your summary is ready.")).toBeVisible();
 });
-test("native progress loop plays and navigation stops it without a provider error", async ({ page }) => {
+test("native progress loop plays and navigation stops it without a provider error", async ({ page }, testInfo) => {
+  const activate = async (control: ReturnType<typeof page.getByRole>) => {
+    if (testInfo.project.name === "mobile") await control.tap();
+    else await control.click();
+  };
   await page.goto("/#/examples");
-  await page.getByRole("button", { name: "Sound off", exact: true }).click();
-  await page.getByRole("button", { name: "Run workflow", exact: true }).click();
+  await activate(page.getByRole("button", { name: "Sound off", exact: true }));
+  await activate(page.getByRole("button", { name: "Run workflow", exact: true }));
   await expect(page.locator(".audio-announcement")).toHaveText("agent.thinking: played");
   const menu = page.getByRole("button", { name: "Open menu", exact: true });
-  if (await menu.isVisible()) await menu.click();
-  await page.locator("header nav").getByRole("link", { name: "Devtools", exact: true }).click();
+  if (await menu.isVisible()) await activate(menu);
+  await activate(page.locator("header nav").getByRole("link", { name: "Devtools", exact: true }));
   const row = page.locator("tbody tr").filter({ hasText: "agent.thinking" });
   await expect(row).toContainText("played");
   await expect(row).toContainText("Ended");
   await expect(row).not.toContainText("provider");
   await expect(page.locator(".devtools-metrics article").filter({ hasText: "Active voices" }).locator("strong")).toHaveText("0 / 4");
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
+  await expect.poll(() => page.evaluate(() => window.visualViewport?.offsetTop ?? 0)).toBe(0);
+  const [download] = await Promise.all([
+    page.waitForEvent("download"),
+    activate(page.getByRole("button", { name: "Export JSON", exact: true })),
+  ]);
+  expect(download.suggestedFilename()).toBe("sonant-trace.json");
+  expect(await download.failure()).toBeNull();
 });
 test("mute persists, policy suppression is visible, and traces export", async ({ page }) => {
   await page.goto("/#/devtools");

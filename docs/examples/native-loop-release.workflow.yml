@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   quality:
-    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-loop-release-20261111-2'
+    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-loop-release-20261111-3'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
