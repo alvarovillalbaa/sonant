@@ -69,8 +69,9 @@ try {
 
   if (!npmOnly) {
     const npx = await consumer("npx");
-    run("npx", ["--yes", spec, "init", "--cwd", npx], root);
-    run("npx", ["--yes", spec, "add", "sound-settings", "--cwd", npx], root);
+    const npxPackage = archive ? ['--yes', '--package', spec, '--', 'sonant'] : ['--yes', spec];
+    run("npx", [...npxPackage, "init", "--cwd", npx], root);
+    run("npx", [...npxPackage, "add", "sound-settings", "--cwd", npx], root);
     assert.match(
       await readFile(join(npx, "components/sonant/sound-settings.tsx"), "utf8"),
       /useSound/,
@@ -80,8 +81,9 @@ try {
     const pnpm = await consumer("pnpm");
     const store = archive ? ['--store-dir', join(root, 'pnpm-store')] : [];
     run("pnpm", [...store, "add", spec], pnpm);
-    run("pnpm", [...store, "dlx", spec, "init", "--cwd", pnpm, "--theme", "soft"], root);
-    run("pnpm", [...store, "dlx", spec, "add", "async-action", "--cwd", pnpm], root);
+    const dlxPackage = archive ? ['--package', spec, 'dlx', 'sonant'] : ['dlx', spec];
+    run("pnpm", [...store, ...dlxPackage, "init", "--cwd", pnpm, "--theme", "soft"], root);
+    run("pnpm", [...store, ...dlxPackage, "add", "async-action", "--cwd", pnpm], root);
     assert.equal(JSON.parse(await readFile(join(pnpm, 'node_modules/@alvarovillalbaa/sonant/package.json'))).version, version);
     const config = JSON.parse(await readFile(join(pnpm, "sonant.config.json"), "utf8"));
     assert.equal(config.theme, "soft");

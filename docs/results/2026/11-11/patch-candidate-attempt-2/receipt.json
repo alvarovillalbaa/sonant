@@ -1,0 +1,148 @@
+{
+  "source": "13eba3f2418c4cc71e8a69bc7db56293e2b4f1cb",
+  "activation": "6556d6c481e62c839360e41e4ec5fb4cb5148e51",
+  "run": 43026065030,
+  "job": 130540948290,
+  "conclusion": "failure",
+  "failure": "Harness bare npx archive path executed as command; exit126",
+  "existingPackageTestsPassed": 35,
+  "typeAndSiteBuildPassed": true,
+  "archiveInspected": true,
+  "archiveSha256": "10106e3dd4b4f37ebf7f33273919a257ba7698807eada39e673283b2827b2963",
+  "archiveFileCount": 39,
+  "sourceFiles": 216,
+  "sourceGuardPassed": true,
+  "freshConsumerProfilesPassed": [
+    "npm-node22"
+  ],
+  "allConsumerProfilesPassed": false,
+  "consumerRootRemovalVerified": true,
+  "ownedWorkRemovalVerified": false,
+  "artifact": {
+    "id": 13856733527,
+    "zipBytes": 89381,
+    "serverZipSha256": "e7632e640d66bd2ea4d26a8fbffa758c362748948090aa54ac677ccd825a490a"
+  },
+  "files": [
+    {
+      "file": "archive-inspection.log.json",
+      "bytes": 630,
+      "sha256": "226c5b936450e89ba8be524f645d6ce53f276009e2345939c1e5d906d5f86479",
+      "originalFile": "archive-inspection.log",
+      "originalBytes": 416,
+      "originalSha256": "83ecf8e64bb6b8bff860cfb1b71d374d40cf04c82616b841af322289e9641fcd"
+    },
+    {
+      "file": "archive-manifest.json",
+      "bytes": 7209,
+      "sha256": "6c6183080b0f13ec56b026e61120ddba5ea60dbf04e52ef504ee09bc2f350bde",
+      "originalFile": "archive-manifest.json",
+      "originalBytes": 7209,
+      "originalSha256": "6c6183080b0f13ec56b026e61120ddba5ea60dbf04e52ef504ee09bc2f350bde"
+    },
+    {
+      "file": "build.log.json",
+      "bytes": 1309,
+      "sha256": "c87faddc27d40ddfe3d685d56dca230109e6095744129fae88cf596e5c0cbff2",
+      "originalFile": "build.log",
+      "originalBytes": 1060,
+      "originalSha256": "03ab3db519bb6c0f7f682aa67b1a48def1e4ee6393ead8a22933bc62ccfa1fa4"
+    },
+    {
+      "file": "check.log.json",
+      "bytes": 526,
+      "sha256": "7137e6ea8c1902b27e12f3081e030f0d00d97f025cce0de59ef0dd5940ba3c0b",
+      "originalFile": "check.log",
+      "originalBytes": 340,
+      "originalSha256": "4bbe0201f7e4ed6ebd987b386a4f21ac787da754a727bdf317f682309ae836b7"
+    },
+    {
+      "file": "install.log.json",
+      "bytes": 198,
+      "sha256": "5117a3e8b68f8ddafa354668480cd0eef58d3263efb11a7d98936fc8d112194b",
+      "originalFile": "install.log",
+      "originalBytes": 25,
+      "originalSha256": "ed3488c0dad53ade8657c9fabb0a14b8fd232ce67362e4c5489d14bc4ef97686"
+    },
+    {
+      "file": "managers-node22.json",
+      "bytes": 213,
+      "sha256": "add387bd2561bf963ab82a15e2cc7d50c348f1ecea3eed9f17eb1526275520ae",
+      "originalFile": "managers-node22.json",
+      "originalBytes": 213,
+      "originalSha256": "add387bd2561bf963ab82a15e2cc7d50c348f1ecea3eed9f17eb1526275520ae"
+    },
+    {
+      "file": "managers-node22.log.json",
+      "bytes": 3011,
+      "sha256": "62af34eadecdf6b72eefe06fed82569918653b30fff51a4d217a31c5e3665c66",
+      "originalFile": "managers-node22.log",
+      "originalBytes": 2714,
+      "originalSha256": "ca63dc528b751cc37cfaed06282b5a1743042a60abfba0b3b477a4bb8c93b340"
+    },
+    {
+      "file": "node22.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906",
+      "originalFile": "node22.txt",
+      "originalBytes": 9,
+      "originalSha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "npm22.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a",
+      "originalFile": "npm22.txt",
+      "originalBytes": 7,
+      "originalSha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "pack.json",
+      "bytes": 4127,
+      "sha256": "4386a55a0604be43184df23f4446f0cc1002d334bb1a41627426b8490a33adac",
+      "originalFile": "pack.json",
+      "originalBytes": 4127,
+      "originalSha256": "4386a55a0604be43184df23f4446f0cc1002d334bb1a41627426b8490a33adac"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 56310,
+      "sha256": "c3e53589563b7a5bf21c1cab6086aa32fd43cd2bbc2051c735848f7900a996dd",
+      "originalFile": "source-after.json",
+      "originalBytes": 56310,
+      "originalSha256": "c3e53589563b7a5bf21c1cab6086aa32fd43cd2bbc2051c735848f7900a996dd"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 56310,
+      "sha256": "c3e53589563b7a5bf21c1cab6086aa32fd43cd2bbc2051c735848f7900a996dd",
+      "originalFile": "source-before.json",
+      "originalBytes": 56310,
+      "originalSha256": "c3e53589563b7a5bf21c1cab6086aa32fd43cd2bbc2051c735848f7900a996dd"
+    },
+    {
+      "file": "tools-install.log.json",
+      "bytes": 205,
+      "sha256": "a813e079ed0e2d727ef9416676d2c29f477371e37a83940149e7ea2271608ca2",
+      "originalFile": "tools-install.log",
+      "originalBytes": 26,
+      "originalSha256": "1f1eb284491773022c58214c329c7888ead841223508693bec8b7c37e49da6be"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 655,
+      "sha256": "30c24474b797dee4beb7ad922477975ac989ecaea225fd9aa8421f90b63d7a5f",
+      "originalFile": "tools-lock.json",
+      "originalBytes": 655,
+      "originalSha256": "30c24474b797dee4beb7ad922477975ac989ecaea225fd9aa8421f90b63d7a5f"
+    },
+    {
+      "file": "unit.log.json",
+      "bytes": 8458,
+      "sha256": "63ac2ff1432143c986bb44064e8246ced35bcaf63660775b96dd7f2e46340b10",
+      "originalFile": "unit.log",
+      "originalBytes": 8052,
+      "originalSha256": "184e2e874f7e98913b69262232f97d889311767caff21e27d4301c46c5fd9ad5"
+    }
+  ]
+}

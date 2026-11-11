@@ -51,7 +51,7 @@ The dependency graph is unchanged. This is preparation, not publication.
 
 The inactive `docs/examples/patch-candidate.workflow.yml` defines the next exact
 scope: one public Ubuntu job,20-minute cap, read-only repository permission,
-immutable source and owned `qa/sonant-patch-candidate-20261111-2` branch. It runs
+immutable source and owned `qa/sonant-patch-candidate-20261111-3` branch. It runs
 the release runbook's frozen install/type/site/package checks and35 existing
 package/integration cases, then packs once and retains the actual tarball. It
 inventories every archive member, declarations/exports, executable/client
@@ -74,3 +74,12 @@ actual tarball. All35 package tests/type/site checks and source guards passed,
 but the seven profiles were correctly skipped. The package build now explicitly
 sets its emitted CLI to0755 using Node's filesystem API; no dependency changed.
 Attempt2 must retain the executable check and exercise the newly packed bytes.
+
+Attempt2 accepted all39 archive members and the fresh npm core/CLI/export
+profile. npx interpreted the bare archive path as an executable and stopped
+with126, before pnpm/React/compatibility profiles. The harness now uses the
+documented explicit `--package` and `sonant` binary form for archive npx/dlx;
+the package-name registry path is unchanged. Sources:
+[npm npx](https://docs.npmjs.com/cli/v11/commands/npx/) and
+[pnpm10 dlx](https://pnpm.io/10.x/cli/dlx). This invocation correction does not
+weaken a consumer assertion or alter the package payload.

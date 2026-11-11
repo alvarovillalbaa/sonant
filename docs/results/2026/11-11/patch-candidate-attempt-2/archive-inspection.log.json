@@ -1,0 +1,7 @@
+{
+  "originalFile": "archive-inspection.log",
+  "encoding": "utf-8",
+  "bytes": 416,
+  "sha256": "83ecf8e64bb6b8bff860cfb1b71d374d40cf04c82616b841af322289e9641fcd",
+  "content": "{\"source\": \"13eba3f2418c4cc71e8a69bc7db56293e2b4f1cb\", \"version\": \"0.1.1\", \"filename\": \"alvarovillalbaa-sonant-0.1.1.tgz\", \"bytes\": 49923, \"sha256\": \"10106e3dd4b4f37ebf7f33273919a257ba7698807eada39e673283b2827b2963\", \"integrity\": \"sha512-qHRY1mMw1XXvG1nOQW73I/Skqk7vKvJJllMjS5dxSXpVfYX/V442Gf2udyi9tsfDWkGHLefmiLmJZDxbzCHGqQ==\", \"shasum\": \"43378d0b9b6c6ef60a8274e0dad9deab01d18c5a\", \"fileCount\": 39, \"passed\": true}\n"
+}

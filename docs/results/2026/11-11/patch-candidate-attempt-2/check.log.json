@@ -1,0 +1,7 @@
+{
+  "originalFile": "check.log",
+  "encoding": "utf-8",
+  "bytes": 340,
+  "sha256": "4bbe0201f7e4ed6ebd987b386a4f21ac787da754a727bdf317f682309ae836b7",
+  "content": "\n> sonant-workspace@0.1.0 check\n> npm run build && tsc --noEmit -p website/tsconfig.json\n\n\n> sonant-workspace@0.1.0 build\n> npm run build --workspace @alvarovillalbaa/sonant\n\n\n> @alvarovillalbaa/sonant@0.1.1 build\n> tsc -p tsconfig.json && node --input-type=module -e 'import { chmodSync } from \"node:fs\"; chmodSync(\"dist/cli.js\", 0o755)'\n\n"
+}
