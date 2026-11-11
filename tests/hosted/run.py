@@ -15,7 +15,7 @@ source = os.environ['SOURCE_COMMIT']
 need(len(source) == 40 and all(c in '0123456789abcdef' for c in source), 'source pin required')
 need(os.environ.get('CI') == 'true' and os.environ.get('GITHUB_ACTIONS') == 'true', 'CI only')
 need(os.environ.get('GITHUB_REPOSITORY') == 'alvarovillalbaa/sonant', 'repository mismatch')
-need(os.environ.get('GITHUB_EVENT_NAME') == 'create' and os.environ.get('GITHUB_REF') == 'refs/heads/qa/sonant-hosted-20261111-2', 'owned QA branch required')
+need(os.environ.get('GITHUB_EVENT_NAME') == 'create' and os.environ.get('GITHUB_REF') == 'refs/heads/qa/sonant-hosted-20261111-3', 'owned QA branch required')
 event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
 need(event['repository']['private'] is False and event['ref_type'] == 'branch', 'public branch required')
 repo = Path.cwd().resolve()

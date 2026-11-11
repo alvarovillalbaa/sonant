@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-11-11T11:42:56.821Z",
+  "preferences": {
+    "enabled": true,
+    "volume": 0.35,
+    "profile": "balanced",
+    "categories": {}
+  },
+  "provider": "Web Audio",
+  "trace": [
+    {
+      "id": 1,
+      "event": "action.select",
+      "time": 1794397373188,
+      "provider": "Web Audio",
+      "decision": "played",
+      "active": false,
+      "loop": false
+    },
+    {
+      "id": 2,
+      "event": "agent.thinking",
+      "time": 1794397373238,
+      "source": "AgentExample",
+      "surface": "examples",
+      "provider": "Web Audio",
+      "decision": "played",
+      "active": false,
+      "loop": true
+    },
+    {
+      "id": 3,
+      "event": "agent.tool.started",
+      "time": 1794397373938,
+      "source": "AgentExample",
+      "surface": "examples",
+      "provider": "Web Audio",
+      "decision": "played",
+      "active": false,
+      "loop": false
+    }
+  ]
+}

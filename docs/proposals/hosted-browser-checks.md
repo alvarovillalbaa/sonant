@@ -19,7 +19,7 @@ authorizes this focused browser and temporary free CI scope.
 | H04 | Narrow Chromium with touch | Soft/quiet configuration and async-action selection produce the matching command and actual six-file source bundle. Config, theme cardinality and cancellation-aware component content are checked; a second download is byte-equal. |
 
 Run only `tests/hosted/run.py` in one public Ubuntu 24.04 job, capped at twelve
-minutes, next owned branch `qa/sonant-hosted-20261111-2`, immutable source pin,
+minutes, next owned branch `qa/sonant-hosted-20261111-3`, immutable source pin,
 read-only contents permission, Node 24.22.2 and isolated Playwright 1.65.0 with
 both package integrity pins. Install Chromium only. No application install,
 build, server, unit suite, model/provider API, account, database or paid action.
@@ -61,3 +61,13 @@ The first run 43011554260 failed and is preserved in the
 [repair record](../fixes/native-loop-buffer.md). Do not rerun hosted checks on
 the old deployment. A real loop-buffer source repair and its separate release
 regression gate precede the next four-case hosted invocation.
+
+The repaired release gate and canonical production cutover closed at `54ae94d0`.
+Second hosted run 43014133678 passed H01/H02/H04 and failed H03's narrow trace
+download, with complete receipts and verified owned cleanup. All four PNGs were
+inspected; H03's full-page image is 624 pixels wide on the 390-pixel profile.
+That image alone does not establish a layout/viewport cause. The next source
+uses native touch for narrow download buttons, matching the intended profile,
+and records pre-action geometry, visual viewport and trusted click targets.
+It changes no app code, outcome assertion, deadline or response. Preserve the
+[second failed packet](../results/2026/11-11/hosted-attempt-2/checksums.json).

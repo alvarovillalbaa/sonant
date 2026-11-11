@@ -10,7 +10,7 @@ assert.ok(root && process.env.CI === 'true');
 const { chromium } = await import(pathToFileURL(path.join(root, 'tools/node_modules/playwright/index.mjs')).href);
 const origin = 'https://sonant-beta.vercel.app';
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
-const report = { source: process.env.SOURCE_COMMIT, origin, cases: [], requests: [], errors: [], assets: {}, passed: false };
+const report = { source: process.env.SOURCE_COMMIT, origin, cases: [], requests: [], downloads: [], errors: [], assets: {}, passed: false };
 const browser = await chromium.launch({ headless: true });
 report.chromium = browser.version();
 const until = async (predicate, label, ms = 5000) => {
@@ -19,13 +19,22 @@ const until = async (predicate, label, ms = 5000) => {
   throw new Error(label);
 };
 const settle = ms => new Promise(resolve => setTimeout(resolve, ms));
-async function download(page, button, filename, id) {
+async function download(page, button, filename, id, touch = false) {
   await button.waitFor({ state: 'visible' });
   await button.scrollIntoViewIfNeeded();
-  const [item] = await Promise.all([
-    page.waitForEvent('download', { timeout: 5000 }),
-    button.click(),
-  ]);
+  const attempt = { id, filename, input: touch ? 'touch' : 'mouse', target: await button.boundingBox(), before: await page.evaluate(() => ({ scrollX, scrollY, innerWidth, innerHeight, documentWidth: document.documentElement.scrollWidth, visual: { scale: visualViewport.scale, width: visualViewport.width, height: visualViewport.height, left: visualViewport.offsetLeft, top: visualViewport.offsetTop } })) };
+  report.downloads.push(attempt);
+  let item;
+  try {
+    [item] = await Promise.all([
+      page.waitForEvent('download', { timeout: 5000 }),
+      touch ? button.tap() : button.click(),
+    ]);
+    attempt.received = true;
+  } finally {
+    attempt.clicks = await page.evaluate(() => window.__sonantHostedClicks);
+    await writeFile(path.join(root, 'proof/browser.json'), JSON.stringify(report, null, 2) + '\n');
+  }
   assert.equal(item.suggestedFilename(), filename);
   assert.equal(await item.failure(), null);
   const bytes = await readFile(await item.path());
@@ -37,6 +46,11 @@ async function download(page, button, filename, id) {
 async function audioObserver() {
   const records = [];
   Object.defineProperty(window, '__sonantHostedAudio', { value: records });
+  const clicks = [];
+  Object.defineProperty(window, '__sonantHostedClicks', { value: clicks });
+  document.addEventListener('click', event => {
+    if (clicks.length < 80) clicks.push({ tag: event.target.tagName, control: event.target.closest('button,a')?.textContent.trim().slice(0, 100), trusted: event.isTrusted, pointer: event.pointerType, x: event.clientX, y: event.clientY });
+  }, true);
   let contextId = 0, sourceId = 0;
   const Native = window.AudioContext;
   window.AudioContext = class extends Native {
@@ -110,7 +124,7 @@ const definitions = [
     assert.equal(await page.getByRole('log', { name: 'Agent workflow' }).innerText(), snapshot);
     await page.getByRole('button', { name: 'Open menu', exact: true }).tap();
     await page.locator('header nav').getByRole('link', { name: 'Devtools', exact: true }).tap();
-    const out = await download(page, page.getByRole('button', { name: 'Export JSON', exact: true }), 'sonant-trace.json', row.id);
+    const out = await download(page, page.getByRole('button', { name: 'Export JSON', exact: true }), 'sonant-trace.json', row.id, true);
     assert.equal(out.value.preferences.enabled, false);
     assert.ok(out.value.trace.some(entry => entry.event === 'agent.interrupted' && entry.reason === 'muted'));
     assert.ok(!out.value.trace.some(entry => entry.event === 'agent.ready'));
@@ -123,14 +137,14 @@ const definitions = [
     await page.getByRole('button', { name: /quiet.*Outcomes/ }).tap();
     await page.getByLabel('async-action', { exact: false }).check();
     assert.ok((await page.locator('.builder-summary .code-block').innerText()).includes('--theme soft --profile quiet --volume 0.35'));
-    const out = await download(page, page.getByRole('button', { name: 'Download source bundle', exact: true }), 'sonant-kit.json', row.id);
+    const out = await download(page, page.getByRole('button', { name: 'Download source bundle', exact: true }), 'sonant-kit.json', row.id, true);
     assert.equal(out.value.format, 'sonant-kit-v1');
     assert.deepEqual(Object.keys(out.value.files).sort(), ['sonant.config.json', ...['provider.tsx', 'theme.json', 'sound-button.tsx', 'sound-settings.tsx', 'async-action.tsx'].map(name => `components/sonant/${name}`)].sort());
     assert.deepEqual(JSON.parse(out.value.files['sonant.config.json']), { schemaVersion: 1, theme: 'soft', preferences: { enabled: false, volume: 0.35, profile: 'quiet' }, directory: 'components/sonant' });
     assert.ok(out.value.files['components/sonant/async-action.tsx'].includes('operation.reject'));
     assert.ok(out.value.files['components/sonant/provider.tsx'].includes('"enabled":false'));
     assert.equal(Object.keys(JSON.parse(out.value.files['components/sonant/theme.json'])).length, 32);
-    const again = await download(page, page.getByRole('button', { name: 'Download source bundle', exact: true }), 'sonant-kit.json', `${row.id}-repeat`);
+    const again = await download(page, page.getByRole('button', { name: 'Download source bundle', exact: true }), 'sonant-kit.json', `${row.id}-repeat`, true);
     assert.equal(again.sha256, out.sha256);
     assert.deepEqual(await page.evaluate(() => window.__sonantHostedAudio), []);
     row.kit = { bytes: out.bytes, sha256: out.sha256, repeatedByteEqual: true, files: Object.keys(out.value.files) };

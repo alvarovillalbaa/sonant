@@ -1,0 +1,167 @@
+{
+  "source": "54ae94d056dfd9438f0325877d724e4d61a146ac",
+  "run": 43014133678,
+  "status": "failed",
+  "artifactFiles": [
+    {
+      "file": "H01-sonant-trace.json",
+      "bytes": 670,
+      "sha256": "73b11e107fbedeb0af92c500e92755918f7d562f1a7eef91f98a50409f67ed86"
+    },
+    {
+      "file": "H01.png",
+      "bytes": 85818,
+      "sha256": "b3cebbb49c57ec340660fb863f6127d812c01eff40a5920bd32ef5b72d2bcbc3"
+    },
+    {
+      "file": "H02-sonant-trace.json",
+      "bytes": 925,
+      "sha256": "2be6f054de177267726c63060a7fadc8f20cccab89261cee7659f1d8549ff315"
+    },
+    {
+      "file": "H02.png",
+      "bytes": 95814,
+      "sha256": "643d5b56bd4239c4a2fbb278f872cafbdf6960cbf9b948672888ca3a0a13d11e"
+    },
+    {
+      "file": "H03.png",
+      "bytes": 66672,
+      "sha256": "f850b978a4efc26c80d22454bfc69ca5db1fff1441698221dbe2db84a38ef81b"
+    },
+    {
+      "file": "H04-repeat-sonant-kit.json",
+      "bytes": 19599,
+      "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de"
+    },
+    {
+      "file": "H04-sonant-kit.json",
+      "bytes": 19599,
+      "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de"
+    },
+    {
+      "file": "H04.png",
+      "bytes": 125593,
+      "sha256": "8bfd74fe88067350fa1d410719c362138ca19e510bfc24e3e34600423d4eb8c5"
+    },
+    {
+      "file": "browser.json",
+      "bytes": 12972,
+      "sha256": "c3bde30e5e27092f06dd41790d7ad9b1366ab6febcebee72f1ac904f55105e8c"
+    },
+    {
+      "file": "browser.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "browser.stderr.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "browser.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "browser.stdout.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "chromium-install.stderr.log",
+      "bytes": 237,
+      "sha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f",
+      "storedFile": "chromium-install.stderr.log.gz",
+      "storedBytes": 152,
+      "storedSha256": "f2dcf5fdeafaf336da58e64391b79f38e5e5dbc7d28440f897a1637417375624",
+      "compression": "gzip"
+    },
+    {
+      "file": "chromium-install.stdout.log",
+      "bytes": 16503,
+      "sha256": "d3487e1510b95828f1761b8f7ecc8f7933ae22a05e870d23de4254e5ade60651",
+      "storedFile": "chromium-install.stdout.log.gz",
+      "storedBytes": 2519,
+      "storedSha256": "13bffaac506bb3116bdc2512c4d8f0f049cb122e433c83aecc02c07452b1f291",
+      "compression": "gzip"
+    },
+    {
+      "file": "install.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "install.stderr.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "install.stdout.log",
+      "bytes": 24,
+      "sha256": "bf14b7a2bc076990244fa3239536925868dfe5ad05089c7d459b5fa482abfc72",
+      "storedFile": "install.stdout.log.gz",
+      "storedBytes": 44,
+      "storedSha256": "98945a9b63958fed0aa867c4eab178753a7444bb0bea6a7868526f9ee42f5e1a",
+      "compression": "gzip"
+    },
+    {
+      "file": "node.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "node.stderr.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "node.stdout.log",
+      "bytes": 9,
+      "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "storedFile": "node.stdout.log.gz",
+      "storedBytes": 29,
+      "storedSha256": "21915b8e70bcf14803465c444a1a3f676e4bae7bb179a41f6e62d15345ccc11c",
+      "compression": "gzip"
+    },
+    {
+      "file": "run.json",
+      "bytes": 4549,
+      "sha256": "64c59e6c2fdf80ddf98019a2a40859341457c231c62256f683799c2f70659ea8"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 39716,
+      "sha256": "bd656d2494f9bdb67a2f26b3599299d0a818c206fe17b0d24d6dfd5058873025"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 39716,
+      "sha256": "bd656d2494f9bdb67a2f26b3599299d0a818c206fe17b0d24d6dfd5058873025"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 1064,
+      "sha256": "2fa84b8293c8e0da7953f61ce00ae75c27f19081d3f3f5e5017b077f053377ad"
+    }
+  ],
+  "originalArtifactBytes": 529480,
+  "sourceFiles": 152,
+  "sourceBlobsBytesVerified": true,
+  "fullStreams": 8,
+  "groupsAbsent": 4,
+  "toolRootRemoved": true,
+  "processScanUncertain": [],
+  "screenshotsViewed": [
+    "H01.png",
+    "H02.png",
+    "H03.png",
+    "H04.png"
+  ],
+  "caseStatus": {
+    "H01": "passed",
+    "H02": "passed",
+    "H03": "failed",
+    "H04": "passed"
+  },
+  "browserClosed": true,
+  "assetCount": 5,
+  "browserResponses": 25,
+  "finalDirectGets": 5
+}

@@ -1,0 +1,210 @@
+{
+  "source": "54ae94d056dfd9438f0325877d724e4d61a146ac",
+  "startedAt": 1794397347.7891433,
+  "commands": [
+    {
+      "label": "node",
+      "streams": {
+        "stdout": {
+          "bytes": 9,
+          "retainedBytes": 9,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04"
+        },
+        "stderr": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "signals": [],
+      "exitCode": 0,
+      "groupAbsent": true,
+      "pid": 2469
+    },
+    {
+      "label": "install",
+      "streams": {
+        "stdout": {
+          "bytes": 24,
+          "retainedBytes": 24,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "bf14b7a2bc076990244fa3239536925868dfe5ad05089c7d459b5fa482abfc72"
+        },
+        "stderr": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "signals": [],
+      "exitCode": 0,
+      "groupAbsent": true,
+      "pid": 2470
+    },
+    {
+      "label": "chromium-install",
+      "streams": {
+        "stdout": {
+          "bytes": 16503,
+          "retainedBytes": 16503,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "d3487e1510b95828f1761b8f7ecc8f7933ae22a05e870d23de4254e5ade60651"
+        },
+        "stderr": {
+          "bytes": 237,
+          "retainedBytes": 237,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+        }
+      },
+      "signals": [],
+      "exitCode": 0,
+      "groupAbsent": true,
+      "pid": 2483
+    },
+    {
+      "label": "browser",
+      "streams": {
+        "stdout": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "signals": [],
+      "exitCode": 1,
+      "groupAbsent": true,
+      "pid": 3106
+    }
+  ],
+  "passed": false,
+  "errors": [
+    "browser failed"
+  ],
+  "preToolProcessBaseline": [
+    {
+      "pid": 1304,
+      "uid": 1001,
+      "ppid": 1,
+      "pgid": 1304,
+      "startTicks": "1198"
+    },
+    {
+      "pid": 1314,
+      "uid": 1001,
+      "ppid": 1304,
+      "pgid": 1304,
+      "startTicks": "1200"
+    },
+    {
+      "pid": 2098,
+      "uid": 1001,
+      "ppid": 1,
+      "pgid": 2098,
+      "startTicks": "1440"
+    },
+    {
+      "pid": 2170,
+      "uid": 1001,
+      "ppid": 2098,
+      "pgid": 2098,
+      "startTicks": "2237"
+    },
+    {
+      "pid": 2189,
+      "uid": 1001,
+      "ppid": 2170,
+      "pgid": 2098,
+      "startTicks": "2446"
+    },
+    {
+      "pid": 2455,
+      "uid": 1001,
+      "ppid": 2189,
+      "pgid": 2098,
+      "startTicks": "2987"
+    },
+    {
+      "pid": 2464,
+      "uid": 1001,
+      "ppid": 2455,
+      "pgid": 2098,
+      "startTicks": "2990"
+    }
+  ],
+  "ownedMarkedProcessesRemaining": [],
+  "processScanUncertain": [],
+  "unchangedPreToolProcessesSkipped": [
+    {
+      "pid": 1304,
+      "uid": 1001,
+      "ppid": 1,
+      "pgid": 1304,
+      "startTicks": "1198"
+    },
+    {
+      "pid": 1314,
+      "uid": 1001,
+      "ppid": 1304,
+      "pgid": 1304,
+      "startTicks": "1200"
+    },
+    {
+      "pid": 2098,
+      "uid": 1001,
+      "ppid": 1,
+      "pgid": 2098,
+      "startTicks": "1440"
+    },
+    {
+      "pid": 2170,
+      "uid": 1001,
+      "ppid": 2098,
+      "pgid": 2098,
+      "startTicks": "2237"
+    },
+    {
+      "pid": 2189,
+      "uid": 1001,
+      "ppid": 2170,
+      "pgid": 2098,
+      "startTicks": "2446"
+    },
+    {
+      "pid": 2455,
+      "uid": 1001,
+      "ppid": 2189,
+      "pgid": 2098,
+      "startTicks": "2987"
+    }
+  ],
+  "sourceUnchanged": true,
+  "ownedWorkRemoved": true,
+  "finishedAt": 1794397387.5458765
+}

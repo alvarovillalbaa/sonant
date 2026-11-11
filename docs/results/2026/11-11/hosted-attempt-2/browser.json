@@ -1,0 +1,466 @@
+{
+  "source": "54ae94d056dfd9438f0325877d724e4d61a146ac",
+  "origin": "https://sonant-beta.vercel.app",
+  "cases": [
+    {
+      "id": "H01",
+      "narrow": false,
+      "status": "passed",
+      "errors": [],
+      "requests": [
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 919,
+          "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-BoiVdViH.js",
+          "status": 200,
+          "bytes": 310655,
+          "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-QBo_8_vM.css",
+          "status": 200,
+          "bytes": 43433,
+          "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+          "finished": true
+        },
+        {
+          "path": "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+          "status": 200,
+          "bytes": 36932,
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+          "finished": true
+        },
+        {
+          "path": "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "status": 200,
+          "bytes": 14708,
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "finished": true
+        },
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 919,
+          "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-QBo_8_vM.css",
+          "status": 200,
+          "bytes": 43433,
+          "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-BoiVdViH.js",
+          "status": 200,
+          "bytes": 310655,
+          "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751",
+          "finished": true
+        },
+        {
+          "path": "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+          "status": 200,
+          "bytes": 36932,
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+          "finished": true
+        },
+        {
+          "path": "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "status": 200,
+          "bytes": 14708,
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "finished": true
+        }
+      ],
+      "closed": true,
+      "trace": {
+        "bytes": 670,
+        "sha256": "73b11e107fbedeb0af92c500e92755918f7d562f1a7eef91f98a50409f67ed86"
+      },
+      "audio": [
+        {
+          "kind": "context",
+          "id": 1,
+          "state": "running"
+        },
+        {
+          "kind": "start",
+          "id": 1,
+          "loop": false,
+          "state": "running"
+        },
+        {
+          "kind": "state",
+          "id": 1,
+          "state": "running"
+        },
+        {
+          "kind": "start",
+          "id": 2,
+          "loop": false,
+          "state": "running"
+        },
+        {
+          "kind": "ended",
+          "id": 1
+        },
+        {
+          "kind": "stop",
+          "id": 1
+        },
+        {
+          "kind": "stop",
+          "id": 2
+        },
+        {
+          "kind": "ended",
+          "id": 2
+        }
+      ],
+      "audioFinal": [],
+      "outstandingRequests": []
+    },
+    {
+      "id": "H02",
+      "narrow": false,
+      "status": "passed",
+      "errors": [],
+      "requests": [
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 919,
+          "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-QBo_8_vM.css",
+          "status": 200,
+          "bytes": 43433,
+          "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-BoiVdViH.js",
+          "status": 200,
+          "bytes": 310655,
+          "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751",
+          "finished": true
+        },
+        {
+          "path": "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "status": 200,
+          "bytes": 14708,
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "finished": true
+        },
+        {
+          "path": "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+          "status": 200,
+          "bytes": 36932,
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+          "finished": true
+        }
+      ],
+      "closed": true,
+      "audio": [
+        {
+          "kind": "context",
+          "id": 1,
+          "state": "running"
+        },
+        {
+          "kind": "start",
+          "id": 1,
+          "loop": false,
+          "state": "running"
+        },
+        {
+          "kind": "state",
+          "id": 1,
+          "state": "running"
+        },
+        {
+          "kind": "start",
+          "id": 2,
+          "loop": true,
+          "state": "running"
+        },
+        {
+          "kind": "ended",
+          "id": 1
+        },
+        {
+          "kind": "stop",
+          "id": 1
+        },
+        {
+          "kind": "start",
+          "id": 3,
+          "loop": false,
+          "state": "running"
+        },
+        {
+          "kind": "stop",
+          "id": 2
+        },
+        {
+          "kind": "stop",
+          "id": 3
+        },
+        {
+          "kind": "ended",
+          "id": 3
+        },
+        {
+          "kind": "ended",
+          "id": 2
+        },
+        {
+          "kind": "state",
+          "id": 1,
+          "state": "suspended"
+        }
+      ],
+      "trace": {
+        "bytes": 925,
+        "sha256": "2be6f054de177267726c63060a7fadc8f20cccab89261cee7659f1d8549ff315"
+      },
+      "audioFinal": [
+        {
+          "kind": "context",
+          "id": 1,
+          "state": "running"
+        },
+        {
+          "kind": "start",
+          "id": 1,
+          "loop": false,
+          "state": "running"
+        },
+        {
+          "kind": "state",
+          "id": 1,
+          "state": "running"
+        },
+        {
+          "kind": "start",
+          "id": 2,
+          "loop": true,
+          "state": "running"
+        },
+        {
+          "kind": "ended",
+          "id": 1
+        },
+        {
+          "kind": "stop",
+          "id": 1
+        },
+        {
+          "kind": "start",
+          "id": 3,
+          "loop": false,
+          "state": "running"
+        },
+        {
+          "kind": "stop",
+          "id": 2
+        },
+        {
+          "kind": "stop",
+          "id": 3
+        },
+        {
+          "kind": "ended",
+          "id": 3
+        },
+        {
+          "kind": "ended",
+          "id": 2
+        },
+        {
+          "kind": "state",
+          "id": 1,
+          "state": "suspended"
+        }
+      ],
+      "outstandingRequests": []
+    },
+    {
+      "id": "H03",
+      "narrow": true,
+      "status": "failed",
+      "errors": [],
+      "requests": [
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 919,
+          "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-QBo_8_vM.css",
+          "status": 200,
+          "bytes": 43433,
+          "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-BoiVdViH.js",
+          "status": 200,
+          "bytes": 310655,
+          "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751",
+          "finished": true
+        },
+        {
+          "path": "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+          "status": 200,
+          "bytes": 36932,
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+          "finished": true
+        },
+        {
+          "path": "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "status": 200,
+          "bytes": 14708,
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "finished": true
+        }
+      ],
+      "closed": true,
+      "error": "page.waitForEvent: Timeout 5000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at download (/home/runner/work/sonant/sonant/tests/hosted/website.mjs:26:10)\n    at async page.getByRole.name (/home/runner/work/sonant/sonant/tests/hosted/website.mjs:113:17)\n    at async file:///home/runner/work/sonant/sonant/tests/hosted/website.mjs:175:7",
+      "outstandingRequests": []
+    },
+    {
+      "id": "H04",
+      "narrow": true,
+      "status": "passed",
+      "errors": [],
+      "requests": [
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 919,
+          "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-QBo_8_vM.css",
+          "status": 200,
+          "bytes": 43433,
+          "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+          "finished": true
+        },
+        {
+          "path": "/assets/index-BoiVdViH.js",
+          "status": 200,
+          "bytes": 310655,
+          "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751",
+          "finished": true
+        },
+        {
+          "path": "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+          "status": 200,
+          "bytes": 36932,
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+          "finished": true
+        },
+        {
+          "path": "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+          "status": 200,
+          "bytes": 14708,
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "finished": true
+        }
+      ],
+      "closed": true,
+      "kit": {
+        "bytes": 19599,
+        "sha256": "fa60c1f836dc551146b9865235ca41b8d083c9cb0193feeee5666dd56c0ab7de",
+        "repeatedByteEqual": true,
+        "files": [
+          "sonant.config.json",
+          "components/sonant/provider.tsx",
+          "components/sonant/theme.json",
+          "components/sonant/sound-button.tsx",
+          "components/sonant/sound-settings.tsx",
+          "components/sonant/async-action.tsx"
+        ]
+      },
+      "audioFinal": [],
+      "outstandingRequests": []
+    }
+  ],
+  "requests": [
+    {
+      "path": "/",
+      "bytes": 919,
+      "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad",
+      "status": 200,
+      "bodyComplete": true
+    },
+    {
+      "path": "/assets/index-BoiVdViH.js",
+      "bytes": 310655,
+      "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751",
+      "status": 200,
+      "bodyComplete": true
+    },
+    {
+      "path": "/assets/index-QBo_8_vM.css",
+      "bytes": 43433,
+      "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2",
+      "status": 200,
+      "bodyComplete": true
+    },
+    {
+      "path": "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+      "status": 200,
+      "bodyComplete": true
+    },
+    {
+      "path": "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2",
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "status": 200,
+      "bodyComplete": true
+    }
+  ],
+  "errors": [],
+  "assets": {
+    "/": {
+      "bytes": 919,
+      "sha256": "b472482b95b1612bae4ab34df8aa2ba6766fb67b9398b7d4a676e60640e3b8ad"
+    },
+    "/assets/index-BoiVdViH.js": {
+      "bytes": 310655,
+      "sha256": "53980845a5afbb567d5ebee29e299c9a279c9ed4020e306880dcb0c889b56751"
+    },
+    "/assets/index-QBo_8_vM.css": {
+      "bytes": 43433,
+      "sha256": "aa1b06be5f1bfaa5aa1dd520d837480dbf842932c964cce6ca7b2cb618bf94f2"
+    },
+    "/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2": {
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    "/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2": {
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+    }
+  },
+  "passed": false,
+  "chromium": "158.0.8127.18",
+  "browserClosed": true
+}
