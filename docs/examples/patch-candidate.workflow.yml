@@ -1,0 +1,146 @@
+# Inactive. Root supplies the immutable preparation SHA in the owned activation.
+name: Temporary Sonant patch candidate
+on:
+  create:
+permissions:
+  contents: read
+jobs:
+  candidate:
+    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-patch-candidate-20261111-1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      SOURCE_COMMIT: APPROVED_SOURCE_COMMIT
+      SONANT_VERSION: '0.1.1'
+    steps:
+      - name: Define owned proof and disposable tool paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          task_root="$RUNNER_TEMP/sonant-patch-candidate"
+          mkdir -m 700 "$task_root"
+          mkdir -m 700 "$task_root/proof" "$task_root/work"
+          mkdir -m 700 "$task_root/work/tmp" "$task_root/work/cache" "$task_root/work/config" "$task_root/work/data"
+          openssl rand -hex 16 > "$task_root/work/.owner"
+          touch "$task_root/work/npm-user" "$task_root/work/npm-global"
+          printf 'SONANT_PATCH_ROOT=%s\n' "$task_root" >> "$GITHUB_ENV"
+          printf 'TMPDIR=%s/work/tmp\nnpm_config_cache=%s/work/cache\n' "$task_root" "$task_root" >> "$GITHUB_ENV"
+          printf 'npm_config_userconfig=%s/work/npm-user\nnpm_config_globalconfig=%s/work/npm-global\n' "$task_root" "$task_root" >> "$GITHUB_ENV"
+          printf 'XDG_CACHE_HOME=%s/work/cache\nXDG_CONFIG_HOME=%s/work/config\nXDG_DATA_HOME=%s/work/data\n' "$task_root" "$task_root" "$task_root" >> "$GITHUB_ENV"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          persist-credentials: false
+          fetch-depth: 1
+          clean: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '22.23.4'
+          package-manager-cache: false
+      - name: Bind source and prepare isolated consumer launcher
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/scripts/package-source-guard.py "$SONANT_PATCH_ROOT/proof/source-before.json"
+          node --version > "$SONANT_PATCH_ROOT/proof/node22.txt"
+          npm --version > "$SONANT_PATCH_ROOT/proof/npm22.txt"
+          cat > "$SONANT_PATCH_ROOT/work/consumer.sh" <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          exec env -i PATH="$PATH" HOME="$HOME" CI=true LANG=C.UTF-8 TZ=UTC \
+            SOURCE_COMMIT="$SOURCE_COMMIT" SONANT_PATCH_ROOT="$SONANT_PATCH_ROOT" \
+            SONANT_VERSION="$SONANT_VERSION" SONANT_TARBALL="$SONANT_TARBALL" \
+            SONANT_TARBALL_SHA256="$SONANT_TARBALL_SHA256" SONANT_TARBALL_INTEGRITY="$SONANT_TARBALL_INTEGRITY" \
+            SONANT_NPM_ONLY="${SONANT_NPM_ONLY:-false}" SONANT_CONSUMER_REPORT="${SONANT_CONSUMER_REPORT:-}" \
+            TMPDIR="$SONANT_PATCH_ROOT/work/tmp" XDG_CACHE_HOME="$SONANT_PATCH_ROOT/work/cache" \
+            XDG_CONFIG_HOME="$SONANT_PATCH_ROOT/work/config" XDG_DATA_HOME="$SONANT_PATCH_ROOT/work/data" \
+            npm_config_cache="$SONANT_PATCH_ROOT/work/consumer-cache" \
+            npm_config_userconfig="$SONANT_PATCH_ROOT/work/npm-user" npm_config_globalconfig="$SONANT_PATCH_ROOT/work/npm-global" \
+            npm_config_registry=https://registry.npmjs.org/ npm_config_audit=false npm_config_fund=false \
+            node "$@"
+          SH
+      - name: Frozen build and existing package regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --no-audit --no-fund 2>&1 | tee "$SONANT_PATCH_ROOT/proof/install.log"
+          npm run check 2>&1 | tee "$SONANT_PATCH_ROOT/proof/check.log"
+          npm test 2>&1 | tee "$SONANT_PATCH_ROOT/proof/unit.log"
+          npm run build:site 2>&1 | tee "$SONANT_PATCH_ROOT/proof/build.log"
+      - name: Pack the actual candidate and inspect all members
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm pack --json --ignore-scripts --workspace @alvarovillalbaa/sonant --pack-destination "$SONANT_PATCH_ROOT/proof" > "$SONANT_PATCH_ROOT/proof/pack.json"
+          python3 tests/scripts/inspect-patch-archive.py > "$SONANT_PATCH_ROOT/proof/archive-inspection.log" 2>&1
+      - name: Install isolated pinned pnpm
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --prefix "$SONANT_PATCH_ROOT/work/tools" --ignore-scripts --no-audit --no-fund pnpm@10.17.1 2>&1 | tee "$SONANT_PATCH_ROOT/proof/tools-install.log"
+          cp "$SONANT_PATCH_ROOT/work/tools/package-lock.json" "$SONANT_PATCH_ROOT/proof/tools-lock.json"
+          printf '%s/work/tools/node_modules/.bin\n' "$SONANT_PATCH_ROOT" >> "$GITHUB_PATH"
+      - name: Fresh npm npx pnpm archive consumers on Node22
+        shell: bash
+        run: |
+          set -euo pipefail
+          export SONANT_CONSUMER_REPORT="$SONANT_PATCH_ROOT/proof/managers-node22.json"
+          bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/registry-install.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/managers-node22.log"
+      - name: Fresh strict generated-source and SSR consumers on React18 and React19
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/patch-react-consumers.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/react-consumers.log"
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '20.19.0'
+          package-manager-cache: false
+      - name: Fresh npm core and CLI archive consumer on minimum Node20
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version > "$SONANT_PATCH_ROOT/proof/node20.txt"
+          npm --version > "$SONANT_PATCH_ROOT/proof/npm20.txt"
+          export SONANT_NPM_ONLY=true SONANT_CONSUMER_REPORT="$SONANT_PATCH_ROOT/proof/compat-node20.json"
+          bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/registry-install.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/compat-node20.log"
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24.22.2'
+          package-manager-cache: false
+      - name: Fresh npm core and CLI archive consumer on Node24
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version > "$SONANT_PATCH_ROOT/proof/node24.txt"
+          npm --version > "$SONANT_PATCH_ROOT/proof/npm24.txt"
+          export SONANT_NPM_ONLY=true SONANT_CONSUMER_REPORT="$SONANT_PATCH_ROOT/proof/compat-node24.json"
+          bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/registry-install.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/compat-node24.log"
+      - name: Always seal unchanged tracked source
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tests/scripts/package-source-guard.py "$SONANT_PATCH_ROOT/proof/source-after.json"
+          cmp "$SONANT_PATCH_ROOT/proof/source-before.json" "$SONANT_PATCH_ROOT/proof/source-after.json"
+          git diff --check
+      - name: Validate all profiles and remove owned disposable tools
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib,shutil
+          root=pathlib.Path(os.environ['SONANT_PATCH_ROOT']);proof=root/'proof';manifest=json.loads((proof/'archive-manifest.json').read_text())
+          assert hashlib.sha256((proof/manifest['filename']).read_bytes()).hexdigest()==manifest['sha256']
+          for filename,count in [('managers-node22.json',3),('react-consumers.json',2),('compat-node20.json',1),('compat-node24.json',1)]:
+              data=json.loads((proof/filename).read_text());assert data['passed'] and len(data['cases'])==count and data['ownedRootRemoved']
+          tools=json.loads((proof/'tools-lock.json').read_text());assert tools['packages']['node_modules/pnpm']['version']=='10.17.1'
+          work=root/'work';assert not work.is_symlink() and (work/'.owner').is_file() and work.stat().st_uid==os.getuid()
+          shutil.rmtree(work);assert not work.exists()
+          (proof/'completion.json').write_text(json.dumps({'source':os.environ['SOURCE_COMMIT'],'archiveInspected':True,'consumerProfilesPassed':7,'ownedWorkRemoved':True,'processGroupsIndependentlyVerified':False},indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: sonant-patch-candidate-${{ github.run_id }}
+          path: ${{ runner.temp }}/sonant-patch-candidate/proof
+          if-no-files-found: error
+          retention-days: 1

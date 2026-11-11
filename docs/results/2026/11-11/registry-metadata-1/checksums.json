@@ -1,0 +1,35 @@
+{
+  "source": "955056cd5bab82fc553bbf06f6a60e417813ac95",
+  "run": 43021430379,
+  "job": 130525316710,
+  "status": "passed-read-only",
+  "sourceFiles": 194,
+  "sourceBlobsBytesVerified": true,
+  "registryLatest": "0.1.0",
+  "candidate": "0.1.1",
+  "candidateAvailableAtObservation": true,
+  "authenticatedIdentityVerified": false,
+  "registryWrite": false,
+  "files": [
+    {
+      "file": "registry-original.json",
+      "bytes": 8779,
+      "sha256": "64af7302408b7d151012ddb4d991eca51b4686d861f9d50358eec57d272931d2"
+    },
+    {
+      "file": "report.json",
+      "bytes": 1569,
+      "sha256": "f0b73d09b1896d1b3a94fd9da4f7fc4863d4d9d594710fa3abed002650cb2c12"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 50632,
+      "sha256": "2ba7c25b496824ce19bbdf175ad1b32e35bc7db0e24d7a7cdd1c73dfc9e8f93f"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 50632,
+      "sha256": "2ba7c25b496824ce19bbdf175ad1b32e35bc7db0e24d7a7cdd1c73dfc9e8f93f"
+    }
+  ]
+}

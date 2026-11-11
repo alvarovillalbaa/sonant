@@ -1,0 +1,47 @@
+{
+  "source": "955056cd5bab82fc553bbf06f6a60e417813ac95",
+  "startedAt": "2026-11-11T12:34:01.815342+00:00",
+  "passed": true,
+  "authenticated": false,
+  "registryWrite": false,
+  "status": 200,
+  "url": "https://registry.npmjs.org/@alvarovillalbaa%2fsonant",
+  "bodyComplete": true,
+  "responseClosed": true,
+  "responseBytes": 8779,
+  "responseSha256": "64af7302408b7d151012ddb4d991eca51b4686d861f9d50358eec57d272931d2",
+  "latest": "0.1.0",
+  "versions": [
+    "0.0.0-stage",
+    "0.1.0"
+  ],
+  "candidate": "0.1.1",
+  "candidateAvailable": true,
+  "maintainers": [
+    {
+      "name": "alvarovillalbaa",
+      "email": "alvaro.villalbaperez@icloud.com"
+    }
+  ],
+  "latestDist": {
+    "shasum": "86d6d5b9f5248447ddc33889135b8dc54e93592b",
+    "tarball": "https://registry.npmjs.org/@alvarovillalbaa/sonant/-/sonant-0.1.0.tgz",
+    "fileCount": 39,
+    "integrity": "sha512-ZZsJphSp/Z20lVj6fYka9UrN5hDQroZi4wMP1v7+NepkNe5QVyKRhBu97a888L59rwWpqVHOcVl5Dov93NrqWQ==",
+    "signatures": [
+      {
+        "sig": "MEYCIQCHEOAQa5XoncJQg7SQoZGUWmmv6TvW8QDH5x7TaDAvUgIhAMzJasTifhjtO2dCg1nf2XoYR13Mm9CYMxoRiZlmUkD2",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      },
+      {
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+        "sig": "MEYCIQCWI6omNr8fYZtKW+ajeJNUhLW3nC5ELUkb3IOwpzL3cQIhAOWVHw7RC/QuYyxhHHeSZ4x/sp6Zd+xWkJuE7JIGkuJw"
+      }
+    ],
+    "unpackedSize": 184585
+  },
+  "sourcePackageVersion": "0.1.0",
+  "sourceUnchanged": true,
+  "sourceFiles": 194,
+  "finishedAt": "2026-11-11T12:34:02.232427+00:00"
+}

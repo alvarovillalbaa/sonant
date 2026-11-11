@@ -84,3 +84,9 @@ the standing continued goal. Begin with its anonymous public metadata job; do
 not repeat failed local DNS or extract/copy local tokens. Prepare and verify
 the exact patch tarball before publication. Authenticated npm identity and scope
 permission remain required; candidate archives are not registry releases.
+The metadata job succeeded at `955056cd` in run43021430379. Do not repeat it.
+The next inactive candidate profile is `docs/examples/patch-candidate.workflow.yml`:
+one exact-source public job with a20-minute cap, archive inspection and seven
+fresh archive consumer profiles after the35 existing package cases/type/site
+checks. Follow the proposal's pinned versions and cleanup/proof limits. This
+scope does not publish npm, relabel public0.1.0 or rerun the closed browser cohort.

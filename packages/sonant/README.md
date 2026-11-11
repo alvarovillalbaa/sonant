@@ -91,8 +91,13 @@ The repository is an npm workspace. `packages/sonant/` owns the public ESM packa
 
 ## Proof and limits
 
-The operation-cancellation repair is source-only and awaits focused checks and
-a package release. See its [verification record](https://github.com/alvarovillalbaa/sonant/blob/fix/operation-cancellation/docs/results/2026/10-29/operation-cancellation.md).
+This patch includes operation cancellation across pending unlocks and updates,
+plus native looping-buffer initialization. The source passed
+[package and four-engine browser checks](https://github.com/alvarovillalbaa/sonant/blob/0976c617bed9c3e77d0197e151525f0f2b99c744/docs/results/2026/11-11/trace-layout-release.md)
+and [four public website journeys](https://github.com/alvarovillalbaa/sonant/blob/0976c617bed9c3e77d0197e151525f0f2b99c744/docs/results/2026/11-11/hosted-browser.md).
+Those results retain their exact sources and profiles. Package publication and
+fresh registry consumers are separate from source and website verification;
+check the registry version and the repository's release notes for distribution.
 
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 

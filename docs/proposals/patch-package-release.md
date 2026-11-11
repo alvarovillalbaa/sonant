@@ -1,8 +1,8 @@
 # Prepare the repaired Sonant package
 
 11 November 2026. The [two source repairs and public verification](../results/2026/11-11/hosted-browser.md)
-are published at `0976c617`. The package metadata remains0.1.0; its package README
-still calls the earlier cancellation repair untested. The intended outcome is
+are published at `0976c617`. The published npm version remains0.1.0. Preparation
+updates the package metadata to0.1.1 and corrects its stale repair notice. The intended outcome is
 an actual patched npm package and fresh package-name consumers, not just source
 or a GitHub archive. Physical audibility remains a separate boundary.
 
@@ -42,3 +42,29 @@ Local npm identity/version preflights already failed DNS ENOTFOUND; the public
 web tool could not access the metadata URL. Do not repeat those unchanged paths
 or infer missing credentials. The connected repository secret list was empty;
 that does not establish whether trusted publishing is configured.
+
+The [metadata receipt](../results/2026/11-11/registry-metadata.md) confirms the
+official registry returned0.1.0 as latest and no0.1.1 on11 November. npm generated
+the0.1.1 metadata offline with scripts/workspace reification disabled; parsed
+comparison found only the package and workspace-lock version fields changed.
+The dependency graph is unchanged. This is preparation, not publication.
+
+The inactive `docs/examples/patch-candidate.workflow.yml` defines the next exact
+scope: one public Ubuntu job,20-minute cap, read-only repository permission,
+immutable source and owned `qa/sonant-patch-candidate-20261111-1` branch. It runs
+the release runbook's frozen install/type/site/package checks and35 existing
+package/integration cases, then packs once and retains the actual tarball. It
+inventories every archive member, declarations/exports, executable/client
+directives, license/README and embedded source-map content against source;
+SHA256, SHA512 SRI and npm's SHA1 bind those exact bytes.
+
+Seven fresh archive consumer profiles follow: npm/npx/pnpm on Node22.23.4;
+strict generated React18.3.1 and19.3.1 source/SSR with TypeScript5.9.3; and npm
+core/CLI/export on the declared minimum Node20.19.0 and Node24.22.2. The isolated
+pnpm tool is10.17.1. Generated output covers all four registry components and32
+authored WAVs; no model, provider, browser or real audio is used. Source guards
+cover every tracked mode/blob/byte before/after. Consumer roots and owned tools
+are removed on success, but this profile does not independently inventory
+process groups or prove physical device/runner disposal. Failed originals are
+retained, not relabeled as successful archive or registry checks. Retire only
+the task's exact temporary controls after terminal evidence.
