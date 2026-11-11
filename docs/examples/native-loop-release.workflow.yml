@@ -6,13 +6,15 @@ permissions:
   contents: read
 jobs:
   quality:
-    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-loop-release-20261111-1'
+    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-loop-release-20261111-2'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
       SOURCE_COMMIT: APPROVED_SOURCE_COMMIT
-      SONANT_LOOP_PROOF: ${{ runner.temp }}/sonant-loop-release
     steps:
+      - name: Define owned proof path on the runner
+        shell: bash
+        run: printf 'SONANT_LOOP_PROOF=%s/sonant-loop-release\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ env.SOURCE_COMMIT }}

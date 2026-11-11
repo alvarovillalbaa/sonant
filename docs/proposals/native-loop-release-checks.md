@@ -6,7 +6,7 @@ error and separate harness failures. Preserve its immutable originals and
 covers this necessary source fix and focused release gate without another ask.
 
 Use one public Ubuntu 24.04 job, twenty-minute maximum, exact immutable source
-checkout on owned `qa/sonant-loop-release-20261111-1`. Follow the existing release
+checkout on next owned `qa/sonant-loop-release-20261111-2`. Follow the existing release
 procedure and its Node 22 profile: frozen npm install, package/site check,
 35 unit/integration cases, production site build, the 44 Chromium/Firefox/WebKit/
 mobile scenarios (40 existing plus four native-loop regressions), five Firefox
@@ -28,3 +28,11 @@ repeat all four unchanged hosted behavioral expectations with the corrected
 download/receipt harness against that actual deployment. Retire both temporary
 workflows and task QA refs after retaining terminal originals. Public npm and
 real devices remain separate gates. Local Storage Guard still blocks builds.
+
+First activation run 43012566436 was rejected with no jobs, check runs, logs or
+artifacts. Its workflow incorrectly used `runner.temp` in job-level `env`;
+[GitHub's context table](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability)
+does not permit `runner` there. The corrected example defines the path inside
+its first runner step via GITHUB_ENV. Runtime, test assertions, commands and
+timeouts are unchanged. [Original metadata](../results/2026/11-11/native-loop-release-attempt-1.json)
+retains the failure; no execution or cleanup pass is inferred.

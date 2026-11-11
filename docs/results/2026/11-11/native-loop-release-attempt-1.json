@@ -1,0 +1,18 @@
+{
+  "source": "f6a842e66b43b975ebd62cc318818ed60de2a804",
+  "activation": "543dd1aa841b6193285c52b996b551c86a626aa7",
+  "run": 43012566436,
+  "workflow": 414595642,
+  "checkSuite": 116478869503,
+  "eventReported": "push",
+  "status": "completed",
+  "conclusion": "failure",
+  "jobs": [],
+  "checkRuns": 0,
+  "artifacts": [],
+  "jobLogs": "not-found",
+  "executionAccepted": false,
+  "cleanupAccepted": false,
+  "diagnosis": "Source uses runner.temp in job-level env, which the primary GitHub context-availability contract disallows. No detailed provider validation annotation was returned.",
+  "correction": "Define SONANT_LOOP_PROOF from RUNNER_TEMP inside the first runner step through GITHUB_ENV; preserve all runtime and behavioral assertions."
+}
