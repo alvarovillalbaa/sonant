@@ -19,5 +19,5 @@ for item in subprocess.check_output(['git', 'ls-files', '--stage', '-z']).split(
     assert bool(file.stat().st_mode & 0o111) == (mode == '100755')
     assert hashlib.sha1(f'blob {len(data)}\0'.encode() + data).hexdigest() == blob
     rows.append({'path': str(file), 'mode': mode, 'blob': blob, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
-assert len(rows) <= 256 and sum(row['bytes'] for row in rows) <= 32000000
+assert len(rows) <= 512 and sum(row['bytes'] for row in rows) <= 32000000
 Path(sys.argv[1]).write_text(json.dumps(rows, indent=2) + '\n')

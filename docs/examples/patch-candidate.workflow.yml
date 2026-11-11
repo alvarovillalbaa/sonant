@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   candidate:
-    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-patch-candidate-20261111-3'
+    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-patch-candidate-20261111-4'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
@@ -87,15 +87,19 @@ jobs:
           export SONANT_CONSUMER_REPORT="$SONANT_PATCH_ROOT/proof/managers-node22.json"
           bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/registry-install.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/managers-node22.log"
       - name: Fresh strict generated-source and SSR consumers on React18 and React19
+        if: ${{ !cancelled() && env.SONANT_TARBALL != '' }}
         shell: bash
         run: |
           set -euo pipefail
           bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/patch-react-consumers.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/react-consumers.log"
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        id: node20
+        if: ${{ !cancelled() && env.SONANT_TARBALL != '' }}
         with:
           node-version: '20.19.0'
           package-manager-cache: false
       - name: Fresh npm core and CLI archive consumer on minimum Node20
+        if: ${{ !cancelled() && steps.node20.outcome == 'success' && env.SONANT_TARBALL != '' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -104,10 +108,13 @@ jobs:
           export SONANT_NPM_ONLY=true SONANT_CONSUMER_REPORT="$SONANT_PATCH_ROOT/proof/compat-node20.json"
           bash "$SONANT_PATCH_ROOT/work/consumer.sh" tests/scripts/registry-install.mjs 2>&1 | tee "$SONANT_PATCH_ROOT/proof/compat-node20.log"
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        id: node24
+        if: ${{ !cancelled() && env.SONANT_TARBALL != '' }}
         with:
           node-version: '24.22.2'
           package-manager-cache: false
       - name: Fresh npm core and CLI archive consumer on Node24
+        if: ${{ !cancelled() && steps.node24.outcome == 'success' && env.SONANT_TARBALL != '' }}
         shell: bash
         run: |
           set -euo pipefail

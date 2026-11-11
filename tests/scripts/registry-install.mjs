@@ -18,8 +18,8 @@ const npmOnly = process.env.SONANT_NPM_ONLY === 'true';
 assert.ok(!npmOnly || archive, 'Compatibility-only mode requires the reviewed archive');
 const root = await mkdtemp(join(tmpdir(), "sonant-registry-"));
 const cases = [];
-function run(command, args, cwd) {
-  const result = spawnSync(command, args, { cwd, stdio: "inherit", timeout: 120000 });
+function run(command, args, cwd, env = process.env) {
+  const result = spawnSync(command, args, { cwd, env, stdio: "inherit", timeout: 120000 });
   assert.equal(
     result.status,
     0,
@@ -79,11 +79,11 @@ try {
     cases.push({ id: 'npx', passed: true, version });
 
     const pnpm = await consumer("pnpm");
-    const store = archive ? ['--store-dir', join(root, 'pnpm-store')] : [];
-    run("pnpm", [...store, "add", spec], pnpm);
+    const pnpmEnv = archive ? { ...process.env, npm_config_store_dir: join(root, 'pnpm-store') } : process.env;
+    run("pnpm", ["add", spec], pnpm, pnpmEnv);
     const dlxPackage = archive ? ['--package', spec, 'dlx', 'sonant'] : ['dlx', spec];
-    run("pnpm", [...store, ...dlxPackage, "init", "--cwd", pnpm, "--theme", "soft"], root);
-    run("pnpm", [...store, ...dlxPackage, "add", "async-action", "--cwd", pnpm], root);
+    run("pnpm", [...dlxPackage, "init", "--cwd", pnpm, "--theme", "soft"], root, pnpmEnv);
+    run("pnpm", [...dlxPackage, "add", "async-action", "--cwd", pnpm], root, pnpmEnv);
     assert.equal(JSON.parse(await readFile(join(pnpm, 'node_modules/@alvarovillalbaa/sonant/package.json'))).version, version);
     const config = JSON.parse(await readFile(join(pnpm, "sonant.config.json"), "utf8"));
     assert.equal(config.theme, "soft");

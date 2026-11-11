@@ -1,0 +1,154 @@
+{
+  "source": "838354d89310ccd453860503e3c6f40461f3d7e1",
+  "activation": "595c24845a3a5e5db5f80aa7514f759237435578",
+  "activationTree": "1781199e15aaa801343ec29fe361138371dc5cbe",
+  "ref": "refs/heads/qa/sonant-patch-candidate-20261111-3",
+  "workflow": ".github/workflows/temporary-patch-candidate.yml",
+  "packageInputsUnchangedSince": "13eba3f2418c4cc71e8a69bc7db56293e2b4f1cb",
+  "previousRun": 43026065030,
+  "run": 43026523673,
+  "job": 130542504112,
+  "conclusion": "failure",
+  "failure": "pnpm10 dlx rejects harness --store-dir command option",
+  "existingPackageTestsPassed": 35,
+  "typeAndSiteBuildPassed": true,
+  "freshConsumerProfilesPassed": [
+    "npm-node22",
+    "npx-node22"
+  ],
+  "allConsumerProfilesPassed": false,
+  "consumerRootRemovalVerified": true,
+  "ownedWorkRemovalVerified": false,
+  "artifact": {
+    "id": 13857232845,
+    "zipBytes": 91522,
+    "serverZipSha256": "bfe22dd276e547eb4774bf5e978c9d3cc6ffd864e3728df018a9504827929ecf"
+  },
+  "sourceFiles": 232,
+  "sourceModesBlobsBytesVerified": true,
+  "archiveSha256": "10106e3dd4b4f37ebf7f33273919a257ba7698807eada39e673283b2827b2963",
+  "archiveBytes": 49923,
+  "archiveFileCount": 39,
+  "files": [
+    {
+      "file": "archive-inspection.log.json",
+      "bytes": 630,
+      "sha256": "07313a2c7ebc9df6d4b27cacacb7271c51273e570a5d07a2527c4e6a4deeb0c0",
+      "originalFile": "archive-inspection.log",
+      "originalBytes": 416,
+      "originalSha256": "3880b6057c503e1527464adbae9c3f833814af36cbdce5d444f0128e5da3b908"
+    },
+    {
+      "file": "archive-manifest.json",
+      "bytes": 7209,
+      "sha256": "41b9939acf9279201c162753b730579e248268e064194de8004e159f22e959f2",
+      "originalFile": "archive-manifest.json",
+      "originalBytes": 7209,
+      "originalSha256": "41b9939acf9279201c162753b730579e248268e064194de8004e159f22e959f2"
+    },
+    {
+      "file": "build.log.json",
+      "bytes": 1309,
+      "sha256": "4e2cbdfc896265db332773415a8af3e5bc22b1267b27d027c89f0284f94751e1",
+      "originalFile": "build.log",
+      "originalBytes": 1060,
+      "originalSha256": "a2ae7034cb98731f5d2cc0136c0705123c0559a54403f2b796fd8ad64f64afb8"
+    },
+    {
+      "file": "check.log.json",
+      "bytes": 526,
+      "sha256": "7137e6ea8c1902b27e12f3081e030f0d00d97f025cce0de59ef0dd5940ba3c0b",
+      "originalFile": "check.log",
+      "originalBytes": 340,
+      "originalSha256": "4bbe0201f7e4ed6ebd987b386a4f21ac787da754a727bdf317f682309ae836b7"
+    },
+    {
+      "file": "install.log.json",
+      "bytes": 198,
+      "sha256": "5117a3e8b68f8ddafa354668480cd0eef58d3263efb11a7d98936fc8d112194b",
+      "originalFile": "install.log",
+      "originalBytes": 25,
+      "originalSha256": "ed3488c0dad53ade8657c9fabb0a14b8fd232ce67362e4c5489d14bc4ef97686"
+    },
+    {
+      "file": "managers-node22.json",
+      "bytes": 292,
+      "sha256": "c1a6b3cd0df355aba9cb4140333d937f6317515245733d948e8df0595d320e1a",
+      "originalFile": "managers-node22.json",
+      "originalBytes": 292,
+      "originalSha256": "c1a6b3cd0df355aba9cb4140333d937f6317515245733d948e8df0595d320e1a"
+    },
+    {
+      "file": "managers-node22.log.json",
+      "bytes": 3713,
+      "sha256": "10bdf86ae3526faeef643612cd31e709e79346c9ba14da34fe7be271f7810498",
+      "originalFile": "managers-node22.log",
+      "originalBytes": 3390,
+      "originalSha256": "6ba2f95e7e3bea6131ba22c6390bb898a5b468c08cf6bcc99a0bdd109a5125c0"
+    },
+    {
+      "file": "node22.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906",
+      "originalFile": "node22.txt",
+      "originalBytes": 9,
+      "originalSha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "npm22.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a",
+      "originalFile": "npm22.txt",
+      "originalBytes": 7,
+      "originalSha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "pack.json",
+      "bytes": 4127,
+      "sha256": "4386a55a0604be43184df23f4446f0cc1002d334bb1a41627426b8490a33adac",
+      "originalFile": "pack.json",
+      "originalBytes": 4127,
+      "originalSha256": "4386a55a0604be43184df23f4446f0cc1002d334bb1a41627426b8490a33adac"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 60609,
+      "sha256": "8807bf8c1394dbd4bc8b2136adf54b2def04ae30a6506019104213528eafd982",
+      "originalFile": "source-after.json",
+      "originalBytes": 60609,
+      "originalSha256": "8807bf8c1394dbd4bc8b2136adf54b2def04ae30a6506019104213528eafd982"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 60609,
+      "sha256": "8807bf8c1394dbd4bc8b2136adf54b2def04ae30a6506019104213528eafd982",
+      "originalFile": "source-before.json",
+      "originalBytes": 60609,
+      "originalSha256": "8807bf8c1394dbd4bc8b2136adf54b2def04ae30a6506019104213528eafd982"
+    },
+    {
+      "file": "tools-install.log.json",
+      "bytes": 202,
+      "sha256": "c2ed501d3b89cd4bb43742c7179c07c63553e2778e544f8c5d99cf107a2ee0eb",
+      "originalFile": "tools-install.log",
+      "originalBytes": 23,
+      "originalSha256": "a941066d38162d18c88ea4b096d8cf11d19b0d46b973f6d916e2f9b8794e1f36"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 655,
+      "sha256": "30c24474b797dee4beb7ad922477975ac989ecaea225fd9aa8421f90b63d7a5f",
+      "originalFile": "tools-lock.json",
+      "originalBytes": 655,
+      "originalSha256": "30c24474b797dee4beb7ad922477975ac989ecaea225fd9aa8421f90b63d7a5f"
+    },
+    {
+      "file": "unit.log.json",
+      "bytes": 8459,
+      "sha256": "8571747d2982372814a2290975c7c6fbdae3359c75c9d17eb9edca5dfc9a2c30",
+      "originalFile": "unit.log",
+      "originalBytes": 8053,
+      "originalSha256": "008afba791238261e289768fe7ea982a5b7a82cd09dac40c57448cab14818876"
+    }
+  ]
+}
