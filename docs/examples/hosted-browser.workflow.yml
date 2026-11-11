@@ -1,0 +1,40 @@
+# Inactive example. Only the task activation copy receives the immutable pin.
+name: Temporary Sonant hosted browser checks
+on:
+  create:
+permissions:
+  contents: read
+jobs:
+  hosted:
+    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-hosted-20261111-1'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      CI: 'true'
+      SOURCE_COMMIT: APPROVED_SOURCE_COMMIT
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SOURCE_COMMIT }}
+          persist-credentials: false
+          fetch-depth: 1
+          clean: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24.22.2'
+          package-manager-cache: false
+      - name: Verify source and four public interactions
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SOURCE_COMMIT"
+          node --check tests/hosted/website.mjs
+          python3 tests/hosted/run.py
+      - name: Retain original proof even on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: sonant-hosted-${{ github.run_id }}
+          path: ${{ runner.temp }}/sonant-hosted/proof
+          if-no-files-found: error
+          retention-days: 1

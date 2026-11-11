@@ -51,3 +51,9 @@ runtime/test/dependency/style/configuration inputs remain unchanged. This final
 status edition retires the HTTP workflow; keep the older QA bookmarks fixed.
 Provider metadata for later docs-only deployments does not relabel the tested
 HTTP source. Public npm, physical audio and hosted browser limits remain open.
+
+11 November: standing owner approval also covers the separate four-case hosted
+packet in `docs/proposals/hosted-browser-checks.md`. Use only its immutable-source
+public twelve-minute CI job. No application build/install, older-suite rerun,
+package release, dependency change or production configuration change is needed.
+Retain original failures and retire the temporary workflow/ref after evidence.
