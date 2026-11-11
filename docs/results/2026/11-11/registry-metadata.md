@@ -12,8 +12,9 @@ activation `3b1635683e9823951dba2ee764ff2dd2ca594b63`. All194 tracked source
 files matched their modes, Git blobs and complete working bytes before/after.
 Artifact13855142246 (32054 bytes) has server ZIP SHA256
 `734639c67d09ec0642e099dbdf8f78e428191454f3c97260ce646d89614786c9`.
-The temporary workflow414652510 is disabled, with readback. The owned QA ref
-is retired separately after these original files are published.
+The temporary workflow414652510 is disabled, with readback. The exact owned QA
+ref was removed with its expected-head lease after publication through the
+candidate source; `git ls-remote` returned no matching ref.
 
 The anonymous request exposed public maintainer metadata, not an authenticated
 npm identity, token state or publication permission. No install, build, test,

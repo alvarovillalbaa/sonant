@@ -1,0 +1,77 @@
+{
+  "source": "46712b571a7b609b8d0183fac67399b99c9b0f45",
+  "activation": "b58ce18f82dbc550363eb5a4000b707f55da912f",
+  "run": 43025540905,
+  "job": 130539208657,
+  "conclusion": "failure",
+  "failure": "Archive CLI mode 0644; executable mode 0755 required",
+  "existingPackageTests": 35,
+  "existingPackageTestsPassed": 35,
+  "typeAndSiteBuildPassed": true,
+  "sourceFiles": 205,
+  "sourceGuardPassed": true,
+  "freshConsumerProfilesRun": 0,
+  "ownedWorkRemovalVerified": false,
+  "archive": {
+    "bytes": 49867,
+    "sha256": "d85e9fbc67f1749084f458fc47dc5a2af0f1ca0740c6c7d562e2d2e5b9453017",
+    "modeCLI": "0o644"
+  },
+  "artifact": {
+    "id": 13856143946,
+    "zipBytes": 83334,
+    "serverZipSha256": "1ac1f63ddb57d3b6b74171501a093eb1463204021e40beb6f327e2209dae994f"
+  },
+  "files": [
+    {
+      "file": "archive-inspection.log",
+      "bytes": 328,
+      "sha256": "973d229d66858de1ecddce2bf74282077df0128e958751619535cd2a5dfbdecc"
+    },
+    {
+      "file": "build.log",
+      "bytes": 958,
+      "sha256": "a961cb42b6226fe7ec2b1d9f3b4fad59cc208460b84f26af6b5ce0c9a06af549"
+    },
+    {
+      "file": "check.log",
+      "bytes": 238,
+      "sha256": "40a8aee6cd4ff3f2b248e4b3442265d69036bfcf50068793480cf9f5663ce2e5"
+    },
+    {
+      "file": "install.log",
+      "bytes": 25,
+      "sha256": "a5167a3c98725273d348f8699f7c314021f7c56ee1c9add9d197db61c60d4ca9"
+    },
+    {
+      "file": "node22.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "npm22.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "pack.json",
+      "bytes": 4127,
+      "sha256": "face81ac6a718ed5d50c1ab7b4b39dcffdd730201280afbce54e187effe0736c"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 53397,
+      "sha256": "791e60858b214a72163a58a357fe9f33dedd75033fd0228468023324b06ebcfa"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 53397,
+      "sha256": "791e60858b214a72163a58a357fe9f33dedd75033fd0228468023324b06ebcfa"
+    },
+    {
+      "file": "unit.log",
+      "bytes": 7948,
+      "sha256": "3d5a8a0934403c758ab4342ebe12a334f95126e9572d744b7696cd977c3e4a6a"
+    }
+  ]
+}

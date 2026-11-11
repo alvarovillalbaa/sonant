@@ -51,7 +51,7 @@ The dependency graph is unchanged. This is preparation, not publication.
 
 The inactive `docs/examples/patch-candidate.workflow.yml` defines the next exact
 scope: one public Ubuntu job,20-minute cap, read-only repository permission,
-immutable source and owned `qa/sonant-patch-candidate-20261111-1` branch. It runs
+immutable source and owned `qa/sonant-patch-candidate-20261111-2` branch. It runs
 the release runbook's frozen install/type/site/package checks and35 existing
 package/integration cases, then packs once and retains the actual tarball. It
 inventories every archive member, declarations/exports, executable/client
@@ -68,3 +68,9 @@ are removed on success, but this profile does not independently inventory
 process groups or prove physical device/runner disposal. Failed originals are
 retained, not relabeled as successful archive or registry checks. Retire only
 the task's exact temporary controls after terminal evidence.
+
+Attempt1 stopped during archive inspection: the built CLI had mode0644 in the
+actual tarball. All35 package tests/type/site checks and source guards passed,
+but the seven profiles were correctly skipped. The package build now explicitly
+sets its emitted CLI to0755 using Node's filesystem API; no dependency changed.
+Attempt2 must retain the executable check and exercise the newly packed bytes.

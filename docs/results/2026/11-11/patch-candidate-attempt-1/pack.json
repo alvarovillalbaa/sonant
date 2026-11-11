@@ -1,0 +1,211 @@
+[
+  {
+    "id": "@alvarovillalbaa/sonant@0.1.1",
+    "name": "@alvarovillalbaa/sonant",
+    "version": "0.1.1",
+    "size": 49867,
+    "unpackedSize": 188874,
+    "shasum": "7cd55881e5295dd90b9bdc7151dceb9add83b61b",
+    "integrity": "sha512-2a5AQwgAWJObPXqmbDI9/YA+jA3ZzxoEdrcJ3sfY8gwgojOAVdoML8NG7yhhj0Q7EJTHD0w/o/BJBbzKmywNmg==",
+    "filename": "alvarovillalbaa-sonant-0.1.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1072,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 5307,
+        "mode": 420
+      },
+      {
+        "path": "dist/audio.d.ts",
+        "size": 268,
+        "mode": 420
+      },
+      {
+        "path": "dist/audio.js",
+        "size": 4182,
+        "mode": 420
+      },
+      {
+        "path": "dist/audio.js.map",
+        "size": 7811,
+        "mode": 420
+      },
+      {
+        "path": "dist/bind.d.ts",
+        "size": 271,
+        "mode": 420
+      },
+      {
+        "path": "dist/bind.js",
+        "size": 2211,
+        "mode": 420
+      },
+      {
+        "path": "dist/bind.js.map",
+        "size": 4850,
+        "mode": 420
+      },
+      {
+        "path": "dist/catalog.d.ts",
+        "size": 5571,
+        "mode": 420
+      },
+      {
+        "path": "dist/catalog.js",
+        "size": 9565,
+        "mode": 420
+      },
+      {
+        "path": "dist/catalog.js.map",
+        "size": 19006,
+        "mode": 420
+      },
+      {
+        "path": "dist/cli.d.ts",
+        "size": 218,
+        "mode": 420
+      },
+      {
+        "path": "dist/cli.js",
+        "size": 10877,
+        "mode": 420
+      },
+      {
+        "path": "dist/cli.js.map",
+        "size": 22399,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.d.ts",
+        "size": 731,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.js",
+        "size": 1648,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.js.map",
+        "size": 3164,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.d.ts",
+        "size": 443,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js.map",
+        "size": 880,
+        "mode": 420
+      },
+      {
+        "path": "dist/providers.d.ts",
+        "size": 874,
+        "mode": 420
+      },
+      {
+        "path": "dist/providers.js",
+        "size": 2909,
+        "mode": 420
+      },
+      {
+        "path": "dist/providers.js.map",
+        "size": 5824,
+        "mode": 420
+      },
+      {
+        "path": "dist/react.d.ts",
+        "size": 3905,
+        "mode": 420
+      },
+      {
+        "path": "dist/react.js",
+        "size": 2656,
+        "mode": 420
+      },
+      {
+        "path": "dist/react.js.map",
+        "size": 5361,
+        "mode": 420
+      },
+      {
+        "path": "dist/registry.d.ts",
+        "size": 3555,
+        "mode": 420
+      },
+      {
+        "path": "dist/registry.js",
+        "size": 3269,
+        "mode": 420
+      },
+      {
+        "path": "dist/registry.js.map",
+        "size": 3954,
+        "mode": 420
+      },
+      {
+        "path": "dist/runtime.d.ts",
+        "size": 1343,
+        "mode": 420
+      },
+      {
+        "path": "dist/runtime.js",
+        "size": 15412,
+        "mode": 420
+      },
+      {
+        "path": "dist/runtime.js.map",
+        "size": 30332,
+        "mode": 420
+      },
+      {
+        "path": "dist/storage.d.ts",
+        "size": 205,
+        "mode": 420
+      },
+      {
+        "path": "dist/storage.js",
+        "size": 638,
+        "mode": 420
+      },
+      {
+        "path": "dist/storage.js.map",
+        "size": 1170,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.d.ts",
+        "size": 2429,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.js",
+        "size": 44,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.js.map",
+        "size": 2601,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1589,
+        "mode": 420
+      }
+    ],
+    "entryCount": 39,
+    "bundled": []
+  }
+]

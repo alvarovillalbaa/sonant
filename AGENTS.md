@@ -90,3 +90,7 @@ one exact-source public job with a20-minute cap, archive inspection and seven
 fresh archive consumer profiles after the35 existing package cases/type/site
 checks. Follow the proposal's pinned versions and cleanup/proof limits. This
 scope does not publish npm, relabel public0.1.0 or rerun the closed browser cohort.
+Candidate attempt1 (run43025540905) passed35 cases/type/site checks but rejected
+the CLI archive mode0644 before consumers. Preserve its original packet. The
+build now sets its emitted CLI to0755; the candidate profile uses ending-2 and
+keeps the executable assertion. No dependency or runtime contract changed.

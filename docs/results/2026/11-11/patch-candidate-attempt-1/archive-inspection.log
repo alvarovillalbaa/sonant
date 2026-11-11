@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/runner/work/sonant/sonant/tests/scripts/inspect-patch-archive.py", line 44, in <module>
+    assert next(row for row in rows if row['path'] == 'dist/cli.js')['mode'] == '0o755'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

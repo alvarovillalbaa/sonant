@@ -1,0 +1,232 @@
+
+> sonant-workspace@0.1.0 test
+> npm run build && node --test tests/unit/*.test.mjs tests/integration/*.test.mjs
+
+
+> sonant-workspace@0.1.0 build
+> npm run build --workspace @alvarovillalbaa/sonant
+
+
+> @alvarovillalbaa/sonant@0.1.1 build
+> tsc -p tsconfig.json
+
+TAP version 13
+# Subtest: CLI creates an editable kit and selected source components
+ok 1 - CLI creates an editable kit and selected source components
+  ---
+  duration_ms: 80.160287
+  type: 'test'
+  ...
+# Subtest: CLI preflights all collisions and preserves existing bytes
+ok 2 - CLI preflights all collisions and preserves existing bytes
+  ---
+  duration_ms: 30.670309
+  type: 'test'
+  ...
+# Subtest: dry runs and invalid input leave no residue
+ok 3 - dry runs and invalid input leave no residue
+  ---
+  duration_ms: 167.289794
+  type: 'test'
+  ...
+# Subtest: CLI rejects traversal, symlinks, and inherited registry keys
+ok 4 - CLI rejects traversal, symlinks, and inherited registry keys
+  ---
+  duration_ms: 161.652068
+  type: 'test'
+  ...
+# Subtest: export emits portable WAVs with provenance and deterministic hashes
+ok 5 - export emits portable WAVs with provenance and deterministic hashes
+  ---
+  duration_ms: 281.828517
+  type: 'test'
+  ...
+# Subtest: compile validates copied recipes and recipe checks run for all themes
+ok 6 - compile validates copied recipes and recipe checks run for all themes
+  ---
+  duration_ms: 591.128686
+  type: 'test'
+  ...
+# Subtest: audit findings are explicitly advisory and strict mode is opt-in
+ok 7 - audit findings are explicitly advisory and strict mode is opt-in
+  ---
+  duration_ms: 86.700617
+  type: 'test'
+  ...
+# Subtest: packed package installs offline and its public imports and executable CLI work
+ok 8 - packed package installs offline and its public imports and executable CLI work
+  ---
+  duration_ms: 1407.193684
+  type: 'test'
+  ...
+# Subtest: React provider renders on the server without a browser or AudioContext
+ok 9 - React provider renders on the server without a browser or AudioContext
+  ---
+  duration_ms: 5.808023
+  type: 'test'
+  ...
+# Subtest: device preferences are deferred until client hydration
+ok 10 - device preferences are deferred until client hydration
+  ---
+  duration_ms: 0.739446
+  type: 'test'
+  ...
+# Subtest: generated provider, every copied component, and editable themes compile as consumer source
+ok 11 - generated provider, every copied component, and editable themes compile as consumer source
+  ---
+  duration_ms: 1295.231285
+  type: 'test'
+  ...
+# Subtest: a pre-aborted caller never unlocks or plays and its operation settles
+ok 12 - a pre-aborted caller never unlocks or plays and its operation settles
+  ---
+  duration_ms: 2.662269
+  type: 'test'
+  ...
+# Subtest: caller cancellation during pending unlock prevents late progress playback
+ok 13 - caller cancellation during pending unlock prevents late progress playback
+  ---
+  duration_ms: 4.545396
+  type: 'test'
+  ...
+# Subtest: caller cancellation during pending progress playback releases its eventual voice
+ok 14 - caller cancellation during pending progress playback releases its eventual voice
+  ---
+  duration_ms: 1.358961
+  type: 'test'
+  ...
+# Subtest: caller abort stops active progress and a pending update despite synchronous terminal reentry
+ok 15 - caller abort stops active progress and a pending update despite synchronous terminal reentry
+  ---
+  duration_ms: 2.039162
+  type: 'test'
+  ...
+# Subtest: explicit operation stop cancels a pending update as well as progress
+ok 16 - explicit operation stop cancels a pending update as well as progress
+  ---
+  duration_ms: 1.233071
+  type: 'test'
+  ...
+# Subtest: watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes
+ok 17 - watchdog completion permits a real result while later caller abort cancels renewed updates and outcomes
+  ---
+  duration_ms: 21.223835
+  type: 'test'
+  ...
+# Subtest: resolve and reject settle once under provider reentry without cancelling their confirmed outcome
+ok 18 - resolve and reject settle once under provider reentry without cancelling their confirmed outcome
+  ---
+  duration_ms: 1.90952
+  type: 'test'
+  ...
+# Subtest: caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable
+ok 19 - caller listeners detach when progress ends or settles while an asynchronous outcome remains cancellable
+  ---
+  duration_ms: 1.407457
+  type: 'test'
+  ...
+# Subtest: natural progress completion retains caller cancellation for an already pending or active update
+ok 20 - natural progress completion retains caller cancellation for an already pending or active update
+  ---
+  duration_ms: 1.181376
+  type: 'test'
+  ...
+# Subtest: caller cancellation synchronously inside provider unlock or play cannot retain a voice
+ok 21 - caller cancellation synchronously inside provider unlock or play cannot retain a voice
+  ---
+  duration_ms: 0.998408
+  type: 'test'
+  ...
+# Subtest: all characters implement the complete deterministic contract with silent tails
+ok 22 - all characters implement the complete deterministic contract with silent tails
+  ---
+  duration_ms: 267.540943
+  type: 'test'
+  ...
+# Subtest: validation rejects incomplete, non-finite and out-of-budget recipes
+ok 23 - validation rejects incomplete, non-finite and out-of-budget recipes
+  ---
+  duration_ms: 0.393796
+  type: 'test'
+  ...
+# Subtest: server imports and unavailable audio are safe and observable
+ok 24 - server imports and unavailable audio are safe and observable
+  ---
+  duration_ms: 1.288025
+  type: 'test'
+  ...
+# Subtest: muting stops a live voice and persists bounded preferences
+ok 25 - muting stops a live voice and persists bounded preferences
+  ---
+  duration_ms: 0.501124
+  type: 'test'
+  ...
+# Subtest: cooldown and voice reservations cover concurrent unlocks
+ok 26 - cooldown and voice reservations cover concurrent unlocks
+  ---
+  duration_ms: 0.299222
+  type: 'test'
+  ...
+# Subtest: cancellation during unlock never reaches the renderer
+ok 27 - cancellation during unlock never reaches the renderer
+  ---
+  duration_ms: 3.808096
+  type: 'test'
+  ...
+# Subtest: a browser unlock that never settles becomes an observable blocked decision
+ok 28 - a browser unlock that never settles becomes an observable blocked decision
+  ---
+  duration_ms: 1500.748847
+  type: 'test'
+  ...
+# Subtest: an unresponsive media provider times out, receives cancellation, and releases a late voice
+ok 29 - an unresponsive media provider times out, receives cancellation, and releases a late voice
+  ---
+  duration_ms: 1500.953025
+  type: 'test'
+  ...
+# Subtest: high-priority failure interrupts a lower-priority voice
+ok 30 - high-priority failure interrupts a lower-priority voice
+  ---
+  duration_ms: 0.628128
+  type: 'test'
+  ...
+# Subtest: quiet, speech, category, surface, density and visible-equivalent policies are explicit
+ok 31 - quiet, speech, category, surface, density and visible-equivalent policies are explicit
+  ---
+  duration_ms: 0.88887
+  type: 'test'
+  ...
+# Subtest: watchdog stops loops but a later real result still emits exactly once
+ok 32 - watchdog stops loops but a later real result still emits exactly once
+  ---
+  duration_ms: 16.390587
+  type: 'test'
+  ...
+# Subtest: destroy during async provider playback releases the eventual voice
+ok 33 - destroy during async provider playback releases the eventual voice
+  ---
+  duration_ms: 0.459472
+  type: 'test'
+  ...
+# Subtest: provider failures are isolated and traces remain bounded and exportable
+ok 34 - provider failures are isolated and traces remain bounded and exportable
+  ---
+  duration_ms: 0.739074
+  type: 'test'
+  ...
+# Subtest: malformed stored preferences cannot erase safe defaults
+ok 35 - malformed stored preferences cannot erase safe defaults
+  ---
+  duration_ms: 0.16171
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4803.833303

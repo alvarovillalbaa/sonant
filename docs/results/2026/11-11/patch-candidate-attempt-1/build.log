@@ -1,0 +1,29 @@
+
+> sonant-workspace@0.1.0 build:site
+> npm run build && npm run build --workspace sonant-website
+
+
+> sonant-workspace@0.1.0 build
+> npm run build --workspace @alvarovillalbaa/sonant
+
+
+> @alvarovillalbaa/sonant@0.1.1 build
+> tsc -p tsconfig.json
+
+
+> sonant-website@0.1.0 build
+> vite build
+
+[36mvite v8.3.4 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 1745 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.91 kB │ gzip:  0.50 kB
+dist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff    13.14 kB
+dist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2   14.70 kB
+dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB
+dist/assets/index-CPjRlEqu.css                              43.45 kB │ gzip:  9.60 kB
+dist/assets/index-B60jQrS5.js                              310.65 kB │ gzip: 96.50 kB
+
+[32m✓ built in 213ms[39m
