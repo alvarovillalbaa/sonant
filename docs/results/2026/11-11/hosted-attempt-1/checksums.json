@@ -1,0 +1,127 @@
+{
+  "source": "7feef0dce1e2a64e0cd399f23539b7835627bb3b",
+  "run": 43011554260,
+  "job": 130492134626,
+  "status": "failed",
+  "artifactFiles": [
+    {
+      "file": "H01-sonant-trace.json",
+      "bytes": 670,
+      "sha256": "3d0c08c699b775f6a902796b39df3e1f3a9cea0536e176cd065844d87e61b186"
+    },
+    {
+      "file": "H01.png",
+      "bytes": 85830,
+      "sha256": "64bdb499b8930fad549522ba5a684f68ba0470d828d70181149e3ed2cc5d9049"
+    },
+    {
+      "file": "H02.png",
+      "bytes": 95496,
+      "sha256": "4d259b5bfa48182f24fa4b802235f4df5ac70ef83dc6d28c91aea07385a3cd9e"
+    },
+    {
+      "file": "browser.stderr.log",
+      "bytes": 643,
+      "sha256": "c7400f207e859204a561b5160e06f8bb98e934d8dbb5703e34d19b9d467a854e",
+      "storedFile": "browser.stderr.log.gz",
+      "storedBytes": 311,
+      "storedSha256": "de17da231092df541445ba7ab2f1fcf59bba1c5dc82ad20bb1b9bb3546eb58b1",
+      "compression": "gzip"
+    },
+    {
+      "file": "browser.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "browser.stdout.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "chromium-install.stderr.log",
+      "bytes": 237,
+      "sha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f",
+      "storedFile": "chromium-install.stderr.log.gz",
+      "storedBytes": 152,
+      "storedSha256": "f2dcf5fdeafaf336da58e64391b79f38e5e5dbc7d28440f897a1637417375624",
+      "compression": "gzip"
+    },
+    {
+      "file": "chromium-install.stdout.log",
+      "bytes": 16503,
+      "sha256": "f688b99762444f38162439ef246843eb87b1413bfbbef311ccb1653b68f31cfd",
+      "storedFile": "chromium-install.stdout.log.gz",
+      "storedBytes": 2517,
+      "storedSha256": "ee5b056458d6af0944b8437e3dbe19c0c2700b217a1a6540c1644a8ef090ebc2",
+      "compression": "gzip"
+    },
+    {
+      "file": "install.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "install.stderr.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "install.stdout.log",
+      "bytes": 24,
+      "sha256": "65c731cd02e19c79f6f5a3e84a4dd64a49acd6c47d2ee551d7cc9da191e8c96c",
+      "storedFile": "install.stdout.log.gz",
+      "storedBytes": 44,
+      "storedSha256": "7505da9978d57d3a3c25275b18bcfc41e76d0b1535f5753c712428c025bb400d",
+      "compression": "gzip"
+    },
+    {
+      "file": "node.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storedFile": "node.stderr.log.gz",
+      "storedBytes": 20,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "compression": "gzip"
+    },
+    {
+      "file": "node.stdout.log",
+      "bytes": 9,
+      "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "storedFile": "node.stdout.log.gz",
+      "storedBytes": 29,
+      "storedSha256": "21915b8e70bcf14803465c444a1a3f676e4bae7bb179a41f6e62d15345ccc11c",
+      "compression": "gzip"
+    },
+    {
+      "file": "run.json",
+      "bytes": 2977,
+      "sha256": "61e51837baa5237be1fd6bfeb968c0aee4d198d300178133c4e62b2ca160fe4c"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 22304,
+      "sha256": "a2dc71f3b7fec9de9bfba30185476704d6d7e4db1afc960a7d6551d02a25fd1c"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 22304,
+      "sha256": "a2dc71f3b7fec9de9bfba30185476704d6d7e4db1afc960a7d6551d02a25fd1c"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 1064,
+      "sha256": "2fa84b8293c8e0da7953f61ce00ae75c27f19081d3f3f5e5017b077f053377ad"
+    }
+  ],
+  "totalArtifactBytes": 248061,
+  "sourceFiles": 95,
+  "sourceBytesVerified": true,
+  "fullStreamsVerified": 8,
+  "ownGroupsAbsent": 4,
+  "cleanupAccepted": false,
+  "browserReportMissing": true,
+  "screenshotsViewed": [
+    "H01.png",
+    "H02.png"
+  ],
+  "preservedFailure": "unhandled download waiter; native loop provider error visible; two unreadable processes prevented work-root cleanup"
+}

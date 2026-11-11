@@ -20,9 +20,12 @@ const until = async (predicate, label, ms = 5000) => {
 };
 const settle = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function download(page, button, filename, id) {
-  const pending = page.waitForEvent('download', { timeout: 5000 });
-  await button.click();
-  const item = await pending;
+  await button.waitFor({ state: 'visible' });
+  await button.scrollIntoViewIfNeeded();
+  const [item] = await Promise.all([
+    page.waitForEvent('download', { timeout: 5000 }),
+    button.click(),
+  ]);
   assert.equal(item.suggestedFilename(), filename);
   assert.equal(await item.failure(), null);
   const bytes = await readFile(await item.path());
@@ -185,6 +188,7 @@ try {
       row.outstandingRequests = [...outstanding.values()].map(value => new URL(value).pathname);
       row.closed = !page || page.isClosed();
       if (row.errors.length || row.outstandingRequests.length || !row.closed) row.status = 'failed';
+      await writeFile(path.join(root, 'proof/browser.json'), JSON.stringify(report, null, 2) + '\n');
     }
   }
   // Independently re-fetch each actually observed public asset after all cases.

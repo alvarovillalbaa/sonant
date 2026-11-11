@@ -57,14 +57,15 @@ export function webAudioProvider(
       }
       const source = ctx.createBufferSource();
       const gain = ctx.createGain();
-      source.buffer = buffer;
+      let playbackBuffer = buffer;
       source.loop = settings.loop;
       // Loops breathe once per second; they never emit at token frequency.
       if (settings.loop && buffer.duration < 0.9) {
         const padded = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
         padded.copyToChannel(buffer.getChannelData(0) as Float32Array<ArrayBuffer>, 0);
-        source.buffer = padded;
+        playbackBuffer = padded;
       }
+      source.buffer = playbackBuffer;
       gain.gain.value = settings.volume;
       source.connect(gain);
       gain.connect(master);

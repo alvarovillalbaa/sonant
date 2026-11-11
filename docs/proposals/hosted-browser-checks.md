@@ -19,7 +19,7 @@ authorizes this focused browser and temporary free CI scope.
 | H04 | Narrow Chromium with touch | Soft/quiet configuration and async-action selection produce the matching command and actual six-file source bundle. Config, theme cardinality and cancellation-aware component content are checked; a second download is byte-equal. |
 
 Run only `tests/hosted/run.py` in one public Ubuntu 24.04 job, capped at twelve
-minutes, exact owned branch `qa/sonant-hosted-20261111-1`, immutable source pin,
+minutes, next owned branch `qa/sonant-hosted-20261111-2`, immutable source pin,
 read-only contents permission, Node 24.22.2 and isolated Playwright 1.65.0 with
 both package integrity pins. Install Chromium only. No application install,
 build, server, unit suite, model/provider API, account, database or paid action.
@@ -43,7 +43,9 @@ The supervisor retains full bounded stdout/stderr, deadlines and original
 process-group absence; checks all tracked modes/blobs/working bytes before and
 after; scans same-UID processes for its exact task marker before deleting only
 its owned tool directory. An unreadable stable process prevents cleanup.
-Chromium's Linux system packages rely on runner disposal. The job's external
+Only exact unchanged same-UID identities recorded before tool setup are excluded
+from that scan; newly created identities remain in scope. Chromium's Linux
+system packages rely on runner disposal. The job's external
 termination is an infrastructure limit, not a demonstrated cleanup pass.
 
 Keep every original failure and make only evidence-backed corrections. Upload
@@ -54,3 +56,8 @@ bytes stay unchanged and later metadata deployments are reported separately.
 
 Local Storage Guard reports 8.5 GiB free versus 34 GiB required; no heavy local
 operation is authorized by this packet. Public npm publication remains separate.
+
+The first run 43011554260 failed and is preserved in the
+[repair record](../fixes/native-loop-buffer.md). Do not rerun hosted checks on
+the old deployment. A real loop-buffer source repair and its separate release
+regression gate precede the next four-case hosted invocation.

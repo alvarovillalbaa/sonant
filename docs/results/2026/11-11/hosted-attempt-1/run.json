@@ -1,0 +1,118 @@
+{
+  "source": "7feef0dce1e2a64e0cd399f23539b7835627bb3b",
+  "startedAt": 1794396215.218727,
+  "commands": [
+    {
+      "label": "node",
+      "streams": {
+        "stdout": {
+          "bytes": 9,
+          "retainedBytes": 9,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04"
+        },
+        "stderr": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "signals": [],
+      "exitCode": 0,
+      "groupAbsent": true,
+      "pid": 2478
+    },
+    {
+      "label": "install",
+      "streams": {
+        "stdout": {
+          "bytes": 24,
+          "retainedBytes": 24,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "65c731cd02e19c79f6f5a3e84a4dd64a49acd6c47d2ee551d7cc9da191e8c96c"
+        },
+        "stderr": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "signals": [],
+      "exitCode": 0,
+      "groupAbsent": true,
+      "pid": 2479
+    },
+    {
+      "label": "chromium-install",
+      "streams": {
+        "stdout": {
+          "bytes": 16503,
+          "retainedBytes": 16503,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "f688b99762444f38162439ef246843eb87b1413bfbbef311ccb1653b68f31cfd"
+        },
+        "stderr": {
+          "bytes": 237,
+          "retainedBytes": 237,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "3b419c69ff321ee6851fa5489a2bb0c9a2ef093815a709dbd05391f89767267f"
+        }
+      },
+      "signals": [],
+      "exitCode": 0,
+      "groupAbsent": true,
+      "pid": 2491
+    },
+    {
+      "label": "browser",
+      "streams": {
+        "stdout": {
+          "bytes": 0,
+          "retainedBytes": 0,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "bytes": 643,
+          "retainedBytes": 643,
+          "eof": true,
+          "closed": true,
+          "overflow": false,
+          "sha256": "c7400f207e859204a561b5160e06f8bb98e934d8dbb5703e34d19b9d467a854e"
+        }
+      },
+      "signals": [],
+      "exitCode": 1,
+      "groupAbsent": true,
+      "pid": 3106
+    }
+  ],
+  "passed": false,
+  "errors": [
+    "browser failed",
+    "final: cleanup uncertain"
+  ],
+  "ownedMarkedProcessesRemaining": [],
+  "processScanUncertain": [
+    1192,
+    1211
+  ],
+  "sourceUnchanged": true,
+  "finishedAt": 1794396254.615989
+}

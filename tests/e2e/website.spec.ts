@@ -181,6 +181,20 @@ test("examples resolve and fail visibly, native dialog restores focus", async ({
   await page.getByRole("button", { name: "Run workflow" }).click();
   await expect(page.getByText("Your summary is ready.")).toBeVisible();
 });
+test("native progress loop plays and navigation stops it without a provider error", async ({ page }) => {
+  await page.goto("/#/examples");
+  await page.getByRole("button", { name: "Sound off", exact: true }).click();
+  await page.getByRole("button", { name: "Run workflow", exact: true }).click();
+  await expect(page.locator(".audio-announcement")).toHaveText("agent.thinking: played");
+  const menu = page.getByRole("button", { name: "Open menu", exact: true });
+  if (await menu.isVisible()) await menu.click();
+  await page.locator("header nav").getByRole("link", { name: "Devtools", exact: true }).click();
+  const row = page.locator("tbody tr").filter({ hasText: "agent.thinking" });
+  await expect(row).toContainText("played");
+  await expect(row).toContainText("Ended");
+  await expect(row).not.toContainText("provider");
+  await expect(page.locator(".devtools-metrics article").filter({ hasText: "Active voices" }).locator("strong")).toHaveText("0 / 4");
+});
 test("mute persists, policy suppression is visible, and traces export", async ({ page }) => {
   await page.goto("/#/devtools");
   await page.getByRole("button", { name: "Sound off", exact: true }).click();

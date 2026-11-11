@@ -57,3 +57,10 @@ packet in `docs/proposals/hosted-browser-checks.md`. Use only its immutable-sour
 public twelve-minute CI job. No application build/install, older-suite rerun,
 package release, dependency change or production configuration change is needed.
 Retain original failures and retire the temporary workflow/ref after evidence.
+
+The first hosted packet failed; originals and cleanup uncertainty are retained
+in docs/results/2026/11-11/hosted-attempt-1. Its native loop error led to
+docs/fixes/native-loop-buffer.md. Standing approval covers the necessary
+buffer-assignment repair, four new native matrix cases and existing release
+regressions in docs/proposals/native-loop-release-checks.md. The next hosted
+invocation must wait for that release gate and an actually repaired deployment.

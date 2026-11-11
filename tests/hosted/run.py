@@ -15,7 +15,7 @@ source = os.environ['SOURCE_COMMIT']
 need(len(source) == 40 and all(c in '0123456789abcdef' for c in source), 'source pin required')
 need(os.environ.get('CI') == 'true' and os.environ.get('GITHUB_ACTIONS') == 'true', 'CI only')
 need(os.environ.get('GITHUB_REPOSITORY') == 'alvarovillalbaa/sonant', 'repository mismatch')
-need(os.environ.get('GITHUB_EVENT_NAME') == 'create' and os.environ.get('GITHUB_REF') == 'refs/heads/qa/sonant-hosted-20261111-1', 'owned QA branch required')
+need(os.environ.get('GITHUB_EVENT_NAME') == 'create' and os.environ.get('GITHUB_REF') == 'refs/heads/qa/sonant-hosted-20261111-2', 'owned QA branch required')
 event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
 need(event['repository']['private'] is False and event['ref_type'] == 'branch', 'public branch required')
 repo = Path.cwd().resolve()
@@ -41,6 +41,22 @@ env.update(CI='true', LANG='C.UTF-8', TZ='UTC', NO_COLOR='1', SONANT_HOSTED_ROOT
 report = {'source': source, 'startedAt': time.time(), 'commands': [], 'passed': False, 'errors': []}
 children = []
 deadline = time.monotonic() + 480
+
+def process_identity(entry):
+    info = entry.stat()
+    fields = (entry / 'stat').read_text().rsplit(')', 1)[1].split()
+    return {'pid': int(entry.name), 'uid': info.st_uid, 'ppid': int(fields[1]), 'pgid': int(fields[2]), 'startTicks': fields[19]}
+
+# Exclude only exact same-UID identities already alive before tool setup.
+process_baseline = {}
+for entry in Path('/proc').iterdir():
+    if not entry.name.isdigit(): continue
+    try:
+        item = process_identity(entry)
+        if item['uid'] == os.getuid(): process_baseline[item['pid']] = item
+    except (FileNotFoundError, ProcessLookupError): pass
+need(len(process_baseline) <= 2048, 'process baseline bound')
+report['preToolProcessBaseline'] = list(process_baseline.values())
 
 def git(*args):
     return subprocess.check_output(['git', *args], cwd=repo, timeout=10)
@@ -141,17 +157,22 @@ finally:
                 child.wait(timeout=4)
             need(group_absent(child.pid), 'owned process group remains')
         except Exception as error: report['errors'].append('cleanup: ' + str(error)[:200])
-    remaining, uncertain = [], []
+    remaining, uncertain, skipped = [], [], []
     for entry in Path('/proc').iterdir():
         if not entry.name.isdigit() or int(entry.name) == os.getpid(): continue
         try:
-            if entry.stat().st_uid != os.getuid(): continue
+            item = process_identity(entry)
+            if item['uid'] != os.getuid(): continue
+            if process_baseline.get(item['pid']) == item:
+                skipped.append(item)
+                continue
             variables = (entry / 'environ').read_bytes().split(b'\0')
             if ('SONANT_HOSTED_ROOT=' + str(work)).encode() in variables: remaining.append(int(entry.name))
         except (FileNotFoundError, ProcessLookupError): pass
         except Exception: uncertain.append(int(entry.name))
     report['ownedMarkedProcessesRemaining'] = remaining
     report['processScanUncertain'] = uncertain
+    report['unchangedPreToolProcessesSkipped'] = skipped
     try:
         after = guard('source-after.json')
         need(after == baseline, 'final source differs')

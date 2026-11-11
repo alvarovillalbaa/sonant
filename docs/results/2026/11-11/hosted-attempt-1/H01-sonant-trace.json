@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-11-11T11:24:00.999Z",
+  "preferences": {
+    "enabled": true,
+    "volume": 0.35,
+    "profile": "balanced",
+    "categories": {}
+  },
+  "provider": "Web Audio",
+  "trace": [
+    {
+      "id": 1,
+      "event": "action.select",
+      "time": 1794396240769,
+      "provider": "Web Audio",
+      "decision": "played",
+      "active": false,
+      "loop": false
+    },
+    {
+      "id": 2,
+      "event": "state.success",
+      "time": 1794396240850,
+      "source": "SoundCatalog",
+      "surface": "playground",
+      "provider": "Web Audio",
+      "decision": "played",
+      "active": false,
+      "loop": false
+    }
+  ]
+}
