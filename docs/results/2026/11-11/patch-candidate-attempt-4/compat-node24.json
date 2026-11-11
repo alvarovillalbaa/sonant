@@ -1,0 +1,14 @@
+{
+  "version": "0.1.1",
+  "node": "v24.22.2",
+  "archiveMode": true,
+  "cases": [
+    {
+      "id": "npm",
+      "passed": true,
+      "version": "0.1.1"
+    }
+  ],
+  "ownedRootRemoved": true,
+  "passed": true
+}

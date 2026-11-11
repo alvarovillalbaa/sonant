@@ -1,0 +1,264 @@
+{
+  "source": "111a097eda300da53b7b5f52822078f74444fe63",
+  "activation": "2851f1144abd206710e997b1d9d03dfac3895d16",
+  "activationTree": "09665dddc2bf6e5696d0def53ceff8307702e691",
+  "ref": "refs/heads/qa/sonant-patch-candidate-20261111-4",
+  "workflow": ".github/workflows/temporary-patch-candidate.yml",
+  "packageInputsUnchangedSince": "13eba3f2418c4cc71e8a69bc7db56293e2b4f1cb",
+  "previousRun": 43026523673,
+  "run": 43026956835,
+  "job": 130543964158,
+  "conclusion": "success",
+  "existingPackageTestsPassed": 35,
+  "typeAndSiteBuildPassed": true,
+  "freshConsumerProfilesPassed": [
+    "npm-node22",
+    "npx-node22",
+    "pnpm-node22",
+    "react18",
+    "react19",
+    "npm-node20",
+    "npm-node24"
+  ],
+  "allConsumerProfilesPassed": true,
+  "consumerRootRemovalVerified": true,
+  "ownedWorkRemovalVerified": true,
+  "processGroupsIndependentlyVerified": false,
+  "registryWrite": false,
+  "artifact": {
+    "id": 13858965376,
+    "zipBytes": 99225,
+    "serverZipSha256": "766ea9d0737f00f1e9dabae6daa513727ea8f61a6a5e249f086ea84ab2d3be84"
+  },
+  "sourceFiles": 248,
+  "sourceModesBlobsBytesVerified": true,
+  "archiveSha256": "10106e3dd4b4f37ebf7f33273919a257ba7698807eada39e673283b2827b2963",
+  "archiveBytes": 49923,
+  "archiveFileCount": 39,
+  "files": [
+    {
+      "file": "archive-inspection.log.json",
+      "bytes": 630,
+      "sha256": "67591c017e393b105666e791337702b4d2be0a9085ebd1352af558440b5d7781",
+      "originalFile": "archive-inspection.log",
+      "originalBytes": 416,
+      "originalSha256": "d25f6e905d3ae28d042a54f493194594359bec74ad0325fac83852d659960518"
+    },
+    {
+      "file": "archive-manifest.json",
+      "bytes": 7209,
+      "sha256": "bdabeba094cf9d2de524b2dac123c3bb9c8aeec120a94d12c2b7a1de00400987",
+      "originalFile": "archive-manifest.json",
+      "originalBytes": 7209,
+      "originalSha256": "bdabeba094cf9d2de524b2dac123c3bb9c8aeec120a94d12c2b7a1de00400987"
+    },
+    {
+      "file": "build.log.json",
+      "bytes": 1309,
+      "sha256": "4e2cbdfc896265db332773415a8af3e5bc22b1267b27d027c89f0284f94751e1",
+      "originalFile": "build.log",
+      "originalBytes": 1060,
+      "originalSha256": "a2ae7034cb98731f5d2cc0136c0705123c0559a54403f2b796fd8ad64f64afb8"
+    },
+    {
+      "file": "check.log.json",
+      "bytes": 526,
+      "sha256": "7137e6ea8c1902b27e12f3081e030f0d00d97f025cce0de59ef0dd5940ba3c0b",
+      "originalFile": "check.log",
+      "originalBytes": 340,
+      "originalSha256": "4bbe0201f7e4ed6ebd987b386a4f21ac787da754a727bdf317f682309ae836b7"
+    },
+    {
+      "file": "compat-node20.json",
+      "bytes": 212,
+      "sha256": "a6f2989595a15eac3a9e0716f20085d75b963ba4063b2c81d517ee53c50390c7",
+      "originalFile": "compat-node20.json",
+      "originalBytes": 212,
+      "originalSha256": "a6f2989595a15eac3a9e0716f20085d75b963ba4063b2c81d517ee53c50390c7"
+    },
+    {
+      "file": "compat-node20.log.json",
+      "bytes": 2334,
+      "sha256": "0539ca64d9f7b93ddae06a4129377905cf45b26afa30ba83dd59375e9c6650c8",
+      "originalFile": "compat-node20.log",
+      "originalBytes": 2058,
+      "originalSha256": "41f9768f1879b77d90438e13a1548dca65b1c03879c2593389e9c9472bdd2c24"
+    },
+    {
+      "file": "compat-node24.json",
+      "bytes": 212,
+      "sha256": "4f687fb1c19d79085fa31f78fc6cf60beb0c1a942206a49ae90bb082e8f61340",
+      "originalFile": "compat-node24.json",
+      "originalBytes": 212,
+      "originalSha256": "4f687fb1c19d79085fa31f78fc6cf60beb0c1a942206a49ae90bb082e8f61340"
+    },
+    {
+      "file": "compat-node24.log.json",
+      "bytes": 2359,
+      "sha256": "539bffa3b41a90dc559a160039ededca0ab08dae76e4f52a0e42e94c5847ed58",
+      "originalFile": "compat-node24.log",
+      "originalBytes": 2079,
+      "originalSha256": "9c6919332842c6bd603ec0b00a45e9fa2daaef690aa2baae6de1fcdb24e96e0a"
+    },
+    {
+      "file": "completion.json",
+      "bytes": 193,
+      "sha256": "0869071809aeaa3c1774fbd7ca320ca979c05f280946ce15753a07141d833657",
+      "originalFile": "completion.json",
+      "originalBytes": 193,
+      "originalSha256": "0869071809aeaa3c1774fbd7ca320ca979c05f280946ce15753a07141d833657"
+    },
+    {
+      "file": "install.log.json",
+      "bytes": 198,
+      "sha256": "f42821b9df5b6c40e88438a80298aa2559958fe0301208c188a2e6a02ddbe20e",
+      "originalFile": "install.log",
+      "originalBytes": 25,
+      "originalSha256": "a5167a3c98725273d348f8699f7c314021f7c56ee1c9add9d197db61c60d4ca9"
+    },
+    {
+      "file": "managers-node22.json",
+      "bytes": 371,
+      "sha256": "0e2356176944559b78df50eeb5c2457383855835cdff7ba3a68f2475b18ac0bd",
+      "originalFile": "managers-node22.json",
+      "originalBytes": 371,
+      "originalSha256": "0e2356176944559b78df50eeb5c2457383855835cdff7ba3a68f2475b18ac0bd"
+    },
+    {
+      "file": "managers-node22.log.json",
+      "bytes": 3312,
+      "sha256": "c992065c3f43e51b1520415b8e14a0d98b302ddeee6a201f7efb9fa0dbc72f94",
+      "originalFile": "managers-node22.log",
+      "originalBytes": 3007,
+      "originalSha256": "b158ac6a50da853c81846b009252a6fad054727b219c32f8d16b86c3dd509930"
+    },
+    {
+      "file": "node20.txt",
+      "bytes": 9,
+      "sha256": "9ade604c07477212e1030c6f9d55f0437ae42ee62e5b87102f65194f47e260f5",
+      "originalFile": "node20.txt",
+      "originalBytes": 9,
+      "originalSha256": "9ade604c07477212e1030c6f9d55f0437ae42ee62e5b87102f65194f47e260f5"
+    },
+    {
+      "file": "node22.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906",
+      "originalFile": "node22.txt",
+      "originalBytes": 9,
+      "originalSha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "node24.txt",
+      "bytes": 9,
+      "sha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04",
+      "originalFile": "node24.txt",
+      "originalBytes": 9,
+      "originalSha256": "6a0cec2e157365c1a8ac6d1715733b7c3321a7c5565862a701ca71ef00359d04"
+    },
+    {
+      "file": "npm20.txt",
+      "bytes": 7,
+      "sha256": "457af6bcb860725c02c36308c43603dd9dd50fdae02abe4d09b1f85541b6431f",
+      "originalFile": "npm20.txt",
+      "originalBytes": 7,
+      "originalSha256": "457af6bcb860725c02c36308c43603dd9dd50fdae02abe4d09b1f85541b6431f"
+    },
+    {
+      "file": "npm22.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a",
+      "originalFile": "npm22.txt",
+      "originalBytes": 7,
+      "originalSha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "npm24.txt",
+      "bytes": 8,
+      "sha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+      "originalFile": "npm24.txt",
+      "originalBytes": 8,
+      "originalSha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0"
+    },
+    {
+      "file": "pack.json",
+      "bytes": 4127,
+      "sha256": "4386a55a0604be43184df23f4446f0cc1002d334bb1a41627426b8490a33adac",
+      "originalFile": "pack.json",
+      "originalBytes": 4127,
+      "originalSha256": "4386a55a0604be43184df23f4446f0cc1002d334bb1a41627426b8490a33adac"
+    },
+    {
+      "file": "react-consumers.json",
+      "bytes": 655,
+      "sha256": "f5ea277c73c89836f0f7b48f88b6ce4eb778f0bae5dbef2bb0334f1dd4a90474",
+      "originalFile": "react-consumers.json",
+      "originalBytes": 655,
+      "originalSha256": "f5ea277c73c89836f0f7b48f88b6ce4eb778f0bae5dbef2bb0334f1dd4a90474"
+    },
+    {
+      "file": "react-consumers.log.json",
+      "bytes": 1177,
+      "sha256": "8bf43ec8e9d512ba6a31189d93b50a65dc558796e14c3d9bec36511dce1bffa3",
+      "originalFile": "react-consumers.log",
+      "originalBytes": 972,
+      "originalSha256": "29639b09aa133d7d8d67f63d9b3ea776029d4ab805af86bf4f0c9f30d3f02ffd"
+    },
+    {
+      "file": "react18-consumer-lock.json",
+      "bytes": 4717,
+      "sha256": "51ac867b79d613691a608d113f3ecdee8bf20fa9fe3fd3407d166b3f5f1589eb",
+      "originalFile": "react18-consumer-lock.json",
+      "originalBytes": 4717,
+      "originalSha256": "51ac867b79d613691a608d113f3ecdee8bf20fa9fe3fd3407d166b3f5f1589eb"
+    },
+    {
+      "file": "react19-consumer-lock.json",
+      "bytes": 3506,
+      "sha256": "b6b5a8f1c2486698cdff67cca70e72f720c7d6434b834493b40ea9d7ae5795e1",
+      "originalFile": "react19-consumer-lock.json",
+      "originalBytes": 3506,
+      "originalSha256": "b6b5a8f1c2486698cdff67cca70e72f720c7d6434b834493b40ea9d7ae5795e1"
+    },
+    {
+      "file": "source-after.json",
+      "bytes": 64908,
+      "sha256": "6c917509064c364a1477fb176b7d40bd3d998d56ea946d7841f693e82932c3dc",
+      "originalFile": "source-after.json",
+      "originalBytes": 64908,
+      "originalSha256": "6c917509064c364a1477fb176b7d40bd3d998d56ea946d7841f693e82932c3dc"
+    },
+    {
+      "file": "source-before.json",
+      "bytes": 64908,
+      "sha256": "6c917509064c364a1477fb176b7d40bd3d998d56ea946d7841f693e82932c3dc",
+      "originalFile": "source-before.json",
+      "originalBytes": 64908,
+      "originalSha256": "6c917509064c364a1477fb176b7d40bd3d998d56ea946d7841f693e82932c3dc"
+    },
+    {
+      "file": "tools-install.log.json",
+      "bytes": 202,
+      "sha256": "c2ed501d3b89cd4bb43742c7179c07c63553e2778e544f8c5d99cf107a2ee0eb",
+      "originalFile": "tools-install.log",
+      "originalBytes": 23,
+      "originalSha256": "a941066d38162d18c88ea4b096d8cf11d19b0d46b973f6d916e2f9b8794e1f36"
+    },
+    {
+      "file": "tools-lock.json",
+      "bytes": 655,
+      "sha256": "30c24474b797dee4beb7ad922477975ac989ecaea225fd9aa8421f90b63d7a5f",
+      "originalFile": "tools-lock.json",
+      "originalBytes": 655,
+      "originalSha256": "30c24474b797dee4beb7ad922477975ac989ecaea225fd9aa8421f90b63d7a5f"
+    },
+    {
+      "file": "unit.log.json",
+      "bytes": 8457,
+      "sha256": "43ffb103cf46b8f59c018cf6923abd2bfb736cc7882dcf9f45334fe9354fcfe9",
+      "originalFile": "unit.log",
+      "originalBytes": 8051,
+      "originalSha256": "604dbec88f55f67c18ce12064fcdfc06d6df22b20e11cb7e046ad4d0583ad2c5"
+    }
+  ]
+}

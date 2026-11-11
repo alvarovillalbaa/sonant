@@ -1,0 +1,31 @@
+{
+  "source": "111a097eda300da53b7b5f52822078f74444fe63",
+  "version": "0.1.1",
+  "node": "v22.23.4",
+  "cases": [
+    {
+      "id": "react18",
+      "react": "18.3.1",
+      "types": "18.3.12",
+      "domTypes": "18.3.1",
+      "passed": true,
+      "strictTypes": true,
+      "generatedComponents": 4,
+      "ssr": true,
+      "archiveFilesEqual": 39
+    },
+    {
+      "id": "react19",
+      "react": "19.3.1",
+      "types": "19.3.0",
+      "domTypes": "19.3.0",
+      "passed": true,
+      "strictTypes": true,
+      "generatedComponents": 4,
+      "ssr": true,
+      "archiveFilesEqual": 39
+    }
+  ],
+  "passed": true,
+  "ownedRootRemoved": true
+}

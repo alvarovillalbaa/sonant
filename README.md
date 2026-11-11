@@ -127,6 +127,13 @@ passed together at `fe64588b`, including real mobile trace/kit downloads and
 verified owned cleanup. Original failures remain preserved. Public npm 0.1.0
 still lacks the source repairs; no new registry version was published.
 
+The [0.1.1 candidate](docs/results/2026/11-11/patch-package-candidate.md) now
+passes actual archive inspection and seven fresh npm/npx/pnpm/React/Node
+consumer profiles, plus35 package tests/type/site checks. Its CLI is executable
+inside the tarball. The [maintainer handoff](docs/runbooks/sonant-0.1.1-publication.md)
+keeps authenticated npm publication and public package-name verification explicit;
+the GitHub candidate alone does not change npm latest.
+
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 
 This release does not include hosted analytics, experiments, native haptics, Ogg export, team governance, or direct version-specific third-party adapters. See [scope](docs/specs/product.md), [architecture](docs/references/architecture.md), [sources](docs/sources/INDEX.md), and [release procedure](docs/runbooks/release.md).

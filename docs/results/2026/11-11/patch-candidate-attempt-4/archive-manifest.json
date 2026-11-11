@@ -1,0 +1,247 @@
+{
+  "source": "111a097eda300da53b7b5f52822078f74444fe63",
+  "version": "0.1.1",
+  "filename": "alvarovillalbaa-sonant-0.1.1.tgz",
+  "bytes": 49923,
+  "sha256": "10106e3dd4b4f37ebf7f33273919a257ba7698807eada39e673283b2827b2963",
+  "integrity": "sha512-qHRY1mMw1XXvG1nOQW73I/Skqk7vKvJJllMjS5dxSXpVfYX/V442Gf2udyi9tsfDWkGHLefmiLmJZDxbzCHGqQ==",
+  "shasum": "43378d0b9b6c6ef60a8274e0dad9deab01d18c5a",
+  "fileCount": 39,
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1072,
+      "mode": "0o644",
+      "sha256": "7edafcd8ebca4ecabedfad6e3c3d4872ce0ef6b49c3658a8b6e644cfb884d32d"
+    },
+    {
+      "path": "dist/audio.js",
+      "bytes": 4182,
+      "mode": "0o644",
+      "sha256": "4a2c8653fc9f8776998ebf4256d77fcd0809a3e25affdb176245f57845701aa0"
+    },
+    {
+      "path": "dist/bind.js",
+      "bytes": 2211,
+      "mode": "0o644",
+      "sha256": "2a7e4b2d5bd558496e32c0be606b849105edd27a2eb61f4ec96e03357647e2f0"
+    },
+    {
+      "path": "dist/catalog.js",
+      "bytes": 9565,
+      "mode": "0o644",
+      "sha256": "1f20530ba98ce8a979026492b4be1c4b0844613fd2a41a883b05628a6ab017c1"
+    },
+    {
+      "path": "dist/cli.js",
+      "bytes": 10877,
+      "mode": "0o755",
+      "sha256": "bdb093d29671bfd931b876e0bd0641fc92773808e7339e83b021b7435d3fdf5c"
+    },
+    {
+      "path": "dist/config.js",
+      "bytes": 1648,
+      "mode": "0o644",
+      "sha256": "7fd303b7ac0bdf5bddf7461b27b3673a216a078a09cf77e55e7e9fc1e0842984"
+    },
+    {
+      "path": "dist/index.js",
+      "bytes": 330,
+      "mode": "0o644",
+      "sha256": "94681bd986ccf27a591abbe2d074eb871549eeff9da371a57ddd10f371b34909"
+    },
+    {
+      "path": "dist/providers.js",
+      "bytes": 2909,
+      "mode": "0o644",
+      "sha256": "fd415f657aead97b17d684496e12829e4b438a944f5ef3cd7991ae1605086e35"
+    },
+    {
+      "path": "dist/react.js",
+      "bytes": 2656,
+      "mode": "0o644",
+      "sha256": "f5c0b084f0800ac37eb4ec2a4a0d14636b302a3024d8d9b4b5a2016120bc64b5"
+    },
+    {
+      "path": "dist/registry.js",
+      "bytes": 3269,
+      "mode": "0o644",
+      "sha256": "88d283267970aff79cbb53a205c22c24a158dacd086e7b911a2520a17d047283"
+    },
+    {
+      "path": "dist/runtime.js",
+      "bytes": 15412,
+      "mode": "0o644",
+      "sha256": "244e55256e30cb31a46a11184a5295fb518fdf7e9ddcbe388a7f93547766db5f"
+    },
+    {
+      "path": "dist/storage.js",
+      "bytes": 638,
+      "mode": "0o644",
+      "sha256": "8bd1358d97a7b283ac4b99f0b99df2a26e0478e4d2ca7e17cce7f34754dee07d"
+    },
+    {
+      "path": "dist/types.js",
+      "bytes": 44,
+      "mode": "0o644",
+      "sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1695,
+      "mode": "0o644",
+      "sha256": "06a29048aa294981939a22cacbcd875fce5c16dfe5ec0f7314acaa77b266067d"
+    },
+    {
+      "path": "dist/audio.js.map",
+      "bytes": 7811,
+      "mode": "0o644",
+      "sha256": "e7a1e195ed8e0b0817d7027717eacbb027e09396e2cd06dfded4d69197ff1474"
+    },
+    {
+      "path": "dist/bind.js.map",
+      "bytes": 4850,
+      "mode": "0o644",
+      "sha256": "6eeca9f48939181acc37241929c82603305d0512039c5dd120db68a62b56a73b"
+    },
+    {
+      "path": "dist/catalog.js.map",
+      "bytes": 19006,
+      "mode": "0o644",
+      "sha256": "375195ffe4b368bcd00717404c8f63816937ff96078e9d75bb8455788892cc79"
+    },
+    {
+      "path": "dist/cli.js.map",
+      "bytes": 22399,
+      "mode": "0o644",
+      "sha256": "1dc028bb0e99a1a545c830fcb52a6bc1c9d16e9c64bbd0417200a08b422610f2"
+    },
+    {
+      "path": "dist/config.js.map",
+      "bytes": 3164,
+      "mode": "0o644",
+      "sha256": "ea6e192e878617cafb55637275b62aa3ce8436776af06809fbbbd5d387658ac5"
+    },
+    {
+      "path": "dist/index.js.map",
+      "bytes": 880,
+      "mode": "0o644",
+      "sha256": "e9f3c38cbafc35a06806fcaa90f640608c74bde5f8847c5e62e907bb0934c3cd"
+    },
+    {
+      "path": "dist/providers.js.map",
+      "bytes": 5824,
+      "mode": "0o644",
+      "sha256": "f629e028fd04867e6eca859bd17e5babdcbd5f2066ba2f3da619086b2d39a7a1"
+    },
+    {
+      "path": "dist/react.js.map",
+      "bytes": 5361,
+      "mode": "0o644",
+      "sha256": "a307a4c040db2f0fe017953aeb6505dad48ddc12765f25d6f94115a636c0150b"
+    },
+    {
+      "path": "dist/registry.js.map",
+      "bytes": 3954,
+      "mode": "0o644",
+      "sha256": "b01c93053ac7ab380666455179341ad15102b737bad82eddb911df185798d615"
+    },
+    {
+      "path": "dist/runtime.js.map",
+      "bytes": 30332,
+      "mode": "0o644",
+      "sha256": "a314be790dcb9cb9a7eafa7b3b6c91b663077229d6bf59ac33bfbc7b0dd2d89d"
+    },
+    {
+      "path": "dist/storage.js.map",
+      "bytes": 1170,
+      "mode": "0o644",
+      "sha256": "45d25d49fb0e3703e4296c80015ce41592718f9186f5772383ba2681a5a74cf6"
+    },
+    {
+      "path": "dist/types.js.map",
+      "bytes": 2601,
+      "mode": "0o644",
+      "sha256": "0186eafd1fbb7498b40989e9e86edefd2d9971d93ee8f3918e232cdfc27c4107"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5307,
+      "mode": "0o644",
+      "sha256": "911ed2971aae53ddf23bb9a97cfea9809ade084007268201e97a49a53012c012"
+    },
+    {
+      "path": "dist/audio.d.ts",
+      "bytes": 268,
+      "mode": "0o644",
+      "sha256": "790e710e5d47054f3a7de5e9f7f173a65dd99ded844ac7e13705c2acc1d322c8"
+    },
+    {
+      "path": "dist/bind.d.ts",
+      "bytes": 271,
+      "mode": "0o644",
+      "sha256": "7492024e652b0ccb16639f4d9c3f8974496c07a351714914b350156f61b066f3"
+    },
+    {
+      "path": "dist/catalog.d.ts",
+      "bytes": 5571,
+      "mode": "0o644",
+      "sha256": "3175a676a04061d59ffe47db1e43f643c5e28ebcf4daafc9f3a5a55e35637630"
+    },
+    {
+      "path": "dist/cli.d.ts",
+      "bytes": 218,
+      "mode": "0o644",
+      "sha256": "f7c7a8d11b3d1f50fb166469699306cde1b38b068d3d1d24676f3b7fb9f47c6b"
+    },
+    {
+      "path": "dist/config.d.ts",
+      "bytes": 731,
+      "mode": "0o644",
+      "sha256": "277026fb0d8e911e4b9128d7924629b383cb67fb97b94d55c424d5fddd4f9268"
+    },
+    {
+      "path": "dist/index.d.ts",
+      "bytes": 443,
+      "mode": "0o644",
+      "sha256": "6e25343a86d328699203613871428dcdd2bf2c2dca2725b3195cabe0bcd81da3"
+    },
+    {
+      "path": "dist/providers.d.ts",
+      "bytes": 874,
+      "mode": "0o644",
+      "sha256": "4aef859c6d64de851a66dd0481fd0feed11c133b61c8d58932c76f0ca48eb50d"
+    },
+    {
+      "path": "dist/react.d.ts",
+      "bytes": 3905,
+      "mode": "0o644",
+      "sha256": "81820bd20acda444ca6d4d492810c3a80ddc940542fa7e678c46a11364ace3ca"
+    },
+    {
+      "path": "dist/registry.d.ts",
+      "bytes": 3555,
+      "mode": "0o644",
+      "sha256": "f00c38cbf7401678f0df951ae7a90ee697abaa72221688f26868b70b97d931bf"
+    },
+    {
+      "path": "dist/runtime.d.ts",
+      "bytes": 1343,
+      "mode": "0o644",
+      "sha256": "2177b374893d694e90b62d731c5734354c979f8e3d491869ca4a0dca952afaae"
+    },
+    {
+      "path": "dist/storage.d.ts",
+      "bytes": 205,
+      "mode": "0o644",
+      "sha256": "3a4b63ebd033ba7a9471214c75a6a81413d9924ba3f9fb841b84a468730b2531"
+    },
+    {
+      "path": "dist/types.d.ts",
+      "bytes": 2429,
+      "mode": "0o644",
+      "sha256": "9545b466d6ed27f6c0d67da6004404ed16f30ec7bab6ccfa689ffa3503527f12"
+    }
+  ],
+  "passed": true
+}

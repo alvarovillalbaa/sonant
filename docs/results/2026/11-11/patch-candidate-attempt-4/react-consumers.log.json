@@ -1,0 +1,7 @@
+{
+  "originalFile": "react-consumers.log",
+  "encoding": "utf-8",
+  "bytes": 972,
+  "sha256": "29639b09aa133d7d8d67f63d9b3ea776029d4ab805af86bf4f0c9f30d3f02ffd",
+  "content": "\nadded 11 packages in 2s\nCreated sonant.config.json\nCreated components/sonant/provider.tsx\nCreated components/sonant/theme.json\n\nNext: install @alvarovillalbaa/sonant and wrap your client tree with SonantProvider.\nAdd sound-settings for explicit opt-in and device-local controls.\nCreated components/sonant/sound-button.tsx\nCreated components/sonant/sound-switch.tsx\nCreated components/sonant/sound-settings.tsx\nCreated components/sonant/async-action.tsx\n\nadded 8 packages in 990ms\nCreated sonant.config.json\nCreated components/sonant/provider.tsx\nCreated components/sonant/theme.json\n\nNext: install @alvarovillalbaa/sonant and wrap your client tree with SonantProvider.\nAdd sound-settings for explicit opt-in and device-local controls.\nCreated components/sonant/sound-button.tsx\nCreated components/sonant/sound-switch.tsx\nCreated components/sonant/sound-settings.tsx\nCreated components/sonant/async-action.tsx\nPASS: strict generated-source and SSR consumers on React18/19\n"
+}

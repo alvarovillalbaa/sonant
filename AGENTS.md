@@ -94,3 +94,10 @@ Candidate attempt1 (run43025540905) passed35 cases/type/site checks but rejected
 the CLI archive mode0644 before consumers. Preserve its original packet. The
 build now sets its emitted CLI to0755; the candidate profile uses ending-2 and
 keeps the executable assertion. No dependency or runtime contract changed.
+Candidate attempt4 passed all seven archive profiles and35 package/type/site
+checks at `111a097e` in run43026956835. Preserve all three failed packets and
+the exact49923-byte tarball/SRI. Do not rerun completed archive/browser cohorts
+unchanged. See `docs/results/2026/11-11/patch-package-candidate.md` and
+`docs/runbooks/sonant-0.1.1-publication.md`; authenticated registry publication
+and fresh public package-name checks remain open. No token extraction or new
+account/plan is authorized by this handoff.

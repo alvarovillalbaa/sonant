@@ -1,0 +1,7 @@
+{
+  "originalFile": "build.log",
+  "encoding": "utf-8",
+  "bytes": 1060,
+  "sha256": "a2ae7034cb98731f5d2cc0136c0705123c0559a54403f2b796fd8ad64f64afb8",
+  "content": "\n> sonant-workspace@0.1.0 build:site\n> npm run build && npm run build --workspace sonant-website\n\n\n> sonant-workspace@0.1.0 build\n> npm run build --workspace @alvarovillalbaa/sonant\n\n\n> @alvarovillalbaa/sonant@0.1.1 build\n> tsc -p tsconfig.json && node --input-type=module -e 'import { chmodSync } from \"node:fs\"; chmodSync(\"dist/cli.js\", 0o755)'\n\n\n> sonant-website@0.1.0 build\n> vite build\n\n\u001b[36mvite v8.3.4 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n\u2713 1745 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                              0.91 kB \u2502 gzip:  0.50 kB\ndist/assets/ibm-plex-mono-latin-400-normal-CvHOgSBP.woff    13.14 kB\ndist/assets/ibm-plex-mono-latin-400-normal-DMJ8VG8y.woff2   14.70 kB\ndist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB\ndist/assets/index-CPjRlEqu.css                              43.45 kB \u2502 gzip:  9.60 kB\ndist/assets/index-B60jQrS5.js                              310.65 kB \u2502 gzip: 96.50 kB\n\n\u001b[32m\u2713 built in 257ms\u001b[39m\n"
+}
