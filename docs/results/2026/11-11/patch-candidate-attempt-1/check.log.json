@@ -1,0 +1,7 @@
+{
+  "originalFile": "check.log",
+  "encoding": "utf-8",
+  "bytes": 238,
+  "sha256": "40a8aee6cd4ff3f2b248e4b3442265d69036bfcf50068793480cf9f5663ce2e5",
+  "content": "\n> sonant-workspace@0.1.0 check\n> npm run build && tsc --noEmit -p website/tsconfig.json\n\n\n> sonant-workspace@0.1.0 build\n> npm run build --workspace @alvarovillalbaa/sonant\n\n\n> @alvarovillalbaa/sonant@0.1.1 build\n> tsc -p tsconfig.json\n\n"
+}

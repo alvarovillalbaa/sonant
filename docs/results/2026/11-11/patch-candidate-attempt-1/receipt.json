@@ -34,9 +34,14 @@
       "sha256": "a961cb42b6226fe7ec2b1d9f3b4fad59cc208460b84f26af6b5ce0c9a06af549"
     },
     {
-      "file": "check.log",
-      "bytes": 238,
-      "sha256": "40a8aee6cd4ff3f2b248e4b3442265d69036bfcf50068793480cf9f5663ce2e5"
+      "file": "check.log.json",
+      "bytes": 420,
+      "sha256": "e6c7be0262ff81510b4d7bfa6a68b47e18c8f29429e8f2f961996aa99fcd628d",
+      "originalFile": {
+        "file": "check.log",
+        "bytes": 238,
+        "sha256": "40a8aee6cd4ff3f2b248e4b3442265d69036bfcf50068793480cf9f5663ce2e5"
+      }
     },
     {
       "file": "install.log",
