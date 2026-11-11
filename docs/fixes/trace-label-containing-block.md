@@ -35,6 +35,7 @@ The hosted supervisor's explicit whole-source byte ceiling is20MB instead of
 12MB, keeping its200-file bound and hashing every file without an exclusion.
 This is a bounded source/evidence allowance, not a behavior or failure bypass.
 
-This containing-block repair is pending verification and is not production.
-On success, verify an actual canonical repaired deployment before repeating
-the four public hosted cases with a new exact source and owned branch.
+The [release gate](../results/2026/11-11/trace-layout-release.md) passed35/44/5
+at3608e4d, including mobile document/client width390/390, zero visual offset and
+a real trace download. Production cutover and the four public hosted cases
+remain separate next gates, requiring an actual repaired canonical deployment.

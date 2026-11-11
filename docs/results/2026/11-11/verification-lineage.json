@@ -1,0 +1,102 @@
+{
+  "entries": [
+    {
+      "base": "dc3a48d1ac9f2d74a0f88d8d1d5fe5589988f1b5",
+      "source": "7feef0dce1e2a64e0cd399f23539b7835627bb3b",
+      "sourceTree": "6c6051ebf09ee3652706bff825a5776726d7ed31",
+      "activation": "3f4710e2ccc5cc1062e46ab9b2e2a023392d823a",
+      "activationTree": "56546672c6c96ae91d3ff0a71ba008a5091fd1b2",
+      "ref": "refs/heads/qa/sonant-hosted-20261111-1",
+      "workflow": ".github/workflows/temporary-hosted-browser.yml",
+      "nativeBranch": "fix/operation-cancellation",
+      "productionDeployment": "dpl_8vnSWmGKJbNuazDQTA3Vmk3eHMt7",
+      "productionSource": "dc3a48d1ac9f2d74a0f88d8d1d5fe5589988f1b5",
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "f6a842e66b43b975ebd62cc318818ed60de2a804",
+      "sourceTree": "4ea39c7073d5b545c093098638d845baa78b8e8e",
+      "activation": "543dd1aa841b6193285c52b996b551c86a626aa7",
+      "activationTree": "637652ad36115d424de90726f8f4344c7b9c8843",
+      "ref": "refs/heads/qa/sonant-loop-release-20261111-1",
+      "workflow": ".github/workflows/temporary-native-loop-release.yml",
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "3f3d53490d33e7cc226725ec8c680b8f34a7d613",
+      "sourceTree": "22a569f883eb1580d0e286320b777257ae10f350",
+      "activation": "8fab686f66ffb39793b78e649c7feb5d9bd7aa39",
+      "activationTree": "687bed8a3c2927aa6b2e3e883e8cea55a3fa0b50",
+      "ref": "refs/heads/qa/sonant-loop-release-20261111-2",
+      "workflow": ".github/workflows/temporary-native-loop-release.yml",
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "54ae94d056dfd9438f0325877d724e4d61a146ac",
+      "sourceTree": "2b99c393480bcd60a2b3c37a053ada13c47d095a",
+      "activation": "0ee54d062bed72e7d3871492c50775ae0d85556f",
+      "activationTree": "9a5ebf7268b270d4638f737464ee7aa520b2a616",
+      "ref": "refs/heads/qa/sonant-hosted-20261111-2",
+      "workflow": ".github/workflows/temporary-hosted-browser.yml",
+      "deployment": "dpl_7fY2rn99HhEtPafM1BD6FtMCUFTC",
+      "productionSource": "54ae94d056dfd9438f0325877d724e4d61a146ac",
+      "canonicalAlias": "sonant-beta.vercel.app",
+      "sourceFiles": 152,
+      "sourceBytes": 6698652,
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "3e67ef6d8dd626b61997f710d81df7c872e35856",
+      "sourceTree": "d98f83ad03afa8280f7674c5fcab7b3d0a788fef",
+      "activation": "ddb2fea52f7afd23ea84b5dfc3512d826fb421d1",
+      "activationTree": "dcf5e203176814bce1326989d47a8bd98ab0eb02",
+      "ref": "refs/heads/qa/sonant-hosted-20261111-3",
+      "workflow": ".github/workflows/temporary-hosted-browser.yml",
+      "productionDeployment": "dpl_7fY2rn99HhEtPafM1BD6FtMCUFTC",
+      "productionSource": "54ae94d056dfd9438f0325877d724e4d61a146ac",
+      "runtimeBytesUnchanged": true,
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "784aee89fe4141fa585aee168739f80f104a090d",
+      "sourceTree": "d010b1158af6d734d476d5aa42b6be0c046bf2ea",
+      "activation": "51fdbb417ae5e9345a03105961dffc8ece7aa873",
+      "activationTree": "b6e70548c327a5dad3c289ad22fdff5a00a0fd6b",
+      "ref": "refs/heads/qa/sonant-loop-release-20261111-3",
+      "workflow": ".github/workflows/temporary-native-loop-release.yml",
+      "applicationChange": "route-scroll placement",
+      "cases": {
+        "unit": 35,
+        "browser": 44,
+        "strengthenedNativeCasesIncluded": 4,
+        "coldStarts": 5
+      },
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "2b6d04accd45af4725171bbbbd2580c9278dc6f2",
+      "sourceTree": "27ec0c69ad7827895d961d69b76d5ba31ae58d1e",
+      "activation": "7a5804f5c81426e800dd13a57cafe0241748dfa1",
+      "activationTree": "a12e88d8b8dc43e8717b3bde148073717681168f",
+      "ref": "refs/heads/qa/sonant-loop-layout-20261111-1",
+      "workflow": ".github/workflows/temporary-loop-layout.yml",
+      "scope": "one mobile diagnostic; no new application change",
+      "retirement": "planned after terminal evidence and publication"
+    },
+    {
+      "source": "3608e4d4694ab7a0ca0a867e45093ba1d7d95af6",
+      "sourceTree": "547d38087b8492f8bf93febe95feb72147b1d4e5",
+      "activation": "683f25343576a9aacf09383b7c228e602c05b149",
+      "activationTree": "d32cac7418b4c062e4ed6ffa228fcedb3f6c0791",
+      "ref": "refs/heads/qa/sonant-trace-layout-release-20261111-1",
+      "workflow": ".github/workflows/temporary-trace-layout-release.yml",
+      "cases": {
+        "unit": 35,
+        "browser": 44,
+        "strongNativeCasesIncluded": 4,
+        "coldStarts": 5
+      },
+      "retirement": "planned after terminal evidence and publication"
+    }
+  ]
+}

@@ -118,6 +118,11 @@ package/integration cases, 44 browser scenarios including four actual native
 loop regressions, and five Firefox cold starts. The published 0.1.0 package
 does not contain this source repair; its registry release remains pending.
 
+The [mobile trace layout repair](docs/fixes/trace-label-containing-block.md)
+also passed [35 package tests,44 browser cases and five cold starts](docs/results/2026/11-11/trace-layout-release.md).
+Its four native navigation cases now verify viewport containment and actual
+post-navigation exports, using touch on mobile. Hosted acceptance is separate.
+
 `sonant audit` is an advisory source review, not control-flow or accessibility proof. `sonant test` checks deterministic recipes, sample peaks, and tails, not perceptual loudness or subjective quality. A “played” trace means a provider accepted playback; it cannot establish physical audibility.
 
 This release does not include hosted analytics, experiments, native haptics, Ogg export, team governance, or direct version-specific third-party adapters. See [scope](docs/specs/product.md), [architecture](docs/references/architecture.md), [sources](docs/sources/INDEX.md), and [release procedure](docs/runbooks/release.md).

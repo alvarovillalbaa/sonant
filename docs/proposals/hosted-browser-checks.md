@@ -5,7 +5,7 @@
 recorded sources. Do not rerun or combine those cohorts. This scope closes the
 separate hosted-browser gap against `https://sonant-beta.vercel.app`.
 
-The canonical alias currently maps to READY `dpl_8vnSWmGKJbNuazDQTA3Vmk3eHMt7`
+Before attempt1, the canonical alias mapped to READY `dpl_8vnSWmGKJbNuazDQTA3Vmk3eHMt7`
 at main `dc3a48d1ac9f2d74a0f88d8d1d5fe5589988f1b5`. No runtime, dependency,
 version, production setting or permanent workflow changes are included.
 The owner's standing "I approve everything / Keep going / Do all the work"
@@ -19,7 +19,7 @@ authorizes this focused browser and temporary free CI scope.
 | H04 | Narrow Chromium with touch | Soft/quiet configuration and async-action selection produce the matching command and actual six-file source bundle. Config, theme cardinality and cancellation-aware component content are checked; a second download is byte-equal. |
 
 Run only `tests/hosted/run.py` in one public Ubuntu 24.04 job, capped at twelve
-minutes, next owned branch `qa/sonant-hosted-20261111-3`, immutable source pin,
+minutes, next owned branch `qa/sonant-hosted-20261111-4`, immutable source pin,
 read-only contents permission, Node 24.22.2 and isolated Playwright 1.65.0 with
 both package integrity pins. Install Chromium only. No application install,
 build, server, unit suite, model/provider API, account, database or paid action.
@@ -71,3 +71,12 @@ uses native touch for narrow download buttons, matching the intended profile,
 and records pre-action geometry, visual viewport and trusted click targets.
 It changes no app code, outcome assertion, deadline or response. Preserve the
 [second failed packet](../results/2026/11-11/hosted-attempt-2/checksums.json).
+
+Attempt3 also failed H03; its native hit-testing/viewport diagnostics identified
+the escaped absolute Replay heading. The localized containing-block repair then
+passed the [stronger release gate](../results/2026/11-11/trace-layout-release.md)
+at `3608e4d`, including mobile document/client width390/390 and real export.
+The ineffective route-scroll hypothesis is removed and its failed originals
+remain. Recheck canonical deployment metadata for that repaired source before
+the next hosted activation. All four original expectations remain unchanged;
+use native touch on narrow download controls and retain the click diagnostics.

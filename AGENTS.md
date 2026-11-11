@@ -52,27 +52,24 @@ status edition retires the HTTP workflow; keep the older QA bookmarks fixed.
 Provider metadata for later docs-only deployments does not relabel the tested
 HTTP source. Public npm, physical audio and hosted browser limits remain open.
 
-11 November: standing owner approval also covers the separate four-case hosted
-packet in `docs/proposals/hosted-browser-checks.md`. Use only its immutable-source
-public twelve-minute CI job. No application build/install, older-suite rerun,
-package release, dependency change or production configuration change is needed.
-Retain original failures and retire the temporary workflow/ref after evidence.
+11 November: standing owner approval covers the four-case public hosted packet
+in `docs/proposals/hosted-browser-checks.md` and the necessary evidence-backed
+repairs. The buffer fix passed its 35/44/5 release gate at `3f3d5349` and was
+published/deployed at `54ae94d0`. The later containing-block repair passed its
+own 35 package/integration cases, 44 browser scenarios and five Firefox cold
+starts at `3608e4d` in run43017388896. Its four strengthened native cases include
+viewport recovery and real post-navigation trace downloads, with mobile touch.
+See `docs/results/2026/11-11/trace-layout-release.md` and its original packet.
 
-The first hosted packet failed; originals and cleanup uncertainty are retained
-in docs/results/2026/11-11/hosted-attempt-1. Its native loop error led to
-docs/fixes/native-loop-buffer.md. Standing approval covers the necessary
-buffer-assignment repair, four new native matrix cases and existing release
-regressions in docs/proposals/native-loop-release-checks.md. The next hosted
-invocation must wait for that release gate and an actually repaired deployment.
-The release gate passed at 3f3d5349 in run43012905409:35 package/integration,
-44 browser cases including four native-loop regressions and five cold starts.
-Its original packet and the rejected prior activation are preserved in owning
-results. Workflow414595642 is disabled; production/hosted/npm remain separate.
-Third hosted failure diagnostics led to docs/fixes/route-scroll-commit.md.
-Standing approval covers its small route-scroll placement candidate and the
-same release gate, now with four strengthened native navigation/export cases.
-It remains pending; do not deploy it on the strength of the earlier 44 cases.
-That scroll-only candidate failed and is removed. The measured escaped hidden
-table heading now has a local containing-block repair; follow
-docs/fixes/trace-label-containing-block.md for its standing-approved release
-gate. Stronger viewport/native-export assertions stay intact.
+All three failed hosted attempts, the invalid release activation, failed
+scroll-only hypothesis and failed one-case diagnostic remain preserved.
+The ineffective route change is removed. Do not repeat the completed release
+matrix unchanged, or borrow the full-release profile's source checks as proof
+of independent process-group/runner disposal or physical audio.
+
+Publish the reviewed source/results and verify an actual canonical repaired
+deployment before the next four-case hosted invocation. Use its exact source
+pin and owned branch ending-4 in one public twelve-minute job; retain originals
+and retire only task-owned controls after terminal evidence. No model/API call,
+account, paid plan, dependency change or production-setting mutation is needed.
+Public npm and physical-device acceptance remain separate from source/hosting.

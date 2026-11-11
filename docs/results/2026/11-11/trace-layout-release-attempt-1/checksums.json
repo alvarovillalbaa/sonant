@@ -1,0 +1,193 @@
+{
+  "source": "3608e4d4694ab7a0ca0a867e45093ba1d7d95af6",
+  "activation": "683f25343576a9aacf09383b7c228e602c05b149",
+  "run": 43017388896,
+  "job": 130511736665,
+  "status": "passed",
+  "sourceFiles": 183,
+  "sourceBytes": 11265571,
+  "node": "v22.23.4",
+  "npm": "10.9.9",
+  "unitPassed": 35,
+  "browserPassed": 44,
+  "strongerNativeCasesIncluded": 4,
+  "firefoxColdStarts": 5,
+  "galleryVisualAcceptance": false,
+  "processGroupsOrRunnerDisposalAccepted": false,
+  "originalArtifactFiles": 34,
+  "originalArtifactBytes": 4959243,
+  "archiveBytes": 4248579,
+  "archiveSha256": "482c4a4d709e0d8614f6527f6a8030a3dd8f95f9b5c29d43ff01ff366c43dc6c",
+  "artifactFiles": [
+    {
+      "file": "_temp/sonant-loop-release/browser-install.log",
+      "bytes": 90950,
+      "sha256": "50ef9b8fb09fe8c328f2b3bc04414b8fda8df4793a7df2cb3cdd1299b4ade135"
+    },
+    {
+      "file": "_temp/sonant-loop-release/build.log",
+      "bytes": 958,
+      "sha256": "981971c2fc4c2b2147917ac32dfe0373099e101ff349fdf3a8343a67ca975c7b"
+    },
+    {
+      "file": "_temp/sonant-loop-release/check.log",
+      "bytes": 238,
+      "sha256": "274b286f43be14884450d5e0dde7a31b3423a5c5203fd1111b28fe583a4550fb"
+    },
+    {
+      "file": "_temp/sonant-loop-release/cold-start.json",
+      "bytes": 18129,
+      "sha256": "22959e097e906c7a28cbc715b81b377fa4d1b66f409b0018ad50022ff8bcdfe2"
+    },
+    {
+      "file": "_temp/sonant-loop-release/cold-start.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "_temp/sonant-loop-release/install.log",
+      "bytes": 141,
+      "sha256": "e6bc6c0b40f3ba69632f87c314ff4178a3e0e526a73fe20b6c9418605a0f3243"
+    },
+    {
+      "file": "_temp/sonant-loop-release/node.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "_temp/sonant-loop-release/npm.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "_temp/sonant-loop-release/package.log",
+      "bytes": 1913,
+      "sha256": "f2729a049d39920467d9981c11d63613a4b6d285e318c53a94adef7207a98bd1"
+    },
+    {
+      "file": "_temp/sonant-loop-release/playwright.json",
+      "bytes": 72081,
+      "sha256": "11bb4c55ce40a304a42cc53f984c53609065d9f845db5283bd2efb2bf55a663e"
+    },
+    {
+      "file": "_temp/sonant-loop-release/playwright.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "_temp/sonant-loop-release/pulse-install.log",
+      "bytes": 4943,
+      "sha256": "25355d08403c29087b4f62f9128509055f8d2a6196228ab31cf9d165047b4245"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-after.json",
+      "bytes": 47791,
+      "sha256": "1dc8c5f1bc24c839f08760d1e69ec7f7b1e6d6164b22a520d6285fe39c1afc0d"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-before.json",
+      "bytes": 47791,
+      "sha256": "1dc8c5f1bc24c839f08760d1e69ec7f7b1e6d6164b22a520d6285fe39c1afc0d"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-guard.py",
+      "bytes": 696,
+      "sha256": "9b0efa0daee6b50456cd990fa36f6f25b45d7aeecc683e6373b133eef88fc180"
+    },
+    {
+      "file": "_temp/sonant-loop-release/unit.log",
+      "bytes": 7947,
+      "sha256": "c63ff3dcb3c12ecbedb516fbdcb3e0ad4c29e2dafca5e7ed35b8243879b58eef"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox/preview.png",
+      "bytes": 97108,
+      "sha256": "eca56a6a8fb70bb7f1194ea0e38471fbc1a5e06a5463b727bff1e6f23398524b"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat1/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat1/preview.png",
+      "bytes": 96915,
+      "sha256": "71ef69d3e3e34ad2af0ab56789dd34df64a21f6928023f29625866a86c9bd64c"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat2/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat2/preview.png",
+      "bytes": 97145,
+      "sha256": "efaf5dcf6b3e122535ac04903f710bfd010d952008d26487f8cd68f8c14589c2"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat3/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat3/preview.png",
+      "bytes": 97023,
+      "sha256": "84fa4165705a57512721a9af9dd804ad318eeb45ffbcadd52800d0344b399916"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat4/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/cold-start-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox-repeat4/preview.png",
+      "bytes": 97162,
+      "sha256": "ed0c92ef8d8d6d0d9ff236da017521e22803dab960f108c74d67bb00ba6efc0e"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-chromium/home.png",
+      "bytes": 255532,
+      "sha256": "a5527afaaa6aa02c46357f7ce9dcf88594a1e7726a490f09c9cf605879b62eb8"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-chromium/preview.png",
+      "bytes": 60919,
+      "sha256": "da231f52f5502c0c4252c8968986e73ab71f4ef4ef5f599895503709f5d1956f"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox/preview.png",
+      "bytes": 97274,
+      "sha256": "a9138a09641cfb833bbca7d84f9f09471c1d0acd55b314b50df005619f595d23"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-mobile/home.png",
+      "bytes": 643924,
+      "sha256": "d053042d92380b7ab4b390320bbec2246ae02106e94cd15ea31d19955f7923a5"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-mobile/preview.png",
+      "bytes": 106241,
+      "sha256": "09f46a164cde0f00527f3ece2b1d0f71d033c8d8902934afb3d049ed726b5c60"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-webkit/home.png",
+      "bytes": 790160,
+      "sha256": "0ad2866a8bc456c36649b3e9bb11f02fcb96c410db946e3ea63b26467cb2c9d5"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-webkit/preview.png",
+      "bytes": 172152,
+      "sha256": "b3fd985552cdfc6f84752f87fdf32e3ae83ace002623f684ca0f4d142b3fa94b"
+    }
+  ]
+}

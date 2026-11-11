@@ -1,0 +1,859 @@
+{
+  "source": "3608e4d4694ab7a0ca0a867e45093ba1d7d95af6",
+  "sourceFiles": 183,
+  "sourceBytes": 11265571,
+  "allSourceModesBlobsBytesVerified": true,
+  "node": "v22.23.4",
+  "npm": "10.9.9",
+  "unitPassed": 35,
+  "browserStats": {
+    "startTime": "2026-11-11T12:07:24.048Z",
+    "duration": 57943.292,
+    "expected": 44,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "browserCases": [
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "chromium",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "firefox",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "webkit",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "delegated bindings respect cancellation, disabled controls, iframe realms, and unbinding",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "catalog renders, filters, and plays through native Web Audio",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "configurator produces exact CLI options and a downloadable source bundle",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "examples resolve and fail visibly, native dialog restores focus",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "native progress loop plays and navigation stops it without a provider error",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "mute persists, policy suppression is visible, and traces export",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/ has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/create has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/examples has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/devtools has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "title": "/#/docs has no serious accessibility violations or horizontal overflow",
+      "project": "mobile",
+      "status": "expected",
+      "expected": "passed",
+      "results": [
+        "passed"
+      ]
+    }
+  ],
+  "layout": [
+    {
+      "project": "chromium",
+      "value": {
+        "innerWidth": 1280,
+        "scrollX": 0,
+        "scrollY": 0,
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "visual": {
+          "width": 1280,
+          "height": 720,
+          "scale": 1,
+          "left": 0,
+          "top": 0
+        },
+        "nodes": []
+      }
+    },
+    {
+      "project": "firefox",
+      "value": {
+        "innerWidth": 1280,
+        "scrollX": 0,
+        "scrollY": 0,
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "visual": {
+          "width": 1280,
+          "height": 720,
+          "scale": 1,
+          "left": 0,
+          "top": 0
+        },
+        "nodes": []
+      }
+    },
+    {
+      "project": "webkit",
+      "value": {
+        "innerWidth": 1280,
+        "scrollX": 0,
+        "scrollY": 0,
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "visual": {
+          "width": 1280,
+          "height": 720,
+          "scale": 1,
+          "left": 0,
+          "top": 0
+        },
+        "nodes": []
+      }
+    },
+    {
+      "project": "mobile",
+      "value": {
+        "innerWidth": 390,
+        "scrollX": 0,
+        "scrollY": 0,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "visual": {
+          "width": 390,
+          "height": 664,
+          "scale": 1,
+          "left": 0,
+          "top": 0
+        },
+        "nodes": [
+          {
+            "tag": "TABLE",
+            "id": "",
+            "className": null,
+            "left": 23,
+            "right": 633,
+            "width": 610,
+            "cssWidth": "610px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "DIV.trace-scroll"
+          },
+          {
+            "tag": "THEAD",
+            "id": "",
+            "className": null,
+            "left": 23,
+            "right": 633,
+            "width": 610,
+            "cssWidth": "610px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-header-group",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TABLE."
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "className": null,
+            "left": 23,
+            "right": 633,
+            "width": 610,
+            "cssWidth": "610px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-row",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "THEAD."
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "className": null,
+            "left": 351,
+            "right": 433,
+            "width": 82,
+            "cssWidth": "82px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "className": null,
+            "left": 433,
+            "right": 568,
+            "width": 135,
+            "cssWidth": "135px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "TH",
+            "id": "",
+            "className": null,
+            "left": 568,
+            "right": 633,
+            "width": 65,
+            "cssWidth": "65px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "className": "sr-only",
+            "left": 585,
+            "right": 586,
+            "width": 1,
+            "cssWidth": "1px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "block",
+            "position": "absolute",
+            "overflowX": "hidden",
+            "parent": "TH."
+          },
+          {
+            "tag": "TBODY",
+            "id": "",
+            "className": null,
+            "left": 23,
+            "right": 633,
+            "width": 610,
+            "cssWidth": "610px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-row-group",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TABLE."
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "className": null,
+            "left": 23,
+            "right": 633,
+            "width": 610,
+            "cssWidth": "610px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-row",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TBODY."
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "className": null,
+            "left": 351,
+            "right": 433,
+            "width": 82,
+            "cssWidth": "82px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "className": "decision played",
+            "left": 369,
+            "right": 415,
+            "width": 46,
+            "cssWidth": "auto",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "inline",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TD."
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "className": null,
+            "left": 433,
+            "right": 568,
+            "width": 135,
+            "cssWidth": "135px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "className": null,
+            "left": 568,
+            "right": 633,
+            "width": 65,
+            "cssWidth": "65px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "icon-button",
+            "left": 586,
+            "right": 615,
+            "width": 29,
+            "cssWidth": "29px",
+            "minWidth": "29px",
+            "maxWidth": "none",
+            "display": "inline-flex",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TD."
+          },
+          {
+            "tag": "svg",
+            "id": "",
+            "className": "lucide lucide-play",
+            "left": 594.5,
+            "right": 606.5,
+            "width": 12,
+            "cssWidth": "12px",
+            "minWidth": "auto",
+            "maxWidth": "none",
+            "display": "block",
+            "position": "static",
+            "overflowX": "hidden",
+            "parent": "BUTTON.icon-button"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "className": null,
+            "left": 597,
+            "right": 605.0006103515625,
+            "width": 8.0006103515625,
+            "cssWidth": "auto",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "inline",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "svg.[object SVGAnimatedString]"
+          },
+          {
+            "tag": "TR",
+            "id": "",
+            "className": null,
+            "left": 23,
+            "right": 633,
+            "width": 610,
+            "cssWidth": "610px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-row",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TBODY."
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "className": null,
+            "left": 351,
+            "right": 433,
+            "width": 82,
+            "cssWidth": "82px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "SPAN",
+            "id": "",
+            "className": "decision played",
+            "left": 369,
+            "right": 415,
+            "width": 46,
+            "cssWidth": "auto",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "inline",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TD."
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "className": null,
+            "left": 433,
+            "right": 568,
+            "width": 135,
+            "cssWidth": "135px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "TD",
+            "id": "",
+            "className": null,
+            "left": 568,
+            "right": 633,
+            "width": 65,
+            "cssWidth": "65px",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "table-cell",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TR."
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "icon-button",
+            "left": 586,
+            "right": 615,
+            "width": 29,
+            "cssWidth": "29px",
+            "minWidth": "29px",
+            "maxWidth": "none",
+            "display": "inline-flex",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "TD."
+          },
+          {
+            "tag": "svg",
+            "id": "",
+            "className": "lucide lucide-play",
+            "left": 594.5,
+            "right": 606.5,
+            "width": 12,
+            "cssWidth": "12px",
+            "minWidth": "auto",
+            "maxWidth": "none",
+            "display": "block",
+            "position": "static",
+            "overflowX": "hidden",
+            "parent": "BUTTON.icon-button"
+          },
+          {
+            "tag": "path",
+            "id": "",
+            "className": null,
+            "left": 597,
+            "right": 605.0006103515625,
+            "width": 8.0006103515625,
+            "cssWidth": "auto",
+            "minWidth": "0px",
+            "maxWidth": "none",
+            "display": "inline",
+            "position": "static",
+            "overflowX": "visible",
+            "parent": "svg.[object SVGAnimatedString]"
+          }
+        ]
+      }
+    }
+  ],
+  "coldStartStats": {
+    "startTime": "2026-11-11T12:08:22.582Z",
+    "duration": 19509.555,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "processGroupsOrRunnerDisposalAccepted": false
+}
