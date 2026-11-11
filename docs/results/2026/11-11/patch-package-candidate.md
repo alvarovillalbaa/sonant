@@ -40,8 +40,18 @@ the emitted CLI's executable mode. Later corrections affect the consumer harness
 The successful archive is byte-identical to the inspected attempt2/3 tarballs.
 No dependency graph or runtime source changed during candidate verification.
 
-Temporary workflow414680080 is disabled with API readback. Exact owned QA refs
-are retired after final source publication. The two permanent workflows remain
+The [GitHub candidate](https://github.com/alvarovillalbaa/sonant/releases/tag/v0.1.1-candidate.1)
+and four assets are published at checkpoint `b31cf81c`; all server asset sizes
+and SHA256 digests match local bytes on readback. Binary re-download failed at
+the network boundary and is not claimed. Production at that checkpoint is
+READY with the canonical alias, as provider metadata. See the
+[publication receipt](patch-candidate-publication.json) for exact identities.
+The unchanged permanent [Quality push workflow](https://github.com/alvarovillalbaa/sonant/actions/runs/43027670988)
+also completed successfully at `b31cf81c`; no manual repeat was dispatched.
+
+Temporary workflow414680080 is disabled with API readback. All four exact owned
+candidate QA refs and the earlier metadata ref were removed with their expected
+head leases and absence readback. The two permanent workflows remain
 unchanged. Independent process groups/runner disposal, physical audio/devices,
 new hosted browser execution and authenticated npm identity/permission are not
 proved by this profile. The [earlier hosted/release results](hosted-browser.md)

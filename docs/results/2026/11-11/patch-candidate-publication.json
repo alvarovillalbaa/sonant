@@ -1,0 +1,63 @@
+{
+  "checkpoint": "b31cf81cee9c3fecb86ba2639da631ec117c4833",
+  "checkpointTree": "fc18e5e3358f3b0423132f5f458e9bd95751f4a5",
+  "candidateSource": "111a097eda300da53b7b5f52822078f74444fe63",
+  "candidateRun": 43026956835,
+  "candidateJob": 130543964158,
+  "candidateConclusion": "success",
+  "checkpointPackageRuntimeTestsAndDependenciesEqualCheckedSource": true,
+  "nativeMainOriginAndRemoteMatchedAtCheckpoint": true,
+  "checkpointFiles": 279,
+  "checkpointBytes": 16710405,
+  "independentApiCommitTreeReadback": true,
+  "recursiveApiTreeFetchSucceeded": false,
+  "permanentQuality": {
+    "run":43027670988,
+    "source":"b31cf81cee9c3fecb86ba2639da631ec117c4833",
+    "status":"completed",
+    "conclusion":"success",
+    "trigger":"existing push workflow; no manual dispatch or rerun"
+  },
+  "release": {
+    "id": 441718242,
+    "url": "https://github.com/alvarovillalbaa/sonant/releases/tag/v0.1.1-candidate.1",
+    "tag": "v0.1.1-candidate.1",
+    "prerelease": true,
+    "draft": false,
+    "target": "b31cf81cee9c3fecb86ba2639da631ec117c4833",
+    "assetsReadBack": true,
+    "serverDigestsEqualLocalBytes": true,
+    "binaryAssetRetrievalVerified": false,
+    "assets": [
+      {"id":735597155,"name":"alvarovillalbaa-sonant-0.1.1.tgz","bytes":49923,"sha256":"10106e3dd4b4f37ebf7f33273919a257ba7698807eada39e673283b2827b2963"},
+      {"id":735597220,"name":"archive-manifest.json","bytes":7209,"sha256":"bdabeba094cf9d2de524b2dac123c3bb9c8aeec120a94d12c2b7a1de00400987"},
+      {"id":735597279,"name":"sonant-0.1.1-candidate-evidence.zip","bytes":373419,"sha256":"000a42460e51eb87b932eed0d4946bd5f589203306e6e935120374945b54cc81"},
+      {"id":735597340,"name":"release-evidence-manifest.json","bytes":242,"sha256":"eded0de098d09594fe32f7ebd346a202d3f01455e9588b7c579756f30364aaaa"}
+    ]
+  },
+  "production": {
+    "id":"dpl_UrFYx9chRSDuD5ss47LXaHqesQ6J",
+    "state":"READY",
+    "source":"b31cf81cee9c3fecb86ba2639da631ec117c4833",
+    "canonicalAlias":"sonant-beta.vercel.app",
+    "metadataAndAliasReadBack":true,
+    "newHostedBrowserRun":false
+  },
+  "controls": {
+    "metadataWorkflow":414652510,
+    "candidateWorkflow":414680080,
+    "bothDisabledWithReadback":true,
+    "fiveExactOwnedQaRefsDeletedWithLeasesAndAbsenceReadback":true,
+    "permanentWorkflowsUnchanged":true
+  },
+  "registry": {
+    "lastOfficialObservation":"2026-11-11T12:34:02Z",
+    "lastObservedLatest":"0.1.0",
+    "authenticatedIdentityVerified":false,
+    "publicationPerformed":false,
+    "freshPublicPackageNameConsumersFor011":false,
+    "ownerHandoffSent":true
+  },
+  "remainingLimits":["native npm DNS failure","supported browser has no connected surface","binary release-asset retrieval hit network failure","physical audio/device acceptance not proved"],
+  "goal":"active-unfinished"
+}
