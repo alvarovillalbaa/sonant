@@ -1697,6 +1697,8 @@ main:focus {
   flex: 1;
 }
 .trace-scroll {
+  /* Keep absolutely positioned table labels inside this scrollport. */
+  position: relative;
   overflow: auto;
 }
 .trace-panel table {

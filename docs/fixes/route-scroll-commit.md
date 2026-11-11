@@ -36,3 +36,6 @@ matched, and the actual mobile failure PNG was viewed. Its
 remain losslessly archived. The scroll-timing hypothesis is insufficient;
 the candidate stays out of production. The next scoped diagnostic records
 overflowing elements and CSS widths, preserving every failing assertion.
+The following diagnostic identified the escaping absolute table label. The
+ineffective route-scroll change was removed; App.tsx again equals production.
+See [the localized containing-block repair](trace-label-containing-block.md).

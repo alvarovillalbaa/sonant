@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -23,13 +23,11 @@ function useRoute() {
   useEffect(() => {
     const handler = () => {
       setRoute(window.location.hash.slice(1) || "/");
+      window.scrollTo(0, 0);
     };
     window.addEventListener("hashchange", handler);
     return () => window.removeEventListener("hashchange", handler);
   }, []);
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [route]);
   return route;
 }
 export function App() {

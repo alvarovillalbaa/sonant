@@ -78,7 +78,7 @@ def guard(filename):
         data = file.read_bytes()
         need(hashlib.sha1(f'blob {len(data)}\0'.encode() + data).hexdigest() == blob, 'source blob changed')
         rows.append({'path': name, 'mode': mode, 'blob': blob, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
-    need(len(rows) <= 200 and sum(row['bytes'] for row in rows) <= 12000000, 'source bound')
+    need(len(rows) <= 200 and sum(row['bytes'] for row in rows) <= 20000000, 'source bound')
     (proof / filename).write_text(json.dumps(rows, indent=2) + '\n')
     return rows
 

@@ -72,3 +72,7 @@ Third hosted failure diagnostics led to docs/fixes/route-scroll-commit.md.
 Standing approval covers its small route-scroll placement candidate and the
 same release gate, now with four strengthened native navigation/export cases.
 It remains pending; do not deploy it on the strength of the earlier 44 cases.
+That scroll-only candidate failed and is removed. The measured escaped hidden
+table heading now has a local containing-block repair; follow
+docs/fixes/trace-label-containing-block.md for its standing-approved release
+gate. Stronger viewport/native-export assertions stay intact.

@@ -1,0 +1,86 @@
+{
+  "source": "2b6d04accd45af4725171bbbbd2580c9278dc6f2",
+  "run": 43016740916,
+  "status": "failed-diagnostic",
+  "sourceFiles": 180,
+  "allSourceBlobsBytesVerified": true,
+  "browserPassed": 0,
+  "browserFailed": 1,
+  "processGroupsOrRunnerDisposalVerified": false,
+  "archiveBytes": 675419,
+  "archiveSha256": "e21ead4b4f5e9a99350d7c378843f997a969976f107055df0208c1f13e01158b",
+  "artifactFiles": [
+    {
+      "file": "_temp/sonant-loop-release/browser-install.log",
+      "bytes": 16658,
+      "sha256": "5f514f07b6378dcd449e02d837e015ec44dc44f2addcb7794afc1bc3039d5cc9"
+    },
+    {
+      "file": "_temp/sonant-loop-release/build.log",
+      "bytes": 958,
+      "sha256": "beeb9ab208a0951801a69ebf2fb74fe67a0300dbacebb4e46298386c87598f05"
+    },
+    {
+      "file": "_temp/sonant-loop-release/check.log",
+      "bytes": 238,
+      "sha256": "274b286f43be14884450d5e0dde7a31b3423a5c5203fd1111b28fe583a4550fb"
+    },
+    {
+      "file": "_temp/sonant-loop-release/install.log",
+      "bytes": 141,
+      "sha256": "e6bc6c0b40f3ba69632f87c314ff4178a3e0e526a73fe20b6c9418605a0f3243"
+    },
+    {
+      "file": "_temp/sonant-loop-release/node.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "_temp/sonant-loop-release/npm.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "_temp/sonant-loop-release/playwright.json",
+      "bytes": 23391,
+      "sha256": "b4c7614e828b8c759f7506972a1a01416abdd3b9fda170d5ea59bd59edd7b2c6"
+    },
+    {
+      "file": "_temp/sonant-loop-release/playwright.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-after.json",
+      "bytes": 47006,
+      "sha256": "13b7b48eb5221f6ffd12ac8f16246dbc159053fc9830f66f6788fceef8c647b3"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-before.json",
+      "bytes": 47006,
+      "sha256": "13b7b48eb5221f6ffd12ac8f16246dbc159053fc9830f66f6788fceef8c647b3"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-guard.py",
+      "bytes": 696,
+      "sha256": "9b0efa0daee6b50456cd990fa36f6f25b45d7aeecc683e6373b133eef88fc180"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-native-progress-lo-770f3-it-without-a-provider-error-mobile/error-context.md",
+      "bytes": 14579,
+      "sha256": "bd40d61c69699c58a6b99ddc94d1223e554d19d4bcd641fde537c9276454ea9f"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-native-progress-lo-770f3-it-without-a-provider-error-mobile/test-failed-1.png",
+      "bytes": 112748,
+      "sha256": "c0559a0ad044de851e97a640860e092e75d7bdbace0b49d4d15b8b7538028393"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-native-progress-lo-770f3-it-without-a-provider-error-mobile/trace.zip",
+      "bytes": 567416,
+      "sha256": "6600f49225614ef6005b622e18596a013eef4918ce5f41929bf23a546a3cebbd"
+    }
+  ],
+  "originalBytes": 830853,
+  "observation": "clientWidth390/scrollWidth586; absolutely positioned sr-only header span right586 escapes trace scroll container; table right633 stays internally clipped"
+}
