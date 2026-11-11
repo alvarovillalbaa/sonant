@@ -1,14 +1,14 @@
 # Inactive; the owned activation copy pins SOURCE_COMMIT.
-name: Temporary Sonant native loop release checks
+name: Temporary Sonant mobile layout diagnostic
 on:
   create:
 permissions:
   contents: read
 jobs:
   quality:
-    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-loop-release-20261111-3'
+    if: github.repository == 'alvarovillalbaa/sonant' && github.event.repository.private == false && github.event.ref_type == 'branch' && github.event.ref == 'qa/sonant-loop-layout-20261111-1'
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 8
     env:
       SOURCE_COMMIT: APPROVED_SOURCE_COMMIT
     steps:
@@ -58,27 +58,15 @@ jobs:
         run: |
           set -euo pipefail
           npm run check 2>&1 | tee "$SONANT_LOOP_PROOF/check.log"
-          npm test 2>&1 | tee "$SONANT_LOOP_PROOF/unit.log"
           npm run build:site 2>&1 | tee "$SONANT_LOOP_PROOF/build.log"
-      - name: Native browser tools and virtual audio
+      - name: Chromium tools only
         shell: bash
         run: |
           set -euo pipefail
-          node node_modules/@playwright/test/cli.js install --with-deps chromium firefox webkit 2>&1 | tee "$SONANT_LOOP_PROOF/browser-install.log"
-          sudo apt-get update > "$SONANT_LOOP_PROOF/pulse-install.log" 2>&1
-          sudo apt-get install -y pulseaudio >> "$SONANT_LOOP_PROOF/pulse-install.log" 2>&1
-          pulseaudio --start --exit-idle-time=-1
-          pactl load-module module-null-sink sink_name=sonant norewinds=1
-          pactl set-default-sink sonant
-      - name: Forty-four browser scenarios
+          node node_modules/@playwright/test/cli.js install --with-deps chromium 2>&1 | tee "$SONANT_LOOP_PROOF/browser-install.log"
+      - name: One mobile layout diagnostic with unchanged assertions
         shell: bash
-        run: node node_modules/@playwright/test/cli.js test --reporter=json > "$SONANT_LOOP_PROOF/playwright.json" 2> "$SONANT_LOOP_PROOF/playwright.stderr.log"
-      - name: Five Firefox cold starts
-        shell: bash
-        run: node node_modules/@playwright/test/cli.js test --project firefox --grep "catalog renders" --repeat-each 5 --workers 1 --output cold-start-results --reporter=json > "$SONANT_LOOP_PROOF/cold-start.json" 2> "$SONANT_LOOP_PROOF/cold-start.stderr.log"
-      - name: Package inspection
-        shell: bash
-        run: npm pack --dry-run --workspace @alvarovillalbaa/sonant > "$SONANT_LOOP_PROOF/package.log" 2>&1
+        run: node node_modules/@playwright/test/cli.js test --project mobile --grep "native progress loop" --workers 1 --reporter=json > "$SONANT_LOOP_PROOF/playwright.json" 2> "$SONANT_LOOP_PROOF/playwright.stderr.log"
       - name: Always verify source unchanged
         if: always()
         shell: bash
@@ -93,7 +81,7 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: sonant-loop-release-${{ github.run_id }}
+          name: sonant-loop-layout-${{ github.run_id }}
           path: |
             ${{ runner.temp }}/sonant-loop-release
             test-results/

@@ -198,6 +198,17 @@ test("native progress loop plays and navigation stops it without a provider erro
   await expect(row).toContainText("Ended");
   await expect(row).not.toContainText("provider");
   await expect(page.locator(".devtools-metrics article").filter({ hasText: "Active voices" }).locator("strong")).toHaveText("0 / 4");
+  console.log("Sonant navigation layout:", JSON.stringify(await page.evaluate(() => {
+    const root = document.documentElement;
+    return {
+      innerWidth, scrollX, scrollY, clientWidth: root.clientWidth, scrollWidth: root.scrollWidth,
+      visual: window.visualViewport && { width: visualViewport!.width, height: visualViewport!.height, scale: visualViewport!.scale, left: visualViewport!.offsetLeft, top: visualViewport!.offsetTop },
+      nodes: Array.from(document.querySelectorAll("body *")).slice(0, 500).map(node => {
+        const rect = node.getBoundingClientRect(), style = getComputedStyle(node);
+        return { tag: node.tagName, id: node.id, className: node.getAttribute("class"), left: rect.left, right: rect.right, width: rect.width, cssWidth: style.width, minWidth: style.minWidth, maxWidth: style.maxWidth, display: style.display, position: style.position, overflowX: style.overflowX, parent: node.parentElement?.tagName + "." + node.parentElement?.className };
+      }).filter(node => node.right > root.clientWidth + 1),
+    };
+  })));
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
   await expect.poll(() => page.evaluate(() => window.visualViewport?.offsetTop ?? 0)).toBe(0);
   const [download] = await Promise.all([

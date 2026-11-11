@@ -27,3 +27,12 @@ versions are unchanged except the route-scroll placement.
 
 The buffer fix remains independently accepted and live at `54ae94d0`.
 This additional navigation candidate is pending and has not been deployed.
+
+The new release run 43015780669 failed: 35 unit cases and 43 browser cases
+passed; the strengthened mobile case still found document overflow. Cold starts
+and package inspection did not run after that failure. All 177 source inputs
+matched, and the actual mobile failure PNG was viewed. Its
+[24 original files](../results/2026/11-11/native-loop-release-attempt-3/checksums.json)
+remain losslessly archived. The scroll-timing hypothesis is insufficient;
+the candidate stays out of production. The next scoped diagnostic records
+overflowing elements and CSS widths, preserving every failing assertion.

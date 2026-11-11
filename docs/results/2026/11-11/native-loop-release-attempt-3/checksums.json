@@ -1,0 +1,142 @@
+{
+  "source": "784aee89fe4141fa585aee168739f80f104a090d",
+  "run": 43015780669,
+  "job": 130506360396,
+  "status": "failed",
+  "sourceFiles": 177,
+  "sourceBlobsAndBytesVerified": true,
+  "unitPassed": 35,
+  "browserPassed": 43,
+  "browserFailed": 1,
+  "failure": "mobile native loop/navigation case document scrollWidth exceeds clientWidth at line201; source-scroll hypothesis insufficient",
+  "coldStarts": "not-run-after-failure",
+  "packageInspection": "not-run-after-failure",
+  "processGroupsOrRunnerDisposalVerified": false,
+  "nativeMobileFailureScreenshotViewed": true,
+  "originalFiles": 24,
+  "originalBytes": 3456677,
+  "archiveBytes": 2964625,
+  "archiveSha256": "e47a067e503a5387866bcfaa06677911cd736b999fee20b6dc6429607fb486ce",
+  "artifactFiles": [
+    {
+      "file": "_temp/sonant-loop-release/browser-install.log",
+      "bytes": 90950,
+      "sha256": "9327425ccb560584080212c8aec393ae4be91d06a6027593b3dbf3e123b0aab3"
+    },
+    {
+      "file": "_temp/sonant-loop-release/build.log",
+      "bytes": 958,
+      "sha256": "e4b4d2640e2c06888fbb65096a78195301f048c656d72a79d9e80c63e98427e5"
+    },
+    {
+      "file": "_temp/sonant-loop-release/check.log",
+      "bytes": 238,
+      "sha256": "274b286f43be14884450d5e0dde7a31b3423a5c5203fd1111b28fe583a4550fb"
+    },
+    {
+      "file": "_temp/sonant-loop-release/install.log",
+      "bytes": 141,
+      "sha256": "e6bc6c0b40f3ba69632f87c314ff4178a3e0e526a73fe20b6c9418605a0f3243"
+    },
+    {
+      "file": "_temp/sonant-loop-release/node.txt",
+      "bytes": 9,
+      "sha256": "2266957ed9a639bd7264d714bfa798a961510bf2e50695c668ab8fc0c3f4e906"
+    },
+    {
+      "file": "_temp/sonant-loop-release/npm.txt",
+      "bytes": 7,
+      "sha256": "d49bd31f65cb736f4045946e1c8365657cfed300dc0e4f173af5e93ab4500e1a"
+    },
+    {
+      "file": "_temp/sonant-loop-release/playwright.json",
+      "bytes": 70213,
+      "sha256": "e400468aaf326bf19f5c3903cf11df9d0d3196cb1403695a9fa8d86c63ec33c9"
+    },
+    {
+      "file": "_temp/sonant-loop-release/playwright.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "_temp/sonant-loop-release/pulse-install.log",
+      "bytes": 4944,
+      "sha256": "3bb52dc076f4074626ff2be80734c13801af98d2cf9960119e47520336fb0cad"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-after.json",
+      "bytes": 46214,
+      "sha256": "6275926898c1f5159608d27da33374d57c1cd260ae0053af650e911f41742873"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-before.json",
+      "bytes": 46214,
+      "sha256": "6275926898c1f5159608d27da33374d57c1cd260ae0053af650e911f41742873"
+    },
+    {
+      "file": "_temp/sonant-loop-release/source-guard.py",
+      "bytes": 696,
+      "sha256": "9b0efa0daee6b50456cd990fa36f6f25b45d7aeecc683e6373b133eef88fc180"
+    },
+    {
+      "file": "_temp/sonant-loop-release/unit.log",
+      "bytes": 7951,
+      "sha256": "253e561f295bd4fab77d83be985d3f51dff28ab91afc4216d68d213111ff3f9d"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-chromium/home.png",
+      "bytes": 255532,
+      "sha256": "a5527afaaa6aa02c46357f7ce9dcf88594a1e7726a490f09c9cf605879b62eb8"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-chromium/preview.png",
+      "bytes": 60689,
+      "sha256": "39d1f01abc39bb3934169a0a126e3e26ff5dc42e6f1884effa7c184397e7c749"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox/home.png",
+      "bytes": 342349,
+      "sha256": "b669ccc6d3eab020f87798ab14a56d144efd09885615e9e987f5f3fb74c000a3"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-firefox/preview.png",
+      "bytes": 97054,
+      "sha256": "eae3430b174fc6c628296623e456291d1a7e30670482c872e2cacbf3bc2c656a"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-mobile/home.png",
+      "bytes": 643924,
+      "sha256": "d053042d92380b7ab4b390320bbec2246ae02106e94cd15ea31d19955f7923a5"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-mobile/preview.png",
+      "bytes": 106123,
+      "sha256": "5eee086f3b166c6bdac7ffaa1ed978c57a1925de6ce9c5656bcdcdafc42abef0"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-webkit/home.png",
+      "bytes": 790160,
+      "sha256": "0ad2866a8bc456c36649b3e9bb11f02fcb96c410db946e3ea63b26467cb2c9d5"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-catalog-renders-fi-34eaf-ys-through-native-Web-Audio-webkit/preview.png",
+      "bytes": 171472,
+      "sha256": "09d11a5a315b9f2589026405df204bf176d8242ce1f1a50c996f341c71636c27"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-native-progress-lo-770f3-it-without-a-provider-error-mobile/error-context.md",
+      "bytes": 14000,
+      "sha256": "3370d8cefd14c41aaa5ec3f0ca4721c868d6780fed5d21c59a681d15be934eff"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-native-progress-lo-770f3-it-without-a-provider-error-mobile/test-failed-1.png",
+      "bytes": 112748,
+      "sha256": "c0559a0ad044de851e97a640860e092e75d7bdbace0b49d4d15b8b7538028393"
+    },
+    {
+      "file": "sonant/sonant/test-results/website-native-progress-lo-770f3-it-without-a-provider-error-mobile/trace.zip",
+      "bytes": 594091,
+      "sha256": "ff55fd13797643715947cd0f93ea6385c81ff5565c2e552d94f599873ea77e41"
+    }
+  ]
+}
