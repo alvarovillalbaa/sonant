@@ -1,5 +1,9 @@
 # Sonant
 
+<!-- project-family:start -->
+> **Project family:** [UI Libraries](https://github.com/alvarovillalbaa#ui-libraries) · **Area:** Interface sounds
+<!-- project-family:end -->
+
 Last updated: 2026-10-15
 
 **A little sound. A lot more feeling.**
